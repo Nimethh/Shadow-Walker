@@ -5,19 +5,28 @@ using UnityEngine;
 public class TestingSunRays : MonoBehaviour
 {
 
+    private GameObject startingPoint;
     private GameObject sun;
+
     [SerializeField]
     private LayerMask obstacleLayer;
 
     private PolygonCollider2D col;
     private Vector2[] colPoints;
+
     public bool isExposedToSunlight;
+
+    private Rigidbody2D rigid;
+    private PlayerController playerController;
 
     void Start()
     {
+        rigid = GetComponent<Rigidbody2D>();
         col = GetComponent<PolygonCollider2D>();
+        playerController = GetComponent<PlayerController>();
         colPoints = col.points;
         sun = GameObject.Find("Sun");
+        startingPoint = GameObject.Find("StartingPoint");
         isExposedToSunlight = false;
     }
 
@@ -34,7 +43,9 @@ public class TestingSunRays : MonoBehaviour
             if(!Physics2D.Raycast(polygonPoint, DirToSun,DistanceToSun,obstacleLayer))
             {
                 isExposedToSunlight = true;
-                Debug.DrawLine(polygonPoint, sun.transform.position, Color.red);
+                //Debug.DrawLine(polygonPoint, sun.transform.position, Color.red);
+                playerController.StopAllMovement(0.8f);
+                transform.position = startingPoint.transform.position;
             }
             else
             {
