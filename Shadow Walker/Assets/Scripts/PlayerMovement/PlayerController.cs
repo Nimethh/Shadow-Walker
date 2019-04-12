@@ -19,8 +19,10 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private LayerMask ground = 0;
 
+    float unableToMoveTimer = 0f;
 
     private Rigidbody2D rb;
+    [SerializeField]
     private float movement = 0f;
     private float jumpingCounter = 0f;
     private bool facingRight = true;
@@ -63,6 +65,19 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
+        if(unableToMoveTimer > 0)
+        {
+            unableToMoveTimer -= Time.deltaTime;
+            if(unableToMoveTimer > 0)
+            {
+                return;
+            }
+            else
+            {
+                unableToMoveTimer = 0;
+            }
+        }
+
         movement = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(movement * speed, rb.velocity.y);
 
@@ -84,5 +99,12 @@ public class PlayerController : MonoBehaviour
         Vector2 characterScale = transform.localScale;
         characterScale.x *= -1;
         transform.localScale = characterScale;
+    }
+
+    public void StopAllMovement(float amountOfSecondsToStopMovement)
+    {
+        rb.Sleep();
+        amountOfSecondsToStopMovement = Mathf.Abs(amountOfSecondsToStopMovement);
+        unableToMoveTimer = amountOfSecondsToStopMovement;
     }
 }
