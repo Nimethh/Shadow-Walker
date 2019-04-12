@@ -36,6 +36,10 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
+    }
+
+    void Jump()
+    {
         if (onGround == true && Input.GetKeyDown(KeyCode.Space))
         {
             onGround = false;
@@ -78,6 +82,7 @@ public class PlayerController : MonoBehaviour
             }
         }
 
+        Jump();
         movement = Input.GetAxis("Horizontal");
         rb.velocity = new Vector2(movement * speed, rb.velocity.y);
 
