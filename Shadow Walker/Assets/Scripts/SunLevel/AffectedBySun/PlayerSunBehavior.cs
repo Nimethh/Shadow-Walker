@@ -24,30 +24,30 @@ public class PlayerSunBehavior : AffectedByTheSun
 
     public override void JustGotCoveredFromSunlight()
     {
-        Debug.Log("JustGotCoveredFromSunlight()");
+        //Debug.Log("JustGotCoveredFromSunlight()");
     }
 
     public override void JustGotExposedToSunlight()
     {
         playerController.StopAllMovement(0.8f);
         transform.position = startingPoint.transform.position;
-        Debug.Log("JustGotExposedToSunlight()");
+        //Debug.Log("JustGotExposedToSunlight()");
 
     }
 
     public override void UnderFullCover()
     {
-        Debug.Log("UnderFullCover()");
+        //Debug.Log("UnderFullCover()");
     }
 
     public override void UnderFullExposure()
     {
-        Debug.Log("UnderFullExposure()");
+        //Debug.Log("UnderFullExposure()");
     }
 
     public override void UnderPartialCover()
     {
-        Debug.Log("UnderPartialCover()");
+        //Debug.Log("UnderPartialCover()");
     }
 
 }
