@@ -14,7 +14,7 @@ public class PlayerSunBehavior : AffectedByTheSun
         AffectedByTheSunScriptStart();
 
         playerController = GetComponent<PlayerController>();
-        startingPoint = GameObject.Find("StartingPoint");
+        startingPoint = GameObject.Find("PrototypeStartingPoint");
     }
 
     public void Update()
