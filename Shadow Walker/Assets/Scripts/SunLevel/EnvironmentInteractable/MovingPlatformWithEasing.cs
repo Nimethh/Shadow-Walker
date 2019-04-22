@@ -13,6 +13,7 @@ public class MovingPlatformWithEasing : MonoBehaviour
 
     private enum MovementEasing
     {
+        LinearEase,
         EaseInOutSine,
         EaseInOutCubic,
         EaseInOutQuint,
@@ -31,15 +32,17 @@ public class MovingPlatformWithEasing : MonoBehaviour
 
     [SerializeField]
     private float movingSpeed;
+    [SerializeField]
+    private float waitTime;
+    private float waitTimeCounter;
     private bool finishedMoving;
     private bool hasReachedStartTransformation;
     private bool hasReachedEndTransformation;
 
 
     [SerializeField]
-    private float tweenTime;
-    [SerializeField]
     private float tweenDuration;
+    private float tweenTime;
     private float b = 0; //Required for easing
     private float c = 1; //Required for easing
 
@@ -75,8 +78,13 @@ public class MovingPlatformWithEasing : MonoBehaviour
     void FixedUpdate()
     {
 
-        if(finishedMoving || !activated)
+        if(finishedMoving || !activated || waitTimeCounter > 0)
         {
+            if(waitTimeCounter > 0)
+            {
+                waitTimeCounter -= Time.deltaTime;
+            }
+
             return;
         }
 
@@ -90,6 +98,11 @@ public class MovingPlatformWithEasing : MonoBehaviour
     {
         switch (movementEasing)
         {
+            case MovementEasing.LinearEase:
+                {
+                    movingPlatform.position = Vector3.Lerp(movingFromLocation.position, movingToLocation.position, LinearEase());
+                }
+                break;
             case MovementEasing.EaseInOutSine:
                 {
                     movingPlatform.position = Vector3.Lerp(movingFromLocation.position, movingToLocation.position, SineEaseInOut(tweenTime, tweenDuration));
@@ -142,8 +155,14 @@ public class MovingPlatformWithEasing : MonoBehaviour
                 }
             }
 
+            SetWaitTime();
             SetDestination(movingToLocation == startTransform ? endTransform : startTransform);
         }
+    }
+
+    void SetWaitTime()
+    {
+        waitTimeCounter = waitTime;
     }
 
     void SetDestination(Transform destination)
@@ -178,6 +197,13 @@ public class MovingPlatformWithEasing : MonoBehaviour
         tweenTime += Time.deltaTime;
         if (tweenTime > tweenDuration)
             tweenTime = tweenDuration;
+    }
+
+    float LinearEase()
+    {
+        float ease = tweenTime / tweenDuration;
+
+        return ease;
     }
 
     float SineEaseInOut(float t, float d)
