@@ -60,24 +60,180 @@ public class MoonLight : MonoBehaviour
         startPoint = this.transform.position;
     }
 
-    void Update()
-    {
-        ListCheck(prevObjectsHitByRay, objectsHitByRay);
-    }
+    //void Update() //Can probably be moved to fixedUpdate
+    //{
+    //    ListCheck(prevObjectsHitByRay, objectsHitByRay);
+    //}
 
+    //void FixedUpdate()
+    //{
+    //    startPoint = this.transform.position;
+    //    direction.x = centerPosition.position.x;
+    //    ClearLists();
+    //    Ray();
+    //}
+
+
+
+    //////////////
     void FixedUpdate()
     {
         startPoint = this.transform.position;
         direction.x = centerPosition.position.x;
-        Reset();
-        Ray();
+        ClearLists();
+        DrawFirstRay();
+        UpdateLineRenderer();
+        NotifyNoLongerHitObjects();
+        CopyCurrentlyHitToPreviouslyHit();
     }
+
+    void DrawFirstRay()
+    {
+        hitPoints.Add(startPoint);
+
+        firstHit = Physics2D.Raycast(startPoint, (direction - startPoint).normalized, maxRayCastLength, ground | mirror);
+
+        if(firstHit)
+        {
+            hitPoints.Add(firstHit.point);
+            NotifyObjectHit(firstHit);
+            AddGameObjectToObjectHitList(firstHit);
+            if(CheckIfRayShouldBeReflected(firstHit))
+            {
+                Debug.Log("Hitting a mirror, should be reflecting");
+                //Change the position of the mirror's light and activate it. 
+                //ReflectRay(startPoint, firstHit);
+                ReflectRay(firstHit.point, firstHit);
+
+            }
+        }
+        else
+        {
+            hitPoints.Add(startPoint + (direction - startPoint).normalized * maxRayCastLength);
+            //Move the moon's own light to firstHit.point
+        }
+
+    }
+
+    void NotifyObjectHit(RaycastHit2D objectHit)
+    {
+        //Tell the object that it has been hit by calling the abstract affectedByMoonRay-script. 
+        //If it is just the platform or ground that has been hit, update the moon's own light to that position.
+
+        if (objectHit.transform.CompareTag("Lamp"))
+        {
+           
+        }
+        else if (objectHit.transform.CompareTag("Platform"))
+        {
+
+        }
+        else if(objectHit.transform.CompareTag("Mirror"))
+        {
+
+        }
+        else
+        {
+
+        }
+    }
+
+    void NotifyNoLongerHitObjects()
+    {
+        //We want to check all previouslyHit objects to see if they still exist in the currently hit list.
+        for(int i = 0; i < prevObjectsHitByRay.Count; i++)
+        {
+            if(!objectsHitByRay.Contains(prevObjectsHitByRay[i]))
+            {
+                //if(prevObjectsHitByRay[i].CompareTag("Ground") /* OR ANY OTHER TAG THAT SHOULD NOT BE NOTFIED/AFFECTED BY THE MOON RAY */) 
+                //{
+                //    return;
+                //}
+                //else
+                //{
+                ////Notify the object that it is no longer being hit by the moonray. This should be done through the abstract affectedByMoonRay-Script.
+                //}
+            }
+        }
+    }
+
+
+    void ReflectRay(Vector2 origin, RaycastHit2D hit)
+    {
+        if (currentReflection > maxNumOfReflection)
+        {
+            return;
+        }
+
+        // Calculating the directions.
+        prevDirection = (hit.point - origin).normalized;
+        newDirection = Vector2.Reflect(prevDirection, hit.normal);
+
+        newHit = Physics2D.Raycast(hit.point + newDirection, newDirection, maxRayCastLength, ground | mirror);
+
+        if (newHit)
+        {
+            hitPoints.Add(newHit.point);
+            NotifyObjectHit(newHit);
+            AddGameObjectToObjectHitList(newHit);
+            if (CheckIfRayShouldBeReflected(newHit))
+            {
+                Debug.Log("Hitting a mirror, should be reflecting");
+                //Change the position of the mirror's light and activate it. 
+                ReflectRay(hit.point, newHit);
+            }
+        }
+        else
+        {
+            hitPoints.Add(newHit.point);
+            //Move the moon's own light to firstHit.point
+        }
+
+    }
+
+    bool CheckIfRayShouldBeReflected(RaycastHit2D objectHit)
+    {
+        if(objectHit.transform.CompareTag("Mirror"))
+        {
+            return true;
+        }
+
+        return false;
+    }
+
+    void AddGameObjectToObjectHitList(RaycastHit2D firstHit)
+    {
+        tempGameObject = firstHit.collider.gameObject;
+
+        if (!objectsHitByRay.Contains(tempGameObject))
+        {
+            currentReflection++;
+            objectsHitByRay.Add(tempGameObject);
+        }
+    }
+
+    void UpdateLineRenderer()
+    {
+        lineRenderer.positionCount = hitPoints.Count;
+        lineRenderer.SetPositions(hitPoints.ToArray());
+    }
+
+    void CopyCurrentlyHitToPreviouslyHit()
+    {
+        prevObjectsHitByRay.Clear();
+
+        for (int i = 0; i < objectsHitByRay.Count; i++)
+        {
+            prevObjectsHitByRay.Add(objectsHitByRay[i]);
+        }
+    }
+    //////////////
 
     void Ray()
     {
-        firstHit = Physics2D.Raycast(startPoint, (direction - startPoint).normalized, maxRayCastLength, ground | mirror);
-
         hitPoints.Add(startPoint);
+
+        firstHit = Physics2D.Raycast(startPoint, (direction - startPoint).normalized, maxRayCastLength, ground | mirror);
 
         if (firstHit)
         {
@@ -122,6 +278,7 @@ public class MoonLight : MonoBehaviour
         lineRenderer.SetPositions(hitPoints.ToArray());
     }
 
+
     void Reflect(Vector2 origin, RaycastHit2D hit)
     {
         if (currentReflection > maxNumOfReflection)
@@ -130,6 +287,7 @@ public class MoonLight : MonoBehaviour
         }
 
         hitPoints.Add(hit.point);
+   
 
         tempGameObject = hit.collider.gameObject;
 
@@ -222,7 +380,7 @@ public class MoonLight : MonoBehaviour
     }
 
     // Resetting the variables and clearing the lists.   Might need to moving them to a better place.
-    void Reset()
+    void ClearLists()
     {
         currentReflection = 0;
         objectsHitByRay.Clear();
