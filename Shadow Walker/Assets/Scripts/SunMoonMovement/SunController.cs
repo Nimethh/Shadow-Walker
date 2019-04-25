@@ -6,10 +6,11 @@ public class SunController : MonoBehaviour
 {
     [SerializeField]
     private Transform[] points;
+    [SerializeField]
+    private int index;
 
     private int numberOfPoints = 100;
 
-    private int index = 0;
 
     [SerializeField]
     private Transform centerPosition;
@@ -17,7 +18,9 @@ public class SunController : MonoBehaviour
     private void Start()
     {
         //lineRenderer.positionCount = numberOfPoints;
-        transform.position = points[0].position;
+        //transform.position = points[0].position;
+        float startT = index / (float)numberOfPoints * 0.5f;
+        transform.position = CalculateQuadraticBezeirPoint(startT, points[0].position, points[1].position, points[2].position);
         //DrawQuadraticCurve();
     }
 

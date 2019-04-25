@@ -8,10 +8,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: ba0aad0dc7f8ff24d9ca781a06441e3a
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/PrototypeLevel.unity
     guid: e80813b2c1eee894c995943a2eddcede
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/StencilShaderPrototype.unity
     guid: 24cfecbabde16e74c9054d3ad0a83e06
+  - enabled: 1
+    path: Assets/Scenes/Congrats.unity
+    guid: a321e2a33e85cbd42b55b51c808a534b
   m_configObjects: {}

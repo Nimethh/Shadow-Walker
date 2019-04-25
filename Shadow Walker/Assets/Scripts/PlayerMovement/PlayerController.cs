@@ -40,7 +40,7 @@ public class PlayerController : MonoBehaviour
 
     void Jump()
     {
-        if (onGround == true && Input.GetKeyDown(KeyCode.Space))
+        if (onGround == true && (Input.GetKeyDown(KeyCode.Space) || Input.GetKey(KeyCode.Space)))
         {
             onGround = false;
             jumping = true;
