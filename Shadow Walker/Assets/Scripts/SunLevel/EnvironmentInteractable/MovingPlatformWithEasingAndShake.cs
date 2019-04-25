@@ -15,9 +15,17 @@ public class MovingPlatformWithEasingAndShake : MonoBehaviour
     {
         LinearEase,
         EaseInOutSine,
+        EaseInSine,
+        EaseOutSine,
         EaseInOutCubic,
+        EaseInCubic,
+        EaseOutCubic,
         EaseInOutQuint,
+        EaseInQuint,
+        EaseOutQuint,
         EaseInOutQuart,
+        EaseInQuart,
+        EaseOutQuart,
         EaseInOutExpo
     }
 
@@ -41,8 +49,12 @@ public class MovingPlatformWithEasingAndShake : MonoBehaviour
     [Header("MovementControl")]
     [SerializeField]
     private MovementPattern movementPattern;
+    //[SerializeField]
+    //private MovementEasing movementEasing;
     [SerializeField]
-    private MovementEasing movementEasing;
+    private MovementEasing ToStartEasing;
+    [SerializeField]
+    private MovementEasing ToEndEasing;
     [SerializeField]
     private float tweenDuration;
     [SerializeField]
@@ -50,9 +62,9 @@ public class MovingPlatformWithEasingAndShake : MonoBehaviour
 
     [Header("Shake Controls")]
     [SerializeField]
-    private bool ShakeWhenStartReached;
+    private bool StartDestShake;
     [SerializeField]
-    private bool ShakeWhenEndReached;
+    private bool EndDestShake;
     [SerializeField]
     private float shakeDuration;
     private float shakeTimer;
@@ -117,47 +129,172 @@ public class MovingPlatformWithEasingAndShake : MonoBehaviour
 
     void UpdateEasingPosition(float t, float d)
     {
-        switch (movementEasing)
+        if(movingToLocation == startTransform)
         {
-            case MovementEasing.LinearEase:
-                {
-                    movingPlatform.position = Vector3.Lerp(movingFromLocation.position, movingToLocation.position, LinearEase());
-                }
-                break;
-            case MovementEasing.EaseInOutSine:
-                {
-                    movingPlatform.position = Vector3.Lerp(movingFromLocation.position, movingToLocation.position, SineEaseInOut(tweenTime, tweenDuration));
-                }
-                break;
-            case MovementEasing.EaseInOutCubic:
-                {
-                    movingPlatform.position = Vector3.Lerp(movingFromLocation.position, movingToLocation.position, CubicEaseInOut(tweenTime, tweenDuration));
-                }
-                break;
-            case MovementEasing.EaseInOutQuint:
-                {
-                    movingPlatform.position = Vector3.Lerp(movingFromLocation.position, movingToLocation.position, QuintEaseInOut(tweenTime, tweenDuration));
-                }
-                break;
-            case MovementEasing.EaseInOutQuart:
-                {
-                    movingPlatform.position = Vector3.Lerp(movingFromLocation.position, movingToLocation.position, QuartEaseInOut(tweenTime, tweenDuration));
-                }
-                break;
-            case MovementEasing.EaseInOutExpo:
-                {
-                    movingPlatform.position = Vector3.Lerp(movingFromLocation.position, movingToLocation.position, ExpoEaseInOut(tweenTime, tweenDuration));
+            switch (ToStartEasing)
+            {
+                case MovementEasing.LinearEase:
+                    {
+                        movingPlatform.position = Vector3.Lerp(movingFromLocation.position, movingToLocation.position, LinearEase());
+                    }
+                    break;
+                case MovementEasing.EaseInOutSine:
+                    {
+                        movingPlatform.position = Vector3.Lerp(movingFromLocation.position, movingToLocation.position, SineEaseInOut(tweenTime, tweenDuration));
+                    }
+                    break;
+                case MovementEasing.EaseInSine:
+                    {
+                        movingPlatform.position = Vector3.Lerp(movingFromLocation.position, movingToLocation.position, SineEaseIn(tweenTime, tweenDuration));
+                    }
+                    break;
+                case MovementEasing.EaseOutSine:
+                    {
+                        movingPlatform.position = Vector3.Lerp(movingFromLocation.position, movingToLocation.position, SineEaseOut(tweenTime, tweenDuration));
+                    }
+                    break;
+                case MovementEasing.EaseInOutCubic:
+                    {
+                        movingPlatform.position = Vector3.Lerp(movingFromLocation.position, movingToLocation.position, CubicEaseInOut(tweenTime, tweenDuration));
+                    }
+                    break;
+                case MovementEasing.EaseInCubic:
+                    {
+                        movingPlatform.position = Vector3.Lerp(movingFromLocation.position, movingToLocation.position, CubicEaseIn(tweenTime, tweenDuration));
+                    }
+                    break;
+                case MovementEasing.EaseOutCubic:
+                    {
+                        movingPlatform.position = Vector3.Lerp(movingFromLocation.position, movingToLocation.position, CubicEaseOut(tweenTime, tweenDuration));
+                    }
+                    break;
+                case MovementEasing.EaseInOutQuint:
+                    {
+                        movingPlatform.position = Vector3.Lerp(movingFromLocation.position, movingToLocation.position, QuintEaseInOut(tweenTime, tweenDuration));
+                    }
+                    break;
+                case MovementEasing.EaseInQuint:
+                    {
+                        movingPlatform.position = Vector3.Lerp(movingFromLocation.position, movingToLocation.position, QuintEaseIn(tweenTime, tweenDuration));
+                    }
+                    break;
+                case MovementEasing.EaseOutQuint:
+                    {
+                        movingPlatform.position = Vector3.Lerp(movingFromLocation.position, movingToLocation.position, QuintEaseOut(tweenTime, tweenDuration));
+                    }
+                    break;
+                case MovementEasing.EaseInOutQuart:
+                    {
+                        movingPlatform.position = Vector3.Lerp(movingFromLocation.position, movingToLocation.position, QuartEaseInOut(tweenTime, tweenDuration));
+                    }
+                    break;
+                case MovementEasing.EaseInQuart:
+                    {
+                        movingPlatform.position = Vector3.Lerp(movingFromLocation.position, movingToLocation.position, QuartEaseIn(tweenTime, tweenDuration));
+                    }
+                    break;
+                case MovementEasing.EaseOutQuart:
+                    {
+                        movingPlatform.position = Vector3.Lerp(movingFromLocation.position, movingToLocation.position, QuartEaseOut(tweenTime, tweenDuration));
+                    }
+                    break;
+                case MovementEasing.EaseInOutExpo:
+                    {
+                        movingPlatform.position = Vector3.Lerp(movingFromLocation.position, movingToLocation.position, ExpoEaseInOut(tweenTime, tweenDuration));
 
-                }break;
-            default:
-                Debug.Log("Default case UpdateEasingPosition");
-                break;
+                    }
+                    break;
+                default:
+                    Debug.Log("Default case UpdateEasingPosition");
+                    break;
+            }
         }
+        else
+        {
+            switch (ToEndEasing)
+            {
+                case MovementEasing.LinearEase:
+                    {
+                        movingPlatform.position = Vector3.Lerp(movingFromLocation.position, movingToLocation.position, LinearEase());
+                    }
+                    break;
+                case MovementEasing.EaseInOutSine:
+                    {
+                        movingPlatform.position = Vector3.Lerp(movingFromLocation.position, movingToLocation.position, SineEaseInOut(tweenTime, tweenDuration));
+                    }
+                    break;
+                case MovementEasing.EaseInSine:
+                    {
+                        movingPlatform.position = Vector3.Lerp(movingFromLocation.position, movingToLocation.position, SineEaseIn(tweenTime, tweenDuration));
+                    }
+                    break;
+                case MovementEasing.EaseOutSine:
+                    {
+                        movingPlatform.position = Vector3.Lerp(movingFromLocation.position, movingToLocation.position, SineEaseOut(tweenTime, tweenDuration));
+                    }
+                    break;
+                case MovementEasing.EaseInOutCubic:
+                    {
+                        movingPlatform.position = Vector3.Lerp(movingFromLocation.position, movingToLocation.position, CubicEaseInOut(tweenTime, tweenDuration));
+                    }
+                    break;
+                case MovementEasing.EaseInCubic:
+                    {
+                        movingPlatform.position = Vector3.Lerp(movingFromLocation.position, movingToLocation.position, CubicEaseIn(tweenTime, tweenDuration));
+                    }
+                    break;
+                case MovementEasing.EaseOutCubic:
+                    {
+                        movingPlatform.position = Vector3.Lerp(movingFromLocation.position, movingToLocation.position, CubicEaseOut(tweenTime, tweenDuration));
+                    }
+                    break;
+                case MovementEasing.EaseInOutQuint:
+                    {
+                        movingPlatform.position = Vector3.Lerp(movingFromLocation.position, movingToLocation.position, QuintEaseInOut(tweenTime, tweenDuration));
+                    }
+                    break;
+                case MovementEasing.EaseInQuint:
+                    {
+                        movingPlatform.position = Vector3.Lerp(movingFromLocation.position, movingToLocation.position, QuintEaseIn(tweenTime, tweenDuration));
+                    }
+                    break;
+                case MovementEasing.EaseOutQuint:
+                    {
+                        movingPlatform.position = Vector3.Lerp(movingFromLocation.position, movingToLocation.position, QuintEaseOut(tweenTime, tweenDuration));
+                    }
+                    break;
+                case MovementEasing.EaseInOutQuart:
+                    {
+                        movingPlatform.position = Vector3.Lerp(movingFromLocation.position, movingToLocation.position, QuartEaseInOut(tweenTime, tweenDuration));
+                    }
+                    break;
+                case MovementEasing.EaseInQuart:
+                    {
+                        movingPlatform.position = Vector3.Lerp(movingFromLocation.position, movingToLocation.position, QuartEaseIn(tweenTime, tweenDuration));
+                    }
+                    break;
+                case MovementEasing.EaseOutQuart:
+                    {
+                        movingPlatform.position = Vector3.Lerp(movingFromLocation.position, movingToLocation.position, QuartEaseOut(tweenTime, tweenDuration));
+                    }
+                    break;
+                case MovementEasing.EaseInOutExpo:
+                    {
+                        movingPlatform.position = Vector3.Lerp(movingFromLocation.position, movingToLocation.position, ExpoEaseInOut(tweenTime, tweenDuration));
+
+                    }
+                    break;
+                default:
+                    Debug.Log("Default case UpdateEasingPosition");
+                    break;
+            }
+        }
+
     }
 
     void UpdateDestination()
     {
-        if (tweenTime + Time.deltaTime >= tweenDuration)
+        if (tweenTime + Time.fixedDeltaTime >= tweenDuration)
         {
             if (movingToLocation == startTransform)
             {
@@ -190,7 +327,7 @@ public class MovingPlatformWithEasingAndShake : MonoBehaviour
     {
         if(movingToLocation == startTransform)
         {
-            if (ShakeWhenStartReached)
+            if (StartDestShake)
             {
                 StartCoroutine(Shake(shakeDuration, shakeIntensity));
                 shakeTimer = shakeDuration;
@@ -200,7 +337,7 @@ public class MovingPlatformWithEasingAndShake : MonoBehaviour
         }
         else
         {
-            if (ShakeWhenEndReached)
+            if (EndDestShake)
             {
                 StartCoroutine(Shake(shakeDuration, shakeIntensity));
                 shakeTimer = shakeDuration;
@@ -240,10 +377,29 @@ public class MovingPlatformWithEasingAndShake : MonoBehaviour
         return -c / 2 * (Mathf.Cos(Mathf.PI * t / d) - 1) + b;
     }
 
+    float SineEaseIn(float t, float d)
+    {
+        return -c * Mathf.Cos(t / d * (Mathf.PI / 2)) + c + b;
+    }
+
+    float SineEaseOut(float t, float d)
+    {
+        return c * Mathf.Sin(t / d * (Mathf.PI / 2)) + b;
+    }
+
     float CubicEaseInOut(float t, float d)
     {
         if ((t /= d / 2) < 1) return c / 2 * t * t * t + b;
         return c / 2 * ((t -= 2) * t * t + 2) + b;
+    }
+
+    float CubicEaseIn(float t, float d)
+    {
+        return c * (t /= d) * t * t + b;
+    }
+    float CubicEaseOut(float t, float d)
+    {
+        return c * ((t = t / d - 1) * t * t + 1) + b;
     }
 
     float QuintEaseInOut(float t, float d)
@@ -252,10 +408,28 @@ public class MovingPlatformWithEasingAndShake : MonoBehaviour
         return c / 2 * ((t -= 2) * t * t * t * t + 2) + b;
     }
 
+    float QuintEaseIn(float t, float d)
+    {
+        return c * (t /= d) * t * t * t * t + b;
+    }
+    float QuintEaseOut(float t, float d)
+    {
+        return c * ((t = t / d - 1) * t * t * t * t + 1) + b;
+    }
+
     float QuartEaseInOut(float t, float d)
     {
         if ((t /= d / 2) < 1) return c / 2 * t * t * t * t + b;
         return -c / 2 * ((t -= 2) * t * t * t - 2) + b;
+    }
+
+    float QuartEaseIn(float t, float d)
+    {
+        return c * (t /= d) * t * t * t + b;
+    }
+    float QuartEaseOut(float t, float d)
+    {
+        return -c * ((t = t / d - 1) * t * t * t - 1) + b;
     }
 
     float ExpoEaseInOut(float t, float d)

@@ -75,7 +75,7 @@ public class MoonLight : MonoBehaviour
 
 
 
-    //////////////
+    ////////////
     void FixedUpdate()
     {
         startPoint = this.transform.position;
@@ -93,17 +93,16 @@ public class MoonLight : MonoBehaviour
 
         firstHit = Physics2D.Raycast(startPoint, (direction - startPoint).normalized, maxRayCastLength, ground | mirror);
 
-        if(firstHit)
+        if (firstHit)
         {
             hitPoints.Add(firstHit.point);
             NotifyObjectHit(firstHit);
             AddGameObjectToObjectHitList(firstHit);
             if(CheckIfRayShouldBeReflected(firstHit))
             {
-                Debug.Log("Hitting a mirror, should be reflecting");
                 //Change the position of the mirror's light and activate it. 
                 //ReflectRay(startPoint, firstHit);
-                ReflectRay(firstHit.point, firstHit);
+                Reflect(startPoint, firstHit);
 
             }
         }
@@ -122,7 +121,8 @@ public class MoonLight : MonoBehaviour
 
         if (objectHit.transform.CompareTag("Lamp"))
         {
-           
+            Debug.Log("Lamp got hit");
+            objectHit.transform.GetComponent<AffectedByMoonRay>().isHitByMoonLight = true;
         }
         else if (objectHit.transform.CompareTag("Platform"))
         {
@@ -130,7 +130,7 @@ public class MoonLight : MonoBehaviour
         }
         else if(objectHit.transform.CompareTag("Mirror"))
         {
-
+            objectHit.transform.GetComponent<AffectedByMoonRay>().isHitByMoonLight = true;
         }
         else
         {
@@ -145,6 +145,16 @@ public class MoonLight : MonoBehaviour
         {
             if(!objectsHitByRay.Contains(prevObjectsHitByRay[i]))
             {
+
+                if (prevObjectsHitByRay[i].transform.CompareTag("Mirror"))
+                {
+                    prevObjectsHitByRay[i].transform.GetComponent<AffectedByMoonRay>().isHitByMoonLight = false;
+                }
+
+                if (prevObjectsHitByRay[i].transform.CompareTag("Lamp"))
+                {
+                    prevObjectsHitByRay[i].transform.GetComponent<AffectedByMoonRay>().isHitByMoonLight = false;
+                }
                 //if(prevObjectsHitByRay[i].CompareTag("Ground") /* OR ANY OTHER TAG THAT SHOULD NOT BE NOTFIED/AFFECTED BY THE MOON RAY */) 
                 //{
                 //    return;
@@ -169,6 +179,7 @@ public class MoonLight : MonoBehaviour
         prevDirection = (hit.point - origin).normalized;
         newDirection = Vector2.Reflect(prevDirection, hit.normal);
 
+        // New Raycast
         newHit = Physics2D.Raycast(hit.point + newDirection, newDirection, maxRayCastLength, ground | mirror);
 
         if (newHit)
@@ -181,11 +192,13 @@ public class MoonLight : MonoBehaviour
                 Debug.Log("Hitting a mirror, should be reflecting");
                 //Change the position of the mirror's light and activate it. 
                 ReflectRay(hit.point, newHit);
+                //Reflect(hit.point, newHit);
+
             }
         }
         else
         {
-            hitPoints.Add(newHit.point);
+            hitPoints.Add(hit.point + newDirection * maxRayCastLength);
             //Move the moon's own light to firstHit.point
         }
 
