@@ -119,7 +119,7 @@ public class PlayerControllerMoon : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        if (other.gameObject.tag == "Mirror" && Input.GetKeyDown(KeyCode.Space) && onGround == true)
+        if (other.gameObject.tag == "MirrorHandle" && Input.GetKeyDown(KeyCode.Space) && onGround == true)
         {
             playerPos = this.transform.position;
             canMove = !canMove;

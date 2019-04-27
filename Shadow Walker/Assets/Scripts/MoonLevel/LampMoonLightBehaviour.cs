@@ -24,7 +24,7 @@ public class LampMoonLightBehaviour : AffectedByMoonRay
 
     public override void ObjectNotHitByMoonLight()
     {
-        Debug.Log("ObjectNotHitByMoonLight");
+        //Debug.Log("ObjectNotHitByMoonLight");
     }
 
     void Start()
