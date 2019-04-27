@@ -53,8 +53,8 @@ public class MoonLight : MonoBehaviour
     {
         hitPoints = new List<Vector3>();
         lineRenderer = transform.GetComponent<LineRenderer>();
-        lineRenderer.startWidth = 0.3f;
-        lineRenderer.endWidth = 0.15f;
+        lineRenderer.startWidth = 0.13f;
+        lineRenderer.endWidth = 0.05f;
         lineRenderer.numCornerVertices = lineRendererNumOfCornerVertices;
         lineRenderer.numCapVertices = lineRendererNumOfCapVertices;
         startPoint = this.transform.position;
@@ -101,8 +101,8 @@ public class MoonLight : MonoBehaviour
             if(CheckIfRayShouldBeReflected(firstHit))
             {
                 //Change the position of the mirror's light and activate it. 
-                //ReflectRay(startPoint, firstHit);
-                Reflect(startPoint, firstHit);
+                ReflectRay(startPoint, firstHit);
+                //Reflect(startPoint, firstHit);
 
             }
         }
