@@ -7,19 +7,20 @@ public class RotateMirror : MonoBehaviour
     [Range(0f, 0.5f)]
     public float maxRotation = 0.2f;
     public bool canBeRotated = false;
-    [SerializeField]
-    private PlayerControllerMoon playerController;
+    private PlayerPlatformController playerPlatformController;
 
     private Transform rotatingSurface;
 
     void Start()
     {
-        playerController = GameObject.Find("Player").GetComponent<PlayerControllerMoon>();
+        playerPlatformController = GameObject.Find("Player").GetComponent<PlayerPlatformController>();
+
         rotatingSurface = this.transform.GetChild(0);
     }
 
     void Update()
     {
+        EnableAndDisablePlayerController();
         if (canBeRotated == true && Input.GetKey(KeyCode.A))
         {
             if (rotatingSurface.transform.rotation.z < maxRotation)
@@ -36,15 +37,27 @@ public class RotateMirror : MonoBehaviour
         }
     }
 
+    void EnableAndDisablePlayerController()
+    {
+        if (canBeRotated == true)
+        {
+            playerPlatformController.enabled = false;
+        }
+        else
+            playerPlatformController.enabled = true;
+    }
+
     private void OnTriggerStay2D(Collider2D other)
     {
         if (other.gameObject.name == "Player" && Input.GetKeyDown(KeyCode.Space))
         {
-            if (playerController == null)
-                playerController = GameObject.Find("Player").GetComponent<PlayerControllerMoon>();
-
-            if (playerController.onGround == true)
+            if (playerPlatformController == null)
+                playerPlatformController = GameObject.Find("Player").GetComponent<PlayerPlatformController>();
+            
+            if (playerPlatformController.onGround == true)
+            {
                 canBeRotated = !canBeRotated;
+            }
         }
     }
 
