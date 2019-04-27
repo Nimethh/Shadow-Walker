@@ -51,14 +51,14 @@ public class SunController : MonoBehaviour
     void MoveRight()
     {
         index++;
-        float t = index / (float)numberOfPoints * 0.5f;
+        float t = index / (float)numberOfPoints * 0.2f;
         transform.position = CalculateQuadraticBezeirPoint(t, points[0].position, points[1].position, points[2].position);
     }
 
     void MoveLeft()
     {
         index--;
-        float t = index / (float)numberOfPoints * 0.5f;
+        float t = index / (float)numberOfPoints * 0.2f;
         transform.position = CalculateQuadraticBezeirPoint(t, points[0].position, points[1].position, points[2].position);
     }
 

@@ -15,28 +15,25 @@ public class MoonLight : MonoBehaviour
     private Vector2 direction;
     private Vector2 prevDirection;
     private Vector2 newDirection;
-
-    // Layers for the raycast.
-    [SerializeField]
-    private LayerMask ground;
-    [SerializeField]
-    private LayerMask mirror;
-
-    // List of hit points position.
-    private List<Vector3> hitPoints;
+    private RaycastHit2D firstHit;
+    private RaycastHit2D newHit;
 
     // CenterPosition for the raycast direction.
     [SerializeField]
     private Transform centerPosition = null;
 
-    private RaycastHit2D firstHit;
-    private RaycastHit2D newHit;
+    // Layers for the raycast.
+    [SerializeField]
+    private LayerMask layersToCheck;
+
+    // List of hit points position.
+    private List<Vector3> hitPoints;
 
     // LineRenderer Variables
     private LineRenderer lineRenderer;
     private int lineRendererNumOfCornerVertices = 10;
     private int lineRendererNumOfCapVertices = 10;
-    
+
     // Temporary gameObject to store the info in it and adding it to the list of object that got hit by moon-light
     private GameObject tempGameObject;
 
@@ -48,15 +45,11 @@ public class MoonLight : MonoBehaviour
 
     // Script to light up the objects.
     private LightingObject lightingObject;
-
+    
     void Start()
     {
         hitPoints = new List<Vector3>();
-        lineRenderer = transform.GetComponent<LineRenderer>();
-        lineRenderer.startWidth = 0.3f;
-        lineRenderer.endWidth = 0.15f;
-        lineRenderer.numCornerVertices = lineRendererNumOfCornerVertices;
-        lineRenderer.numCapVertices = lineRendererNumOfCapVertices;
+        SetUpLineRenderer();
         startPoint = this.transform.position;
     }
 
@@ -80,6 +73,8 @@ public class MoonLight : MonoBehaviour
     {
         startPoint = this.transform.position;
         direction.x = centerPosition.position.x;
+        lineRenderer.startWidth = 0.1f;
+        lineRenderer.endWidth = 0.1f;
         ClearLists();
         DrawFirstRay();
         UpdateLineRenderer();
@@ -89,9 +84,9 @@ public class MoonLight : MonoBehaviour
 
     void DrawFirstRay()
     {
-        hitPoints.Add(startPoint);
+        firstHit = Physics2D.Raycast(startPoint, (direction - startPoint).normalized, maxRayCastLength, layersToCheck);
 
-        firstHit = Physics2D.Raycast(startPoint, (direction - startPoint).normalized, maxRayCastLength, ground | mirror);
+        hitPoints.Add(startPoint);
 
         if (firstHit)
         {
@@ -100,10 +95,8 @@ public class MoonLight : MonoBehaviour
             AddGameObjectToObjectHitList(firstHit);
             if(CheckIfRayShouldBeReflected(firstHit))
             {
-                //Change the position of the mirror's light and activate it. 
-                //ReflectRay(startPoint, firstHit);
-                Reflect(startPoint, firstHit);
-
+                //Change the position of the mirror's light and activate it.
+                ReflectRay(startPoint, firstHit);
             }
         }
         else
@@ -122,7 +115,7 @@ public class MoonLight : MonoBehaviour
         if (objectHit.transform.CompareTag("Lamp"))
         {
             Debug.Log("Lamp got hit");
-            objectHit.transform.GetComponent<AffectedByMoonRay>().isHitByMoonLight = true;
+            //objectHit.transform.GetComponent<AffectedByMoonRay>().isHitByMoonLight = true;
         }
         else if (objectHit.transform.CompareTag("Platform"))
         {
@@ -130,7 +123,7 @@ public class MoonLight : MonoBehaviour
         }
         else if(objectHit.transform.CompareTag("Mirror"))
         {
-            objectHit.transform.GetComponent<AffectedByMoonRay>().isHitByMoonLight = true;
+            //objectHit.transform.GetComponent<AffectedByMoonRay>().isHitByMoonLight = true;
         }
         else
         {
@@ -148,12 +141,12 @@ public class MoonLight : MonoBehaviour
 
                 if (prevObjectsHitByRay[i].transform.CompareTag("Mirror"))
                 {
-                    prevObjectsHitByRay[i].transform.GetComponent<AffectedByMoonRay>().isHitByMoonLight = false;
+                    //prevObjectsHitByRay[i].transform.GetComponent<AffectedByMoonRay>().isHitByMoonLight = false;
                 }
 
                 if (prevObjectsHitByRay[i].transform.CompareTag("Lamp"))
                 {
-                    prevObjectsHitByRay[i].transform.GetComponent<AffectedByMoonRay>().isHitByMoonLight = false;
+                    //prevObjectsHitByRay[i].transform.GetComponent<AffectedByMoonRay>().isHitByMoonLight = false;
                 }
                 //if(prevObjectsHitByRay[i].CompareTag("Ground") /* OR ANY OTHER TAG THAT SHOULD NOT BE NOTFIED/AFFECTED BY THE MOON RAY */) 
                 //{
@@ -175,12 +168,16 @@ public class MoonLight : MonoBehaviour
             return;
         }
 
+        //hitPoints.Add(hit.point);
+
+        currentReflection++;
+
         // Calculating the directions.
         prevDirection = (hit.point - origin).normalized;
         newDirection = Vector2.Reflect(prevDirection, hit.normal);
 
         // New Raycast
-        newHit = Physics2D.Raycast(hit.point + newDirection, newDirection, maxRayCastLength, ground | mirror);
+        newHit = Physics2D.Raycast(hit.point + newDirection, newDirection, maxRayCastLength, layersToCheck);
 
         if (newHit)
         {
@@ -189,10 +186,9 @@ public class MoonLight : MonoBehaviour
             AddGameObjectToObjectHitList(newHit);
             if (CheckIfRayShouldBeReflected(newHit))
             {
-                Debug.Log("Hitting a mirror, should be reflecting");
+                //Debug.Log("Hitting a mirror, should be reflecting");
                 //Change the position of the mirror's light and activate it. 
                 ReflectRay(hit.point, newHit);
-                //Reflect(hit.point, newHit);
 
             }
         }
@@ -214,13 +210,12 @@ public class MoonLight : MonoBehaviour
         return false;
     }
 
-    void AddGameObjectToObjectHitList(RaycastHit2D firstHit)
+    void AddGameObjectToObjectHitList(RaycastHit2D hit)
     {
-        tempGameObject = firstHit.collider.gameObject;
+        tempGameObject = hit.collider.gameObject;
 
         if (!objectsHitByRay.Contains(tempGameObject))
         {
-            currentReflection++;
             objectsHitByRay.Add(tempGameObject);
         }
     }
@@ -238,130 +233,6 @@ public class MoonLight : MonoBehaviour
         for (int i = 0; i < objectsHitByRay.Count; i++)
         {
             prevObjectsHitByRay.Add(objectsHitByRay[i]);
-        }
-    }
-    //////////////
-
-    void Ray()
-    {
-        hitPoints.Add(startPoint);
-
-        firstHit = Physics2D.Raycast(startPoint, (direction - startPoint).normalized, maxRayCastLength, ground | mirror);
-
-        if (firstHit)
-        {
-            if (firstHit.transform.tag == "Lamp")
-            {
-                hitPoints.Add(firstHit.point);
-                // Move the movable object.
-            }
-            else if (firstHit.transform.tag == "Platform")
-            {
-                hitPoints.Add(firstHit.point);
-
-                if (lineRenderer.positionCount <= 2)
-                {
-                    // move it back to the original position.
-                }
-
-                if (lightingObject != null)
-                {
-                    lightingObject.LightUpObject(firstHit);
-                }
-            }
-            else
-            {
-                Reflect(startPoint, firstHit);
-                if (lineRenderer.positionCount <= 2)
-                {
-                    // move it back to the original position.
-                }
-            }
-        }
-        else
-        {
-            hitPoints.Add(startPoint + (direction - startPoint).normalized * maxRayCastLength);
-            if (lineRenderer.positionCount <= 2)
-            {
-                // move it back to the original position.
-            }
-        }
-
-        lineRenderer.positionCount = hitPoints.Count;
-        lineRenderer.SetPositions(hitPoints.ToArray());
-    }
-
-
-    void Reflect(Vector2 origin, RaycastHit2D hit)
-    {
-        if (currentReflection > maxNumOfReflection)
-        {
-            return;
-        }
-
-        hitPoints.Add(hit.point);
-   
-
-        tempGameObject = hit.collider.gameObject;
-
-        if (!objectsHitByRay.Contains(tempGameObject))
-        {
-            currentReflection++;
-            objectsHitByRay.Add(tempGameObject);
-        }
-
-        // Calculating the directions.
-        prevDirection = (hit.point - origin).normalized;
-        newDirection = Vector2.Reflect(prevDirection, hit.normal);
-
-        // New Raycast
-        newHit = Physics2D.Raycast(hit.point + newDirection, newDirection, maxRayCastLength, ground | mirror);
-
-        if (newHit)
-        {
-            if (newHit.transform.tag == "Lamp")
-            {
-                hitPoints.Add(newHit.point);
-                // Move the movable object.
-            }
-            else if (newHit.transform.tag == "Platform")
-            {
-                hitPoints.Add(newHit.point);
-                if (lineRenderer.positionCount > 2)
-                {
-                    // move it back to the original position.
-                }
-            }
-            else
-            {
-                Reflect(hit.point, newHit);
-            }
-        }
-        else
-        {
-            hitPoints.Add(hit.point + newDirection * maxRayCastLength);
-            if (lineRenderer.positionCount > 2)
-            {
-                // move it back to the original position.
-            }
-        }
-
-        //Lighting Up the object
-        if (lightingObject != null)
-        {
-            lightingObject.LightUpObject(newHit);
-        }
-    }
-
-    // Copy the list of gameObjects from the currently hit list to the previously hit list.
-    void CopyList(List<GameObject> prev, List<GameObject> current)
-    {
-        for (int i = 0; i < current.Count; i++)
-        {
-            if (!prev.Contains(current[i]))
-            {
-                prev.Add(current[i]);
-            }
         }
     }
 
@@ -388,7 +259,6 @@ public class MoonLight : MonoBehaviour
         // Clear the previously hit list.
         prevObjectsHitByRay.Clear();
         // Copy the currently hit objects to the previously hit list.
-        CopyList(prevObjectsHitByRay, objectsHitByRay);
 
     }
 
@@ -398,5 +268,14 @@ public class MoonLight : MonoBehaviour
         currentReflection = 0;
         objectsHitByRay.Clear();
         hitPoints.Clear();
+    }
+
+    void SetUpLineRenderer()
+    {
+        lineRenderer = transform.GetComponent<LineRenderer>();
+        lineRenderer.startWidth = 0.1f;
+        lineRenderer.endWidth = 0.1f;
+        lineRenderer.numCornerVertices = lineRendererNumOfCornerVertices;
+        lineRenderer.numCapVertices = lineRendererNumOfCapVertices;
     }
 }

@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 4689117061144573865}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -7.92, y: 2.26, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children:
   - {fileID: 4689117062376619114}
   m_Father: {fileID: 0}
@@ -69,7 +69,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 2210333c0d036ee4d876d51ad1434f8c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -97,6 +97,7 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+  index: 0
   centerPosition: {fileID: 0}
 --- !u!1 &4689117062376619115
 GameObject:
@@ -142,13 +143,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1ecb78c00be1cc4f99e1f8cf224a059, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ground:
-    serializedVersion: 2
-    m_Bits: 0
-  mirror:
-    serializedVersion: 2
-    m_Bits: 0
   centerPosition: {fileID: 0}
+  layersToCheck:
+    serializedVersion: 2
+    m_Bits: 2560
   objectsHitByRay: []
   prevObjectsHitByRay: []
 --- !u!120 &4689117062376619112
@@ -168,7 +166,7 @@ LineRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 0f1837cdc72cf684ba136b3d9348fbfe, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -187,7 +185,7 @@ LineRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 4
+  m_SortingOrder: 2
   m_Positions:
   - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 1}
