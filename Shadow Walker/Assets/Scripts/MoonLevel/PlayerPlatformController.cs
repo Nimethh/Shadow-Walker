@@ -24,7 +24,7 @@ public class PlayerPlatformController : PlayerPhysics
         // resetting the vector so we don't use the old one.
         Vector2 movement = Vector2.zero;
 
-        movement.x = Input.GetAxisRaw("Horizontal");
+        movement.x = Input.GetAxis("Horizontal");
 
         Jump();
 

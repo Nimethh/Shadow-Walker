@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerPhysics : MonoBehaviour
 {
-    public float minGroundYNormalized = 0.5f;
+    public float minGroundYNormalized = 0.3f;
     public float gravityScale = 3f;
     float movementDistance = 0f;
     private float minMoveDistance = 0.001f;
