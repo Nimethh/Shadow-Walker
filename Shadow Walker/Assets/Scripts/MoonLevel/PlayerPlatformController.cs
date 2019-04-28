@@ -5,8 +5,8 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class PlayerPlatformController : PlayerPhysics
 {
-    public float maxSpeed = 7f;
-    public float jumpForce = 14;
+    public float maxSpeed = 2f;
+    public float jumpForce = 6;
     Vector2 playerPos;
 
     private bool facingRight = true;
@@ -24,7 +24,7 @@ public class PlayerPlatformController : PlayerPhysics
         // resetting the vector so we don't use the old one.
         Vector2 movement = Vector2.zero;
 
-        movement.x = Input.GetAxisRaw("Horizontal");
+        movement.x = Input.GetAxis("Horizontal");
 
         Jump();
 

@@ -9,6 +9,7 @@ TagManager:
   - Ground
   - Lamp
   - MirrorHandle
+  - MirrorBody
   layers:
   - Default
   - TransparentFX
