@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlayerPhysics : MonoBehaviour
 {
-    public float minGroundYNormalized = 0.3f;
-    public float gravityScale = 3f;
+    public float minGroundYNormalized = 0.7f;
+    public float gravityScale = 2f;
     float movementDistance = 0f;
     private float minMoveDistance = 0.001f;
     private float collisionOffset = 0.01f;
@@ -20,6 +20,7 @@ public class PlayerPhysics : MonoBehaviour
     protected Vector2 playerVelocity = Vector2.zero;
 
     public bool onGround = false;
+    
 
     void Start()
     {

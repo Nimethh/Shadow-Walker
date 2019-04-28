@@ -5,8 +5,8 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class PlayerPlatformController : PlayerPhysics
 {
-    public float maxSpeed = 7f;
-    public float jumpForce = 14;
+    public float maxSpeed = 2f;
+    public float jumpForce = 6;
     Vector2 playerPos;
 
     private bool facingRight = true;

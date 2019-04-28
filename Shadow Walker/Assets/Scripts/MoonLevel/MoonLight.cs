@@ -114,7 +114,6 @@ public class MoonLight : MonoBehaviour
 
         if (objectHit.transform.CompareTag("Lamp"))
         {
-            Debug.Log("Lamp got hit");
             //objectHit.transform.GetComponent<AffectedByMoonRay>().isHitByMoonLight = true;
         }
         else if (objectHit.transform.CompareTag("Platform"))
@@ -124,6 +123,11 @@ public class MoonLight : MonoBehaviour
         else if(objectHit.transform.CompareTag("Mirror"))
         {
             //objectHit.transform.GetComponent<AffectedByMoonRay>().isHitByMoonLight = true;
+            objectHit.transform.parent.GetComponent<AffectedByMoonRay>().isHitByMoonLight = true;
+        }
+        else if(objectHit.transform.CompareTag("MirrorBody") || objectHit.transform.CompareTag("MirrorHandle"))
+        {
+            objectHit.transform.GetComponent<AffectedByMoonRay>().isHitByMoonLight = true;
         }
         else
         {
@@ -142,6 +146,12 @@ public class MoonLight : MonoBehaviour
                 if (prevObjectsHitByRay[i].transform.CompareTag("Mirror"))
                 {
                     //prevObjectsHitByRay[i].transform.GetComponent<AffectedByMoonRay>().isHitByMoonLight = false;
+                    prevObjectsHitByRay[i].transform.parent.GetComponent<AffectedByMoonRay>().isHitByMoonLight = false;
+                }
+
+                if (prevObjectsHitByRay[i].transform.CompareTag("MirrorBody") || prevObjectsHitByRay[i].transform.CompareTag("MirrorHandle"))
+                {
+                    prevObjectsHitByRay[i].transform.GetComponent<AffectedByMoonRay>().isHitByMoonLight = false;
                 }
 
                 if (prevObjectsHitByRay[i].transform.CompareTag("Lamp"))
