@@ -43,32 +43,17 @@ public class MoonLight : MonoBehaviour
     [SerializeField]
     List<GameObject> prevObjectsHitByRay;
 
-    // Script to light up the objects.
-    private LightingObject lightingObject;
+    private Light moonLight;
+    private Vector3 moonLightPos;
     
     void Start()
     {
         hitPoints = new List<Vector3>();
+        SetUpPointLight();
         SetUpLineRenderer();
         startPoint = this.transform.position;
     }
 
-    //void Update() //Can probably be moved to fixedUpdate
-    //{
-    //    ListCheck(prevObjectsHitByRay, objectsHitByRay);
-    //}
-
-    //void FixedUpdate()
-    //{
-    //    startPoint = this.transform.position;
-    //    direction.x = centerPosition.position.x;
-    //    ClearLists();
-    //    Ray();
-    //}
-
-
-
-    ////////////
     void FixedUpdate()
     {
         startPoint = this.transform.position;
@@ -102,6 +87,7 @@ public class MoonLight : MonoBehaviour
         else
         {
             hitPoints.Add(startPoint + (direction - startPoint).normalized * maxRayCastLength);
+            DeActivatePointLight();
             //Move the moon's own light to firstHit.point
         }
 
@@ -114,11 +100,12 @@ public class MoonLight : MonoBehaviour
 
         if (objectHit.transform.CompareTag("Lamp"))
         {
+            ActivatePointLight(objectHit);
             //objectHit.transform.GetComponent<AffectedByMoonRay>().isHitByMoonLight = true;
         }
         else if (objectHit.transform.CompareTag("Platform"))
         {
-
+            ActivatePointLight(objectHit);
         }
         else if(objectHit.transform.CompareTag("Mirror"))
         {
@@ -205,6 +192,7 @@ public class MoonLight : MonoBehaviour
         else
         {
             hitPoints.Add(hit.point + newDirection * maxRayCastLength);
+            DeActivatePointLight();
             //Move the moon's own light to firstHit.point
         }
 
@@ -246,32 +234,6 @@ public class MoonLight : MonoBehaviour
         }
     }
 
-    void ListCheck(List<GameObject> prev, List<GameObject> current)
-    {
-        for (int i = 0; i < prev.Count; i++)
-        {
-            for (int j = 0; j < current.Count; j++)
-            {
-                if (current[j].gameObject.name == prev[i].gameObject.name)
-                {
-                    lightingObject = current[j].GetComponent<LightingObject>();
-                    lightingObject.canBeLit = true;
-                }
-                else
-                {
-                    lightingObject = prev[i].gameObject.GetComponent<LightingObject>();
-                    lightingObject.canBeLit = false;
-
-                }
-            }
-        }
-
-        // Clear the previously hit list.
-        prevObjectsHitByRay.Clear();
-        // Copy the currently hit objects to the previously hit list.
-
-    }
-
     // Resetting the variables and clearing the lists.   Might need to moving them to a better place.
     void ClearLists()
     {
@@ -287,5 +249,27 @@ public class MoonLight : MonoBehaviour
         lineRenderer.endWidth = 0.1f;
         lineRenderer.numCornerVertices = lineRendererNumOfCornerVertices;
         lineRenderer.numCapVertices = lineRendererNumOfCapVertices;
+    }
+
+    void SetUpPointLight()
+    {
+        moonLight = this.gameObject.GetComponentInChildren<Light>();
+        moonLightPos = this.transform.position;
+        moonLightPos.z = 100;
+        moonLight.transform.position = moonLightPos;
+    }
+
+    void ActivatePointLight(RaycastHit2D hitPoint)
+    {
+        moonLightPos = hitPoint.point;
+        moonLightPos.z = 4.5f;
+        moonLight.transform.position = moonLightPos;
+    }
+
+    void DeActivatePointLight()
+    {
+        moonLightPos = this.transform.position;
+        moonLightPos.z = 100;
+        moonLight.transform.position = moonLightPos;
     }
 }

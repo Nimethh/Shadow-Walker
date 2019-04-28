@@ -3280,12 +3280,12 @@ PrefabInstance:
     - target: {fileID: 4063528887623512697, guid: cfa52e0da09dfa946bf5b65949b0198c,
         type: 3}
       propertyPath: m_Range
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4063528887623512697, guid: cfa52e0da09dfa946bf5b65949b0198c,
         type: 3}
       propertyPath: m_Intensity
-      value: 5
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4063528887623512697, guid: cfa52e0da09dfa946bf5b65949b0198c,
         type: 3}
