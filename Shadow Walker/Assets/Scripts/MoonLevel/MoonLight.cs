@@ -58,8 +58,8 @@ public class MoonLight : MonoBehaviour
     {
         startPoint = this.transform.position;
         direction.x = centerPosition.position.x;
-        lineRenderer.startWidth = 0.1f;
-        lineRenderer.endWidth = 0.1f;
+        lineRenderer.startWidth = 0.15f;
+        lineRenderer.endWidth = 0.15f;
         ClearLists();
         DrawFirstRay();
         UpdateLineRenderer();

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerPhysics : MonoBehaviour
 {
-    public float minGroundYNormalized = 0.7f;
+    public float minGroundYNormalized = 0.8f;
     public float gravityScale = 2f;
     float movementDistance = 0f;
     private float minMoveDistance = 0.001f;
@@ -20,7 +20,6 @@ public class PlayerPhysics : MonoBehaviour
     protected Vector2 playerVelocity = Vector2.zero;
 
     public bool onGround = false;
-    
 
     void Start()
     {
@@ -65,7 +64,7 @@ public class PlayerPhysics : MonoBehaviour
 
         onGround = false;
 
-        Vector2 deltaPosition = velocity * Time.deltaTime;
+        Vector2 deltaPosition = velocity * Time.fixedDeltaTime;
 
         Vector2 moveAlongGround = new Vector2(groundNormalized.y, -groundNormalized.x);
 
@@ -97,8 +96,15 @@ public class PlayerPhysics : MonoBehaviour
                     onGround = true;
                     if (p_movingOnSlope)
                     {
+                        if (currentNormal.y < 0.8f)
+                        {
+                            gravityScale = 3f;
+                        }
+                        else
+                            gravityScale = 2f;
                         groundNormalized = currentNormal;
                         currentNormal.x = 0;
+
                     }
                 }
 
