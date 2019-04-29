@@ -26,23 +26,23 @@ public class SunController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if ( Input.GetAxis("Mouse X") > 0 && transform.position.x < points[2].position.x)
-        {
-            MoveRight();
-        }
-        if (Input.GetAxis("Mouse X") < 0 && transform.position.x > points[0].position.x)
-        {
-            MoveLeft();
-        }
-
-        //if (Input.GetKey(KeyCode.L) && transform.position.x < points[2].position.x)
+        //if ( Input.GetAxis("Mouse X") > 0 && transform.position.x < points[2].position.x)
         //{
         //    MoveRight();
         //}
-        //if (Input.GetKey(KeyCode.J) && transform.position.x > points[0].position.x)
+        //if (Input.GetAxis("Mouse X") < 0 && transform.position.x > points[0].position.x)
         //{
         //    MoveLeft();
         //}
+
+        if (Input.GetKey(KeyCode.L) && transform.position.x < points[2].position.x)
+        {
+            MoveRight();
+        }
+        if (Input.GetKey(KeyCode.J) && transform.position.x > points[0].position.x)
+        {
+            MoveLeft();
+        }
 
         //Rotate();
 

@@ -25,11 +25,19 @@ public class FieldOfView : MonoBehaviour
     public MeshFilter viewMeshFilter;
     Mesh viewMesh;
 
+    //Added 2019-04-29
+    public MeshFilter heatDistortionMeshFilter;
+
+
     void Start()
     {
         viewMesh = new Mesh();
         viewMesh.name = "View Mesh";
         viewMeshFilter.mesh = viewMesh;
+
+        //Added 2019-04-29
+        heatDistortionMeshFilter.mesh = viewMesh;
+
 
         //StartCoroutine("FindTargetsWithDelay", .2f);
     }
