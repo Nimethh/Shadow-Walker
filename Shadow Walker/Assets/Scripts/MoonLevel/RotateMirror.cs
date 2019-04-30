@@ -25,14 +25,14 @@ public class RotateMirror : MonoBehaviour
         {
             if (rotatingSurface.transform.rotation.z < maxRotation)
             {
-                rotatingSurface.transform.Rotate(0f, 0f, 0.1f);
+                rotatingSurface.transform.Rotate(0f, 0f, 0.15f);
             }
         }
         if (canBeRotated == true && Input.GetKey(KeyCode.D))
         {
             if (rotatingSurface.transform.rotation.z > maxRotation * -1f)
             {
-                rotatingSurface.transform.Rotate(0f, 0f, -0.1f);
+                rotatingSurface.transform.Rotate(0f, 0f, -0.15f);
             }
         }
     }

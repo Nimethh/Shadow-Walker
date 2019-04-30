@@ -13,6 +13,8 @@ public class PlayerPlatformController : PlayerPhysics
 
     private SpriteRenderer spriteRenderer;
 
+    float unableToMoveTimer = 0f;
+
 
     void Awake()
     {
@@ -76,4 +78,10 @@ public class PlayerPlatformController : PlayerPhysics
         }
     }
 
+    public void StopAllMovement(float amountOfSecondsToStopMovement)
+    {
+        rb.Sleep();
+        amountOfSecondsToStopMovement = Mathf.Abs(amountOfSecondsToStopMovement);
+        unableToMoveTimer = amountOfSecondsToStopMovement;
+    }
 }

@@ -11,7 +11,6 @@ public class SunController : MonoBehaviour
 
     private int numberOfPoints = 100;
 
-
     [SerializeField]
     private Transform centerPosition;
 
@@ -51,14 +50,14 @@ public class SunController : MonoBehaviour
     void MoveRight()
     {
         index++;
-        float t = index / (float)numberOfPoints * 0.2f;
+        float t = index / (float)numberOfPoints * 0.15f;
         transform.position = CalculateQuadraticBezeirPoint(t, points[0].position, points[1].position, points[2].position);
     }
 
     void MoveLeft()
     {
         index--;
-        float t = index / (float)numberOfPoints * 0.2f;
+        float t = index / (float)numberOfPoints * 0.15f;
         transform.position = CalculateQuadraticBezeirPoint(t, points[0].position, points[1].position, points[2].position);
     }
 
