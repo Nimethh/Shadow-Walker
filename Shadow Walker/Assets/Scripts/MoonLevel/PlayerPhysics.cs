@@ -5,7 +5,11 @@ using UnityEngine;
 public class PlayerPhysics : MonoBehaviour
 {
     public float minGroundYNormalized = 0.8f;
-    public float gravityScale = 2f;
+    public float gravityScale = 3f;
+    [SerializeField]
+    private float gravityOnSlopes = 2f;
+    [SerializeField]
+    private float normalGravity = 3f;
     float movementDistance = 0f;
     private float minMoveDistance = 0.001f;
     private float collisionOffset = 0.01f;
@@ -98,10 +102,10 @@ public class PlayerPhysics : MonoBehaviour
                     {
                         if (currentNormal.y < 0.8f)
                         {
-                            gravityScale = 3f;
+                            gravityScale = gravityOnSlopes;
                         }
                         else
-                            gravityScale = 2f;
+                            gravityScale = normalGravity;
                         groundNormalized = currentNormal;
                         currentNormal.x = 0;
 

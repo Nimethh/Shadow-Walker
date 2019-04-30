@@ -48,7 +48,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _Noise:
-        m_Texture: {fileID: 2800000, guid: e77ea275685d2344d9624365cb706367, type: 3}
+        m_Texture: {fileID: 2800000, guid: 6e2631e563eaf0f4c9c8156c76ffef96, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
@@ -60,7 +60,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _StrengthFilter:
-        m_Texture: {fileID: 2800000, guid: 22d6ca224b58fdb4b8d5a427091e24dc, type: 3}
+        m_Texture: {fileID: 2800000, guid: d10fe7aa2e8542549bbeb9b8c1928c38, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
@@ -77,7 +77,7 @@ Material:
     - _Parallax: 0.02
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
-    - _Speed: 50
+    - _Speed: 70
     - _SrcBlend: 1
     - _Strength: 0.0025
     - _UVSec: 0

@@ -5,11 +5,12 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody2D))]
 public class PlayerPlatformController : PlayerPhysics
 {
-    public float maxSpeed = 2f;
+    public float speed = 2f;
     public float jumpForce = 6;
     Vector2 playerPos = Vector2.zero;
     private bool canMove = true;
     private bool facingRight = true;
+    
 
     private SpriteRenderer spriteRenderer;
 
@@ -32,7 +33,7 @@ public class PlayerPlatformController : PlayerPhysics
 
             Jump();
 
-            playerVelocity = movement * maxSpeed;
+            playerVelocity = movement * speed;
             if (facingRight == false && movement.x > 0)
             {
                 Flip();

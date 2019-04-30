@@ -226,8 +226,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minGroundYNormalized: 0.8
   gravityScale: 0.5
+  gravityOnSlopes: 2
+  normalGravity: 1.5
   onGround: 0
-  maxSpeed: 2
+  speed: 2
   jumpForce: 6.5
 --- !u!1 &122729077
 GameObject:
