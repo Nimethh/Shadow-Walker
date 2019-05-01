@@ -6,6 +6,8 @@
 		_StrengthFilter("Strength Filter", 2D) = "white" {}
 		_Strength("Distort Strength", float) = 1.0
 		_Speed("Distort Speed", float) = 1.0
+		/*_BumpMap("Normalmap", 2D) = "bump" {}
+		_BumpAmt("Distortion", range(0,128)) = 10*/
 	}
 
 		SubShader
@@ -14,20 +16,27 @@
 			{
 				"Queue" = "Transparent"
 				"DisableBatching" = "True"
+				//"LightMode" = "Always"
 			}
 
 			GrabPass
 			{
+				//Name "BASE"
 				"_BackgroundTexture"
+				//"LightMode" = "Always"
 			}
 
 			Pass
 			{
-				ZTest Always
+				// Draw on top of everything.
+				//ZTest Always
+				/*Name "BASE"
+				"LightMode" = "Always"*/
 
 				CGPROGRAM
 				#pragma vertex vert
 				#pragma fragment frag
+				//#pragma multi_compile_fog
 				#include "UnityCG.cginc"
 
 				sampler2D _Noise;
@@ -35,6 +44,9 @@
 				sampler2D _BackgroundTexture;
 				float     _Strength;
 				float     _Speed;
+
+				/*float _BumpAmt;
+				float4 _BumpMap_ST;*/
 
 				struct vertexInput
 				{
