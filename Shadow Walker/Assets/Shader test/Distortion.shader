@@ -39,11 +39,8 @@
 			float     _Strength;
 			float     _Speed;
 
-			struct vertexInput
-			{
-				float4 vertex : POSITION;
-				float3 texCoord : TEXCOORD0;
-			};
+				/*float _BumpAmt;
+				float4 _BumpMap_ST;*/
 
 			struct vertexOutput
 			{
@@ -55,10 +52,12 @@
 			{
 				vertexOutput output;
 
-				// billboard to camera
-				float4 pos = input.vertex;
-				pos = mul(UNITY_MATRIX_P,
-					  mul(UNITY_MATRIX_MV, float4(0, 0, 0, 0.2))
+				vertexOutput vert(vertexInput input)
+				{
+					vertexOutput output;
+					float4 pos = input.vertex;
+					pos = mul(UNITY_MATRIX_P,
+						  mul(UNITY_MATRIX_MV, float4(0, 0, 0, 0.2))
 						  + float4(pos.x, pos.z, 0, 0));
 				output.pos = pos;
 
