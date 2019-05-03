@@ -112,4 +112,28 @@ public class PlayerController : MonoBehaviour
         amountOfSecondsToStopMovement = Mathf.Abs(amountOfSecondsToStopMovement);
         unableToMoveTimer = amountOfSecondsToStopMovement;
     }
+
+    //void ClimbCheck()
+    //{
+    //    RaycastHit2D hitUpwards = Physics2D.Raycast(transform.position, Vector2.up, maxRayDistance, ladder);
+    //    RaycastHit2D hitDownwards = Physics2D.Raycast(transform.position, Vector2.down, maxRayDistance, ladder);
+    //    if (hitUpwards || hitDownwards)
+    //    {
+    //        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.S))
+    //        {
+    //            climbing = true;
+    //        }
+    //    }
+    //    else
+    //    {
+    //        climbing = false;
+    //    }
+
+    //    if (climbing == true && hitUpwards != false || hitDownwards != false)
+    //    {
+    //        Climb();
+    //    }
+    //    else
+    //        rb.gravityScale = 3f;
+    //}
 }

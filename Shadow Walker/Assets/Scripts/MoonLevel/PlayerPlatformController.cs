@@ -6,12 +6,13 @@ using UnityEngine;
 public class PlayerPlatformController : PlayerPhysics
 {
     public float speed = 2f;
+    public float climbingSpeed = 2f;
     public float jumpForce = 6;
     Vector2 playerPos = Vector2.zero;
     private bool canMove = true;
     private bool facingRight = true;
-    
-
+    Vector2 movement = Vector2.zero;
+    //Vector2 climbingMovement = Vector2.zero;
     private SpriteRenderer spriteRenderer;
 
     float unableToMoveTimer = 0f;
@@ -27,10 +28,10 @@ public class PlayerPlatformController : PlayerPhysics
         //if (canMove == true)
         //{
             // resetting the vector so we don't use the old one.
-            Vector2 movement = Vector2.zero;
+            movement = Vector2.zero;
             playerPos = Vector2.zero;
             movement.x = Input.GetAxis("Horizontal");
-
+            Climb();
             Jump();
 
             playerVelocity = movement * speed;
@@ -84,5 +85,14 @@ public class PlayerPlatformController : PlayerPhysics
         rb.Sleep();
         amountOfSecondsToStopMovement = Mathf.Abs(amountOfSecondsToStopMovement);
         unableToMoveTimer = amountOfSecondsToStopMovement;
+    }
+
+    void Climb()
+    {
+        if (isClimbing == true)
+        {
+            movement.y = Input.GetAxis("Vertical");
+            rb.velocity = new Vector2(rb.velocity.x, movement.y * climbingSpeed);
+        }
     }
 }

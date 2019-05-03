@@ -29,7 +29,7 @@ public class BridgeAffectedBySunlight : AffectedByTheSun
         bridgeObject.SetActive(true);
         shadowCastingCollider.enabled = true;
         jumpCollider.enabled = true;
-        Debug.Log("Bridge JustGotCoveredFromSunlight()");
+        //Debug.Log("Bridge JustGotCoveredFromSunlight()");
     }
 
     public override void JustGotExposedToSunlight()
@@ -38,22 +38,22 @@ public class BridgeAffectedBySunlight : AffectedByTheSun
         bridgeObject.SetActive(false);
         shadowCastingCollider.enabled = false;
         jumpCollider.enabled = false;
-        Debug.Log("Bridge JustGotExposedToSunlight()");
+        //Debug.Log("Bridge JustGotExposedToSunlight()");
     }
 
     public override void UnderFullCover()
     {
-        Debug.Log("Bridge UnderFullCover()");
+        //Debug.Log("Bridge UnderFullCover()");
     }
 
     public override void UnderFullExposure()
     {
-        Debug.Log("Bridge UnderFullExposure()");
+        //Debug.Log("Bridge UnderFullExposure()");
     }
 
     public override void UnderPartialCover()
     {
-        Debug.Log("Bridge UnderPartialCover()");
+        //Debug.Log("Bridge UnderPartialCover()");
     }
 
 }
