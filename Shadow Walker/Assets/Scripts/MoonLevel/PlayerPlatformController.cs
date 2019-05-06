@@ -11,8 +11,8 @@ public class PlayerPlatformController : PlayerPhysics
     Vector2 playerPos = Vector2.zero;
     private bool canMove = true;
     private bool facingRight = true;
-    private AudioSource aS;
-
+    Vector2 movement = Vector2.zero;
+    //Vector2 climbingMovement = Vector2.zero;
     private SpriteRenderer spriteRenderer;
 
     float unableToMoveTimer = 0f;
@@ -21,29 +21,28 @@ public class PlayerPlatformController : PlayerPhysics
     void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        aS = GetComponent<AudioSource>();
     }
 
     protected override void Movement()
     {
         //if (canMove == true)
         //{
-            // resetting the vector so we don't use the old one.
-            movement = Vector2.zero;
-            playerPos = Vector2.zero;
-            movement.x = Input.GetAxis("Horizontal");
-            Climb();
-            Jump();
+        // resetting the vector so we don't use the old one.
+        movement = Vector2.zero;
+        playerPos = Vector2.zero;
+        movement.x = Input.GetAxis("Horizontal");
+        Climb();
+        Jump();
 
-            playerVelocity = movement * speed;
-            if (facingRight == false && movement.x > 0)
-            {
-                Flip();
-            }
-            else if (facingRight == true && movement.x < 0)
-            {
-                Flip();
-            }
+        playerVelocity = movement * speed;
+        if (facingRight == false && movement.x > 0)
+        {
+            Flip();
+        }
+        else if (facingRight == true && movement.x < 0)
+        {
+            Flip();
+        }
         //}
         //else
         //{
@@ -57,7 +56,6 @@ public class PlayerPlatformController : PlayerPhysics
     {
         if (Input.GetButtonDown("Jump") && onGround)
         {
-            aS.Play();
             velocity.y = jumpForce;
         }
     }
@@ -76,7 +74,7 @@ public class PlayerPlatformController : PlayerPhysics
         {
             //if (playerPos == Vector2.zero)
             //{
-                playerPos = this.transform.position;
+            playerPos = this.transform.position;
             //}
             //canMove = !canMove;
         }

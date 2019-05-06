@@ -25,12 +25,12 @@
 			// Render the object with the texture generated above, and invert the colors
 			Pass
 			{
-				//ZTest Always 
+			//ZTest Always 
 
-				CGPROGRAM
-				#pragma vertex vert
-				#pragma fragment frag
-				#include "UnityCG.cginc"
+			CGPROGRAM
+			#pragma vertex vert
+			#pragma fragment frag
+			#include "UnityCG.cginc"
 
 			// Properties
 			sampler2D _Noise;
@@ -39,8 +39,11 @@
 			float     _Strength;
 			float     _Speed;
 
-				/*float _BumpAmt;
-				float4 _BumpMap_ST;*/
+			struct vertexInput
+			{
+				float4 vertex : POSITION;
+				float3 texCoord : TEXCOORD0;
+			};
 
 			struct vertexOutput
 			{
@@ -52,12 +55,10 @@
 			{
 				vertexOutput output;
 
-				vertexOutput vert(vertexInput input)
-				{
-					vertexOutput output;
-					float4 pos = input.vertex;
-					pos = mul(UNITY_MATRIX_P,
-						  mul(UNITY_MATRIX_MV, float4(0, 0, 0, 0.2))
+				// billboard to camera
+				float4 pos = input.vertex;
+				pos = mul(UNITY_MATRIX_P,
+					  mul(UNITY_MATRIX_MV, float4(0, 0, 0, 0.2))
 						  + float4(pos.x, pos.z, 0, 0));
 				output.pos = pos;
 
