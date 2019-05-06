@@ -9,6 +9,8 @@ public class PlayerSunBehavior : AffectedByTheSun
     //private PlayerController playerController;
     private PlayerPlatformController playerPlatformController;
 
+    public Transform spawningPos;
+
     public void Start()
     {
         AffectedByTheSunScriptStart();
@@ -17,6 +19,7 @@ public class PlayerSunBehavior : AffectedByTheSun
         playerPlatformController = GetComponent<PlayerPlatformController>();
 
         startingPoint = GameObject.Find("PrototypeStartingPoint");
+        spawningPos = startingPoint.transform;
     }
 
     public void Update()
@@ -32,8 +35,9 @@ public class PlayerSunBehavior : AffectedByTheSun
     public override void JustGotExposedToSunlight()
     {
         //playerController.StopAllMovement(0.8f);
-        playerPlatformController.StopAllMovement(0.8f);
-        transform.position = startingPoint.transform.position;
+        //playerPlatformController.StopAllMovement(0.8f);
+        //transform.position = startingPoint.transform.position;
+        transform.gameObject.SetActive(false);
         //Debug.Log("JustGotExposedToSunlight()");
 
     }

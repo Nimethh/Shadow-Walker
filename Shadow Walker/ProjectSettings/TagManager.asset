@@ -14,6 +14,8 @@ TagManager:
   - Through
   - LadderTop
   - LadderBottom
+  - CheckPoint
+  - Sun
   layers:
   - Default
   - TransparentFX

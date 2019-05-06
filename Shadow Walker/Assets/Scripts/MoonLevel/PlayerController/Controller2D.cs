@@ -12,11 +12,16 @@ public class Controller2D : RaycastController
 	public CollisionInfo collisionInfo;
 	[HideInInspector]
 	public Vector2 playerInput;
+
+    private PlayerSunBehavior playerSunBehavior;
+    private SunController sunController;
 	
 	public override void Start()
     {
 		base.Start ();
         collisionInfo.faceDir = 1;
+        playerSunBehavior = GetComponent<PlayerSunBehavior>();
+        sunController = GameObject.FindGameObjectWithTag("Sun").GetComponent<SunController>();
 	}
     
     public Vector2 Move(Vector2 moveAmount, Vector2 input, bool standingOnPlatform = false)
@@ -116,6 +121,11 @@ public class Controller2D : RaycastController
                         continue;
                     }
                 }
+                if(hit.collider.tag == "CheckPoint")
+                {
+                    SaveSpawnPoints(hit.collider.gameObject);
+                    continue;
+                }
 
                 otherCollider = hit.collider;
 			
@@ -181,6 +191,11 @@ public class Controller2D : RaycastController
                 if(hit.collider.tag == "MovingPlatform")
                 {
                     this.gameObject.transform.parent = hit.collider.gameObject.transform;
+                }
+                if(hit.collider.tag == "CheckPoint")
+                {
+                    SaveSpawnPoints(hit.collider.gameObject);
+                    continue;
                 }
                 if(hit.collider.tag == "LadderTop" && playerInput.y == 1)
                 {
@@ -340,6 +355,13 @@ public class Controller2D : RaycastController
     {
         collisionInfo.fallingThroughPlatform = false;
 	}
+
+    void SaveSpawnPoints(GameObject checkPoint)
+    {
+        CheckPoint checkPointScript = checkPoint.gameObject.GetComponent<CheckPoint>();
+        playerSunBehavior.spawningPos.position = checkPoint.transform.position;
+        sunController.checkPointIndex = checkPointScript.sunCheckPointIndex;
+    }
 
     public struct CollisionInfo
     {

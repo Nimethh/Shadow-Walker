@@ -7,18 +7,22 @@ public class SunController : MonoBehaviour
     [SerializeField]
     private Transform[] points;
     [SerializeField]
-    private int index;
-
-    private int numberOfPoints = 100;
-
-    [SerializeField]
     private Transform centerPosition;
+    public int index;
 
+    public bool canMove = true;
+    public int checkPointIndex = 100;
+    private int numberOfPoints = 100;
+    float startT;
+   
+
+    [Range(0f, 1f)][SerializeField]
+    private float sunSpeed = 0.2f;
     private void Start()
     {
         //lineRenderer.positionCount = numberOfPoints;
         //transform.position = points[0].position;
-        float startT = index / (float)numberOfPoints * 0.5f;
+        startT = index / (float)numberOfPoints * sunSpeed;
         transform.position = CalculateQuadraticBezeirPoint(startT, points[0].position, points[1].position, points[2].position);
         //DrawQuadraticCurve();
     }
@@ -34,30 +38,73 @@ public class SunController : MonoBehaviour
         //    MoveLeft();
         //}
 
-        if (Input.GetKey(KeyCode.L) && transform.position.x < points[2].position.x)
+        if (canMove == true)
         {
-            MoveRight();
+            if (Input.GetKey(KeyCode.L) && transform.position.x < points[2].position.x)
+            {
+                MoveRight();
+            }
+            if (Input.GetKey(KeyCode.J) && transform.position.x > points[0].position.x)
+            {
+                MoveLeft();
+            }
         }
-        if (Input.GetKey(KeyCode.J) && transform.position.x > points[0].position.x)
-        {
-            MoveLeft();
-        }
+        //else
+        //{
+        //    if (index > checkPointIndex)
+        //    {
+        //        Debug.Log("Move Left");
+        //        MoveLeftToCheckPointPos();
+        //        //if (sunController.index <= sunCheckPointIndex)
+        //        //{
+        //        //    Debug.Log("still didn't reach the pos");
+        //        //    SpawnPlayer();
+        //        //    sunController.canMove = true;
 
+        //        //}
+        //    }
+        //    else if (index < checkPointIndex)
+        //    {
+        //        Debug.Log("Move right");
+        //        MoveRightToCheckPointPos();
+        //        //if (sunController.index >= sunCheckPointIndex)
+        //        //{
+        //        //    Debug.Log("still didn't reach the pos");
+
+        //        //    sunController.canMove = true;
+        //        //    SpawnPlayer();
+        //        //}
+        //    }
+        //}
         //Rotate();
 
     }
-
+    
     void MoveRight()
     {
         index++;
-        float t = index / (float)numberOfPoints * 0.20f;
+        float t = index / (float)numberOfPoints * sunSpeed;
         transform.position = CalculateQuadraticBezeirPoint(t, points[0].position, points[1].position, points[2].position);
     }
 
     void MoveLeft()
     {
         index--;
-        float t = index / (float)numberOfPoints * 0.20f;
+        float t = index / (float)numberOfPoints * sunSpeed;
+        transform.position = CalculateQuadraticBezeirPoint(t, points[0].position, points[1].position, points[2].position);
+    }
+
+    public void MoveRightToCheckPointPos()
+    {
+        index++;
+        float t = index / (float)numberOfPoints * sunSpeed /** Time.smoothDeltaTime*/;
+        transform.position = CalculateQuadraticBezeirPoint(t, points[0].position, points[1].position, points[2].position);
+    }
+
+    public void MoveLeftToCheckPointPos()
+    {
+        index--;
+        float t = index / (float)numberOfPoints * sunSpeed /** Time.smoothDeltaTime*/;
         transform.position = CalculateQuadraticBezeirPoint(t, points[0].position, points[1].position, points[2].position);
     }
 
@@ -86,5 +133,4 @@ public class SunController : MonoBehaviour
 
         return point;
     }
-
 }
