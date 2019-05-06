@@ -4,7 +4,8 @@ using System.Collections;
 [RequireComponent (typeof (Player))]
 public class PlayerInput : MonoBehaviour
 {
-
+    ParticleSystem movingPartical;
+    private GameObject movingParticalObject;
 	Player player;
     Vector2 directionalInput;
     Controller2D controller;
@@ -17,6 +18,8 @@ public class PlayerInput : MonoBehaviour
 		player = GetComponent<Player> ();
         controller = GetComponent<Controller2D>();
         animator = GetComponent<Animator>();
+        movingParticalObject = transform.GetChild(0).gameObject;
+        movingPartical = movingParticalObject.GetComponent<ParticleSystem>();
 	}
 
 	void Update ()
@@ -70,5 +73,10 @@ public class PlayerInput : MonoBehaviour
         Vector2 characterScale = transform.localScale;
         characterScale.x *= -1;
         transform.localScale = characterScale;
+    }
+
+    public void PlayMovingParticle()
+    {
+        movingPartical.Play();
     }
 }
