@@ -4,8 +4,8 @@ using System.Collections;
 [RequireComponent(typeof(PolygonCollider2D))]
 public class RaycastController : MonoBehaviour
 {
-
-    public LayerMask collisionMask;
+    public LayerMask ground;
+    public LayerMask ladder;
 
     public const float skinWidth = .05f;
     const float distanceBetweenRays = 0.05f;
@@ -42,6 +42,8 @@ public class RaycastController : MonoBehaviour
         raycastOrigins.bottomRight = new Vector2(bounds.max.x, bounds.min.y);
         raycastOrigins.topLeft = new Vector2(bounds.min.x, bounds.max.y);
         raycastOrigins.topRight = new Vector2(bounds.max.x, bounds.max.y);
+        raycastOrigins.middleBottom = new Vector2(bounds.center.x, bounds.min.y);
+        raycastOrigins.middleTop = new Vector2(bounds.center.x, bounds.max.y);
     }
 
     public void CalculateRaySpacing()
@@ -50,7 +52,6 @@ public class RaycastController : MonoBehaviour
         bounds.Expand(skinWidth * -2);
 
         float boundsWidth = bounds.size.x;
-        Debug.Log(boundsWidth);
         float boundsHeight = bounds.size.y;
 
         numberOfHorizontalRays = Mathf.RoundToInt(boundsHeight / distanceBetweenRays);
@@ -64,5 +65,6 @@ public class RaycastController : MonoBehaviour
     {
         public Vector2 topLeft, topRight;
         public Vector2 bottomLeft, bottomRight;
+        public Vector2 middleTop, middleBottom;
     }
 }

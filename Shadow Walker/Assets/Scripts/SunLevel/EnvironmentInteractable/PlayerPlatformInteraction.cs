@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class PlayerPlatformInteraction : MonoBehaviour
 {
-
+    private void Start()
+    {
+        
+    }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Player"))

@@ -9,87 +9,128 @@ public class Controller2D : RaycastController
     [SerializeField][Range(0f,100f)]
 	private float maxDescendSlopeAngle = 80;
 	
-	public CollisionInfo collisions;
+	public CollisionInfo collisionInfo;
 	[HideInInspector]
 	public Vector2 playerInput;
 	
 	public override void Start()
     {
 		base.Start ();
-		collisions.faceDir = 1;
+        collisionInfo.faceDir = 1;
 	}
     
     public Vector2 Move(Vector2 moveAmount, Vector2 input, bool standingOnPlatform = false)
     {
 		UpdateRaycastOrigins ();
-
-		collisions.Reset ();
-		collisions.moveAmountOld = moveAmount;
+        collisionInfo.Reset ();
+        collisionInfo.moveAmountOld = moveAmount;
 		playerInput = input;
 
-		if (moveAmount.x != 0) {
-			collisions.faceDir = (int)Mathf.Sign(moveAmount.x);
+		if (moveAmount.x != 0)
+        {
+            collisionInfo.faceDir = (int)Mathf.Sign(moveAmount.x);
 		}
 
-		if (moveAmount.y < 0) {
+		if (moveAmount.y < 0 && collisionInfo.climbing == false && collisionInfo.canClimbOld == false)
+        {
 			DescendSlope(ref moveAmount);
 		}
 
 		HorizontalCollisions (ref moveAmount);
-		if (moveAmount.y != 0) {
+
+		if (moveAmount.y != 0)
+        {
 			VerticalCollisions (ref moveAmount);
 		}
 
 		transform.Translate (moveAmount);
 
-		if (standingOnPlatform) {
-			collisions.below = true;
-		}
+		if (standingOnPlatform)
+        {
+            collisionInfo.below = true;
+            collisionInfo.canClimbOld = false;
+            collisionInfo.climbing = false;
+            Debug.Log("Standing on platform " + collisionInfo.climbing);
+
+        }
+
+        LadderCheck(0.1f,0.1f);
 
 		return moveAmount;
 	}
 
 	void HorizontalCollisions(ref Vector2 moveAmount)
     {
+        
 		float originalMoveAmountX = moveAmount.x;
 		Collider2D otherCollider = null;
 
-		float directionX = collisions.faceDir;
+		float directionX = collisionInfo.faceDir;
 		float rayLength = Mathf.Abs (moveAmount.x) + skinWidth;
 
 		if (Mathf.Abs(moveAmount.x) < skinWidth)
         {
 			rayLength = 2*skinWidth;
 		}
+
 		
-		for (int i = 0; i < numberOfHorizontalRays; i ++) {
-			Vector2 rayOrigin = (directionX == -1)?raycastOrigins.bottomLeft:raycastOrigins.bottomRight;
+		for (int i = 0; i < numberOfHorizontalRays; i ++)
+        {
+            //if (collisionInfo.canClimbOld == true)
+            //{
+            //    continue;
+            //}
+            //if (collisionInfo.climbing == true)
+            //{
+            //    continue;
+            //}
+            Vector2 rayOrigin = (directionX == -1)?raycastOrigins.bottomLeft:raycastOrigins.bottomRight;
 			rayOrigin += Vector2.up * (horizontalRaySpacing * i);
-			RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector2.right * directionX, rayLength, collisionMask);
+			RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector2.right * directionX, rayLength, ground);
 
 			Debug.DrawRay(rayOrigin, Vector2.right * directionX,Color.red);
 
 			if (hit)
             {
                 //This was causing problem in collision
-				//if (hit.distance == 0)
+                //if (hit.distance == 0)
                 //{
                 //    Debug.Log("return");
-		        //	continue;
-			    //}
+                //	continue;
+                //}
 
-				otherCollider = hit.collider;
+                if (hit.collider.tag == "Through" && collisionInfo.canClimbOld == true)
+                {
+                    if (playerInput.y == 1 || hit.distance == 0)
+                    {
+                        continue;
+                    }
+                    if (collisionInfo.fallingThroughPlatform /*&& collisionInfo.canClimbOld == true*/)
+                    {
+                        continue;
+                    }
+                    if (playerInput.y == -1 && collisionInfo.canClimbOld == true)
+                    {
+                        collisionInfo.fallingThroughPlatform = true;
+                        Invoke("ResetFallingThroughPlatform", .5f);
+                        continue;
+                    }
+                }
+
+                otherCollider = hit.collider;
 			
 				float slopeAngle = Vector2.Angle(hit.normal, Vector2.up);
 
 				if (i == 0 && slopeAngle <= maxClimbSlopeAngle)
                 {
-					if (collisions.descendingSlope) {
-						collisions.descendingSlope = false;
-						moveAmount = collisions.moveAmountOld;
+					if (collisionInfo.descendingSlope)
+                    {
+                        collisionInfo.descendingSlope = false;
+						moveAmount = collisionInfo.moveAmountOld;
 					}
 					float distanceToSlopeStart = 0;
-					if (slopeAngle != collisions.slopeAngleOld) {
+					if (slopeAngle != collisionInfo.slopeAngleOld)
+                    {
 						distanceToSlopeStart = hit.distance-skinWidth;
 						moveAmount.x -= distanceToSlopeStart * directionX;
 					}
@@ -97,18 +138,18 @@ public class Controller2D : RaycastController
 					moveAmount.x += distanceToSlopeStart * directionX;
 				}
 
-				if (!collisions.climbingSlope || slopeAngle > maxClimbSlopeAngle)
+				if (!collisionInfo.climbingSlope || slopeAngle > maxClimbSlopeAngle)
                 {
 					moveAmount.x = (hit.distance - skinWidth) * directionX;
 					rayLength = hit.distance;
 
-					if (collisions.climbingSlope)
+					if (collisionInfo.climbingSlope)
                     {
-						moveAmount.y = Mathf.Tan(collisions.slopeAngle * Mathf.Deg2Rad) * Mathf.Abs(moveAmount.x);
+						moveAmount.y = Mathf.Tan(collisionInfo.slopeAngle * Mathf.Deg2Rad) * Mathf.Abs(moveAmount.x);
 					}
 
-					collisions.left = directionX == -1;
-					collisions.right = directionX == 1;
+                    collisionInfo.left = directionX == -1;
+                    collisionInfo.right = directionX == 1;
 				}
 			}
 		}
@@ -118,64 +159,91 @@ public class Controller2D : RaycastController
     {
 		float directionY = Mathf.Sign (moveAmount.y);
 		float rayLength = Mathf.Abs (moveAmount.y) + skinWidth;
-
-		for (int i = 0; i < numberOfVerticalRays; i ++) {
-
-			Vector2 rayOrigin = (directionY == -1)?raycastOrigins.bottomLeft:raycastOrigins.topLeft;
+        
+        for (int i = 0; i < numberOfVerticalRays; i ++)
+        {
+            //if (collisionInfo.canClimbOld == true)
+            //{
+            //    continue;
+            //}
+            //if (collisionInfo.climbing == true)
+            //{
+            //    continue;
+            //}
+            Vector2 rayOrigin = (directionY == -1)?raycastOrigins.bottomLeft:raycastOrigins.topLeft;
 			rayOrigin += Vector2.right * (verticalRaySpacing * i + moveAmount.x);
-			RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector2.up * directionY, rayLength, collisionMask);
+			RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector2.up * directionY, rayLength, ground);
 
 			Debug.DrawRay(rayOrigin, Vector2.up * directionY,Color.red);
 
 			if (hit)
             {
-				if (hit.collider.tag == "Through") {
-					if (directionY == 1 || hit.distance == 0) {
-						continue;
-					}
-					if (collisions.fallingThroughPlatform) {
-						continue;
-					}
-					if (playerInput.y == -1) {
-						collisions.fallingThroughPlatform = true;
-						Invoke("ResetFallingThroughPlatform",.5f);
-						continue;
-					}
-				}
-                
+                if(hit.collider.tag == "MovingPlatform")
+                {
+                    this.gameObject.transform.parent = hit.collider.gameObject.transform;
+                }
+                if(hit.collider.tag == "LadderTop" && playerInput.y == 1)
+                {
+                    collisionInfo.canClimbOld = false;
+                }
+                else if (hit.collider.tag == "LadderTop" && playerInput.y == -1)
+                {
+                    continue;
+                }
+                if (hit.collider.tag == "LadderBottom" && playerInput.y == -1)
+                {
+                    collisionInfo.canClimbOld = false;
+                }
+                else if (hit.collider.tag == "LadderBottom" && playerInput.y == 1)
+                {
+                    continue;
+                }
+                if (hit.collider.tag == "Through")
+                {
+                    if (directionY == 1 && collisionInfo.canClimbOld == true/*|| hit.distance == 0*/)
+                    {
+                        continue;
+                    }
+                    if (collisionInfo.fallingThroughPlatform/* && collisionInfo.canClimbOld == true*/)
+                    {
+                        continue;
+                    }
+                    if (playerInput.y == -1 && collisionInfo.canClimbOld == true)
+                    {
+                        collisionInfo.fallingThroughPlatform = true;
+                        Invoke("ResetFallingThroughPlatform", .5f);
+                        continue;
+                    }
+                }
 
-				moveAmount.y = (hit.distance - skinWidth) * directionY;
+                moveAmount.y = (hit.distance - skinWidth) * directionY;
 				rayLength = hit.distance;
 
-				if (collisions.climbingSlope) {
-					moveAmount.x = moveAmount.y / Mathf.Tan(collisions.slopeAngle * Mathf.Deg2Rad) * Mathf.Sign(moveAmount.x);
+				if (collisionInfo.climbingSlope)
+                {
+					moveAmount.x = moveAmount.y / Mathf.Tan(collisionInfo.slopeAngle * Mathf.Deg2Rad) * Mathf.Sign(moveAmount.x);
 				}
 
-				collisions.below = directionY == -1;
-				collisions.above = directionY == 1;
-
-                //if (hit.collider.tag == "Ladder")
-                //{
-                //    collisions.canClimb = true;
-                //    continue;
-                //}
+                collisionInfo.below = directionY == -1;
+                collisionInfo.above = directionY == 1;
+                
             }
 		}
 
-		if (collisions.climbingSlope)
+		if (collisionInfo.climbingSlope)
         {
 			float directionX = Mathf.Sign(moveAmount.x);
 			rayLength = Mathf.Abs(moveAmount.x) + skinWidth;
 			Vector2 rayOrigin = ((directionX == -1)?raycastOrigins.bottomLeft:raycastOrigins.bottomRight) + Vector2.up * moveAmount.y;
-			RaycastHit2D hit = Physics2D.Raycast(rayOrigin,Vector2.right * directionX,rayLength,collisionMask);
+			RaycastHit2D hit = Physics2D.Raycast(rayOrigin,Vector2.right * directionX,rayLength,ground);
 
-			if (hit)
+			if (hit && collisionInfo.canClimbOld == true)
             {
 				float slopeAngle = Vector2.Angle(hit.normal,Vector2.up);
-				if (slopeAngle != collisions.slopeAngle)
+				if (slopeAngle != collisionInfo.slopeAngle)
                 {
 					moveAmount.x = (hit.distance - skinWidth) * directionX;
-					collisions.slopeAngle = slopeAngle;
+                    collisionInfo.slopeAngle = slopeAngle;
 				}
 			}
 		}
@@ -190,21 +258,22 @@ public class Controller2D : RaycastController
         {
 			moveAmount.y = climbmoveAmountY;
 			moveAmount.x = Mathf.Cos (slopeAngle * Mathf.Deg2Rad) * moveDistance * Mathf.Sign (moveAmount.x);
-			collisions.below = true;
-			collisions.climbingSlope = true;
-			collisions.slopeAngle = slopeAngle;
+            collisionInfo.below = true;
+            collisionInfo.climbingSlope = true;
+            collisionInfo.slopeAngle = slopeAngle;
 		}
 	}
 
 	void DescendSlope(ref Vector2 moveAmount)
     {
-		float directionX = Mathf.Sign (moveAmount.x);
-		Vector2 rayOrigin = (directionX == -1) ? raycastOrigins.bottomRight : raycastOrigins.bottomLeft;
-		RaycastHit2D hit = Physics2D.Raycast (rayOrigin, -Vector2.up, Mathf.Infinity, collisionMask);
 
-		if (hit)
+        float directionX = Mathf.Sign (moveAmount.x);
+		Vector2 rayOrigin = (directionX == -1) ? raycastOrigins.bottomRight : raycastOrigins.bottomLeft;
+		RaycastHit2D hit = Physics2D.Raycast (rayOrigin, -Vector2.up, Mathf.Infinity, ground);
+
+		if (hit && collisionInfo.canClimbOld == true)
         {
-			float slopeAngle = Vector2.Angle(hit.normal, Vector2.up);
+            float slopeAngle = Vector2.Angle(hit.normal, Vector2.up);
 			if (slopeAngle != 0 && slopeAngle <= maxDescendSlopeAngle)
             {
 				if (Mathf.Sign(hit.normal.x) == directionX)
@@ -216,21 +285,64 @@ public class Controller2D : RaycastController
 						moveAmount.x = Mathf.Cos (slopeAngle * Mathf.Deg2Rad) * moveDistance * Mathf.Sign (moveAmount.x);
 						moveAmount.y -= descendmoveAmountY;
 
-						collisions.slopeAngle = slopeAngle;
-						collisions.descendingSlope = true;
-						collisions.below = true;
+                        collisionInfo.slopeAngle = slopeAngle;
+                        collisionInfo.descendingSlope = true;
+                        collisionInfo.below = true;
 					}
 				}
 			}
 		}
 	}
 
-	void ResetFallingThroughPlatform()
+    void LadderCheck(float rayLengthUp, float rayLengthDown)
     {
-		collisions.fallingThroughPlatform = false;
+        Vector2 raycastLadderOriginUp = raycastOrigins.middleTop;
+        Vector2 raycastLadderOriginDown = raycastOrigins.middleBottom;
+        RaycastHit2D ladderHitUp = Physics2D.Raycast(raycastOrigins.middleTop, Vector2.up, rayLengthUp, ladder);
+        RaycastHit2D ladderHitDown = Physics2D.Raycast(raycastOrigins.middleBottom, Vector2.down, rayLengthDown, ladder);
+
+        Debug.DrawRay(raycastLadderOriginUp, Vector2.up);
+        Debug.DrawRay(raycastLadderOriginDown, Vector2.down);
+
+        collisionInfo.canClimbOld = false;
+
+        if (ladderHitUp || ladderHitDown)
+        {
+            if(ladderHitUp)
+            {
+                rayLengthUp = ladderHitUp.distance;
+            }
+            else if(ladderHitDown)
+            {
+                rayLengthDown = ladderHitDown.distance;
+            }
+            collisionInfo.canClimb = true;
+            if (playerInput.y < 0)
+            {
+                collisionInfo.climbing = true;
+            }
+            else if (playerInput.y > 0)
+            {
+                collisionInfo.climbing = true;
+            }
+            collisionInfo.canClimbOld = collisionInfo.canClimb;
+            Debug.DrawRay(raycastLadderOriginUp, Vector2.up,Color.green);
+            Debug.DrawRay(raycastLadderOriginDown, Vector2.down,Color.green);
+        }
+        else if(collisionInfo.canClimbOld == false)
+        {
+            collisionInfo.canClimb = false;
+            collisionInfo.climbing = false;
+        }
+    }
+
+    void ResetFallingThroughPlatform()
+    {
+        collisionInfo.fallingThroughPlatform = false;
 	}
 
-	public struct CollisionInfo {
+    public struct CollisionInfo
+    {
 		public bool above, below;
 		public bool left, right;
 
@@ -241,15 +353,19 @@ public class Controller2D : RaycastController
 		public int faceDir;
 		public bool fallingThroughPlatform;
         public bool canClimb;
+        public bool reachedTopOfTheLadder;
+        public bool reachedBottomOfTheLadder;
+        public bool climbing;
+        public bool canClimbOld;
 
-		public void Reset() {
+        public void Reset()
+        {
 			above = below = false;
 			left = right = false;
 			climbingSlope = false;
 			descendingSlope = false;
             canClimb = false;
-
-			slopeAngleOld = slopeAngle;
+            slopeAngleOld = slopeAngle;
 			slopeAngle = 0;
 		}
 	}
