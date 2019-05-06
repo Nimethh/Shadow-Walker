@@ -11,8 +11,8 @@ public class PlayerPlatformController : PlayerPhysics
     Vector2 playerPos = Vector2.zero;
     private bool canMove = true;
     private bool facingRight = true;
-    Vector2 movement = Vector2.zero;
-    //Vector2 climbingMovement = Vector2.zero;
+    private AudioSource aS;
+
     private SpriteRenderer spriteRenderer;
 
     float unableToMoveTimer = 0f;
@@ -21,6 +21,7 @@ public class PlayerPlatformController : PlayerPhysics
     void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        aS = GetComponent<AudioSource>();
     }
 
     protected override void Movement()
@@ -56,6 +57,7 @@ public class PlayerPlatformController : PlayerPhysics
     {
         if (Input.GetButtonDown("Jump") && onGround)
         {
+            aS.Play();
             velocity.y = jumpForce;
         }
     }

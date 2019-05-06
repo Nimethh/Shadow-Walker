@@ -1,5 +1,23 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &5393662933189177894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 146550644351180565}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a6c387643e740c489cf2d303623190b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activated: 0
+  movingPlatform: {fileID: 146550643748513138}
+  visualAid: {fileID: 146550643082052638}
+  movingSpeed: 1
+  startTransform: {fileID: 146550643799229932}
+  endTransform: {fileID: 146550642981606561}
 --- !u!1 &5393662932482881029
 GameObject:
   m_ObjectHideFlags: 0
@@ -12,7 +30,7 @@ GameObject:
   - component: {fileID: 5393662932482881031}
   - component: {fileID: 5393662932482881030}
   m_Layer: 0
-  m_Name: ButtonMovingPlatform
+  m_Name: PrototypeButtonMovingPlatform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -76,24 +94,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   platform: {fileID: 5393662933189177894}
---- !u!114 &5393662933189177894
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 146550644351180565}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9a6c387643e740c489cf2d303623190b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  activated: 0
-  movingPlatform: {fileID: 146550643748513138}
-  visualAid: {fileID: 146550643082052638}
-  movingSpeed: 1
-  startTransform: {fileID: 146550643799229932}
-  endTransform: {fileID: 146550642981606561}
 --- !u!1 &5393662933316104784
 GameObject:
   m_ObjectHideFlags: 0
