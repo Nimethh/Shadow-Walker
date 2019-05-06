@@ -28,6 +28,7 @@ public class PlayerInput : MonoBehaviour
 		if (Input.GetKeyDown (KeyCode.Space))
         {
 			player.OnJumpInputDown ();
-		}
+            FindObjectOfType<AudioManager>().Play("Jump");
+        }
 	}
 }
