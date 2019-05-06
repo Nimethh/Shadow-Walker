@@ -701,6 +701,7 @@ MonoBehaviour:
     volume: 1
     pitch: 1
     loop: 1
+    playOnAwake: 0
     aS: {fileID: 0}
 --- !u!1 &325426990
 GameObject:
@@ -7256,7 +7257,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 39c2bcc4b27c94c41a5a413a6c92610a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_FlipX: 1
+  m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 0.2, y: 0.19}
@@ -7296,27 +7297,25 @@ MonoBehaviour:
   wasPreviouslyExposedToSun: 0
   justGotExposedToSunlight: 0
   justGotCoveredFromSunlight: 0
---- !u!50 &827824479
-Rigidbody2D:
-  serializedVersion: 4
+--- !u!95 &827824479
+Animator:
+  serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 827824471}
-  m_BodyType: 2
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 508e801744e80684b98d156b5536ed23, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &834628619
 GameObject:
   m_ObjectHideFlags: 0
