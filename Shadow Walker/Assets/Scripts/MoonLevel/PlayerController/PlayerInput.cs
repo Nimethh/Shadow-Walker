@@ -13,6 +13,8 @@ public class PlayerInput : MonoBehaviour
     private bool facingRight = true;
     private SpriteRenderer spriteRenderer;
 
+    private float lastMoveX;
+
     void Start ()
     {
 		player = GetComponent<Player> ();
@@ -28,37 +30,55 @@ public class PlayerInput : MonoBehaviour
         if (controller.collisionInfo.climbing == false || controller.collisionInfo.below == true)
         {
             directionalInput.x = Input.GetAxisRaw("Horizontal");
-            Debug.Log(directionalInput.x);
             if (directionalInput.x > 0)
             {
-                animator.SetBool("WalkRight", true);
-                animator.SetBool("WalkLeft", false);
-                animator.SetBool("Idle", false);
+                lastMoveX = directionalInput.x;
+                animator.SetFloat("MovementX", directionalInput.x);
+                animator.SetBool("Moving", true);
             }
-            else if(directionalInput.x < 0)
+            else if (directionalInput.x < 0)
             {
-                animator.SetBool("WalkLeft", true);
-                animator.SetBool("WalkRight", false);
-                animator.SetBool("Idle", false);
+                lastMoveX = directionalInput.x;
+                animator.SetFloat("MovementX", directionalInput.x);
+                animator.SetBool("Moving", true);
             }
             else
             {
-                animator.SetBool("Idle", true);
-                animator.SetBool("WalkRight", false);
-                animator.SetBool("WalkLeft", false);
+                animator.SetFloat("MovementX", directionalInput.x);
+                animator.SetBool("Moving", false);
             }
+
+            animator.SetFloat("LastXValue", lastMoveX);
+            //if (directionalInput.x > 0)
+            //{
+            //    animator.SetBool("WalkRight", true);
+            //    animator.SetBool("WalkLeft", false);
+            //    animator.SetBool("Idle", false);
+            //}
+            //else if(directionalInput.x < 0)
+            //{
+            //    animator.SetBool("WalkLeft", true);
+            //    animator.SetBool("WalkRight", false);
+            //    animator.SetBool("Idle", false);
+            //}
+            //else
+            //{
+            //    animator.SetBool("Idle", true);
+            //    animator.SetBool("WalkRight", false);
+            //    animator.SetBool("WalkLeft", false);
+            //}
         }
         directionalInput.y = Input.GetAxisRaw("Vertical");
         player.SetDirectionalInput (directionalInput);
 
-        if (facingRight == false && directionalInput.x > 0)
-        {
-            Flip();
-        }
-        else if (facingRight == true && directionalInput.x < 0)
-        {
-            Flip();
-        }
+        //if (facingRight == false && directionalInput.x > 0)
+        //{
+        //    Flip();
+        //}
+        //else if (facingRight == true && directionalInput.x < 0)
+        //{
+        //    Flip();
+        //}
 
         if (Input.GetKeyDown (KeyCode.Space))
         {

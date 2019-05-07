@@ -5,12 +5,12 @@ using UnityEngine;
 public class CheckPoint : MonoBehaviour
 {
     private PlayerSunBehavior playerSunBehavior;
-    private SunController sunController;
-    public int sunCheckPointIndex;
+    //private SunController sunController;
+    //public int sunCheckPointIndex;
     void Start()
     {
         playerSunBehavior = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerSunBehavior>();
-        sunController = GameObject.FindGameObjectWithTag("Sun").GetComponent<SunController>();
+        //sunController = GameObject.FindGameObjectWithTag("Sun").GetComponent<SunController>();
         //sunCheckPointIndex = sunController.checkPointIndex;
     }
 
@@ -19,43 +19,45 @@ public class CheckPoint : MonoBehaviour
         if (playerSunBehavior.isExposedToSunlight)
         {
             Debug.Log("Update Check");
-            sunController.canMove = false;
-            MoveSunToCheckPointPos();
+            SpawnPlayer();
+
+            //sunController.canMove = false;
+            //MoveSunToCheckPointPos();
         }
-        else
-        {
-            sunController.canMove = true;
-        }
+        //else
+        //{
+        //    sunController.canMove = true;
+        //}
     }
 
     void SpawnPlayer()
     {
         playerSunBehavior.gameObject.SetActive(true);
         playerSunBehavior.gameObject.transform.position = playerSunBehavior.spawningPos.transform.position;
-        sunController.canMove = true;
+        //sunController.canMove = true;
     }
 
-    public void MoveSunToCheckPointPos()
-    {
-        if (sunController.index > sunController.checkPointIndex)
-        {
-            sunController.MoveLeftToCheckPointPos();
-            if (sunController.index <= sunController.checkPointIndex)
-            {
-                SpawnPlayer();
-            }
-        }
-        else if (sunController.index < sunController.checkPointIndex)
-        {
-            sunController.MoveRightToCheckPointPos();
-            if (sunController.index >= sunController.checkPointIndex)
-            {
-                SpawnPlayer();
-            }
-        }
-        else
-        {
-            SpawnPlayer();
-        }
-    }
+    //public void MoveSunToCheckPointPos()
+    //{
+    //    if (sunController.index > sunController.checkPointIndex)
+    //    {
+    //        sunController.MoveLeftToCheckPointPos();
+    //        if (sunController.index <= sunController.checkPointIndex)
+    //        {
+    //            SpawnPlayer();
+    //        }
+    //    }
+    //    else if (sunController.index < sunController.checkPointIndex)
+    //    {
+    //        sunController.MoveRightToCheckPointPos();
+    //        if (sunController.index >= sunController.checkPointIndex)
+    //        {
+    //            SpawnPlayer();
+    //        }
+    //    }
+    //    else
+    //    {
+    //        SpawnPlayer();
+    //    }
+    //}
 }

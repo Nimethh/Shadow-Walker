@@ -14,14 +14,14 @@ public class Controller2D : RaycastController
 	public Vector2 playerInput;
 
     private PlayerSunBehavior playerSunBehavior;
-    private SunController sunController;
+    //private SunController sunController;
 	
 	public override void Start()
     {
 		base.Start ();
         collisionInfo.faceDir = 1;
         playerSunBehavior = GetComponent<PlayerSunBehavior>();
-        sunController = GameObject.FindGameObjectWithTag("Sun").GetComponent<SunController>();
+        //sunController = GameObject.FindGameObjectWithTag("Sun").GetComponent<SunController>();
 	}
     
     public Vector2 Move(Vector2 moveAmount, Vector2 input, bool standingOnPlatform = false)
@@ -358,9 +358,9 @@ public class Controller2D : RaycastController
 
     void SaveSpawnPoints(GameObject checkPoint)
     {
-        CheckPoint checkPointScript = checkPoint.gameObject.GetComponent<CheckPoint>();
+        //CheckPoint checkPointScript = checkPoint.gameObject.GetComponent<CheckPoint>();
         playerSunBehavior.spawningPos.position = checkPoint.transform.position;
-        sunController.checkPointIndex = checkPointScript.sunCheckPointIndex;
+        //sunController.checkPointIndex = checkPointScript.sunCheckPointIndex;
     }
 
     public struct CollisionInfo

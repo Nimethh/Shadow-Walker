@@ -21,8 +21,9 @@ public abstract class AffectedByTheSun : MonoBehaviour
     public void AffectedByTheSunScriptStart()
     {
         sun = GameObject.Find("Sun");
-        obstacleLayer = LayerMask.GetMask("Obstacle");
-        if(obstacleLayer.value == 0)
+        //obstacleLayer = LayerMask.GetMask("Obstacle");
+        obstacleLayer = LayerMask.GetMask("Ground");
+        if (obstacleLayer.value == 0)
         {
             Debug.Log("Make sure you've spelled the LayerMask.GetMask correctly, It appears to be the default one");
         }
