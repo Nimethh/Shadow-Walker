@@ -15,7 +15,7 @@ public class Controller2D : RaycastController
 
     private PlayerSunBehavior playerSunBehavior;
     //private SunController sunController;
-	
+    
 	public override void Start()
     {
 		base.Start ();
@@ -31,7 +31,7 @@ public class Controller2D : RaycastController
         collisionInfo.moveAmountOld = moveAmount;
 		playerInput = input;
 
-		if (moveAmount.x != 0)
+        if (moveAmount.x != 0)
         {
             collisionInfo.faceDir = (int)Mathf.Sign(moveAmount.x);
 		}
@@ -335,6 +335,10 @@ public class Controller2D : RaycastController
             if (playerInput.y < 0)
             {
                 collisionInfo.climbing = true;
+                if(!ladderHitDown)
+                {
+                    collisionInfo.climbing = false;
+                }
             }
             else if (playerInput.y > 0)
             {

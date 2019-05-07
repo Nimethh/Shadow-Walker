@@ -1,55 +1,55 @@
 fileFormatVersion: 2
-guid: 75259be1bf779f348b1832d8b9ceb65e
+guid: a4c2633ed6a3287458754565f0529d26
 TextureImporter:
   fileIDToRecycleName:
-    21300000: playercharacter_animation_walking_left_ver1_0
-    21300002: playercharacter_animation_walking_left_ver1_1
-    21300004: playercharacter_animation_walking_left_ver1_2
-    21300006: playercharacter_animation_walking_left_ver1_3
-    21300008: playercharacter_animation_walking_left_ver1_4
-    21300010: playercharacter_animation_walking_left_ver1_5
-    21300012: playercharacter_animation_walking_left_ver1_6
-    21300014: playercharacter_animation_walking_left_ver1_7
-    21300016: playercharacter_animation_walking_left_ver1_8
-    21300018: playercharacter_animation_walking_left_ver1_9
-    21300020: playercharacter_animation_walking_left_ver1_10
-    21300022: playercharacter_animation_walking_left_ver1_11
-    21300024: playercharacter_animation_walking_left_ver1_12
-    21300026: playercharacter_animation_walking_left_ver1_13
-    21300028: playercharacter_animation_walking_left_ver1_14
-    21300030: playercharacter_animation_walking_left_ver1_15
-    21300032: playercharacter_animation_walking_left_ver1_16
-    21300034: playercharacter_animation_walking_left_ver1_17
-    21300036: playercharacter_animation_walking_left_ver1_18
-    21300038: playercharacter_animation_walking_left_ver1_19
-    21300040: playercharacter_animation_walking_left_ver1_20
-    21300042: playercharacter_animation_walking_left_ver1_21
-    21300044: playercharacter_animation_walking_left_ver1_22
-    21300046: playercharacter_animation_walking_left_ver1_23
-    21300048: playercharacter_animation_walking_left_ver1_24
-    21300050: playercharacter_animation_walking_left_ver1_25
-    21300052: playercharacter_animation_walking_left_ver1_26
-    21300054: playercharacter_animation_walking_left_ver1_27
-    21300056: playercharacter_animation_walking_left_ver1_28
-    21300058: playercharacter_animation_walking_left_ver1_29
-    21300060: playercharacter_animation_walking_left_ver1_30
-    21300062: playercharacter_animation_walking_left_ver1_31
-    21300064: playercharacter_animation_walking_left_ver1_32
-    21300066: playercharacter_animation_walking_left_ver1_33
-    21300068: playercharacter_animation_walking_left_ver1_34
-    21300070: playercharacter_animation_walking_left_ver1_35
-    21300072: playercharacter_animation_walking_left_ver1_36
-    21300074: playercharacter_animation_walking_left_ver1_37
-    21300076: playercharacter_animation_walking_left_ver1_38
-    21300078: playercharacter_animation_walking_left_ver1_39
-    21300080: playercharacter_animation_walking_left_ver1_40
-    21300082: playercharacter_animation_walking_left_ver1_41
-    21300084: playercharacter_animation_walking_left_ver1_42
-    21300086: playercharacter_animation_walking_left_ver1_43
-    21300088: playercharacter_animation_walking_left_ver1_44
-    21300090: playercharacter_animation_walking_left_ver1_45
-    21300092: playercharacter_animation_walking_left_ver1_46
-    21300094: playercharacter_animation_walking_left_ver1_47
+    21300000: playercharacter_animation_walking_right_ver2_0
+    21300002: playercharacter_animation_walking_right_ver2_1
+    21300004: playercharacter_animation_walking_right_ver2_2
+    21300006: playercharacter_animation_walking_right_ver2_3
+    21300008: playercharacter_animation_walking_right_ver2_4
+    21300010: playercharacter_animation_walking_right_ver2_5
+    21300012: playercharacter_animation_walking_right_ver2_6
+    21300014: playercharacter_animation_walking_right_ver2_7
+    21300016: playercharacter_animation_walking_right_ver2_8
+    21300018: playercharacter_animation_walking_right_ver2_9
+    21300020: playercharacter_animation_walking_right_ver2_10
+    21300022: playercharacter_animation_walking_right_ver2_11
+    21300024: playercharacter_animation_walking_right_ver2_12
+    21300026: playercharacter_animation_walking_right_ver2_13
+    21300028: playercharacter_animation_walking_right_ver2_14
+    21300030: playercharacter_animation_walking_right_ver2_15
+    21300032: playercharacter_animation_walking_right_ver2_16
+    21300034: playercharacter_animation_walking_right_ver2_17
+    21300036: playercharacter_animation_walking_right_ver2_18
+    21300038: playercharacter_animation_walking_right_ver2_19
+    21300040: playercharacter_animation_walking_right_ver2_20
+    21300042: playercharacter_animation_walking_right_ver2_21
+    21300044: playercharacter_animation_walking_right_ver2_22
+    21300046: playercharacter_animation_walking_right_ver2_23
+    21300048: playercharacter_animation_walking_right_ver2_24
+    21300050: playercharacter_animation_walking_right_ver2_25
+    21300052: playercharacter_animation_walking_right_ver2_26
+    21300054: playercharacter_animation_walking_right_ver2_27
+    21300056: playercharacter_animation_walking_right_ver2_28
+    21300058: playercharacter_animation_walking_right_ver2_29
+    21300060: playercharacter_animation_walking_right_ver2_30
+    21300062: playercharacter_animation_walking_right_ver2_31
+    21300064: playercharacter_animation_walking_right_ver2_32
+    21300066: playercharacter_animation_walking_right_ver2_33
+    21300068: playercharacter_animation_walking_right_ver2_34
+    21300070: playercharacter_animation_walking_right_ver2_35
+    21300072: playercharacter_animation_walking_right_ver2_36
+    21300074: playercharacter_animation_walking_right_ver2_37
+    21300076: playercharacter_animation_walking_right_ver2_38
+    21300078: playercharacter_animation_walking_right_ver2_39
+    21300080: playercharacter_animation_walking_right_ver2_40
+    21300082: playercharacter_animation_walking_right_ver2_41
+    21300084: playercharacter_animation_walking_right_ver2_42
+    21300086: playercharacter_animation_walking_right_ver2_43
+    21300088: playercharacter_animation_walking_right_ver2_44
+    21300090: playercharacter_animation_walking_right_ver2_45
+    21300092: playercharacter_animation_walking_right_ver2_46
+    21300094: playercharacter_animation_walking_right_ver2_47
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -132,12 +132,12 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: playercharacter_animation_walking_left_ver1_0
+      name: playercharacter_animation_walking_right_ver2_0
       rect:
         serializedVersion: 2
-        x: 40
-        y: 899
-        width: 49
+        x: 41
+        y: 898
+        width: 48
         height: 120
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -146,18 +146,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 525e38e15098c0546a63f6d6011b5a8f
+      spriteID: 63bb2b15414c6c24e8c6bfe29935ef84
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playercharacter_animation_walking_left_ver1_1
+      name: playercharacter_animation_walking_right_ver2_1
       rect:
         serializedVersion: 2
         x: 167
-        y: 899
-        width: 49
+        y: 898
+        width: 48
         height: 120
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -166,18 +166,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e0bcd2c247356574db1a5a2d86953044
+      spriteID: 160f232e7ed4b844080b4c7eceaacc19
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playercharacter_animation_walking_left_ver1_2
+      name: playercharacter_animation_walking_right_ver2_2
       rect:
         serializedVersion: 2
-        x: 295
-        y: 899
-        width: 49
+        x: 296
+        y: 898
+        width: 48
         height: 120
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -186,18 +186,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 463aeead1b68cd14bad5ecb7ca03cae8
+      spriteID: cd27fd02c1e0b7c4dae3cf3a9717fce1
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playercharacter_animation_walking_left_ver1_3
+      name: playercharacter_animation_walking_right_ver2_3
       rect:
         serializedVersion: 2
-        x: 422
-        y: 899
-        width: 49
+        x: 423
+        y: 898
+        width: 48
         height: 120
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -206,18 +206,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dadc937549a7eaa4db23d1de90d11bb8
+      spriteID: c89d3a86f50ed904d87db4b594d78bc2
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playercharacter_animation_walking_left_ver1_4
+      name: playercharacter_animation_walking_right_ver2_4
       rect:
         serializedVersion: 2
-        x: 551
-        y: 899
-        width: 49
+        x: 552
+        y: 898
+        width: 48
         height: 120
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -226,18 +226,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 163dc03bfebb4e3479572a395cc4ab68
+      spriteID: 20bfb015bc69dc64482676d886fb931f
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playercharacter_animation_walking_left_ver1_5
+      name: playercharacter_animation_walking_right_ver2_5
       rect:
         serializedVersion: 2
-        x: 679
-        y: 899
-        width: 49
+        x: 680
+        y: 898
+        width: 48
         height: 120
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -246,18 +246,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 47bb953e30aed7e4ea83e61ebd4463f8
+      spriteID: 5b66aaae33afa4a43aaa9d5d1826fb87
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playercharacter_animation_walking_left_ver1_6
+      name: playercharacter_animation_walking_right_ver2_6
       rect:
         serializedVersion: 2
-        x: 807
-        y: 899
-        width: 49
+        x: 808
+        y: 898
+        width: 48
         height: 120
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -266,18 +266,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 324d5e3fdca32874eba65c70e8f61b54
+      spriteID: 6d0a15cbaba671844a6aba6cb6251d06
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playercharacter_animation_walking_left_ver1_7
+      name: playercharacter_animation_walking_right_ver2_7
       rect:
         serializedVersion: 2
         x: 935
-        y: 899
-        width: 49
+        y: 898
+        width: 48
         height: 120
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -286,18 +286,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b7d22992275cbbb49984dd2e4cb0ce24
+      spriteID: 44f359a7b2f20a04cb1672c8043c3d60
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playercharacter_animation_walking_left_ver1_8
+      name: playercharacter_animation_walking_right_ver2_8
       rect:
         serializedVersion: 2
-        x: 40
+        x: 41
         y: 772
-        width: 49
+        width: 48
         height: 120
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -306,18 +306,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5e643fad828174c449be74ffa210e168
+      spriteID: c71d6519965b6854a858c631737b7e06
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playercharacter_animation_walking_left_ver1_9
+      name: playercharacter_animation_walking_right_ver2_9
       rect:
         serializedVersion: 2
         x: 167
         y: 772
-        width: 49
+        width: 48
         height: 120
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -326,18 +326,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 656110e65508b204cbe83f7156766277
+      spriteID: 2696eae396e990147b77428b069cf05b
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playercharacter_animation_walking_left_ver1_10
+      name: playercharacter_animation_walking_right_ver2_10
       rect:
         serializedVersion: 2
-        x: 295
+        x: 296
         y: 772
-        width: 49
+        width: 48
         height: 120
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -346,18 +346,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ba5775704ab61624a936be8b0700c3d4
+      spriteID: ffa7f727cdb7ac94b8b065b88422ff73
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playercharacter_animation_walking_left_ver1_11
+      name: playercharacter_animation_walking_right_ver2_11
       rect:
         serializedVersion: 2
-        x: 422
+        x: 423
         y: 772
-        width: 49
+        width: 48
         height: 120
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -366,18 +366,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c0ab39125aa438344be2c08cc06627f1
+      spriteID: fee77d2d2106da243b17fe3f2829eb49
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playercharacter_animation_walking_left_ver1_12
+      name: playercharacter_animation_walking_right_ver2_12
       rect:
         serializedVersion: 2
-        x: 551
+        x: 552
         y: 772
-        width: 49
+        width: 48
         height: 120
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -386,18 +386,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b4945d7211e5a5a4bbe7b432a1046d57
+      spriteID: 6728a5b447d460b4c8d6c459777c9243
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playercharacter_animation_walking_left_ver1_13
+      name: playercharacter_animation_walking_right_ver2_13
       rect:
         serializedVersion: 2
-        x: 679
+        x: 680
         y: 772
-        width: 49
+        width: 48
         height: 120
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -406,18 +406,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: beddb6362b0c7e54d8090b4876761652
+      spriteID: cea078c16e041ca4a8fdcb5f0faab41c
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playercharacter_animation_walking_left_ver1_14
+      name: playercharacter_animation_walking_right_ver2_14
       rect:
         serializedVersion: 2
-        x: 807
+        x: 808
         y: 772
-        width: 49
+        width: 48
         height: 120
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -426,18 +426,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: de4edc7da9b3e6b49859192a589e40cd
+      spriteID: 5c277e8339afac847b5bdca486b58c42
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playercharacter_animation_walking_left_ver1_15
+      name: playercharacter_animation_walking_right_ver2_15
       rect:
         serializedVersion: 2
         x: 935
         y: 772
-        width: 49
+        width: 48
         height: 120
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -446,18 +446,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 54e722a84e0957948a066736d6d5e4ac
+      spriteID: 6ed8188eb7f481a41871c231dfef768a
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playercharacter_animation_walking_left_ver1_16
+      name: playercharacter_animation_walking_right_ver2_16
       rect:
         serializedVersion: 2
-        x: 40
-        y: 645
-        width: 49
+        x: 41
+        y: 643
+        width: 48
         height: 120
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -466,18 +466,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 47856e025fde7ad45a3f9750795633ee
+      spriteID: 8f178314b3a4e4448a5038c934153571
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playercharacter_animation_walking_left_ver1_17
+      name: playercharacter_animation_walking_right_ver2_17
       rect:
         serializedVersion: 2
         x: 167
-        y: 645
-        width: 49
+        y: 643
+        width: 48
         height: 120
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -486,18 +486,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1ec127a6a984ef24a93b40eb197316c1
+      spriteID: fcb0b14adaa3da14f82b20c3e3290e01
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playercharacter_animation_walking_left_ver1_18
+      name: playercharacter_animation_walking_right_ver2_18
       rect:
         serializedVersion: 2
-        x: 295
-        y: 645
-        width: 49
+        x: 296
+        y: 643
+        width: 48
         height: 120
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -506,18 +506,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c2a416cec45c9ea418a8bca097b2e7e9
+      spriteID: 2dc2d6053ec841c44a7dd29dfc3659b2
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playercharacter_animation_walking_left_ver1_19
+      name: playercharacter_animation_walking_right_ver2_19
       rect:
         serializedVersion: 2
-        x: 422
-        y: 645
-        width: 49
+        x: 423
+        y: 643
+        width: 48
         height: 120
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -526,18 +526,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fd36e6ed79e62304c9c9bdcfba0658f8
+      spriteID: b380b2867c3350245bd2c6e9c7f40b78
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playercharacter_animation_walking_left_ver1_20
+      name: playercharacter_animation_walking_right_ver2_20
       rect:
         serializedVersion: 2
-        x: 551
-        y: 645
-        width: 49
+        x: 552
+        y: 643
+        width: 48
         height: 120
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -546,18 +546,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 20df9aecb97cb0c409f5bcc8c16a0587
+      spriteID: 3cbfbea7cc3752e41b233481f7160a71
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playercharacter_animation_walking_left_ver1_21
+      name: playercharacter_animation_walking_right_ver2_21
       rect:
         serializedVersion: 2
-        x: 679
-        y: 645
-        width: 49
+        x: 680
+        y: 643
+        width: 48
         height: 120
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -566,18 +566,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2103b24e53d27eb4dbb51ae1f2a5d4ed
+      spriteID: dcc97a2a472712f408d898216852c4a9
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playercharacter_animation_walking_left_ver1_22
+      name: playercharacter_animation_walking_right_ver2_22
       rect:
         serializedVersion: 2
-        x: 807
-        y: 645
-        width: 49
+        x: 808
+        y: 643
+        width: 48
         height: 120
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -586,18 +586,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f1c9f762c162b87459dcda3cd8a1c1b9
+      spriteID: 569ecc32501df8640be8b9f421fe4955
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playercharacter_animation_walking_left_ver1_23
+      name: playercharacter_animation_walking_right_ver2_23
       rect:
         serializedVersion: 2
         x: 935
-        y: 645
-        width: 49
+        y: 643
+        width: 48
         height: 120
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -606,18 +606,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0f886f73dacfa7245bdd954eced8b6e6
+      spriteID: 35bbbf16841207a4db5f00b415c6f58d
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playercharacter_animation_walking_left_ver1_24
+      name: playercharacter_animation_walking_right_ver2_24
       rect:
         serializedVersion: 2
-        x: 40
-        y: 518
-        width: 49
+        x: 41
+        y: 516
+        width: 48
         height: 120
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -626,18 +626,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5f477dceb8dbc0d45a54e0e4f1fcea3c
+      spriteID: ce3d622275796ee439e8bafb6a57fefa
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playercharacter_animation_walking_left_ver1_25
+      name: playercharacter_animation_walking_right_ver2_25
       rect:
         serializedVersion: 2
         x: 167
-        y: 518
-        width: 49
+        y: 516
+        width: 48
         height: 120
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -646,18 +646,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 258414be183f46f4890fe4a0437ad8a2
+      spriteID: f8abc0c762bbc224c9afd8370588087e
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playercharacter_animation_walking_left_ver1_26
+      name: playercharacter_animation_walking_right_ver2_26
       rect:
         serializedVersion: 2
-        x: 295
-        y: 518
-        width: 49
+        x: 296
+        y: 516
+        width: 48
         height: 120
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -666,18 +666,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0ce60c471fe557a4da7377396ff9d4aa
+      spriteID: ca58387cca90e6640b0fed5a2b2f49ea
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playercharacter_animation_walking_left_ver1_27
+      name: playercharacter_animation_walking_right_ver2_27
       rect:
         serializedVersion: 2
-        x: 422
-        y: 518
-        width: 49
+        x: 423
+        y: 516
+        width: 48
         height: 120
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -686,18 +686,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5107070c36b526d42816bde0369ca0cb
+      spriteID: 64e0cd7ff9c6adb4f9f78e297d3cc673
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playercharacter_animation_walking_left_ver1_28
+      name: playercharacter_animation_walking_right_ver2_28
       rect:
         serializedVersion: 2
-        x: 551
-        y: 518
-        width: 49
+        x: 552
+        y: 516
+        width: 48
         height: 120
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -706,18 +706,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 01866c26cefbe9d45b8ea9c92339a448
+      spriteID: a04feaa06fb0079498b6ea99f6b80b3f
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playercharacter_animation_walking_left_ver1_29
+      name: playercharacter_animation_walking_right_ver2_29
       rect:
         serializedVersion: 2
-        x: 679
-        y: 518
-        width: 49
+        x: 680
+        y: 516
+        width: 48
         height: 120
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -726,18 +726,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 40702f2c8bf3d3d41932af4049dbe33c
+      spriteID: db9c4455752fe0145a58f970efd65c72
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playercharacter_animation_walking_left_ver1_30
+      name: playercharacter_animation_walking_right_ver2_30
       rect:
         serializedVersion: 2
-        x: 807
-        y: 518
-        width: 49
+        x: 808
+        y: 516
+        width: 48
         height: 120
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -746,18 +746,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5c636b1ffc21a754d93153a867db2fd4
+      spriteID: 835a5c3b613fb36458652af827447e3f
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playercharacter_animation_walking_left_ver1_31
+      name: playercharacter_animation_walking_right_ver2_31
       rect:
         serializedVersion: 2
         x: 935
-        y: 518
-        width: 49
+        y: 516
+        width: 48
         height: 120
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -766,18 +766,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 888b0bba1fd33b742b750069098089a4
+      spriteID: a2d29e94bcf12a64aaec57aa22c75dbc
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playercharacter_animation_walking_left_ver1_32
+      name: playercharacter_animation_walking_right_ver2_32
       rect:
         serializedVersion: 2
-        x: 40
-        y: 389
-        width: 49
+        x: 41
+        y: 388
+        width: 48
         height: 120
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -786,18 +786,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5b9b2504fa186d449b1c3cd3ae5eb35c
+      spriteID: 66e270ae9928bce4081e77f1ea663152
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playercharacter_animation_walking_left_ver1_33
+      name: playercharacter_animation_walking_right_ver2_33
       rect:
         serializedVersion: 2
         x: 167
-        y: 389
-        width: 49
+        y: 388
+        width: 48
         height: 120
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -806,18 +806,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4509d58137ea69a41831994129491356
+      spriteID: 2c0eb06792039ab4088acfacb81df42a
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playercharacter_animation_walking_left_ver1_34
+      name: playercharacter_animation_walking_right_ver2_34
       rect:
         serializedVersion: 2
-        x: 295
-        y: 389
-        width: 49
+        x: 296
+        y: 388
+        width: 48
         height: 120
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -826,18 +826,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d3c91bcdd2f731b48817bb5da1cb5cc2
+      spriteID: 101920486b74a314d8c50204853f6533
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playercharacter_animation_walking_left_ver1_35
+      name: playercharacter_animation_walking_right_ver2_35
       rect:
         serializedVersion: 2
-        x: 422
-        y: 389
-        width: 49
+        x: 423
+        y: 388
+        width: 48
         height: 120
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -846,18 +846,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2dcb0b63ceef9d148b67f8a18ae17f7e
+      spriteID: d6e06ae934cca474e9d8b65d26b29382
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playercharacter_animation_walking_left_ver1_36
+      name: playercharacter_animation_walking_right_ver2_36
       rect:
         serializedVersion: 2
-        x: 551
-        y: 389
-        width: 49
+        x: 552
+        y: 388
+        width: 48
         height: 120
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -866,18 +866,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 154b377fba9348349a78aa2cddf11b93
+      spriteID: 03bb58ea1bed76546ae198886af49d9e
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playercharacter_animation_walking_left_ver1_37
+      name: playercharacter_animation_walking_right_ver2_37
       rect:
         serializedVersion: 2
-        x: 679
-        y: 389
-        width: 49
+        x: 680
+        y: 388
+        width: 48
         height: 120
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -886,18 +886,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: cae406beaa234d34ba3bce4015209d73
+      spriteID: fd3f152fe5e332e4da004be52460ae61
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playercharacter_animation_walking_left_ver1_38
+      name: playercharacter_animation_walking_right_ver2_38
       rect:
         serializedVersion: 2
-        x: 807
-        y: 389
-        width: 49
+        x: 808
+        y: 388
+        width: 48
         height: 120
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -906,18 +906,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 658ebb50c30ee274f962606ffeca98bf
+      spriteID: 2ec95cdffcae47448a18ec06ff0e8983
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playercharacter_animation_walking_left_ver1_39
+      name: playercharacter_animation_walking_right_ver2_39
       rect:
         serializedVersion: 2
         x: 935
-        y: 389
-        width: 49
+        y: 388
+        width: 48
         height: 120
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -926,18 +926,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2fe48efef57f12d46851f80e2603080c
+      spriteID: d74145b78eedc6e4885bc0c68a77a61b
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playercharacter_animation_walking_left_ver1_40
+      name: playercharacter_animation_walking_right_ver2_40
       rect:
         serializedVersion: 2
-        x: 40
+        x: 41
         y: 260
-        width: 49
+        width: 48
         height: 120
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -946,18 +946,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ba1fecc988b98c74cb68707462a38327
+      spriteID: 5a9ed4dd3e90f1e469d90afdaf9b5194
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playercharacter_animation_walking_left_ver1_41
+      name: playercharacter_animation_walking_right_ver2_41
       rect:
         serializedVersion: 2
         x: 167
         y: 260
-        width: 49
+        width: 48
         height: 120
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -966,18 +966,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 46222dfde1f696443be2aaba4eb53c32
+      spriteID: 9a836751f0ac5ee4dbef5e6ca82b1ff0
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playercharacter_animation_walking_left_ver1_42
+      name: playercharacter_animation_walking_right_ver2_42
       rect:
         serializedVersion: 2
-        x: 295
+        x: 296
         y: 260
-        width: 49
+        width: 48
         height: 120
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -986,18 +986,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3396e28a277c61b4e9c56931c7d8ac6c
+      spriteID: c5c0dc9f39fe3604e952598919ad95b3
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playercharacter_animation_walking_left_ver1_43
+      name: playercharacter_animation_walking_right_ver2_43
       rect:
         serializedVersion: 2
-        x: 422
+        x: 423
         y: 260
-        width: 49
+        width: 48
         height: 120
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1006,18 +1006,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 10c74720e11a43a4484e1a211bc56cd1
+      spriteID: 99eee707867772e48bf684250781c256
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playercharacter_animation_walking_left_ver1_44
+      name: playercharacter_animation_walking_right_ver2_44
       rect:
         serializedVersion: 2
-        x: 551
+        x: 552
         y: 260
-        width: 49
+        width: 48
         height: 120
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1026,18 +1026,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 433f8fd5b10895b4b91639049a6a02e7
+      spriteID: 94d35ba927bc2db4d9d6bfe6a97f95b0
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playercharacter_animation_walking_left_ver1_45
+      name: playercharacter_animation_walking_right_ver2_45
       rect:
         serializedVersion: 2
-        x: 679
+        x: 680
         y: 260
-        width: 49
+        width: 48
         height: 120
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1046,18 +1046,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6134c366bbd431a43ae109836b70bccc
+      spriteID: 4c2834776c826154bb3f6e968877fae2
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playercharacter_animation_walking_left_ver1_46
+      name: playercharacter_animation_walking_right_ver2_46
       rect:
         serializedVersion: 2
-        x: 807
+        x: 808
         y: 260
-        width: 49
+        width: 48
         height: 120
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1066,18 +1066,18 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0532ebdb01c741648a46a60428987e15
+      spriteID: a8b244580a39ff34d8331c68c4690a26
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playercharacter_animation_walking_left_ver1_47
+      name: playercharacter_animation_walking_right_ver2_47
       rect:
         serializedVersion: 2
         x: 935
         y: 260
-        width: 49
+        width: 48
         height: 120
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1086,7 +1086,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5506de1528623364ca49cdb87c2d6e1e
+      spriteID: 0e775464dd10ee8439a4577833f9564d
       vertices: []
       indices: 
       edges: []
@@ -1094,7 +1094,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 77edf213b41f19146a2008fd80aff0c0
+    spriteID: 68cb65ccab2101d479d9304f881fada5
     vertices: []
     indices: 
     edges: []
