@@ -31,6 +31,8 @@ public class Controller2D : RaycastController
         collisionInfo.moveAmountOld = moveAmount;
 		playerInput = input;
 
+        Debug.Log(collisionInfo.climbing);
+
         if (moveAmount.x != 0)
         {
             collisionInfo.faceDir = (int)Mathf.Sign(moveAmount.x);
@@ -52,6 +54,7 @@ public class Controller2D : RaycastController
 
 		if (standingOnPlatform)
         {
+            Debug.Log("StandingOn Platform " + collisionInfo.below);
             collisionInfo.below = true;
             collisionInfo.canClimbOld = false;
             collisionInfo.climbing = false;
@@ -192,7 +195,11 @@ public class Controller2D : RaycastController
                 {
                     this.gameObject.transform.parent = hit.collider.gameObject.transform;
                 }
-                if(hit.collider.tag == "CheckPoint")
+                else
+                {
+                    this.gameObject.transform.parent = null;
+                }
+                if (hit.collider.tag == "CheckPoint")
                 {
                     SaveSpawnPoints(hit.collider.gameObject);
                     continue;
@@ -240,6 +247,12 @@ public class Controller2D : RaycastController
 				}
 
                 collisionInfo.below = directionY == -1;
+
+                //Debug.Log(directionY);
+                //if(directionY == -1 && collisionInfo.below)
+                //{
+                //    Debug.Log(collisionInfo.below);
+                //}
                 collisionInfo.above = directionY == 1;
                 
             }

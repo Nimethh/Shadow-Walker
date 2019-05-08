@@ -12,12 +12,14 @@ public class PlayerInput : MonoBehaviour
     Animator animator;
     private bool facingRight = true;
     private SpriteRenderer spriteRenderer;
+    private PlayerSoundManager playerSoundManager;
 
     private float lastMoveX;
 
     void Start ()
     {
 		player = GetComponent<Player> ();
+        playerSoundManager = GetComponent<PlayerSoundManager>();
         controller = GetComponent<Controller2D>();
         animator = GetComponent<Animator>();
         movingParticalObject = transform.GetChild(0).gameObject;
@@ -70,6 +72,7 @@ public class PlayerInput : MonoBehaviour
         }
         directionalInput.y = Input.GetAxisRaw("Vertical");
         player.SetDirectionalInput (directionalInput);
+        playerSoundManager.SetDirectionalInput(directionalInput);
 
         //if (facingRight == false && directionalInput.x > 0)
         //{
@@ -83,7 +86,6 @@ public class PlayerInput : MonoBehaviour
         if (Input.GetKeyDown (KeyCode.Space))
         {
 			player.OnJumpInputDown ();
-            FindObjectOfType<AudioManager>().Play("Jump");
         }
     }
 

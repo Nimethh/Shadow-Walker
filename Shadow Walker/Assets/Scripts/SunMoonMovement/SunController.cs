@@ -43,10 +43,12 @@ public class SunController : MonoBehaviour
             if (Input.GetKey(KeyCode.L) && transform.position.x < points[2].position.x)
             {
                 MoveRight();
+                FindObjectOfType<AudioManager>().Play("SunMoving");
             }
             if (Input.GetKey(KeyCode.J) && transform.position.x > points[0].position.x)
             {
                 MoveLeft();
+                FindObjectOfType<AudioManager>().Play("SunMoving");
             }
         }
         //else
