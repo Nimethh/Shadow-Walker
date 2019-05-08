@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 29599989126658006}
   - component: {fileID: 29599989126658000}
   - component: {fileID: 29599989126658001}
+  - component: {fileID: 157726458}
   m_Layer: 13
   m_Name: Player
   m_TagString: Player
@@ -131,7 +132,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ground:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 16896
   ladder:
     serializedVersion: 2
     m_Bits: 4096
@@ -159,7 +160,7 @@ MonoBehaviour:
   timeToJumpPeak: 0.4
   accelerationTimeInAirTurn: 0.207
   accelerationTimeOnGroundTurn: 0.131
-  moveSpeed: 2.5
+  moveSpeed: 1.5
   climbingSpeed: 1.5
   wallSlideSpeed: 5
 --- !u!114 &29599989126658006
@@ -174,6 +175,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3587ceee891f98f4aa9f634374b35046, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  moveOffLadderTimer: 0.01
+  moveOffLadderHoldTimer: 0.4
 --- !u!114 &29599989126658000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -211,6 +214,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &157726458
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 29599989126658009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e2b87394b1f0a541a4161e28f304228, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &29599990845537559
 GameObject:
   m_ObjectHideFlags: 0
@@ -316,7 +331,7 @@ ParticleSystem:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-  moveWithTransform: 0
+  moveWithTransform: 1
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
   randomSeed: 0
@@ -871,7 +886,7 @@ ParticleSystem:
     serializedVersion: 6
     enabled: 1
     type: 4
-    angle: 15
+    angle: 7.484356
     length: 5
     boxThickness: {x: 0, y: 0, z: 0}
     radiusThickness: 1
@@ -1251,7 +1266,7 @@ ParticleSystem:
         m_Curve:
         - serializedVersion: 3
           time: 0
-          value: 0.2857132
+          value: 0.18499756
           inSlope: 0
           outSlope: 0
           tangentMode: 0
@@ -1260,12 +1275,12 @@ ParticleSystem:
           outWeight: 0.33333334
         - serializedVersion: 3
           time: 1
-          value: 1
-          inSlope: 1
-          outSlope: 1
+          value: 0.30216742
+          inSlope: 0.000038898466
+          outSlope: 0.000038898466
           tangentMode: 0
           weightedMode: 0
-          inWeight: 0.33333334
+          inWeight: 0.13672301
           outWeight: 0.33333334
         m_PreInfinity: 2
         m_PostInfinity: 2
