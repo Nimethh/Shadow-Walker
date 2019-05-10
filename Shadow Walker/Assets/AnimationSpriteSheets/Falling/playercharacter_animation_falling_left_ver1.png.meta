@@ -1,0 +1,1338 @@
+fileFormatVersion: 2
+guid: 567d14b5e3e7a4c45ab0cf64a34f6683
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: playercharacter_animation_falling_left_ver1_0
+    21300002: playercharacter_animation_falling_left_ver1_1
+    21300004: playercharacter_animation_falling_left_ver1_2
+    21300006: playercharacter_animation_falling_left_ver1_3
+    21300008: playercharacter_animation_falling_left_ver1_4
+    21300010: playercharacter_animation_falling_left_ver1_5
+    21300012: playercharacter_animation_falling_left_ver1_6
+    21300014: playercharacter_animation_falling_left_ver1_7
+    21300016: playercharacter_animation_falling_left_ver1_8
+    21300018: playercharacter_animation_falling_left_ver1_9
+    21300020: playercharacter_animation_falling_left_ver1_10
+    21300022: playercharacter_animation_falling_left_ver1_11
+    21300024: playercharacter_animation_falling_left_ver1_12
+    21300026: playercharacter_animation_falling_left_ver1_13
+    21300028: playercharacter_animation_falling_left_ver1_14
+    21300030: playercharacter_animation_falling_left_ver1_15
+    21300032: playercharacter_animation_falling_left_ver1_16
+    21300034: playercharacter_animation_falling_left_ver1_17
+    21300036: playercharacter_animation_falling_left_ver1_18
+    21300038: playercharacter_animation_falling_left_ver1_19
+    21300040: playercharacter_animation_falling_left_ver1_20
+    21300042: playercharacter_animation_falling_left_ver1_21
+    21300044: playercharacter_animation_falling_left_ver1_22
+    21300046: playercharacter_animation_falling_left_ver1_23
+    21300048: playercharacter_animation_falling_left_ver1_24
+    21300050: playercharacter_animation_falling_left_ver1_25
+    21300052: playercharacter_animation_falling_left_ver1_26
+    21300054: playercharacter_animation_falling_left_ver1_27
+    21300056: playercharacter_animation_falling_left_ver1_28
+    21300058: playercharacter_animation_falling_left_ver1_29
+    21300060: playercharacter_animation_falling_left_ver1_30
+    21300062: playercharacter_animation_falling_left_ver1_31
+    21300064: playercharacter_animation_falling_left_ver1_32
+    21300066: playercharacter_animation_falling_left_ver1_33
+    21300068: playercharacter_animation_falling_left_ver1_34
+    21300070: playercharacter_animation_falling_left_ver1_35
+    21300072: playercharacter_animation_falling_left_ver1_36
+    21300074: playercharacter_animation_falling_left_ver1_37
+    21300076: playercharacter_animation_falling_left_ver1_38
+    21300078: playercharacter_animation_falling_left_ver1_39
+    21300080: playercharacter_animation_falling_left_ver1_40
+    21300082: playercharacter_animation_falling_left_ver1_41
+    21300084: playercharacter_animation_falling_left_ver1_42
+    21300086: playercharacter_animation_falling_left_ver1_43
+    21300088: playercharacter_animation_falling_left_ver1_44
+    21300090: playercharacter_animation_falling_left_ver1_45
+    21300092: playercharacter_animation_falling_left_ver1_46
+    21300094: playercharacter_animation_falling_left_ver1_47
+    21300096: playercharacter_animation_falling_left_ver1_48
+    21300098: playercharacter_animation_falling_left_ver1_49
+    21300100: playercharacter_animation_falling_left_ver1_50
+    21300102: playercharacter_animation_falling_left_ver1_51
+    21300104: playercharacter_animation_falling_left_ver1_52
+    21300106: playercharacter_animation_falling_left_ver1_53
+    21300108: playercharacter_animation_falling_left_ver1_54
+    21300110: playercharacter_animation_falling_left_ver1_55
+    21300112: playercharacter_animation_falling_left_ver1_56
+    21300114: playercharacter_animation_falling_left_ver1_57
+    21300116: playercharacter_animation_falling_left_ver1_58
+  externalObjects: {}
+  serializedVersion: 9
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: playercharacter_animation_falling_left_ver1_0
+      rect:
+        serializedVersion: 2
+        x: 310
+        y: 1785
+        width: 66
+        height: 118
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f85d4606c774d4f4ea1baf9eb440044f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_falling_left_ver1_1
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 1785
+        width: 66
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c588a2db549edf1429d9ff9b7433fc25
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_falling_left_ver1_2
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 1784
+        width: 68
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e879bf5d82114084889c7ed0f1e1a84d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_falling_left_ver1_3
+      rect:
+        serializedVersion: 2
+        x: 647
+        y: 1784
+        width: 65
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5061791a4ac5c24887f425848e60510
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_falling_left_ver1_4
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 1784
+        width: 65
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ddbf2f34a1451e40832f1ba052a22eb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_falling_left_ver1_5
+      rect:
+        serializedVersion: 2
+        x: 895
+        y: 1784
+        width: 65
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74b9fe6258783d946a0d8c558910c9ba
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_falling_left_ver1_6
+      rect:
+        serializedVersion: 2
+        x: 1034
+        y: 1784
+        width: 64
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25fe641c2b369e945a07c9d13d37a413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_falling_left_ver1_7
+      rect:
+        serializedVersion: 2
+        x: 1172
+        y: 1784
+        width: 65
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b626e5fa59debcb43baae080a498ad1a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_falling_left_ver1_8
+      rect:
+        serializedVersion: 2
+        x: 1302
+        y: 1784
+        width: 63
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0adfc6c7e8bb87b4cab974502b14dc55
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_falling_left_ver1_9
+      rect:
+        serializedVersion: 2
+        x: 1440
+        y: 1784
+        width: 64
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8664387d1f445894495afa8cca480f12
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_falling_left_ver1_10
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 1781
+        width: 45
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11b304509837035488808f9e9d7cf8ed
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_falling_left_ver1_11
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 1524
+        width: 64
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dbda05b10e94c642973760a88b9c438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_falling_left_ver1_12
+      rect:
+        serializedVersion: 2
+        x: 419
+        y: 1524
+        width: 62
+        height: 117
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb9e68d1c0146964f9692ea9623e0f0f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_falling_left_ver1_13
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 1526
+        width: 63
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e970f50dca776247b691733b097d0b5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_falling_left_ver1_14
+      rect:
+        serializedVersion: 2
+        x: 647
+        y: 1526
+        width: 61
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e2137243d1c5a243b2ee234e1178756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_falling_left_ver1_15
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 1526
+        width: 61
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 465677d0ec3fb4b4890fb5b7393bbc15
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_falling_left_ver1_16
+      rect:
+        serializedVersion: 2
+        x: 895
+        y: 1526
+        width: 61
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e89fd0b2ce99f54fa5b0d12bf11e527
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_falling_left_ver1_17
+      rect:
+        serializedVersion: 2
+        x: 1035
+        y: 1526
+        width: 59
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e38f67b70e147e4d82679e7ea54caa0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_falling_left_ver1_18
+      rect:
+        serializedVersion: 2
+        x: 1172
+        y: 1526
+        width: 60
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67f1f631162d5cf4eb16157b5d000729
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_falling_left_ver1_19
+      rect:
+        serializedVersion: 2
+        x: 1303
+        y: 1526
+        width: 58
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a67a42ead3cf81b45bcde6ee7b9302e4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_falling_left_ver1_20
+      rect:
+        serializedVersion: 2
+        x: 1442
+        y: 1524
+        width: 58
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e9f7b420994be9499e1db3ac1a2710a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_falling_left_ver1_21
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 1524
+        width: 45
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f66e1a88e97a654eb04a158209f7249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_falling_left_ver1_22
+      rect:
+        serializedVersion: 2
+        x: 308
+        y: 1268
+        width: 60
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1effc2f342104814d88decfde428ca1a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_falling_left_ver1_23
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 1268
+        width: 57
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c7310100bc652448bac289785e68432
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_falling_left_ver1_24
+      rect:
+        serializedVersion: 2
+        x: 536
+        y: 1268
+        width: 60
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c33b8d7f69ecf4544a91fdb86a7b2ce6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_falling_left_ver1_25
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 1268
+        width: 56
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d61244395ff46e34584049cda610cc78
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_falling_left_ver1_26
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 1268
+        width: 57
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3be6e909eb4d3b84f9385f6bcea79161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_falling_left_ver1_27
+      rect:
+        serializedVersion: 2
+        x: 896
+        y: 1268
+        width: 56
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4af4dcb411ce1a74eba7de74a159467c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_falling_left_ver1_28
+      rect:
+        serializedVersion: 2
+        x: 1035
+        y: 1268
+        width: 55
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c84a541c1b939ff4ebdec06b7d866f0b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_falling_left_ver1_29
+      rect:
+        serializedVersion: 2
+        x: 1174
+        y: 1268
+        width: 55
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b36ddda4c37e8b46b3bd620f6803a20
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_falling_left_ver1_30
+      rect:
+        serializedVersion: 2
+        x: 1304
+        y: 1268
+        width: 54
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b51eba4e97417a4db194762be4390b1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_falling_left_ver1_31
+      rect:
+        serializedVersion: 2
+        x: 1443
+        y: 1268
+        width: 54
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da23b54d505040041978b4f4dabe3316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_falling_left_ver1_32
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 1266
+        width: 45
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed14bc5777a2d8a47b9e9a7f5171c8bf
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_falling_left_ver1_33
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 1010
+        width: 53
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 603ca8376efbf7048b6b473802fd4c59
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_falling_left_ver1_34
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 1010
+        width: 53
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aca36fccab5fd0b4686edfd876c38f3c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_falling_left_ver1_35
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 1010
+        width: 52
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e50e272d8109a84c985e748a1dd4f46
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_falling_left_ver1_36
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 1008
+        width: 53
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f05bf7d67a6801c44b188c7c214dfefe
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_falling_left_ver1_37
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 1010
+        width: 54
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 960d22e4544711748bb2fe2b288c0f9a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_falling_left_ver1_38
+      rect:
+        serializedVersion: 2
+        x: 898
+        y: 1008
+        width: 51
+        height: 115
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9b1f8bfea41e6ef4998a175f5fddd0f5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_falling_left_ver1_39
+      rect:
+        serializedVersion: 2
+        x: 1036
+        y: 1010
+        width: 52
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 714c9d5f025d8f64088211bbe89829e8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_falling_left_ver1_40
+      rect:
+        serializedVersion: 2
+        x: 1176
+        y: 1008
+        width: 52
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 485e9e94fdabfeb47b0c39d62f639578
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_falling_left_ver1_41
+      rect:
+        serializedVersion: 2
+        x: 1304
+        y: 1010
+        width: 52
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0982364d67c9737409fc81773dedad7a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_falling_left_ver1_42
+      rect:
+        serializedVersion: 2
+        x: 1444
+        y: 1010
+        width: 50
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c1827673b292ad4da3d0a8a7366c745
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_falling_left_ver1_43
+      rect:
+        serializedVersion: 2
+        x: 1585
+        y: 1009
+        width: 47
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 314514e3f5cdf0d479909a03ab310692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_falling_left_ver1_44
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 752
+        width: 52
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b434e5dfa21fe5a429b971647dce7161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_falling_left_ver1_45
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 752
+        width: 52
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fd0840770ec9b04399efb7890af5456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_falling_left_ver1_46
+      rect:
+        serializedVersion: 2
+        x: 542
+        y: 752
+        width: 47
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 876e52f3f6f2a3948b9d066c002cafa6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_falling_left_ver1_47
+      rect:
+        serializedVersion: 2
+        x: 651
+        y: 752
+        width: 47
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25b73cbbf5c55d847ba458cbd3f28442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_falling_left_ver1_48
+      rect:
+        serializedVersion: 2
+        x: 760
+        y: 752
+        width: 48
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f990a0ad50723547a49be9a0ac26b76
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_falling_left_ver1_49
+      rect:
+        serializedVersion: 2
+        x: 899
+        y: 751
+        width: 49
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d34cd0e7dceab124baf9125df34bddfa
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_falling_left_ver1_50
+      rect:
+        serializedVersion: 2
+        x: 1036
+        y: 751
+        width: 48
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd86295909c6ae040b5051143c2893b9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_falling_left_ver1_51
+      rect:
+        serializedVersion: 2
+        x: 1176
+        y: 751
+        width: 47
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2aa3e300a98c934fa7f91f45436c204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_falling_left_ver1_52
+      rect:
+        serializedVersion: 2
+        x: 1306
+        y: 751
+        width: 46
+        height: 112
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55efa9ae5d34c2f4087a7c12eb229b69
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_falling_left_ver1_53
+      rect:
+        serializedVersion: 2
+        x: 1445
+        y: 751
+        width: 47
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 33f715ef91f419b4197a25628590a410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_falling_left_ver1_54
+      rect:
+        serializedVersion: 2
+        x: 1584
+        y: 751
+        width: 48
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39182f9211fd9094f988084da1591d15
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_falling_left_ver1_55
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 493
+        width: 48
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58e3ee45860c4ab4faba1fb5b106dd1d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_falling_left_ver1_56
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 492
+        width: 45
+        height: 114
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 077425004bdd7634c83d6b35b47ac807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_falling_left_ver1_57
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 492
+        width: 48
+        height: 116
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2e735c14765f1b44aa8a2fb5864250d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_falling_left_ver1_58
+      rect:
+        serializedVersion: 2
+        x: 651
+        y: 493
+        width: 46
+        height: 113
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49b6de0b1d4471441b678d0871f55e73
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 3e7d9ee571bfee748a15cf7971d53a18
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

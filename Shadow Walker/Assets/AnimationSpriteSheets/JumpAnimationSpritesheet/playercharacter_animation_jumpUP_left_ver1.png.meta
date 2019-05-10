@@ -1,0 +1,897 @@
+fileFormatVersion: 2
+guid: cd96d1854d249b143873de2a7a640531
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: playercharacter_animation_jumpUP_left_ver1_0
+    21300002: playercharacter_animation_jumpUP_left_ver1_1
+    21300004: playercharacter_animation_jumpUP_left_ver1_2
+    21300006: playercharacter_animation_jumpUP_left_ver1_3
+    21300008: playercharacter_animation_jumpUP_left_ver1_4
+    21300010: playercharacter_animation_jumpUP_left_ver1_5
+    21300012: playercharacter_animation_jumpUP_left_ver1_6
+    21300014: playercharacter_animation_jumpUP_left_ver1_7
+    21300016: playercharacter_animation_jumpUP_left_ver1_8
+    21300018: playercharacter_animation_jumpUP_left_ver1_9
+    21300020: playercharacter_animation_jumpUP_left_ver1_10
+    21300022: playercharacter_animation_jumpUP_left_ver1_11
+    21300024: playercharacter_animation_jumpUP_left_ver1_12
+    21300026: playercharacter_animation_jumpUP_left_ver1_13
+    21300028: playercharacter_animation_jumpUP_left_ver1_14
+    21300030: playercharacter_animation_jumpUP_left_ver1_15
+    21300032: playercharacter_animation_jumpUP_left_ver1_16
+    21300034: playercharacter_animation_jumpUP_left_ver1_17
+    21300036: playercharacter_animation_jumpUP_left_ver1_18
+    21300038: playercharacter_animation_jumpUP_left_ver1_19
+    21300040: playercharacter_animation_jumpUP_left_ver1_20
+    21300042: playercharacter_animation_jumpUP_left_ver1_21
+    21300044: playercharacter_animation_jumpUP_left_ver1_22
+    21300046: playercharacter_animation_jumpUP_left_ver1_23
+    21300048: playercharacter_animation_jumpUP_left_ver1_24
+    21300050: playercharacter_animation_jumpUP_left_ver1_25
+    21300052: playercharacter_animation_jumpUP_left_ver1_26
+    21300054: playercharacter_animation_jumpUP_left_ver1_27
+    21300056: playercharacter_animation_jumpUP_left_ver1_28
+    21300058: playercharacter_animation_jumpUP_left_ver1_29
+    21300060: playercharacter_animation_jumpUP_left_ver1_30
+    21300062: playercharacter_animation_jumpUP_left_ver1_31
+    21300064: playercharacter_animation_jumpUP_left_ver1_32
+    21300066: playercharacter_animation_jumpUP_left_ver1_33
+    21300068: playercharacter_animation_jumpUP_left_ver1_34
+    21300070: playercharacter_animation_jumpUP_left_ver1_35
+    21300072: playercharacter_animation_jumpUP_left_ver1_36
+    21300074: playercharacter_animation_jumpUP_left_ver1_37
+  externalObjects: {}
+  serializedVersion: 9
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: playercharacter_animation_jumpUP_left_ver1_0
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 1130
+        width: 89
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cccfe16ec23bfd4981758e7bdb221b1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_jumpUP_left_ver1_1
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 1130
+        width: 89
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0a20d27697dd9b40913b8a639c7c71b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_jumpUP_left_ver1_2
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 1130
+        width: 89
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8dcdfe1afc000d42a2f9f6da2137728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_jumpUP_left_ver1_3
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 1130
+        width: 89
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f697b594714ba324f82b6d5345aaa526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_jumpUP_left_ver1_4
+      rect:
+        serializedVersion: 2
+        x: 533
+        y: 1130
+        width: 89
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57d6eb37c2421cb4899cdfde0f5b696d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_jumpUP_left_ver1_5
+      rect:
+        serializedVersion: 2
+        x: 663
+        y: 1130
+        width: 89
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b1af5f1421f59b428810ddcd36b355c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_jumpUP_left_ver1_6
+      rect:
+        serializedVersion: 2
+        x: 793
+        y: 1130
+        width: 89
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1de014394e901a542b3822e94262d326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_jumpUP_left_ver1_7
+      rect:
+        serializedVersion: 2
+        x: 922
+        y: 1130
+        width: 89
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0867d20c4c951b04fa2648c2bf86cc6b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_jumpUP_left_ver1_8
+      rect:
+        serializedVersion: 2
+        x: 1052
+        y: 1130
+        width: 89
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b2f4ea9461361b4eaa27e915bf31f61
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_jumpUP_left_ver1_9
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 965
+        width: 89
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 694f0df4e98985e4cafc774f0cbe6d19
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_jumpUP_left_ver1_10
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 965
+        width: 89
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe1d08e44f6e2514fb17dc34329b234b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_jumpUP_left_ver1_11
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 965
+        width: 89
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2072deda41828214b93a35206170b491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_jumpUP_left_ver1_12
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 965
+        width: 89
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2ab40bf6f67c2a4ba703fd02483a3f5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_jumpUP_left_ver1_13
+      rect:
+        serializedVersion: 2
+        x: 533
+        y: 965
+        width: 89
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96a4fce65ee46254d826f72ea38b516c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_jumpUP_left_ver1_14
+      rect:
+        serializedVersion: 2
+        x: 663
+        y: 965
+        width: 89
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80cb92c06473dd44b9bc5e87408c1415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_jumpUP_left_ver1_15
+      rect:
+        serializedVersion: 2
+        x: 793
+        y: 965
+        width: 89
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58fe6bf293f99f440babbe60d6b3e567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_jumpUP_left_ver1_16
+      rect:
+        serializedVersion: 2
+        x: 922
+        y: 965
+        width: 89
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f758fe7ad58d44047a2caf353bde5948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_jumpUP_left_ver1_17
+      rect:
+        serializedVersion: 2
+        x: 1052
+        y: 965
+        width: 89
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7069bdcdb32dd548aef23543b96099d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_jumpUP_left_ver1_18
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 791
+        width: 89
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ef753158e99dc54cac00ce927b6cc61
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_jumpUP_left_ver1_19
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 791
+        width: 89
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d26b6c87ec914c7408773a1cce9f026d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_jumpUP_left_ver1_20
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 791
+        width: 89
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec43fc5c177b1ce41af22c36c3bbae11
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_jumpUP_left_ver1_21
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 791
+        width: 89
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 675732e51ce1a0243b06f0bf736cc2e1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_jumpUP_left_ver1_22
+      rect:
+        serializedVersion: 2
+        x: 533
+        y: 791
+        width: 89
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 134867717aa516d48bdf15546f1cdb55
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_jumpUP_left_ver1_23
+      rect:
+        serializedVersion: 2
+        x: 663
+        y: 791
+        width: 89
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 406b3559e06763d419efea1d8833a116
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_jumpUP_left_ver1_24
+      rect:
+        serializedVersion: 2
+        x: 793
+        y: 791
+        width: 89
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27aa50b8c2f5a0a4fb05144e0977d704
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_jumpUP_left_ver1_25
+      rect:
+        serializedVersion: 2
+        x: 922
+        y: 791
+        width: 89
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1baf82249c383f4e9379b96ef337ac0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_jumpUP_left_ver1_26
+      rect:
+        serializedVersion: 2
+        x: 1052
+        y: 791
+        width: 89
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ebe784a35346c74eb84d438d21749ba
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_jumpUP_left_ver1_27
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 609
+        width: 89
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea8bba4e04df4bf43b827e4a115097df
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_jumpUP_left_ver1_28
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 609
+        width: 89
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b53d5f6aacb276949b741f4089041c08
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_jumpUP_left_ver1_29
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 609
+        width: 89
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a7ba5d4c66ef9641b6a8c216369836b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_jumpUP_left_ver1_30
+      rect:
+        serializedVersion: 2
+        x: 403
+        y: 609
+        width: 89
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 586d53c1ec6657e4ca70895355e1a673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_jumpUP_left_ver1_31
+      rect:
+        serializedVersion: 2
+        x: 533
+        y: 609
+        width: 89
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d0eef4bfa4c5d84a8e9ac9d5c05dd58
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_jumpUP_left_ver1_32
+      rect:
+        serializedVersion: 2
+        x: 663
+        y: 609
+        width: 89
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3592dfa1d34cec64cb2c5cdfb3cc6ccb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_jumpUP_left_ver1_33
+      rect:
+        serializedVersion: 2
+        x: 793
+        y: 609
+        width: 89
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a897cbaa9172a534387804c8c867adbe
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_jumpUP_left_ver1_34
+      rect:
+        serializedVersion: 2
+        x: 922
+        y: 609
+        width: 89
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2663435977c4e142b16722ccfd3b6e4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_jumpUP_left_ver1_35
+      rect:
+        serializedVersion: 2
+        x: 1052
+        y: 609
+        width: 89
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 641eb7f961c91f64c99f81abd0dde366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_jumpUP_left_ver1_36
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 437
+        width: 89
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba13d5c2bd346bf438a69183a770c272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_jumpUP_left_ver1_37
+      rect:
+        serializedVersion: 2
+        x: 141
+        y: 437
+        width: 89
+        height: 143
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb9892ffcd4e2ca49a29dad167865828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: f8bdf2c0f4f00e9428f5c954645f4e25
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

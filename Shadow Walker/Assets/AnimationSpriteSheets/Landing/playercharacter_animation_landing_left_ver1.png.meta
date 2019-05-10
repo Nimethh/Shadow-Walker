@@ -1,0 +1,939 @@
+fileFormatVersion: 2
+guid: a06d2f9d627431242b69ec1663a2329d
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: playercharacter_animation_landing_left_ver1_0
+    21300002: playercharacter_animation_landing_left_ver1_1
+    21300004: playercharacter_animation_landing_left_ver1_2
+    21300006: playercharacter_animation_landing_left_ver1_3
+    21300008: playercharacter_animation_landing_left_ver1_4
+    21300010: playercharacter_animation_landing_left_ver1_5
+    21300012: playercharacter_animation_landing_left_ver1_6
+    21300014: playercharacter_animation_landing_left_ver1_7
+    21300016: playercharacter_animation_landing_left_ver1_8
+    21300018: playercharacter_animation_landing_left_ver1_9
+    21300020: playercharacter_animation_landing_left_ver1_10
+    21300022: playercharacter_animation_landing_left_ver1_11
+    21300024: playercharacter_animation_landing_left_ver1_12
+    21300026: playercharacter_animation_landing_left_ver1_13
+    21300028: playercharacter_animation_landing_left_ver1_14
+    21300030: playercharacter_animation_landing_left_ver1_15
+    21300032: playercharacter_animation_landing_left_ver1_16
+    21300034: playercharacter_animation_landing_left_ver1_17
+    21300036: playercharacter_animation_landing_left_ver1_18
+    21300038: playercharacter_animation_landing_left_ver1_19
+    21300040: playercharacter_animation_landing_left_ver1_20
+    21300042: playercharacter_animation_landing_left_ver1_21
+    21300044: playercharacter_animation_landing_left_ver1_22
+    21300046: playercharacter_animation_landing_left_ver1_23
+    21300048: playercharacter_animation_landing_left_ver1_24
+    21300050: playercharacter_animation_landing_left_ver1_25
+    21300052: playercharacter_animation_landing_left_ver1_26
+    21300054: playercharacter_animation_landing_left_ver1_27
+    21300056: playercharacter_animation_landing_left_ver1_28
+    21300058: playercharacter_animation_landing_left_ver1_29
+    21300060: playercharacter_animation_landing_left_ver1_30
+    21300062: playercharacter_animation_landing_left_ver1_31
+    21300064: playercharacter_animation_landing_left_ver1_32
+    21300066: playercharacter_animation_landing_left_ver1_33
+    21300068: playercharacter_animation_landing_left_ver1_34
+    21300070: playercharacter_animation_landing_left_ver1_35
+    21300072: playercharacter_animation_landing_left_ver1_36
+    21300074: playercharacter_animation_landing_left_ver1_37
+    21300076: playercharacter_animation_landing_left_ver1_38
+    21300078: playercharacter_animation_landing_left_ver1_39
+  externalObjects: {}
+  serializedVersion: 9
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: playercharacter_animation_landing_left_ver1_0
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 807
+        width: 78
+        height: 119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0d6d8bf0135cb44e9a4e5496c0cd46e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_landing_left_ver1_1
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 807
+        width: 78
+        height: 119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9266e36dc8502a478cc22df8a3dad5f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_landing_left_ver1_2
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 807
+        width: 78
+        height: 119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0734f46b2898f014f8fa34065633cea7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_landing_left_ver1_3
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 807
+        width: 78
+        height: 119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bf18fd2322122fe44b3b5ba1bc7c93fb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_landing_left_ver1_4
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 807
+        width: 78
+        height: 119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a438d6f160b2e9841918632a8c68e554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_landing_left_ver1_5
+      rect:
+        serializedVersion: 2
+        x: 566
+        y: 807
+        width: 78
+        height: 119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1602515bdd29b647a315cd3bef606d8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_landing_left_ver1_6
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 807
+        width: 78
+        height: 119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c1657b0db1a4384799161cfa35ea3e2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_landing_left_ver1_7
+      rect:
+        serializedVersion: 2
+        x: 764
+        y: 807
+        width: 78
+        height: 119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: baf8749d8e318e6458e7de72e04fc982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_landing_left_ver1_8
+      rect:
+        serializedVersion: 2
+        x: 874
+        y: 807
+        width: 78
+        height: 119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfe927b749027d746bddeb69242640eb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_landing_left_ver1_9
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 683
+        width: 78
+        height: 119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 290ac7573798b284293b305a6c41b2a7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_landing_left_ver1_10
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 683
+        width: 78
+        height: 119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6410b90abdafec419e7e42addf053a4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_landing_left_ver1_11
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 683
+        width: 78
+        height: 119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8000751e046a0444bb44a326a8b1d4c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_landing_left_ver1_12
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 683
+        width: 78
+        height: 119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cd97f6103971294fa650cd0f3da0db2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_landing_left_ver1_13
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 683
+        width: 78
+        height: 119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3c74cc163cefd745baeda3859747bf4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_landing_left_ver1_14
+      rect:
+        serializedVersion: 2
+        x: 566
+        y: 683
+        width: 78
+        height: 119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6e4eff9f2567734fa8cf702a9df1847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_landing_left_ver1_15
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 683
+        width: 78
+        height: 119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee634b3a542e8fd48aded5b6caec92a0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_landing_left_ver1_16
+      rect:
+        serializedVersion: 2
+        x: 764
+        y: 683
+        width: 78
+        height: 119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d1fc55034619794484f266398db8c26
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_landing_left_ver1_17
+      rect:
+        serializedVersion: 2
+        x: 874
+        y: 683
+        width: 78
+        height: 119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d68c6c4d98bb4041801c31d61d098a2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_landing_left_ver1_18
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 563
+        width: 78
+        height: 119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf3765ff99afec94886b349b657958db
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_landing_left_ver1_19
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 563
+        width: 78
+        height: 119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cba6a81147545894f9d545761f28540d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_landing_left_ver1_20
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 563
+        width: 78
+        height: 119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61cfe0e0b8fe85d419c464fc371f91b4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_landing_left_ver1_21
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 563
+        width: 78
+        height: 119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad30706395eb78b489248c2aafe507a5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_landing_left_ver1_22
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 563
+        width: 78
+        height: 119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e96a4e8705cca1429ed01c866b78713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_landing_left_ver1_23
+      rect:
+        serializedVersion: 2
+        x: 566
+        y: 563
+        width: 78
+        height: 119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec1386e50541ddb459503e8eff8d7fcf
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_landing_left_ver1_24
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 563
+        width: 78
+        height: 119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3832e93c837f8ce48a9a002420f0ecef
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_landing_left_ver1_25
+      rect:
+        serializedVersion: 2
+        x: 764
+        y: 563
+        width: 78
+        height: 119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57c182fa3d20c3c448843b7560dfd9df
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_landing_left_ver1_26
+      rect:
+        serializedVersion: 2
+        x: 874
+        y: 563
+        width: 78
+        height: 119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5824944db1da23145af60034d26d3928
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_landing_left_ver1_27
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 427
+        width: 78
+        height: 119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c996956e7a56634f8653cefd19a54dd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_landing_left_ver1_28
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 427
+        width: 78
+        height: 119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 638e716423943bb46a7eb8cd51243292
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_landing_left_ver1_29
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 427
+        width: 78
+        height: 119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55b87a53c971e4444b428238af49b98b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_landing_left_ver1_30
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 427
+        width: 78
+        height: 119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e760e0c5a0873f846ba2208a0a00858d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_landing_left_ver1_31
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 427
+        width: 78
+        height: 119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e14436ad8d00c2b4898acbd4e4a1536b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_landing_left_ver1_32
+      rect:
+        serializedVersion: 2
+        x: 566
+        y: 427
+        width: 78
+        height: 119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 861cd29626d497047abf32950fda45b1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_landing_left_ver1_33
+      rect:
+        serializedVersion: 2
+        x: 665
+        y: 427
+        width: 78
+        height: 119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 300da553db92ab64ebb80f731166fb18
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_landing_left_ver1_34
+      rect:
+        serializedVersion: 2
+        x: 764
+        y: 427
+        width: 78
+        height: 119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d41924fc3f50989439f88b0e338be583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_landing_left_ver1_35
+      rect:
+        serializedVersion: 2
+        x: 874
+        y: 427
+        width: 78
+        height: 119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab23695149e09854080ada691e748c7a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_landing_left_ver1_36
+      rect:
+        serializedVersion: 2
+        x: 58
+        y: 290
+        width: 78
+        height: 119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23b6e2dc48bbdca4186b0796ff335e7b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_landing_left_ver1_37
+      rect:
+        serializedVersion: 2
+        x: 158
+        y: 290
+        width: 78
+        height: 119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1dd418ceedb49d47afe07428958cd9a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_landing_left_ver1_38
+      rect:
+        serializedVersion: 2
+        x: 257
+        y: 290
+        width: 78
+        height: 119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3dd07d5e3949acb47b8afc6c536c5289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_landing_left_ver1_39
+      rect:
+        serializedVersion: 2
+        x: 356
+        y: 290
+        width: 78
+        height: 119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09a49fc74e2620848adba86f09573bc9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 461c724560956b74795af1cb63eec23e
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

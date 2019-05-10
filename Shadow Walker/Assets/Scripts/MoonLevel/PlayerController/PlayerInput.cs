@@ -41,7 +41,10 @@ public class PlayerInput : MonoBehaviour
         MovementCheck();
         MoveOffLadderCheck();
         JumpCheck();
-        
+        JumpAnimationCheck();
+        FallingAnimationCheck();
+
+
         player.SetDirectionalInput (directionalInput);
         playerSoundManager.SetDirectionalInput(directionalInput);
     }
@@ -56,13 +59,13 @@ public class PlayerInput : MonoBehaviour
         if (controller.collisionInfo.climbing == false || controller.collisionInfo.below == true)
         {
             directionalInput.x = Input.GetAxisRaw("Horizontal");
-            if (directionalInput.x > 0)
+            if (directionalInput.x > 0 && player.onGround)
             {
                 lastMoveX = directionalInput.x;
                 animator.SetFloat("MovementX", directionalInput.x);
                 animator.SetBool("Moving", true);
             }
-            else if (directionalInput.x < 0)
+            else if (directionalInput.x < 0 && player.onGround)
             {
                 lastMoveX = directionalInput.x;
                 animator.SetFloat("MovementX", directionalInput.x);
@@ -124,7 +127,55 @@ public class PlayerInput : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
+            animator.SetBool("Jumping", true);
             player.OnJumpInputDown();
+        }
+    }
+
+    void JumpAnimationCheck()
+    {
+        if (player.jumping == true)
+        {
+            if (directionalInput.x > 0)
+            {
+                lastMoveX = directionalInput.x;
+                animator.SetFloat("MovementX", directionalInput.x);
+            }
+            else if (directionalInput.x < 0)
+            {
+                lastMoveX = directionalInput.x;
+                animator.SetFloat("MovementX", directionalInput.x);
+            }
+            else
+            {
+                animator.SetFloat("MovementX", directionalInput.x);
+            }
+            animator.SetFloat("LastXValue", lastMoveX);
+        }
+        else
+            animator.SetBool("Jumping", false);
+    }
+
+    void FallingAnimationCheck()
+    {
+        animator.SetBool("Falling", player.falling);
+        if (player.falling == true)
+        {
+            if (directionalInput.x > 0)
+            {
+                lastMoveX = directionalInput.x;
+                animator.SetFloat("MovementX", directionalInput.x);
+            }
+            else if (directionalInput.x < 0)
+            {
+                lastMoveX = directionalInput.x;
+                animator.SetFloat("MovementX", directionalInput.x);
+            }
+            else
+            {
+                animator.SetFloat("MovementX", directionalInput.x);
+            }
+            animator.SetFloat("LastXValue", lastMoveX);
         }
     }
 }

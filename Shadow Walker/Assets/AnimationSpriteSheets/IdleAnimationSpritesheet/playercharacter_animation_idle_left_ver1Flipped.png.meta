@@ -1,0 +1,4026 @@
+fileFormatVersion: 2
+guid: 87fbdea0432059f4f90fad94484eee4a
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: playercharacter_animation_idle_left_ver1Flipped_0
+    21300002: playercharacter_animation_idle_left_ver1Flipped_1
+    21300004: playercharacter_animation_idle_left_ver1Flipped_2
+    21300006: playercharacter_animation_idle_left_ver1Flipped_3
+    21300008: playercharacter_animation_idle_left_ver1Flipped_4
+    21300010: playercharacter_animation_idle_left_ver1Flipped_5
+    21300012: playercharacter_animation_idle_left_ver1Flipped_6
+    21300014: playercharacter_animation_idle_left_ver1Flipped_7
+    21300016: playercharacter_animation_idle_left_ver1Flipped_8
+    21300018: playercharacter_animation_idle_left_ver1Flipped_9
+    21300020: playercharacter_animation_idle_left_ver1Flipped_10
+    21300022: playercharacter_animation_idle_left_ver1Flipped_11
+    21300024: playercharacter_animation_idle_left_ver1Flipped_12
+    21300026: playercharacter_animation_idle_left_ver1Flipped_13
+    21300028: playercharacter_animation_idle_left_ver1Flipped_14
+    21300030: playercharacter_animation_idle_left_ver1Flipped_15
+    21300032: playercharacter_animation_idle_left_ver1Flipped_16
+    21300034: playercharacter_animation_idle_left_ver1Flipped_17
+    21300036: playercharacter_animation_idle_left_ver1Flipped_18
+    21300038: playercharacter_animation_idle_left_ver1Flipped_19
+    21300040: playercharacter_animation_idle_left_ver1Flipped_20
+    21300042: playercharacter_animation_idle_left_ver1Flipped_21
+    21300044: playercharacter_animation_idle_left_ver1Flipped_22
+    21300046: playercharacter_animation_idle_left_ver1Flipped_23
+    21300048: playercharacter_animation_idle_left_ver1Flipped_24
+    21300050: playercharacter_animation_idle_left_ver1Flipped_25
+    21300052: playercharacter_animation_idle_left_ver1Flipped_26
+    21300054: playercharacter_animation_idle_left_ver1Flipped_27
+    21300056: playercharacter_animation_idle_left_ver1Flipped_28
+    21300058: playercharacter_animation_idle_left_ver1Flipped_29
+    21300060: playercharacter_animation_idle_left_ver1Flipped_30
+    21300062: playercharacter_animation_idle_left_ver1Flipped_31
+    21300064: playercharacter_animation_idle_left_ver1Flipped_32
+    21300066: playercharacter_animation_idle_left_ver1Flipped_33
+    21300068: playercharacter_animation_idle_left_ver1Flipped_34
+    21300070: playercharacter_animation_idle_left_ver1Flipped_35
+    21300072: playercharacter_animation_idle_left_ver1Flipped_36
+    21300074: playercharacter_animation_idle_left_ver1Flipped_37
+    21300076: playercharacter_animation_idle_left_ver1Flipped_38
+    21300078: playercharacter_animation_idle_left_ver1Flipped_39
+    21300080: playercharacter_animation_idle_left_ver1Flipped_40
+    21300082: playercharacter_animation_idle_left_ver1Flipped_41
+    21300084: playercharacter_animation_idle_left_ver1Flipped_42
+    21300086: playercharacter_animation_idle_left_ver1Flipped_43
+    21300088: playercharacter_animation_idle_left_ver1Flipped_44
+    21300090: playercharacter_animation_idle_left_ver1Flipped_45
+    21300092: playercharacter_animation_idle_left_ver1Flipped_46
+    21300094: playercharacter_animation_idle_left_ver1Flipped_47
+    21300096: playercharacter_animation_idle_left_ver1Flipped_48
+    21300098: playercharacter_animation_idle_left_ver1Flipped_49
+    21300100: playercharacter_animation_idle_left_ver1Flipped_50
+    21300102: playercharacter_animation_idle_left_ver1Flipped_51
+    21300104: playercharacter_animation_idle_left_ver1Flipped_52
+    21300106: playercharacter_animation_idle_left_ver1Flipped_53
+    21300108: playercharacter_animation_idle_left_ver1Flipped_54
+    21300110: playercharacter_animation_idle_left_ver1Flipped_55
+    21300112: playercharacter_animation_idle_left_ver1Flipped_56
+    21300114: playercharacter_animation_idle_left_ver1Flipped_57
+    21300116: playercharacter_animation_idle_left_ver1Flipped_58
+    21300118: playercharacter_animation_idle_left_ver1Flipped_59
+    21300120: playercharacter_animation_idle_left_ver1Flipped_60
+    21300122: playercharacter_animation_idle_left_ver1Flipped_61
+    21300124: playercharacter_animation_idle_left_ver1Flipped_62
+    21300126: playercharacter_animation_idle_left_ver1Flipped_63
+    21300128: playercharacter_animation_idle_left_ver1Flipped_64
+    21300130: playercharacter_animation_idle_left_ver1Flipped_65
+    21300132: playercharacter_animation_idle_left_ver1Flipped_66
+    21300134: playercharacter_animation_idle_left_ver1Flipped_67
+    21300136: playercharacter_animation_idle_left_ver1Flipped_68
+    21300138: playercharacter_animation_idle_left_ver1Flipped_69
+    21300140: playercharacter_animation_idle_left_ver1Flipped_70
+    21300142: playercharacter_animation_idle_left_ver1Flipped_71
+    21300144: playercharacter_animation_idle_left_ver1Flipped_72
+    21300146: playercharacter_animation_idle_left_ver1Flipped_73
+    21300148: playercharacter_animation_idle_left_ver1Flipped_74
+    21300150: playercharacter_animation_idle_left_ver1Flipped_75
+    21300152: playercharacter_animation_idle_left_ver1Flipped_76
+    21300154: playercharacter_animation_idle_left_ver1Flipped_77
+    21300156: playercharacter_animation_idle_left_ver1Flipped_78
+    21300158: playercharacter_animation_idle_left_ver1Flipped_79
+    21300160: playercharacter_animation_idle_left_ver1Flipped_80
+    21300162: playercharacter_animation_idle_left_ver1Flipped_81
+    21300164: playercharacter_animation_idle_left_ver1Flipped_82
+    21300166: playercharacter_animation_idle_left_ver1Flipped_83
+    21300168: playercharacter_animation_idle_left_ver1Flipped_84
+    21300170: playercharacter_animation_idle_left_ver1Flipped_85
+    21300172: playercharacter_animation_idle_left_ver1Flipped_86
+    21300174: playercharacter_animation_idle_left_ver1Flipped_87
+    21300176: playercharacter_animation_idle_left_ver1Flipped_88
+    21300178: playercharacter_animation_idle_left_ver1Flipped_89
+    21300180: playercharacter_animation_idle_left_ver1Flipped_90
+    21300182: playercharacter_animation_idle_left_ver1Flipped_91
+    21300184: playercharacter_animation_idle_left_ver1Flipped_92
+    21300186: playercharacter_animation_idle_left_ver1Flipped_93
+    21300188: playercharacter_animation_idle_left_ver1Flipped_94
+    21300190: playercharacter_animation_idle_left_ver1Flipped_95
+    21300192: playercharacter_animation_idle_left_ver1Flipped_96
+    21300194: playercharacter_animation_idle_left_ver1Flipped_97
+    21300196: playercharacter_animation_idle_left_ver1Flipped_98
+    21300198: playercharacter_animation_idle_left_ver1Flipped_99
+    21300200: playercharacter_animation_idle_left_ver1Flipped_100
+    21300202: playercharacter_animation_idle_left_ver1Flipped_101
+    21300204: playercharacter_animation_idle_left_ver1Flipped_102
+    21300206: playercharacter_animation_idle_left_ver1Flipped_103
+    21300208: playercharacter_animation_idle_left_ver1Flipped_104
+    21300210: playercharacter_animation_idle_left_ver1Flipped_105
+    21300212: playercharacter_animation_idle_left_ver1Flipped_106
+    21300214: playercharacter_animation_idle_left_ver1Flipped_107
+    21300216: playercharacter_animation_idle_left_ver1Flipped_108
+    21300218: playercharacter_animation_idle_left_ver1Flipped_109
+    21300220: playercharacter_animation_idle_left_ver1Flipped_110
+    21300222: playercharacter_animation_idle_left_ver1Flipped_111
+    21300224: playercharacter_animation_idle_left_ver1Flipped_112
+    21300226: playercharacter_animation_idle_left_ver1Flipped_113
+    21300228: playercharacter_animation_idle_left_ver1Flipped_114
+    21300230: playercharacter_animation_idle_left_ver1Flipped_115
+    21300232: playercharacter_animation_idle_left_ver1Flipped_116
+    21300234: playercharacter_animation_idle_left_ver1Flipped_117
+    21300236: playercharacter_animation_idle_left_ver1Flipped_118
+    21300238: playercharacter_animation_idle_left_ver1Flipped_119
+    21300240: playercharacter_animation_idle_left_ver1Flipped_120
+    21300242: playercharacter_animation_idle_left_ver1Flipped_121
+    21300244: playercharacter_animation_idle_left_ver1Flipped_122
+    21300246: playercharacter_animation_idle_left_ver1Flipped_123
+    21300248: playercharacter_animation_idle_left_ver1Flipped_124
+    21300250: playercharacter_animation_idle_left_ver1Flipped_125
+    21300252: playercharacter_animation_idle_left_ver1Flipped_126
+    21300254: playercharacter_animation_idle_left_ver1Flipped_127
+    21300256: playercharacter_animation_idle_left_ver1Flipped_128
+    21300258: playercharacter_animation_idle_left_ver1Flipped_129
+    21300260: playercharacter_animation_idle_left_ver1Flipped_130
+    21300262: playercharacter_animation_idle_left_ver1Flipped_131
+    21300264: playercharacter_animation_idle_left_ver1Flipped_132
+    21300266: playercharacter_animation_idle_left_ver1Flipped_133
+    21300268: playercharacter_animation_idle_left_ver1Flipped_134
+    21300270: playercharacter_animation_idle_left_ver1Flipped_135
+    21300272: playercharacter_animation_idle_left_ver1Flipped_136
+    21300274: playercharacter_animation_idle_left_ver1Flipped_137
+    21300276: playercharacter_animation_idle_left_ver1Flipped_138
+    21300278: playercharacter_animation_idle_left_ver1Flipped_139
+    21300280: playercharacter_animation_idle_left_ver1Flipped_140
+    21300282: playercharacter_animation_idle_left_ver1Flipped_141
+    21300284: playercharacter_animation_idle_left_ver1Flipped_142
+    21300286: playercharacter_animation_idle_left_ver1Flipped_143
+    21300288: playercharacter_animation_idle_left_ver1Flipped_144
+    21300290: playercharacter_animation_idle_left_ver1Flipped_145
+    21300292: playercharacter_animation_idle_left_ver1Flipped_146
+    21300294: playercharacter_animation_idle_left_ver1Flipped_147
+    21300296: playercharacter_animation_idle_left_ver1Flipped_148
+    21300298: playercharacter_animation_idle_left_ver1Flipped_149
+    21300300: playercharacter_animation_idle_left_ver1Flipped_150
+    21300302: playercharacter_animation_idle_left_ver1Flipped_151
+    21300304: playercharacter_animation_idle_left_ver1Flipped_152
+    21300306: playercharacter_animation_idle_left_ver1Flipped_153
+    21300308: playercharacter_animation_idle_left_ver1Flipped_154
+    21300310: playercharacter_animation_idle_left_ver1Flipped_155
+    21300312: playercharacter_animation_idle_left_ver1Flipped_156
+    21300314: playercharacter_animation_idle_left_ver1Flipped_157
+    21300316: playercharacter_animation_idle_left_ver1Flipped_158
+    21300318: playercharacter_animation_idle_left_ver1Flipped_159
+    21300320: playercharacter_animation_idle_left_ver1Flipped_160
+    21300322: playercharacter_animation_idle_left_ver1Flipped_161
+    21300324: playercharacter_animation_idle_left_ver1Flipped_162
+    21300326: playercharacter_animation_idle_left_ver1Flipped_163
+    21300328: playercharacter_animation_idle_left_ver1Flipped_164
+    21300330: playercharacter_animation_idle_left_ver1Flipped_165
+    21300332: playercharacter_animation_idle_left_ver1Flipped_166
+    21300334: playercharacter_animation_idle_left_ver1Flipped_167
+    21300336: playercharacter_animation_idle_left_ver1Flipped_168
+    21300338: playercharacter_animation_idle_left_ver1Flipped_169
+    21300340: playercharacter_animation_idle_left_ver1Flipped_170
+    21300342: playercharacter_animation_idle_left_ver1Flipped_171
+    21300344: playercharacter_animation_idle_left_ver1Flipped_172
+    21300346: playercharacter_animation_idle_left_ver1Flipped_173
+    21300348: playercharacter_animation_idle_left_ver1Flipped_174
+    21300350: playercharacter_animation_idle_left_ver1Flipped_175
+    21300352: playercharacter_animation_idle_left_ver1Flipped_176
+    21300354: playercharacter_animation_idle_left_ver1Flipped_177
+    21300356: playercharacter_animation_idle_left_ver1Flipped_178
+    21300358: playercharacter_animation_idle_left_ver1Flipped_179
+    21300360: playercharacter_animation_idle_left_ver1Flipped_180
+    21300362: playercharacter_animation_idle_left_ver1Flipped_181
+    21300364: playercharacter_animation_idle_left_ver1Flipped_182
+    21300366: playercharacter_animation_idle_left_ver1Flipped_183
+    21300368: playercharacter_animation_idle_left_ver1Flipped_184
+    21300370: playercharacter_animation_idle_left_ver1Flipped_185
+    21300372: playercharacter_animation_idle_left_ver1Flipped_186
+  externalObjects: {}
+  serializedVersion: 9
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_0
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 3936
+        width: 53
+        height: 123
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fcf53592951038941946488f9779757b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_1
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 3936
+        width: 52
+        height: 123
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cbf23017aa4e8e42b2281e7ce915eae
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_2
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 3935
+        width: 56
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04b211a447b980745a40c801fe063e40
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_3
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 3936
+        width: 55
+        height: 123
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca99aadb19fd14f4b81a5117499897c5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_4
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 3936
+        width: 55
+        height: 123
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ad494dc9fb102c248be511240e351176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_5
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 3939
+        width: 55
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84c4075b97a156042bbaf9ce016ef41b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_6
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 3936
+        width: 53
+        height: 123
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1ab476b12c6afc4fb93e71340ae4d3d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_7
+      rect:
+        serializedVersion: 2
+        x: 567
+        y: 3936
+        width: 52
+        height: 123
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 374a7d218fc4ee645983aaa834e6d232
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_8
+      rect:
+        serializedVersion: 2
+        x: 637
+        y: 3939
+        width: 52
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebd8ab7c176c5bf429392c97df4f6903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_9
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 3935
+        width: 56
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e73f024cf5f65344ac341fc8bcf64d5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_10
+      rect:
+        serializedVersion: 2
+        x: 789
+        y: 3939
+        width: 52
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c40ac318bd30a234aa2c617752039e8d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_11
+      rect:
+        serializedVersion: 2
+        x: 869
+        y: 3935
+        width: 52
+        height: 124
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52a6a29521b7d6f45826661d9af32e02
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_12
+      rect:
+        serializedVersion: 2
+        x: 949
+        y: 3936
+        width: 52
+        height: 123
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66254568ccd3a43449193717aac25359
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_13
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 3725
+        width: 52
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 349e1d746276fc44fbb7594353847f6a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_14
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 3725
+        width: 52
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 706531d18e6318f4aaba1c3a6c1c05be
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_15
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 3725
+        width: 55
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c93c304686285eb46a5dbf01f108bb99
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_16
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 3725
+        width: 55
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b071dac51b4e6e04f8afbcbeec51a5d2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_17
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 3725
+        width: 54
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7af66604e9a44c044aea10e1b662381e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_18
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 3725
+        width: 55
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 11a099ac9ea26674493b63f0e528811a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_19
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 3725
+        width: 57
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5813bb94ccedecf47b5b84da63ec9cb6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_20
+      rect:
+        serializedVersion: 2
+        x: 567
+        y: 3725
+        width: 52
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2535cd413331f824098ba5953c20f17a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_21
+      rect:
+        serializedVersion: 2
+        x: 637
+        y: 3725
+        width: 54
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69153b2387f79fd45addb6080d815b80
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_22
+      rect:
+        serializedVersion: 2
+        x: 707
+        y: 3725
+        width: 54
+        height: 119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbaa43741d31f7845af08620792f619d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_23
+      rect:
+        serializedVersion: 2
+        x: 787
+        y: 3725
+        width: 54
+        height: 119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 382f0df94b8bd624fafaf1980f28789b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_24
+      rect:
+        serializedVersion: 2
+        x: 869
+        y: 3725
+        width: 52
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77eecf3069bc94a41a2b0164fa2cf1cf
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_25
+      rect:
+        serializedVersion: 2
+        x: 949
+        y: 3725
+        width: 52
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e119542a877a2484e997e12dc944aff4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_26
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 3511
+        width: 54
+        height: 121
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 026ff0e4febdf974f80668b2baac83ad
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_27
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 3511
+        width: 52
+        height: 121
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 487bc57ff6eb7e44880d3f014ab8f83e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_28
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 3511
+        width: 55
+        height: 121
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4673e0689a639814f83fc145a0715a7c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_29
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 3512
+        width: 57
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12320de308b2624439a6e3a6ff47218c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_30
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 3511
+        width: 54
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 368097d6ca5e71b4a85c858c7f589c13
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_31
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 3511
+        width: 55
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aadbab2bc7a4a8a4ba9fa3f957604866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_32
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 3511
+        width: 54
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d33f94d1d1e8f14fb3aea398eb2655a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_33
+      rect:
+        serializedVersion: 2
+        x: 567
+        y: 3512
+        width: 54
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fdbcce9790be2849b732926e125c473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_34
+      rect:
+        serializedVersion: 2
+        x: 637
+        y: 3511
+        width: 54
+        height: 121
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e2e94ec70c642f148b376081e370db08
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_35
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 3511
+        width: 57
+        height: 121
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d0b939e116431a499cf0a7c323e74e8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_36
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 3511
+        width: 57
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0abac0d3cbeb5b4cb947aca2f909322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_37
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 3512
+        width: 57
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d77a51af2a63344ba56e82400c23c25
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_38
+      rect:
+        serializedVersion: 2
+        x: 944
+        y: 3511
+        width: 59
+        height: 121
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d9365fd80a6656479ec085f83edc66f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_39
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 3296
+        width: 54
+        height: 119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7463cbf5ea55f44f9ec771488500ecd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_40
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 3299
+        width: 55
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be50bcf609349404792a0f87e3a5d38d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_41
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 3299
+        width: 57
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7bef9d9a2f9a8b41818caf933c0c503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_42
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 3299
+        width: 57
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e93cae78872f12f4bbd3c27b5ac9f857
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_43
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 3295
+        width: 57
+        height: 122
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b6b300802d346242a567c4843b2e071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_44
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 3299
+        width: 58
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28e6e4e0ba7376842aa60a2a8c14a6a3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_45
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 3296
+        width: 54
+        height: 121
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 83a2ee2816756f74a9fe0b83f0b68e69
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_46
+      rect:
+        serializedVersion: 2
+        x: 565
+        y: 3299
+        width: 56
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 032de1f1fc764424c9bd8e53d899764f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_47
+      rect:
+        serializedVersion: 2
+        x: 637
+        y: 3299
+        width: 54
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 834ac42080d7e1045a01c80ce194e759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_48
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 3295
+        width: 57
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4119a32d646c0a41b83af5fc13c8ee5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_49
+      rect:
+        serializedVersion: 2
+        x: 787
+        y: 3299
+        width: 54
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffd5c44c31330034780ea90902fd6156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_50
+      rect:
+        serializedVersion: 2
+        x: 867
+        y: 3299
+        width: 55
+        height: 116
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35aa432bc01bac14692c911a25343124
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_51
+      rect:
+        serializedVersion: 2
+        x: 947
+        y: 3299
+        width: 56
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 259009401cdfcde4baea19cf56cc4a11
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_52
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 3085
+        width: 54
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01473054a73f06e4a84bea88c8901a1b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_53
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 3085
+        width: 55
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2723c237057a6aa448a2dbe0289f6579
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_54
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 3085
+        width: 54
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4f7cf082c23d2d944bdd36b84dde2cae
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_55
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 3085
+        width: 57
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12ac65c005d395747bdd2f8b7d2a5144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_56
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 3085
+        width: 57
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71c4a7c94361038429b5daf07aa8654d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_57
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 3085
+        width: 54
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6b08560185c48e4f8525c65ea80e0db
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_58
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 3085
+        width: 54
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 485619c812d4d92489aa449e9ffae16c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_59
+      rect:
+        serializedVersion: 2
+        x: 565
+        y: 3085
+        width: 54
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c482b8f5431ff342b11584198bf49a1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_60
+      rect:
+        serializedVersion: 2
+        x: 635
+        y: 3085
+        width: 56
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9640ec69e8ec5f24e86fe17a15983562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_61
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 3085
+        width: 57
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0bf86f5c37448048a2093e3d028c478
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_62
+      rect:
+        serializedVersion: 2
+        x: 787
+        y: 3085
+        width: 54
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8f22b77ebaf0894a86e2582520165a0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_63
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 3085
+        width: 57
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e9b58cd43e073654cadfb9e49cc8523e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_64
+      rect:
+        serializedVersion: 2
+        x: 947
+        y: 3085
+        width: 54
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edee866a4be5def46b60c00d573fdef7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_65
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 2871
+        width: 54
+        height: 121
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f22574d26a07b7349b9d038a3a6af257
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_66
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 2871
+        width: 54
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: db3ce358d4b48d64a98f254f58818a6a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_67
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 2871
+        width: 54
+        height: 121
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74f714d9c20e2754e85130a5f7939229
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_68
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 2871
+        width: 56
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 352673e77c621fb41a1a8b3d4f807fc7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_69
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 2871
+        width: 52
+        height: 121
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b04219c773e969346922a290fa2bbdaf
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_70
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 2871
+        width: 53
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e679987d4556f244b893665d3f49a35
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_71
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 2871
+        width: 57
+        height: 122
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85181ef4a6dcfde42a871b69ee37100c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_72
+      rect:
+        serializedVersion: 2
+        x: 565
+        y: 2872
+        width: 54
+        height: 119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9626d8cf96a477d44a6e4684cf112675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_73
+      rect:
+        serializedVersion: 2
+        x: 635
+        y: 2871
+        width: 54
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d25bf393d0819f42aad99ae65f85ed6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_74
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 2871
+        width: 56
+        height: 121
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30e24584072b368438eb19668b6471a4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_75
+      rect:
+        serializedVersion: 2
+        x: 787
+        y: 2871
+        width: 54
+        height: 122
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05652a02bde42904abd8f97bbd3c4cbf
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_76
+      rect:
+        serializedVersion: 2
+        x: 867
+        y: 2871
+        width: 54
+        height: 121
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75f42c0d0d78e1146a2c875b59c3d38b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_77
+      rect:
+        serializedVersion: 2
+        x: 944
+        y: 2871
+        width: 56
+        height: 121
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a219d6e02f1c1d0498729b833c85d547
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_78
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 2655
+        width: 52
+        height: 122
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e486bd995cf4844684ecae2e74238b7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_79
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 2659
+        width: 55
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 666368dcb6c84fc4ca937e1590e056ae
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_80
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 2659
+        width: 53
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ac2073de38831a4896cea79bdab28e0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_81
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 2656
+        width: 56
+        height: 121
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 426f0b99fa84fd242b177f7a7a1d238c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_82
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 2659
+        width: 53
+        height: 119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f71c932269e41ba4e855594516c19a76
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_83
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 2659
+        width: 55
+        height: 119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aca7f4a0afa20694ca3964d90e0e1aeb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_84
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 2656
+        width: 52
+        height: 123
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a604ea9825cb1274192b5803cd26f10c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_85
+      rect:
+        serializedVersion: 2
+        x: 565
+        y: 2656
+        width: 52
+        height: 123
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78eeec484e2d08c49bdfc1a643a275cb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_86
+      rect:
+        serializedVersion: 2
+        x: 635
+        y: 2656
+        width: 52
+        height: 123
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52f3ef2718fc2bc42a0e7f58bb4d75bc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_87
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 2656
+        width: 57
+        height: 123
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 568f72c8b0d8b46488cf37d4c50ec858
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_88
+      rect:
+        serializedVersion: 2
+        x: 787
+        y: 2659
+        width: 52
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6780c12a14ac474ba7c22d2e7913e18
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_89
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 2659
+        width: 55
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1e835993514fbd45b9995119b6b653e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_90
+      rect:
+        serializedVersion: 2
+        x: 944
+        y: 2656
+        width: 55
+        height: 123
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25bfcac0b825f5a479c93429ac3c7623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_91
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 2445
+        width: 52
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75c41b0e4170fc14499999f3e6b2cc75
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_92
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 2445
+        width: 55
+        height: 123
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 48aa091015bcf994f81ec028620aae51
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_93
+      rect:
+        serializedVersion: 2
+        x: 191
+        y: 2445
+        width: 57
+        height: 123
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cefe96adcde5d6849b79078bbc10d8da
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_94
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 2445
+        width: 56
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d60533f7df00e8478f1389a3b2c5935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_95
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 2445
+        width: 53
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cc90c213b27b7a43b014903085b5b79
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_96
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 2445
+        width: 56
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 536a2b5517e88064f8b376c932490cb1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_97
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 2445
+        width: 52
+        height: 123
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d8e17f2fe2aa594da7b265ce1a994d7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_98
+      rect:
+        serializedVersion: 2
+        x: 565
+        y: 2445
+        width: 52
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfc5f8e0dd2542443b8c8493e9e809a2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_99
+      rect:
+        serializedVersion: 2
+        x: 635
+        y: 2445
+        width: 52
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca5a3dcb9af8dcc4aa03d9b8b36eff53
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_100
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 2445
+        width: 53
+        height: 123
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8166586d5cbeebf4cb0000abffed39d4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_101
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 2445
+        width: 55
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6aebd49af85504c43b58305bc30e1dff
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_102
+      rect:
+        serializedVersion: 2
+        x: 863
+        y: 2445
+        width: 56
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8e139a8c4b26107478fe809949cfac37
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_103
+      rect:
+        serializedVersion: 2
+        x: 944
+        y: 2445
+        width: 56
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 814a986c3e817e14b953e7cf263a6eea
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_104
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 2231
+        width: 52
+        height: 122
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3157d78c94080b54db097dd0d963c393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_105
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 2231
+        width: 56
+        height: 121
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 486aa3c309c6083459bd67262e1dd089
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_106
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 2231
+        width: 52
+        height: 121
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26543e371856649498a32c1d40e2b181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_107
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 2231
+        width: 56
+        height: 121
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99eb30a92ae66b048923eef7b6b54399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_108
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 2231
+        width: 57
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5c3647b13dcdfd469b5e826890c797e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_109
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 2231
+        width: 56
+        height: 122
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc765a99d8611324dbccb67f9775c82c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_110
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 2231
+        width: 52
+        height: 121
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b39ce56430b4bef409f9dc6f2a559ec0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_111
+      rect:
+        serializedVersion: 2
+        x: 565
+        y: 2232
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 778681e997ca1c848971474da6824fea
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_112
+      rect:
+        serializedVersion: 2
+        x: 635
+        y: 2232
+        width: 52
+        height: 119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a6e087a117f5714d964cd08bbfc992e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_113
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 2231
+        width: 55
+        height: 121
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: daeafd0549b95b74885cce87bc308af5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_114
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 2231
+        width: 55
+        height: 121
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21ed436917823914a868bc1700ab732b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_115
+      rect:
+        serializedVersion: 2
+        x: 867
+        y: 2231
+        width: 52
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93ab0870a5776c344b2767bbe99843ce
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_116
+      rect:
+        serializedVersion: 2
+        x: 947
+        y: 2231
+        width: 53
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2def72c56416306458b6294663d1fe1e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_117
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 2019
+        width: 52
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88333eabc50a6eb41b5821a6e06f3e89
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_118
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 2016
+        width: 57
+        height: 121
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f53796630f7e964f84a65bd87558071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_119
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 2019
+        width: 55
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99e16613c5759d74cb9c69f7246c6de7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_120
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 2015
+        width: 54
+        height: 122
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9c4d06de09fffb4d9b5a9af50503933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_121
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 2016
+        width: 56
+        height: 121
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f44980d3b6e9b84488fd267fa04d710
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_122
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 2019
+        width: 52
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ed2b3c2e4015b14c8c4b39c33707ccc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_123
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 2016
+        width: 54
+        height: 121
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c26e6a7798026f44a7653ae46e02195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_124
+      rect:
+        serializedVersion: 2
+        x: 565
+        y: 2019
+        width: 54
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cac07e0bb4b667448bad84e04ff69da
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_125
+      rect:
+        serializedVersion: 2
+        x: 635
+        y: 2019
+        width: 54
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c3d85780c95c664cafe145d1bae65e6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_126
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 2016
+        width: 57
+        height: 121
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29c3ff35cd08e774b841bf60effe4546
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_127
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 2019
+        width: 57
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b2781704b90e61479231c7fc48bd099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_128
+      rect:
+        serializedVersion: 2
+        x: 863
+        y: 2016
+        width: 58
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d9fc36e2abca2745890b78b182a37a7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_129
+      rect:
+        serializedVersion: 2
+        x: 947
+        y: 2019
+        width: 54
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d92f6dbd52cc4c4d99bd3a4adbec65d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_130
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 1805
+        width: 54
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82581e8143392f94dac50b31ca447bd4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_131
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 1805
+        width: 57
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6c356249667b60459b58e8052a57480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_132
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1805
+        width: 56
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 725262cf39c78024cb8a0661dc34f104
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_133
+      rect:
+        serializedVersion: 2
+        x: 271
+        y: 1805
+        width: 58
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8d15a84ca9c8d94a9797e0b9d9e39ed
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_134
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 1805
+        width: 57
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4de479d85644fd468ad190ebf8f3561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_135
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 1805
+        width: 56
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff5e10ce788ca0541824b0c022958d2a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_136
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 1805
+        width: 57
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd6aa9cbb729e614095196e0b6562a4f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_137
+      rect:
+        serializedVersion: 2
+        x: 565
+        y: 1805
+        width: 56
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34baffa63f64ab34998a21ff4604f2fa
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_138
+      rect:
+        serializedVersion: 2
+        x: 637
+        y: 1805
+        width: 54
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d5af4db13b22c904db211936a1750def
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_139
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 1805
+        width: 57
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b129ecb51d8682846be1d765c96fb730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_140
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 1805
+        width: 57
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 678ec443018dfed4d89af7647748dc32
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_141
+      rect:
+        serializedVersion: 2
+        x: 867
+        y: 1805
+        width: 55
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f69fdc78da0e39640b5bf0b5caf53c0e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_142
+      rect:
+        serializedVersion: 2
+        x: 947
+        y: 1805
+        width: 56
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a1c61e334d8e04498fa0aeb876fc273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_143
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 1591
+        width: 54
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5021851fe7ab8d146a05418a623e0b5a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_144
+      rect:
+        serializedVersion: 2
+        x: 123
+        y: 1591
+        width: 56
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d8219179c2ce85b4a9436a2e8aec72b2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_145
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1591
+        width: 57
+        height: 121
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b2e1beb06d700b4b89dd0f66d9d960d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_146
+      rect:
+        serializedVersion: 2
+        x: 272
+        y: 1591
+        width: 57
+        height: 121
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 874c54238aa19c740a63094b216b210d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_147
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 1591
+        width: 57
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49c6f348b52a1844389339c003670983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_148
+      rect:
+        serializedVersion: 2
+        x: 423
+        y: 1591
+        width: 57
+        height: 121
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df24943c2c4bfbe42aef7757e020155e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_149
+      rect:
+        serializedVersion: 2
+        x: 495
+        y: 1591
+        width: 54
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0cae33ed34cfe4e47b8b2d43f74b3168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_150
+      rect:
+        serializedVersion: 2
+        x: 565
+        y: 1591
+        width: 56
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a55d047e5aefcb248ad16a06fe96e06f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_151
+      rect:
+        serializedVersion: 2
+        x: 637
+        y: 1591
+        width: 54
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9626282b3046ef34c86317cdf3a8d72e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_152
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 1591
+        width: 57
+        height: 121
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e24a72faeb520b242b6dc573700e5dfb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_153
+      rect:
+        serializedVersion: 2
+        x: 784
+        y: 1591
+        width: 57
+        height: 121
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ccb174a4d53f3146bf55de0344efd86
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_154
+      rect:
+        serializedVersion: 2
+        x: 864
+        y: 1591
+        width: 57
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 646580e60acfe2e409564db46ce0cf38
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_155
+      rect:
+        serializedVersion: 2
+        x: 949
+        y: 1591
+        width: 54
+        height: 121
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a70974a245a71e5488c2d95880cec11c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_156
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 1376
+        width: 54
+        height: 121
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e5f218641cb96c41ac9814296a22ccf
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_157
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 1376
+        width: 57
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae81a57c19e80b948bd02c74161a0fb0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_158
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 1379
+        width: 53
+        height: 117
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7ac68eaa8fa1524784512ab52a24be7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_159
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 1376
+        width: 54
+        height: 121
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c62eb6ff5e7547468327b37ce08aab7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_160
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 1376
+        width: 54
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a44fa97f702404479dabf3d97fe3f8a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_161
+      rect:
+        serializedVersion: 2
+        x: 425
+        y: 1379
+        width: 54
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 330527bd02269ae45a968128911ac2ca
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_162
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 1375
+        width: 56
+        height: 122
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2cd0274c44c345e4992fd31db12973cc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_163
+      rect:
+        serializedVersion: 2
+        x: 567
+        y: 1379
+        width: 52
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 100840ba79aa4c64082949356d815431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_164
+      rect:
+        serializedVersion: 2
+        x: 637
+        y: 1379
+        width: 54
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b74f77ee7462d9478040f369a46f1dd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_165
+      rect:
+        serializedVersion: 2
+        x: 707
+        y: 1376
+        width: 53
+        height: 121
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c48a66bf68381a344a82637750790aec
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_166
+      rect:
+        serializedVersion: 2
+        x: 787
+        y: 1379
+        width: 54
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d223952e76a9514b97a2561210c3ba7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_167
+      rect:
+        serializedVersion: 2
+        x: 869
+        y: 1376
+        width: 52
+        height: 121
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7263bd0879a4dc4409410918deb6eb9b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_168
+      rect:
+        serializedVersion: 2
+        x: 949
+        y: 1379
+        width: 52
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5f2596bd4dc3da4b85b96b366a6f26e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_169
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 1165
+        width: 53
+        height: 119
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0140b396118efb42b2e784a8ee39321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_170
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 1165
+        width: 52
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa0b82d6a8ff76b4f90109da558f1aec
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_171
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 1165
+        width: 52
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7f5da115a2aaeb448b48320feb907de
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_172
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 1165
+        width: 52
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dd77f2b1a7618b44cbdef43a6f3738f7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_173
+      rect:
+        serializedVersion: 2
+        x: 352
+        y: 1165
+        width: 57
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a28f9c80a279f5c4189a62d13a084217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_174
+      rect:
+        serializedVersion: 2
+        x: 424
+        y: 1165
+        width: 55
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4fd66871ddf21c49a237f6407f06d29
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_175
+      rect:
+        serializedVersion: 2
+        x: 496
+        y: 1165
+        width: 53
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb88a41e844b8454a9a03f4e35170326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_176
+      rect:
+        serializedVersion: 2
+        x: 567
+        y: 1165
+        width: 52
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d1a67817bb1217d49a2478d71e252b13
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_177
+      rect:
+        serializedVersion: 2
+        x: 637
+        y: 1165
+        width: 52
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ef818f67d5b29748b7555caab3104b8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_178
+      rect:
+        serializedVersion: 2
+        x: 704
+        y: 1165
+        width: 56
+        height: 123
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26b45e2512110f446b5ea7bc5862a925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_179
+      rect:
+        serializedVersion: 2
+        x: 789
+        y: 1165
+        width: 52
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cbee817aa342c6b4d9947b2fb65f0bba
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_180
+      rect:
+        serializedVersion: 2
+        x: 869
+        y: 1165
+        width: 52
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b741c2956914ff48b1f25491aff8488
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_181
+      rect:
+        serializedVersion: 2
+        x: 949
+        y: 1165
+        width: 52
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fce7bdb020cfcea43b10b18244a93479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_182
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 951
+        width: 52
+        height: 121
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df2f632e1680b4444a2877490de76db6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_183
+      rect:
+        serializedVersion: 2
+        x: 125
+        y: 951
+        width: 52
+        height: 121
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bcb299a6ef415241981e928182bbeb6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_184
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 951
+        width: 54
+        height: 120
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3c551da881afea044a61a112caced7d6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_185
+      rect:
+        serializedVersion: 2
+        x: 275
+        y: 951
+        width: 52
+        height: 121
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f346602df025cd543bb96d0e074c52a7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_idle_left_ver1Flipped_186
+      rect:
+        serializedVersion: 2
+        x: 22
+        y: 666
+        width: 82
+        height: 3430
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d025478b5196b85489add5eed1c24c43
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 7077db181f47ecc4c8f7225b1fd4a013
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

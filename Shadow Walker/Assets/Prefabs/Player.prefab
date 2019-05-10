@@ -162,6 +162,9 @@ MonoBehaviour:
   accelerationTimeOnGroundTurn: 0.131
   moveSpeed: 1.5
   climbingSpeed: 1.5
+  jumping: 0
+  onGround: 0
+  falling: 0
   wallSlideSpeed: 5
 --- !u!114 &29599989126658006
 MonoBehaviour:

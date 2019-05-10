@@ -3,6 +3,7 @@ using System.Collections;
 
 public class Controller2D : RaycastController
 {
+
     [Header("Slope Handling")]
     [SerializeField]
     [Range(0f, 100f)]
@@ -148,6 +149,7 @@ public class Controller2D : RaycastController
 
                     collisionInfo.left = directionX == -1;
                     collisionInfo.right = directionX == 1;
+
                 }
             }
         }
@@ -206,7 +208,7 @@ public class Controller2D : RaycastController
                 {
                     moveAmount.x = moveAmount.y / Mathf.Tan(collisionInfo.slopeAngle * Mathf.Deg2Rad) * Mathf.Sign(moveAmount.x);
                 }
-
+                
                 collisionInfo.below = directionY == -1;
                 collisionInfo.above = directionY == 1;
 

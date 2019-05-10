@@ -1207,7 +1207,7 @@ BoxCollider:
   m_GameObject: {fileID: 536977786}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1.22, y: 0.16, z: 0.2}
   m_Center: {x: 0, y: 0, z: 0}
@@ -10335,10 +10335,15 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 29599989126658006, guid: c6c5ebdc5417e3a4b979949782201a24,
+    - target: {fileID: 29599989126658007, guid: c6c5ebdc5417e3a4b979949782201a24,
         type: 3}
-      propertyPath: moveOffLadderHoldTimer
+      propertyPath: timeToJumpPeak
       value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 29599989126658007, guid: c6c5ebdc5417e3a4b979949782201a24,
+        type: 3}
+      propertyPath: jumpHeight
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6c5ebdc5417e3a4b979949782201a24, type: 3}

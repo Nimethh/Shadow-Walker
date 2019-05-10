@@ -17,6 +17,7 @@ public class Audio
     public float pitch = 1f;
     public bool loop = false;
     public bool playOnAwake = false;
+    public bool isPlaying = false;
     [HideInInspector]
     public AudioSource aS;
 }
