@@ -17,7 +17,6 @@ public class Audio
     public float pitch = 1f;
     public bool loop = false;
     public bool playOnAwake = false;
-    public bool isPlaying = false;
     [HideInInspector]
     public AudioSource aS;
 }
@@ -52,7 +51,24 @@ public class AudioManager : MonoBehaviour
             Debug.Log("Audio : " + name + " not found");
             return;
         }
-        aud.aS.Play();
+        if (!aud.aS.isPlaying)
+        {
+            aud.aS.Play();
+        }
+    }
+
+    public void Stop(string p_name)
+    {
+        Audio aud = Array.Find(soundFX, Audio => Audio.name == p_name);
+        if (aud == null)
+        {
+            Debug.Log("Audio : " + name + " not found");
+            return;
+        }
+        if (aud.aS.isPlaying)
+        {
+            aud.aS.Stop();
+        }
     }
 
     //  FindObjectOfType<AudioManager>().Play("Name of the clip");

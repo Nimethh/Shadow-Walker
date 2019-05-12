@@ -44,7 +44,7 @@ public class PlayerSunBehaviorUpdated : AffectedByTheSun
         timeInSun += Time.deltaTime;
         if (timeInSun > timeInSunAllowed)
         {
-            playerPlatformController.StopAllMovement(0.8f);
+            //playerPlatformController.StopAllMovement(0.8f);
             transform.position = startingPoint.transform.position;
         }
 
@@ -66,7 +66,7 @@ public class PlayerSunBehaviorUpdated : AffectedByTheSun
         timeInSun += Time.deltaTime;
         if (timeInSun > timeInSunAllowed)
         {
-            playerPlatformController.StopAllMovement(0.8f);
+            //playerPlatformController.StopAllMovement(0.8f);
             transform.position = startingPoint.transform.position;
         }
     }
@@ -77,7 +77,7 @@ public class PlayerSunBehaviorUpdated : AffectedByTheSun
         timeInSun += Time.deltaTime;
         if (timeInSun > timeInSunAllowed)
         {
-            playerPlatformController.StopAllMovement(0.8f);
+            //playerPlatformController.StopAllMovement(0.8f);
             transform.position = startingPoint.transform.position;
         }
     }

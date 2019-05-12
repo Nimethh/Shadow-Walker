@@ -38,19 +38,21 @@ public class SunController : MonoBehaviour
         //    MoveLeft();
         //}
 
-        if (canMove == true)
-        {
+        //if (canMove == true)
+        //{
             if (Input.GetKey(KeyCode.L) && transform.position.x < points[2].position.x)
             {
                 MoveRight();
-                FindObjectOfType<AudioManager>().Play("SunMoving");
             }
-            if (Input.GetKey(KeyCode.J) && transform.position.x > points[0].position.x)
+            else if (Input.GetKey(KeyCode.J) && transform.position.x > points[0].position.x)
             {
                 MoveLeft();
-                FindObjectOfType<AudioManager>().Play("SunMoving");
             }
-        }
+            else
+            {
+                FindObjectOfType<AudioManager>().Stop("SunMoving");
+            }
+        //}
         //else
         //{
         //    if (index > checkPointIndex)
@@ -87,6 +89,7 @@ public class SunController : MonoBehaviour
         index++;
         float t = index / (float)numberOfPoints * sunSpeed;
         transform.position = CalculateQuadraticBezeirPoint(t, points[0].position, points[1].position, points[2].position);
+        FindObjectOfType<AudioManager>().Play("SunMoving");
     }
 
     void MoveLeft()
@@ -94,6 +97,7 @@ public class SunController : MonoBehaviour
         index--;
         float t = index / (float)numberOfPoints * sunSpeed;
         transform.position = CalculateQuadraticBezeirPoint(t, points[0].position, points[1].position, points[2].position);
+        FindObjectOfType<AudioManager>().Play("SunMoving");
     }
 
     public void MoveRightToCheckPointPos()

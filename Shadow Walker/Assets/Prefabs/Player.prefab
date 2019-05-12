@@ -17,6 +17,7 @@ GameObject:
   - component: {fileID: 29599989126658000}
   - component: {fileID: 29599989126658001}
   - component: {fileID: 157726458}
+  - component: {fileID: 1704630883}
   m_Layer: 13
   m_Name: Player
   m_TagString: Player
@@ -165,6 +166,8 @@ MonoBehaviour:
   jumping: 0
   onGround: 0
   falling: 0
+  landing: 0
+  landed: 0
   wallSlideSpeed: 5
 --- !u!114 &29599989126658006
 MonoBehaviour:
@@ -229,6 +232,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e2b87394b1f0a541a4161e28f304228, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1704630883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 29599989126658009}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e54ba103a4671d4e850cdaf5261292f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isExposedToSunlight: 0
+  isPartiallyExposed: 0
+  wasPreviouslyExposedToSun: 0
+  justGotExposedToSunlight: 0
+  justGotCoveredFromSunlight: 0
+  timeInSunAllowed: 0.3
 --- !u!1 &29599990845537559
 GameObject:
   m_ObjectHideFlags: 0

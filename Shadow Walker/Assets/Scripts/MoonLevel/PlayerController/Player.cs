@@ -31,6 +31,8 @@ public class Player : MonoBehaviour
     private Vector2 directionalInput;
     public bool onGround;
     public bool falling;
+    public bool landing;
+    public bool landed;
 
     [SerializeField]
     public float wallSlideSpeed = 3;
@@ -60,7 +62,6 @@ public class Player : MonoBehaviour
             velocity.y = 0;
         }
         Climb();
-        
     }
 
     public void SetDirectionalInput(Vector2 input)
@@ -74,6 +75,7 @@ public class Player : MonoBehaviour
         {
             jumping = true;
             velocity.y = jumpVelocity;
+            landing = false;
         }
     }
 
@@ -86,6 +88,11 @@ public class Player : MonoBehaviour
         }
         if (velocity.y < 0 && controller.collisionInfo.below)
         {
+            if(landing == false)
+            {
+                landing = true;
+                landed = true;
+            }
             falling = false;
             onGround = true;
         }
@@ -95,7 +102,7 @@ public class Player : MonoBehaviour
 
     public void Climb()
     {
-        if (controller.collisionInfo.canClimbOld)
+        if (controller.collisionInfo.climbing)
         {
             gravity = 0f;
             if (directionalInput.y > 0)
