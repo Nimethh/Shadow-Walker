@@ -102,7 +102,7 @@ public class Player : MonoBehaviour
 
     public void Climb()
     {
-        if (controller.collisionInfo.climbing)
+        if (controller.collisionInfo.climbing && directionalInput.x == 0)
         {
             gravity = 0f;
             if (directionalInput.y > 0)

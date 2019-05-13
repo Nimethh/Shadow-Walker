@@ -38,8 +38,8 @@ public class PlayerInput : MonoBehaviour
 
 	void Update ()
     {
-        MovementCheck();
         MoveOffLadderCheck();
+        MovementCheck();
         JumpCheck();
         JumpAnimationCheck();
         FallingAnimationCheck();

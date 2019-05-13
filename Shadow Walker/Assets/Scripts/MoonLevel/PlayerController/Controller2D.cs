@@ -54,15 +54,7 @@ public class Controller2D : RaycastController
         }
 
         transform.Translate(moveAmount);
-
-        if (standingOnPlatform)
-        {
-            Debug.Log("Stading on platform");
-            collisionInfo.below = true;
-            collisionInfo.canClimbOld = false;
-            collisionInfo.climbing = false;
-        }
-
+        
         LadderCheck(ladderRayLengthUp, ladderRayLengthDown);
 
         return moveAmount;
@@ -185,7 +177,7 @@ public class Controller2D : RaycastController
                 }
                 if (hit.collider.tag == "Through")
                 {
-                    if (directionY == 1 && collisionInfo.canClimbOld == true)
+                    if (directionY == 1 && playerInput.x == 0 && collisionInfo.canClimbOld == true)
                     {
                         continue;
                     }
@@ -193,7 +185,7 @@ public class Controller2D : RaycastController
                     {
                         continue;
                     }
-                    if (playerInput.y == -1 && collisionInfo.canClimbOld == true)
+                    if (playerInput.y == -1 && playerInput.x == 0 && collisionInfo.canClimbOld == true)
                     {
                         collisionInfo.fallingThroughPlatform = true;
                         Invoke("ResetFallingThroughPlatform", .5f);
@@ -303,7 +295,7 @@ public class Controller2D : RaycastController
             }
             collisionInfo.canClimb = true;
 
-            if (playerInput.y < 0)
+            if (playerInput.y < 0 && playerInput.x == 0)
             {
                 collisionInfo.climbing = true;
                 if (!ladderHitDown)
@@ -311,7 +303,7 @@ public class Controller2D : RaycastController
                     collisionInfo.climbing = false;
                 }
             }
-            else if (playerInput.y > 0)
+            else if (playerInput.y > 0 && playerInput.x == 0)
             {
                 collisionInfo.climbing = true;
             }
@@ -328,11 +320,12 @@ public class Controller2D : RaycastController
             if (ladderHitDown)
                 Debug.DrawRay(raycastLadderOriginDown, Vector2.down, Color.cyan);
         }
-        else if (collisionInfo.canClimbOld == false)
+        else
         {
             collisionInfo.canClimb = false;
             collisionInfo.climbing = false;
         }
+
     }
 
     void ResetFallingThroughPlatform()

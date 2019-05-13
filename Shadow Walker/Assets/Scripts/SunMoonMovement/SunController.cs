@@ -38,49 +38,18 @@ public class SunController : MonoBehaviour
         //    MoveLeft();
         //}
 
-        //if (canMove == true)
-        //{
-            if (Input.GetKey(KeyCode.L) && transform.position.x < points[2].position.x)
-            {
-                MoveRight();
-            }
-            else if (Input.GetKey(KeyCode.J) && transform.position.x > points[0].position.x)
-            {
-                MoveLeft();
-            }
-            else
-            {
-                FindObjectOfType<AudioManager>().Stop("SunMoving");
-            }
-        //}
-        //else
-        //{
-        //    if (index > checkPointIndex)
-        //    {
-        //        Debug.Log("Move Left");
-        //        MoveLeftToCheckPointPos();
-        //        //if (sunController.index <= sunCheckPointIndex)
-        //        //{
-        //        //    Debug.Log("still didn't reach the pos");
-        //        //    SpawnPlayer();
-        //        //    sunController.canMove = true;
-
-        //        //}
-        //    }
-        //    else if (index < checkPointIndex)
-        //    {
-        //        Debug.Log("Move right");
-        //        MoveRightToCheckPointPos();
-        //        //if (sunController.index >= sunCheckPointIndex)
-        //        //{
-        //        //    Debug.Log("still didn't reach the pos");
-
-        //        //    sunController.canMove = true;
-        //        //    SpawnPlayer();
-        //        //}
-        //    }
-        //}
-        //Rotate();
+        if (Input.GetKey(KeyCode.L) && transform.position.x < points[2].position.x)
+        {
+            MoveRight();
+        }
+        else if (Input.GetKey(KeyCode.J) && transform.position.x > points[0].position.x)
+        {
+            MoveLeft();
+        }
+        else
+        {
+            FindObjectOfType<AudioManager>().Stop("SunMoving");
+        }
 
     }
     
@@ -98,20 +67,6 @@ public class SunController : MonoBehaviour
         float t = index / (float)numberOfPoints * sunSpeed;
         transform.position = CalculateQuadraticBezeirPoint(t, points[0].position, points[1].position, points[2].position);
         FindObjectOfType<AudioManager>().Play("SunMoving");
-    }
-
-    public void MoveRightToCheckPointPos()
-    {
-        index++;
-        float t = index / (float)numberOfPoints * sunSpeed /** Time.smoothDeltaTime*/;
-        transform.position = CalculateQuadraticBezeirPoint(t, points[0].position, points[1].position, points[2].position);
-    }
-
-    public void MoveLeftToCheckPointPos()
-    {
-        index--;
-        float t = index / (float)numberOfPoints * sunSpeed /** Time.smoothDeltaTime*/;
-        transform.position = CalculateQuadraticBezeirPoint(t, points[0].position, points[1].position, points[2].position);
     }
 
     void Rotate()
