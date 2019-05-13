@@ -72,11 +72,11 @@ Material:
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _RematerializeSize: 0
-    - _RematerializeY: 0.15934725
+    - _RematerializeY: 0.159287
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
-    - _StartingY: -2.1299999
+    - _StartingY: -2.2576954
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:

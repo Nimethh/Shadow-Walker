@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8930231884945552106}
   - component: {fileID: 8930231884945552104}
   - component: {fileID: 8930231884945552105}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: SavePoint0
   m_TagString: CheckPoint
   m_Icon: {fileID: 0}
@@ -70,7 +70,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29ab7e653d468854bbc338831bc3fda3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sunCheckPointIndex: 100
 --- !u!1 &8930231885021947055
 GameObject:
   m_ObjectHideFlags: 0
@@ -82,7 +81,7 @@ GameObject:
   - component: {fileID: 8930231885021947054}
   - component: {fileID: 8930231885021947052}
   - component: {fileID: 8930231885021947053}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: SavePoint4
   m_TagString: CheckPoint
   m_Icon: {fileID: 0}
@@ -141,7 +140,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29ab7e653d468854bbc338831bc3fda3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sunCheckPointIndex: 70
 --- !u!1 &8930231885108877752
 GameObject:
   m_ObjectHideFlags: 0
@@ -153,7 +151,7 @@ GameObject:
   - component: {fileID: 8930231885108877735}
   - component: {fileID: 8930231885108877733}
   - component: {fileID: 8930231885108877734}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: SavePoint1
   m_TagString: CheckPoint
   m_Icon: {fileID: 0}
@@ -212,7 +210,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29ab7e653d468854bbc338831bc3fda3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sunCheckPointIndex: 300
 --- !u!1 &8930231885316758167
 GameObject:
   m_ObjectHideFlags: 0
@@ -224,7 +221,7 @@ GameObject:
   - component: {fileID: 8930231885316758166}
   - component: {fileID: 8930231885316758164}
   - component: {fileID: 8930231885316758165}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: SavePoint2
   m_TagString: CheckPoint
   m_Icon: {fileID: 0}
@@ -283,7 +280,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29ab7e653d468854bbc338831bc3fda3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sunCheckPointIndex: 300
 --- !u!1 &8930231885750511979
 GameObject:
   m_ObjectHideFlags: 0
@@ -295,7 +291,7 @@ GameObject:
   - component: {fileID: 8930231885750511978}
   - component: {fileID: 8930231885750511976}
   - component: {fileID: 8930231885750511977}
-  m_Layer: 10
+  m_Layer: 9
   m_Name: SavePoint3
   m_TagString: CheckPoint
   m_Icon: {fileID: 0}
@@ -354,7 +350,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29ab7e653d468854bbc338831bc3fda3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sunCheckPointIndex: 300
 --- !u!1 &8930231885891478372
 GameObject:
   m_ObjectHideFlags: 0

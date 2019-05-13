@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1760179230135277637}
   - component: {fileID: 1760179230135277642}
   - component: {fileID: 1760179230135277643}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: GlassPlatform
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,7 +104,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1760179231539543918}
   - component: {fileID: 1760179231539543913}
-  m_Layer: 10
+  m_Layer: 14
   m_Name: PolyCollider (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

@@ -74,6 +74,14 @@ public class PressurePlatform : MonoBehaviour
         finishedMoving = false;
     }
 
+    private void OnDrawGizmos() //Visualisation Aid
+    {
+        Gizmos.color = Color.cyan;
+        Gizmos.DrawWireCube(startTransform.position, visualAid.transform.localScale);
+        Gizmos.color = Color.cyan;
+        Gizmos.DrawWireCube(endTransform.position, visualAid.transform.localScale);
+    }
+
     //void SetDestination(Transform destination)
     //{
     //    movingToLocation = destination;

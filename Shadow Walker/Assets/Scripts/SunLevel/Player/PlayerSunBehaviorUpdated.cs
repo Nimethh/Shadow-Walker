@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerSunBehaviorUpdated : AffectedByTheSun
 {
     private GameObject startingPoint;
-
+    public Transform spawningPos;
     //private PlayerController playerController;
     private PlayerPlatformController playerPlatformController;
     private float timeInSun;
@@ -21,6 +21,7 @@ public class PlayerSunBehaviorUpdated : AffectedByTheSun
 
         startingPoint = GameObject.Find("PrototypeStartingPoint");
         timeInSun = 0;
+        spawningPos = startingPoint.transform;
 
     }
 
@@ -44,8 +45,8 @@ public class PlayerSunBehaviorUpdated : AffectedByTheSun
         timeInSun += Time.deltaTime;
         if (timeInSun > timeInSunAllowed)
         {
-            playerPlatformController.StopAllMovement(0.8f);
-            transform.position = startingPoint.transform.position;
+            //playerPlatformController.StopAllMovement(0.8f);
+            transform.position = spawningPos.transform.position;
         }
 
         //playerController.StopAllMovement(0.8f);
@@ -66,8 +67,8 @@ public class PlayerSunBehaviorUpdated : AffectedByTheSun
         timeInSun += Time.deltaTime;
         if (timeInSun > timeInSunAllowed)
         {
-            playerPlatformController.StopAllMovement(0.8f);
-            transform.position = startingPoint.transform.position;
+            //playerPlatformController.StopAllMovement(0.8f);
+            transform.position = spawningPos.transform.position;
         }
     }
 
@@ -77,8 +78,8 @@ public class PlayerSunBehaviorUpdated : AffectedByTheSun
         timeInSun += Time.deltaTime;
         if (timeInSun > timeInSunAllowed)
         {
-            playerPlatformController.StopAllMovement(0.8f);
-            transform.position = startingPoint.transform.position;
+            //playerPlatformController.StopAllMovement(0.8f);
+            transform.position = spawningPos.transform.position;
         }
     }
 

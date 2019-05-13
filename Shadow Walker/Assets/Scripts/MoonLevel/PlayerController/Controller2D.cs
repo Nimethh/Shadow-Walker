@@ -13,14 +13,14 @@ public class Controller2D : RaycastController
 	[HideInInspector]
 	public Vector2 playerInput;
 
-    private PlayerSunBehavior playerSunBehavior;
+    private PlayerSunBehaviorUpdated playerSunBehavior;
     //private SunController sunController;
     
 	public override void Start()
     {
 		base.Start ();
         collisionInfo.faceDir = 1;
-        playerSunBehavior = GetComponent<PlayerSunBehavior>();
+        playerSunBehavior = GetComponent<PlayerSunBehaviorUpdated>();
         //sunController = GameObject.FindGameObjectWithTag("Sun").GetComponent<SunController>();
 	}
     

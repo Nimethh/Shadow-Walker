@@ -38,6 +38,8 @@ public class SunController : MonoBehaviour
         //    MoveLeft();
         //}
 
+
+
         if (canMove == true)
         {
             if (Input.GetKey(KeyCode.L) && transform.position.x < points[2].position.x)
