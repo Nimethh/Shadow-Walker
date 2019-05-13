@@ -1,0 +1,2115 @@
+fileFormatVersion: 2
+guid: 6f51c9b7a37471648a9c072d1cf1031b
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: playercharacter_animation_walking_right_ver2Fixed_0
+    21300002: playercharacter_animation_walking_right_ver2Fixed_1
+    21300004: playercharacter_animation_walking_right_ver2Fixed_2
+    21300006: playercharacter_animation_walking_right_ver2Fixed_3
+    21300008: playercharacter_animation_walking_right_ver2Fixed_4
+    21300010: playercharacter_animation_walking_right_ver2Fixed_5
+    21300012: playercharacter_animation_walking_right_ver2Fixed_6
+    21300014: playercharacter_animation_walking_right_ver2Fixed_7
+    21300016: playercharacter_animation_walking_right_ver2Fixed_8
+    21300018: playercharacter_animation_walking_right_ver2Fixed_9
+    21300020: playercharacter_animation_walking_right_ver2Fixed_10
+    21300022: playercharacter_animation_walking_right_ver2Fixed_11
+    21300024: playercharacter_animation_walking_right_ver2Fixed_12
+    21300026: playercharacter_animation_walking_right_ver2Fixed_13
+    21300028: playercharacter_animation_walking_right_ver2Fixed_14
+    21300030: playercharacter_animation_walking_right_ver2Fixed_15
+    21300032: playercharacter_animation_walking_right_ver2Fixed_16
+    21300034: playercharacter_animation_walking_right_ver2Fixed_17
+    21300036: playercharacter_animation_walking_right_ver2Fixed_18
+    21300038: playercharacter_animation_walking_right_ver2Fixed_19
+    21300040: playercharacter_animation_walking_right_ver2Fixed_20
+    21300042: playercharacter_animation_walking_right_ver2Fixed_21
+    21300044: playercharacter_animation_walking_right_ver2Fixed_22
+    21300046: playercharacter_animation_walking_right_ver2Fixed_23
+    21300048: playercharacter_animation_walking_right_ver2Fixed_24
+    21300050: playercharacter_animation_walking_right_ver2Fixed_25
+    21300052: playercharacter_animation_walking_right_ver2Fixed_26
+    21300054: playercharacter_animation_walking_right_ver2Fixed_27
+    21300056: playercharacter_animation_walking_right_ver2Fixed_28
+    21300058: playercharacter_animation_walking_right_ver2Fixed_29
+    21300060: playercharacter_animation_walking_right_ver2Fixed_30
+    21300062: playercharacter_animation_walking_right_ver2Fixed_31
+    21300064: playercharacter_animation_walking_right_ver2Fixed_32
+    21300066: playercharacter_animation_walking_right_ver2Fixed_33
+    21300068: playercharacter_animation_walking_right_ver2Fixed_34
+    21300070: playercharacter_animation_walking_right_ver2Fixed_35
+    21300072: playercharacter_animation_walking_right_ver2Fixed_36
+    21300074: playercharacter_animation_walking_right_ver2Fixed_37
+    21300076: playercharacter_animation_walking_right_ver2Fixed_38
+    21300078: playercharacter_animation_walking_right_ver2Fixed_39
+    21300080: playercharacter_animation_walking_right_ver2Fixed_40
+    21300082: playercharacter_animation_walking_right_ver2Fixed_41
+    21300084: playercharacter_animation_walking_right_ver2Fixed_42
+    21300086: playercharacter_animation_walking_right_ver2Fixed_43
+    21300088: playercharacter_animation_walking_right_ver2Fixed_44
+    21300090: playercharacter_animation_walking_right_ver2Fixed_45
+    21300092: playercharacter_animation_walking_right_ver2Fixed_46
+    21300094: playercharacter_animation_walking_right_ver2Fixed_47
+    21300096: playercharacter_animation_walking_right_ver2Fixed_48
+    21300098: playercharacter_animation_walking_right_ver2Fixed_49
+    21300100: playercharacter_animation_walking_right_ver2Fixed_50
+    21300102: playercharacter_animation_walking_right_ver2Fixed_51
+    21300104: playercharacter_animation_walking_right_ver2Fixed_52
+    21300106: playercharacter_animation_walking_right_ver2Fixed_53
+    21300108: playercharacter_animation_walking_right_ver2Fixed_54
+    21300110: playercharacter_animation_walking_right_ver2Fixed_55
+    21300112: playercharacter_animation_walking_right_ver2Fixed_56
+    21300114: playercharacter_animation_walking_right_ver2Fixed_57
+    21300116: playercharacter_animation_walking_right_ver2Fixed_58
+    21300118: playercharacter_animation_walking_right_ver2Fixed_59
+    21300120: playercharacter_animation_walking_right_ver2Fixed_60
+    21300122: playercharacter_animation_walking_right_ver2Fixed_61
+    21300124: playercharacter_animation_walking_right_ver2Fixed_62
+    21300126: playercharacter_animation_walking_right_ver2Fixed_63
+    21300128: playercharacter_animation_walking_right_ver2Fixed_64
+    21300130: playercharacter_animation_walking_right_ver2Fixed_65
+    21300132: playercharacter_animation_walking_right_ver2Fixed_66
+    21300134: playercharacter_animation_walking_right_ver2Fixed_67
+    21300136: playercharacter_animation_walking_right_ver2Fixed_68
+    21300138: playercharacter_animation_walking_right_ver2Fixed_69
+    21300140: playercharacter_animation_walking_right_ver2Fixed_70
+    21300142: playercharacter_animation_walking_right_ver2Fixed_71
+    21300144: playercharacter_animation_walking_right_ver2Fixed_72
+    21300146: playercharacter_animation_walking_right_ver2Fixed_73
+    21300148: playercharacter_animation_walking_right_ver2Fixed_74
+    21300150: playercharacter_animation_walking_right_ver2Fixed_75
+    21300152: playercharacter_animation_walking_right_ver2Fixed_76
+    21300154: playercharacter_animation_walking_right_ver2Fixed_77
+    21300156: playercharacter_animation_walking_right_ver2Fixed_78
+    21300158: playercharacter_animation_walking_right_ver2Fixed_79
+    21300160: playercharacter_animation_walking_right_ver2Fixed_80
+    21300162: playercharacter_animation_walking_right_ver2Fixed_81
+    21300164: playercharacter_animation_walking_right_ver2Fixed_82
+    21300166: playercharacter_animation_walking_right_ver2Fixed_83
+    21300168: playercharacter_animation_walking_right_ver2Fixed_84
+    21300170: playercharacter_animation_walking_right_ver2Fixed_85
+    21300172: playercharacter_animation_walking_right_ver2Fixed_86
+    21300174: playercharacter_animation_walking_right_ver2Fixed_87
+    21300176: playercharacter_animation_walking_right_ver2Fixed_88
+    21300178: playercharacter_animation_walking_right_ver2Fixed_89
+    21300180: playercharacter_animation_walking_right_ver2Fixed_90
+    21300182: playercharacter_animation_walking_right_ver2Fixed_91
+    21300184: playercharacter_animation_walking_right_ver2Fixed_92
+    21300186: playercharacter_animation_walking_right_ver2Fixed_93
+    21300188: playercharacter_animation_walking_right_ver2Fixed_94
+    21300190: playercharacter_animation_walking_right_ver2Fixed_95
+  externalObjects: {}
+  serializedVersion: 9
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: playercharacter_animation_walking_right_ver2Fixed_0
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 1857
+        width: 53
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a534aadf0d1ded459a27e7363173b71
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_walking_right_ver2Fixed_1
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 1857
+        width: 53
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 721086f70f7545a45afb6a00d3504757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_walking_right_ver2Fixed_2
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 1857
+        width: 53
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90a494da8cf055642a23f87c3b50cbb9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_walking_right_ver2Fixed_3
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 1857
+        width: 53
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 974ea45e799495042a01970d516a9629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_walking_right_ver2Fixed_4
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 1857
+        width: 53
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2ef6d3cd3f9cb64d81c7feab41f0e92
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_walking_right_ver2Fixed_5
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 1857
+        width: 53
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a547d3dc343a3b345a674894c670c6d0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_walking_right_ver2Fixed_6
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 1857
+        width: 53
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62add6d1fdb84b8409265232b75473fb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_walking_right_ver2Fixed_7
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 1857
+        width: 53
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 39e260f278495444e898839684233922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_walking_right_ver2Fixed_8
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 1857
+        width: 53
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63bc41ffd3ef4fb43a047d5d1c186233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_walking_right_ver2Fixed_9
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 1711
+        width: 53
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8fef1f12a59339448d6d3fd001f72b9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_walking_right_ver2Fixed_10
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 1711
+        width: 53
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d30fa1d1f350904fbb71468449fda23
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_walking_right_ver2Fixed_11
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 1711
+        width: 53
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d94160ddb0d75542aa92c446ee9ba8d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_walking_right_ver2Fixed_12
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 1711
+        width: 53
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fcd2699aa747f44d9bf17b2e5eccb79
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_walking_right_ver2Fixed_13
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 1711
+        width: 53
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b669ebeda3192648b4cfd3f5e34a8c0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_walking_right_ver2Fixed_14
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 1711
+        width: 53
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d468eecf300dc9345852cff15658cf44
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_walking_right_ver2Fixed_15
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 1711
+        width: 53
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ef5f4881ed2b604a8c279cc2322ef31
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_walking_right_ver2Fixed_16
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 1711
+        width: 53
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3c53ed0b0e35c84f88b958483c9b866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_walking_right_ver2Fixed_17
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 1711
+        width: 53
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4ca795f457b2234783b28107a083f53
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_walking_right_ver2Fixed_18
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 1570
+        width: 53
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24d9eda90be21a94dafe598a9ea2d2d4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_walking_right_ver2Fixed_19
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 1570
+        width: 53
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f585c7a172738a540a27eee40798dcef
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_walking_right_ver2Fixed_20
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 1570
+        width: 53
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c609e1572af9efa44b5edfe386238dc7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_walking_right_ver2Fixed_21
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 1570
+        width: 53
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c39cca640fd18a4eaa055078d9db820
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_walking_right_ver2Fixed_22
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 1570
+        width: 53
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dd7190766a81534abeba52a523f33a6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_walking_right_ver2Fixed_23
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 1570
+        width: 53
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71c1530127dc3a642aa28ef3db303f9b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_walking_right_ver2Fixed_24
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 1570
+        width: 53
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d9320cb1a993b543a64788bd227afb3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_walking_right_ver2Fixed_25
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 1570
+        width: 53
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5586effb0dc7f7045aae6291c47e0e79
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_walking_right_ver2Fixed_26
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 1570
+        width: 53
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 931f86a22482acb4e82d6d2192562b16
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_walking_right_ver2Fixed_27
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 1425
+        width: 53
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d566682e9d8b474d94ff8ac3597cdd3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_walking_right_ver2Fixed_28
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 1425
+        width: 53
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 97403a66161f88340871b5bd12716dbe
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_walking_right_ver2Fixed_29
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 1425
+        width: 53
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 516d94028ad47554c907dcbe12e65c6b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_walking_right_ver2Fixed_30
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 1425
+        width: 53
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4d7d904a5eb37704e95ad33c25505417
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_walking_right_ver2Fixed_31
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 1425
+        width: 53
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc545b370d834244eb31a9ed832d48d5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_walking_right_ver2Fixed_32
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 1425
+        width: 53
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac61a0946f339604c9cc25a6704ae094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_walking_right_ver2Fixed_33
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 1425
+        width: 53
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0148f2905d1d7441a747503c0590fd3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_walking_right_ver2Fixed_34
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 1425
+        width: 53
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c4b97eb1a05fa946b48e49c8d992a6b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_walking_right_ver2Fixed_35
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 1425
+        width: 53
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 459be62faf1165d40a8abc0799547264
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_walking_right_ver2Fixed_36
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 1275
+        width: 53
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1ccfd9f0787de54cb16e7ec9d570406
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_walking_right_ver2Fixed_37
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 1275
+        width: 53
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54c1054db949f2946b17f9920698828e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_walking_right_ver2Fixed_38
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 1275
+        width: 53
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcb84d13563023e4987c6ada36dcbc6a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_walking_right_ver2Fixed_39
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 1275
+        width: 53
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d14cac133960fa64fbbc5af7d2c0f933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_walking_right_ver2Fixed_40
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 1275
+        width: 53
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26cff4538660e9e4781ce54e1c3b83dc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_walking_right_ver2Fixed_41
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 1275
+        width: 53
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: da10018db8a4a354eacb0502648c099c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_walking_right_ver2Fixed_42
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 1275
+        width: 53
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c10438390be70d1409d9387ba88ac727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_walking_right_ver2Fixed_43
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 1275
+        width: 53
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7e8b788753335f04d858124d3c81f38f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_walking_right_ver2Fixed_44
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 1275
+        width: 53
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f31dd69a6dcf7743af560232d3b0de9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_walking_right_ver2Fixed_45
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 1128
+        width: 53
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f64c48a4d5b81c46821f1d055617ba4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_walking_right_ver2Fixed_46
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 1128
+        width: 53
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1415eef4719606f42a6e6b3a3a6c71af
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_walking_right_ver2Fixed_47
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 1128
+        width: 53
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9aa889fa10f09a24780e827efe635230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_walking_right_ver2Fixed_48
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 1128
+        width: 53
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a29dfbba9883184395d76a90f47d3f3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_walking_right_ver2Fixed_49
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 1128
+        width: 53
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49cf74f4acd2970458f70b027f6023bd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_walking_right_ver2Fixed_50
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 1128
+        width: 53
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 961327440eb1466468305d0861e35f74
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_walking_right_ver2Fixed_51
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 1128
+        width: 53
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e44dcceed67443d41b2d025231afb15e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_walking_right_ver2Fixed_52
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 1128
+        width: 53
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 231c3aa7c1da0cb40afda3be4e56a2e1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_walking_right_ver2Fixed_53
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 1128
+        width: 53
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 337b0982c3fecc641bbdb17eedb280a6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_walking_right_ver2Fixed_54
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 984
+        width: 53
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bdfaeebb5e14774aaa03b2bccf84792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_walking_right_ver2Fixed_55
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 984
+        width: 53
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce287d49cf48f2741ba40efbe4208ee8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_walking_right_ver2Fixed_56
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 984
+        width: 53
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0050e44d6bb828048a57946fabde8117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_walking_right_ver2Fixed_57
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 984
+        width: 53
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4198dab81dbc4234ca2e4e6b45882e4d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_walking_right_ver2Fixed_58
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 984
+        width: 53
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb4e8995a6e6e1c4589870238352775c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_walking_right_ver2Fixed_59
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 984
+        width: 53
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e5b28e9d481b2543a6ff9eff55cffbb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_walking_right_ver2Fixed_60
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 984
+        width: 53
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff4432085525dbe47bc24a3c5cf9f518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_walking_right_ver2Fixed_61
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 984
+        width: 53
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b4ec2bcfa2fa07e4a89e503eb5555e76
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_walking_right_ver2Fixed_62
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 984
+        width: 53
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0412c5e7cc3b3034b8950e17158344c7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_walking_right_ver2Fixed_63
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 843
+        width: 53
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e190592cc82f41243a3f8945dc0ee350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_walking_right_ver2Fixed_64
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 843
+        width: 53
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c805d66024c5e494a9e30feeb77859a5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_walking_right_ver2Fixed_65
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 843
+        width: 53
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9814d395f7de124385aff0516c46b36
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_walking_right_ver2Fixed_66
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 843
+        width: 53
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b36350c12c0e7a945804bf0f86006b2d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_walking_right_ver2Fixed_67
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 843
+        width: 53
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7433dc3b1b153ba44a1ff8eb548c6e22
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_walking_right_ver2Fixed_68
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 843
+        width: 53
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6b73b635e397a24299086eb190441bc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_walking_right_ver2Fixed_69
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 843
+        width: 53
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6dc9a0c4edf30ba4ab0c6b35673be725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_walking_right_ver2Fixed_70
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 843
+        width: 53
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f73acc47ba8d164097c9b80e474bbc1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_walking_right_ver2Fixed_71
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 843
+        width: 53
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3181353feeccfbb4ebc19af4dfb3efc8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_walking_right_ver2Fixed_72
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 692
+        width: 53
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f49baba3756a4540abe89e5f96b3b3f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_walking_right_ver2Fixed_73
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 692
+        width: 53
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e0150c4e0074c748aebeec0a0feb9bf
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_walking_right_ver2Fixed_74
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 692
+        width: 53
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b892e8b3b6926d242adb59b887118c87
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_walking_right_ver2Fixed_75
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 692
+        width: 53
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50540bbe233cc5b47971781b82c64455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_walking_right_ver2Fixed_76
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 692
+        width: 53
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a8de5a0765573341b32f93de9d6f092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_walking_right_ver2Fixed_77
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 692
+        width: 53
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7391a4cbe601ffa48b18c8b9f022e54a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_walking_right_ver2Fixed_78
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 692
+        width: 53
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5d2854dda3e6f074199a75fb283c2ce7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_walking_right_ver2Fixed_79
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 692
+        width: 53
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2627f0dd72c664147a21c82c468d9fa5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_walking_right_ver2Fixed_80
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 692
+        width: 53
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7252ccd8197afa4aa953edc1309b5dc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_walking_right_ver2Fixed_81
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 544
+        width: 53
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: df2ceda8c8a23784e82fdc83c8bfb533
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_walking_right_ver2Fixed_82
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 544
+        width: 53
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5983765ce57d7a4dbac2c07b3b68ed4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_walking_right_ver2Fixed_83
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 544
+        width: 53
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82f87bb80ebe7114e96fd92e2e697c9b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_walking_right_ver2Fixed_84
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 544
+        width: 53
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea635ecb281b2cb4cb41df41a2eb3fdd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_walking_right_ver2Fixed_85
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 544
+        width: 53
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42b4afce8c8c15e42966fd97ff53a974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_walking_right_ver2Fixed_86
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 544
+        width: 53
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f3529fcf18386141865115a3cdaedd7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_walking_right_ver2Fixed_87
+      rect:
+        serializedVersion: 2
+        x: 590
+        y: 544
+        width: 53
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e44da84b9b21ed24eb15f2f1ed51c9ff
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_walking_right_ver2Fixed_88
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 544
+        width: 53
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5dac8a37df5fb84fb8656e780b1d4bf
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_walking_right_ver2Fixed_89
+      rect:
+        serializedVersion: 2
+        x: 770
+        y: 544
+        width: 53
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a7d99782a3f59e4b8014a4b505c1634
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_walking_right_ver2Fixed_90
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 397
+        width: 53
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aba9fd3ef514a3e4da4ad0157ce949db
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_walking_right_ver2Fixed_91
+      rect:
+        serializedVersion: 2
+        x: 140
+        y: 397
+        width: 53
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53e8a9d99610a06408f5ffba08b24fd6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_walking_right_ver2Fixed_92
+      rect:
+        serializedVersion: 2
+        x: 231
+        y: 397
+        width: 53
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 834198460827de54eb9d04aa2d67b545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_walking_right_ver2Fixed_93
+      rect:
+        serializedVersion: 2
+        x: 320
+        y: 397
+        width: 53
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac805340e5edf5c4db63405c8b77555d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_walking_right_ver2Fixed_94
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 397
+        width: 53
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4581ab98c62b72b4d86840eeea964613
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: playercharacter_animation_walking_right_ver2Fixed_95
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 397
+        width: 53
+        height: 128
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 209fddad571bd574fa61399430389499
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 31f2ab9f9f8e7c1409bcc9c29fed2ea7
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

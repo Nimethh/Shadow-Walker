@@ -46,7 +46,7 @@ public class PlayerSunBehaviorUpdated : AffectedByTheSun
         if (timeInSun > timeInSunAllowed)
         {
             //playerPlatformController.StopAllMovement(0.8f);
-            transform.position = spawningPos.transform.position;
+            transform.position = startingPoint.transform.position;
         }
 
         //playerController.StopAllMovement(0.8f);
@@ -68,7 +68,7 @@ public class PlayerSunBehaviorUpdated : AffectedByTheSun
         if (timeInSun > timeInSunAllowed)
         {
             //playerPlatformController.StopAllMovement(0.8f);
-            transform.position = spawningPos.transform.position;
+            transform.position = startingPoint.transform.position;
         }
     }
 
@@ -79,7 +79,7 @@ public class PlayerSunBehaviorUpdated : AffectedByTheSun
         if (timeInSun > timeInSunAllowed)
         {
             //playerPlatformController.StopAllMovement(0.8f);
-            transform.position = spawningPos.transform.position;
+            transform.position = startingPoint.transform.position;
         }
     }
 

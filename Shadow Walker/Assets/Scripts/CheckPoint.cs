@@ -18,7 +18,6 @@ public class CheckPoint : MonoBehaviour
     {
         if (playerSunBehavior.isExposedToSunlight)
         {
-            Debug.Log("Update Check");
             SpawnPlayer();
 
             //sunController.canMove = false;

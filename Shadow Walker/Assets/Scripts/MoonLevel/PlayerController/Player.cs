@@ -23,12 +23,16 @@ public class Player : MonoBehaviour
 
     [SerializeField]
     private float climbingSpeed = 5f;
-
+    public bool jumping = false;
     private float velocityXSmoothing;
     private float gravity;
     private float jumpVelocity;
     private Vector3 velocity;
     private Vector2 directionalInput;
+    public bool onGround;
+    public bool falling;
+    public bool landing;
+    public bool landed;
 
     [SerializeField]
     public float wallSlideSpeed = 3;
@@ -49,7 +53,8 @@ public class Player : MonoBehaviour
     {
         CalculateVelocity();
         HandleWallSliding();
-
+        GroundCheck();
+        
         controller.Move(velocity * Time.deltaTime, directionalInput);
 
         if (controller.collisionInfo.above || controller.collisionInfo.below && controller.collisionInfo.climbing == false)
@@ -68,13 +73,36 @@ public class Player : MonoBehaviour
     {
         if (controller.collisionInfo.below)
         {
+            jumping = true;
             velocity.y = jumpVelocity;
+            landing = false;
         }
+    }
+
+    public void GroundCheck()
+    {
+        if(jumping == true && velocity.y < 0)
+        {
+            falling = true;
+            jumping = false;
+        }
+        if (velocity.y < 0 && controller.collisionInfo.below)
+        {
+            if(landing == false)
+            {
+                landing = true;
+                landed = true;
+            }
+            falling = false;
+            onGround = true;
+        }
+        else
+            onGround = false;
     }
 
     public void Climb()
     {
-        if (controller.collisionInfo.canClimbOld)
+        if (controller.collisionInfo.climbing && directionalInput.x == 0)
         {
             gravity = 0f;
             if (directionalInput.y > 0)

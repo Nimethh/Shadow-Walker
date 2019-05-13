@@ -4,41 +4,68 @@ using System.Collections;
 [RequireComponent (typeof (Player))]
 public class PlayerInput : MonoBehaviour
 {
-    ParticleSystem movingPartical;
-    private GameObject movingParticalObject;
-	Player player;
-    Vector2 directionalInput;
     Controller2D controller;
+    PlayerSoundManager playerSoundManager;
     Animator animator;
-    private bool facingRight = true;
-    private SpriteRenderer spriteRenderer;
-    private PlayerSoundManager playerSoundManager;
+    Player player;
+    ParticleSystem movingPartical;
 
+    GameObject movingParticalObject;
+    
+    Vector2 directionalInput;
+    private float xMovement;
     private float lastMoveX;
+
+    [SerializeField]
+    private float moveOffLadderTimer = 0.01f;
+    private float moveOffLadderCooldown = 0.01f;
+    [SerializeField]
+    private float moveOffLadderHoldTimer = 0.05f;
+    private float moveOffLadderHoldCooldown = 0.05f;
 
     void Start ()
     {
-		player = GetComponent<Player> ();
+        movingParticalObject = transform.GetChild(0).gameObject;
+        movingPartical = movingParticalObject.GetComponent<ParticleSystem>();
+        player = GetComponent<Player> ();
         playerSoundManager = GetComponent<PlayerSoundManager>();
         controller = GetComponent<Controller2D>();
         animator = GetComponent<Animator>();
-        movingParticalObject = transform.GetChild(0).gameObject;
-        movingPartical = movingParticalObject.GetComponent<ParticleSystem>();
+
+        moveOffLadderCooldown = moveOffLadderTimer;
+        moveOffLadderHoldCooldown = moveOffLadderHoldTimer;
 	}
 
 	void Update ()
     {
-        //Vector2 directionalInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+        MoveOffLadderCheck();
+        MovementCheck();
+        JumpCheck();
+        JumpAnimationCheck();
+        FallingAnimationCheck();
+
+
+        player.SetDirectionalInput (directionalInput);
+        playerSoundManager.SetDirectionalInput(directionalInput);
+    }
+
+    public void PlayMovingParticle()
+    {
+        movingPartical.Play();
+    }
+
+    void MovementCheck()
+    {
         if (controller.collisionInfo.climbing == false || controller.collisionInfo.below == true)
         {
             directionalInput.x = Input.GetAxisRaw("Horizontal");
-            if (directionalInput.x > 0)
+            if (directionalInput.x > 0 && player.onGround)
             {
                 lastMoveX = directionalInput.x;
                 animator.SetFloat("MovementX", directionalInput.x);
                 animator.SetBool("Moving", true);
             }
-            else if (directionalInput.x < 0)
+            else if (directionalInput.x < 0 && player.onGround)
             {
                 lastMoveX = directionalInput.x;
                 animator.SetFloat("MovementX", directionalInput.x);
@@ -49,56 +76,108 @@ public class PlayerInput : MonoBehaviour
                 animator.SetFloat("MovementX", directionalInput.x);
                 animator.SetBool("Moving", false);
             }
-
             animator.SetFloat("LastXValue", lastMoveX);
-            //if (directionalInput.x > 0)
-            //{
-            //    animator.SetBool("WalkRight", true);
-            //    animator.SetBool("WalkLeft", false);
-            //    animator.SetBool("Idle", false);
-            //}
-            //else if(directionalInput.x < 0)
-            //{
-            //    animator.SetBool("WalkLeft", true);
-            //    animator.SetBool("WalkRight", false);
-            //    animator.SetBool("Idle", false);
-            //}
-            //else
-            //{
-            //    animator.SetBool("Idle", true);
-            //    animator.SetBool("WalkRight", false);
-            //    animator.SetBool("WalkLeft", false);
-            //}
         }
+
         directionalInput.y = Input.GetAxisRaw("Vertical");
-        player.SetDirectionalInput (directionalInput);
-        playerSoundManager.SetDirectionalInput(directionalInput);
 
-        //if (facingRight == false && directionalInput.x > 0)
-        //{
-        //    Flip();
-        //}
-        //else if (facingRight == true && directionalInput.x < 0)
-        //{
-        //    Flip();
-        //}
+    }
 
-        if (Input.GetKeyDown (KeyCode.Space))
+    void MoveOffLadderCheck()
+    {
+        if (controller.collisionInfo.climbing == true && controller.collisionInfo.reachedTopOfTheLadder == false)
         {
-			player.OnJumpInputDown ();
+            if (directionalInput.y > 0 || directionalInput.y < 0)
+            {
+                moveOffLadderCooldown = moveOffLadderTimer;
+                moveOffLadderHoldCooldown = moveOffLadderHoldTimer;
+            }
+            if ((Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A)))
+            {
+                if (moveOffLadderHoldCooldown <= 0)
+                {
+                    directionalInput.x = Input.GetAxisRaw("Horizontal");
+                }
+                else
+                    moveOffLadderHoldCooldown -= Time.deltaTime;
+            }
+
+            if (Input.GetKeyDown(KeyCode.D))
+            {
+                if (moveOffLadderCooldown <= 0)
+                {
+                    directionalInput.x = Input.GetAxisRaw("Horizontal");
+                }
+                else
+                    moveOffLadderCooldown -= Time.deltaTime;
+            }
+            else if (Input.GetKeyDown(KeyCode.A))
+            {
+                if (moveOffLadderCooldown <= 0)
+                {
+                    directionalInput.x = Input.GetAxisRaw("Horizontal");
+                }
+                else
+                    moveOffLadderCooldown -= Time.deltaTime;
+            }
         }
     }
 
-    void Flip()
+    void JumpCheck()
     {
-        facingRight = !facingRight;
-        Vector2 characterScale = transform.localScale;
-        characterScale.x *= -1;
-        transform.localScale = characterScale;
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            animator.SetBool("Jumping", true);
+            player.OnJumpInputDown();
+        }
     }
 
-    public void PlayMovingParticle()
+    void JumpAnimationCheck()
     {
-        movingPartical.Play();
+        if (player.jumping == true)
+        {
+            if (directionalInput.x > 0)
+            {
+                lastMoveX = directionalInput.x;
+                animator.SetFloat("MovementX", directionalInput.x);
+            }
+            else if (directionalInput.x < 0)
+            {
+                lastMoveX = directionalInput.x;
+                animator.SetFloat("MovementX", directionalInput.x);
+            }
+            else
+            {
+                animator.SetFloat("MovementX", directionalInput.x);
+            }
+            animator.SetFloat("LastXValue", lastMoveX);
+        }
+        else
+            animator.SetBool("Jumping", false);
+    }
+
+    void FallingAnimationCheck()
+    {
+        animator.SetBool("Falling", player.falling);
+        if (player.falling == true)
+        {
+            if (directionalInput.x > 0)
+            {
+                lastMoveX = directionalInput.x;
+                animator.SetFloat("MovementX", directionalInput.x);
+            }
+            else if (directionalInput.x < 0)
+            {
+                lastMoveX = directionalInput.x;
+                animator.SetFloat("MovementX", directionalInput.x);
+            }
+            else
+            {
+                animator.SetFloat("MovementX", directionalInput.x);
+            }
+            animator.SetFloat("LastXValue", lastMoveX);
+        }
     }
 }
+
+

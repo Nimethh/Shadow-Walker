@@ -33,7 +33,6 @@ public class PressurePlatform : MonoBehaviour
         movingFromLocation = endTransform;
         movingToStart = true;
         direction = (movingToLocation.position - movingPlatform.position).normalized;
-
     }
 
     public void Update()
