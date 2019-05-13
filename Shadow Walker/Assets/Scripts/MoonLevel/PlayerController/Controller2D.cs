@@ -369,22 +369,4 @@ public class Controller2D : RaycastController
             slopeAngle = 0;
         }
     }
-
 }
-
-	[SerializeField][Range(0f,100f)]
-	private float maxClimbSlopeAngle = 80;
-    [SerializeField][Range(0f,100f)]
-	private float maxDescendSlopeAngle = 80;
-	
-	public CollisionInfo collisionInfo;
-	[HideInInspector]
-	public Vector2 playerInput;
-
-    private PlayerSunBehaviorUpdated playerSunBehavior;
-    //private SunController sunController;
-        playerSunBehavior = GetComponent<PlayerSunBehaviorUpdated>();
-        //sunController = GameObject.FindGameObjectWithTag("Sun").GetComponent<SunController>();
-	}
-    
-    public Vector2 Move(Vector2 moveAmount, Vector2 input, bool standingOnPlatform = false)

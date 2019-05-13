@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PressurePlatePairMovePlatform : MonoBehaviour
+public class PressurePlatePairMovePlatform2 : MonoBehaviour
 {
     //public MovingPlatformWithEasingAndShakePressurePlatePair platform;
     public PressurePlatform platform;
