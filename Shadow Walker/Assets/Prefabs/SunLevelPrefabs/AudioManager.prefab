@@ -48,13 +48,17 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 99ced8264472a304888e4f6150ec259f, type: 3}
     volume: 0
     pitch: 1
+    randomVolume: 0
+    randomPitch: 0
     loop: 1
     playOnAwake: 0
     aS: {fileID: 0}
   - name: SunMoving
-    clip: {fileID: 8300000, guid: 6884e87360e3ba844b2ad2cacb127bc1, type: 3}
+    clip: {fileID: 8300000, guid: 8ed6ddb13c7cde24abf6e83fd7aebbd8, type: 3}
     volume: 1
     pitch: 1
+    randomVolume: 0.1
+    randomPitch: 0.1
     loop: 1
     playOnAwake: 0
     aS: {fileID: 0}
@@ -62,6 +66,8 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 7212349daf7a59b4c8d58ece9c8caf7f, type: 3}
     volume: 1
     pitch: 1
+    randomVolume: 0.1
+    randomPitch: 0.1
     loop: 0
     playOnAwake: 0
     aS: {fileID: 0}
@@ -69,6 +75,8 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: ba7a592cf79a8cb4c89eab389fd5440f, type: 3}
     volume: 1
     pitch: 1
+    randomVolume: 0.1
+    randomPitch: 0.1
     loop: 1
     playOnAwake: 0
     aS: {fileID: 0}
@@ -76,6 +84,8 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 1e98df888c28d4044a232ac8b1fad9c2, type: 3}
     volume: 1
     pitch: 1
+    randomVolume: 0.1
+    randomPitch: 0.1
     loop: 0
     playOnAwake: 0
     aS: {fileID: 0}
@@ -83,6 +93,8 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 702db4650b265254384ddb9af135781d, type: 3}
     volume: 1
     pitch: 1
+    randomVolume: 0.1
+    randomPitch: 0.1
     loop: 0
     playOnAwake: 0
     aS: {fileID: 0}
@@ -90,6 +102,8 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 057292f06ab0c904682f07bd670d5639, type: 3}
     volume: 1
     pitch: 1
+    randomVolume: 0.1
+    randomPitch: 0.1
     loop: 1
     playOnAwake: 0
     aS: {fileID: 0}

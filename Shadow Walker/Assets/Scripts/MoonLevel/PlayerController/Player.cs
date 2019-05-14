@@ -27,7 +27,7 @@ public class Player : MonoBehaviour
     private float velocityXSmoothing;
     private float gravity;
     private float jumpVelocity;
-    private Vector3 velocity;
+    public Vector3 velocity;
     private Vector2 directionalInput;
     public bool onGround;
     public bool falling;
@@ -95,6 +95,10 @@ public class Player : MonoBehaviour
             }
             falling = false;
             onGround = true;
+        }
+        else if(!controller.collisionInfo.below)
+        {
+            landing = false;
         }
         else
             onGround = false;

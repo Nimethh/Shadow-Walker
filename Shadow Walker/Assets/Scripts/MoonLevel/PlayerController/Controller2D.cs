@@ -14,7 +14,7 @@ public class Controller2D : RaycastController
 	[HideInInspector]
 	public Vector2 playerInput;
 
-    private PlayerSunBehavior playerSunBehavior;
+    private PlayerSunBehaviorUpdated playerSunBehavior;
     //private SunController sunController;
     
     private float ladderRayLengthUp = 0.1f;
@@ -25,7 +25,7 @@ public class Controller2D : RaycastController
     {
         base.Start();
         collisionInfo.faceDir = 1;
-        playerSunBehavior = GetComponent<PlayerSunBehavior>();
+        playerSunBehavior = GetComponent<PlayerSunBehaviorUpdated>();
         //sunController = GameObject.FindGameObjectWithTag("Sun").GetComponent<SunController>();
 	}
     
@@ -104,7 +104,7 @@ public class Controller2D : RaycastController
                 }
                 if (hit.collider.tag == "CheckPoint")
                 {
-                    SaveSpawnPoints(hit.collider.gameObject);
+                    //SaveSpawnPoints(hit.collider.gameObject);
                     continue;
                 }
 
@@ -172,7 +172,7 @@ public class Controller2D : RaycastController
                 }
                 if (hit.collider.tag == "CheckPoint")
                 {
-                    SaveSpawnPoints(hit.collider.gameObject);
+                    //SaveSpawnPoints(hit.collider.gameObject);
                     continue;
                 }
                 if (hit.collider.tag == "Through")

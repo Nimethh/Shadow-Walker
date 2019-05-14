@@ -1,103 +1,100 @@
 fileFormatVersion: 2
-guid: 6f51c9b7a37471648a9c072d1cf1031b
+guid: 0ec2823a07ae37a4abb8b342e068503e
 TextureImporter:
   fileIDToRecycleName:
-    21300000: playercharacter_animation_walking_right_ver2Fixed_0
-    21300002: playercharacter_animation_walking_right_ver2Fixed_1
-    21300004: playercharacter_animation_walking_right_ver2Fixed_2
-    21300006: playercharacter_animation_walking_right_ver2Fixed_3
-    21300008: playercharacter_animation_walking_right_ver2Fixed_4
-    21300010: playercharacter_animation_walking_right_ver2Fixed_5
-    21300012: playercharacter_animation_walking_right_ver2Fixed_6
-    21300014: playercharacter_animation_walking_right_ver2Fixed_7
-    21300016: playercharacter_animation_walking_right_ver2Fixed_8
-    21300018: playercharacter_animation_walking_right_ver2Fixed_9
-    21300020: playercharacter_animation_walking_right_ver2Fixed_10
-    21300022: playercharacter_animation_walking_right_ver2Fixed_11
-    21300024: playercharacter_animation_walking_right_ver2Fixed_12
-    21300026: playercharacter_animation_walking_right_ver2Fixed_13
-    21300028: playercharacter_animation_walking_right_ver2Fixed_14
-    21300030: playercharacter_animation_walking_right_ver2Fixed_15
-    21300032: playercharacter_animation_walking_right_ver2Fixed_16
-    21300034: playercharacter_animation_walking_right_ver2Fixed_17
-    21300036: playercharacter_animation_walking_right_ver2Fixed_18
-    21300038: playercharacter_animation_walking_right_ver2Fixed_19
-    21300040: playercharacter_animation_walking_right_ver2Fixed_20
-    21300042: playercharacter_animation_walking_right_ver2Fixed_21
-    21300044: playercharacter_animation_walking_right_ver2Fixed_22
-    21300046: playercharacter_animation_walking_right_ver2Fixed_23
-    21300048: playercharacter_animation_walking_right_ver2Fixed_24
-    21300050: playercharacter_animation_walking_right_ver2Fixed_25
-    21300052: playercharacter_animation_walking_right_ver2Fixed_26
-    21300054: playercharacter_animation_walking_right_ver2Fixed_27
-    21300056: playercharacter_animation_walking_right_ver2Fixed_28
-    21300058: playercharacter_animation_walking_right_ver2Fixed_29
-    21300060: playercharacter_animation_walking_right_ver2Fixed_30
-    21300062: playercharacter_animation_walking_right_ver2Fixed_31
-    21300064: playercharacter_animation_walking_right_ver2Fixed_32
-    21300066: playercharacter_animation_walking_right_ver2Fixed_33
-    21300068: playercharacter_animation_walking_right_ver2Fixed_34
-    21300070: playercharacter_animation_walking_right_ver2Fixed_35
-    21300072: playercharacter_animation_walking_right_ver2Fixed_36
-    21300074: playercharacter_animation_walking_right_ver2Fixed_37
-    21300076: playercharacter_animation_walking_right_ver2Fixed_38
-    21300078: playercharacter_animation_walking_right_ver2Fixed_39
-    21300080: playercharacter_animation_walking_right_ver2Fixed_40
-    21300082: playercharacter_animation_walking_right_ver2Fixed_41
-    21300084: playercharacter_animation_walking_right_ver2Fixed_42
-    21300086: playercharacter_animation_walking_right_ver2Fixed_43
-    21300088: playercharacter_animation_walking_right_ver2Fixed_44
-    21300090: playercharacter_animation_walking_right_ver2Fixed_45
-    21300092: playercharacter_animation_walking_right_ver2Fixed_46
-    21300094: playercharacter_animation_walking_right_ver2Fixed_47
-    21300096: playercharacter_animation_walking_right_ver2Fixed_48
-    21300098: playercharacter_animation_walking_right_ver2Fixed_49
-    21300100: playercharacter_animation_walking_right_ver2Fixed_50
-    21300102: playercharacter_animation_walking_right_ver2Fixed_51
-    21300104: playercharacter_animation_walking_right_ver2Fixed_52
-    21300106: playercharacter_animation_walking_right_ver2Fixed_53
-    21300108: playercharacter_animation_walking_right_ver2Fixed_54
-    21300110: playercharacter_animation_walking_right_ver2Fixed_55
-    21300112: playercharacter_animation_walking_right_ver2Fixed_56
-    21300114: playercharacter_animation_walking_right_ver2Fixed_57
-    21300116: playercharacter_animation_walking_right_ver2Fixed_58
-    21300118: playercharacter_animation_walking_right_ver2Fixed_59
-    21300120: playercharacter_animation_walking_right_ver2Fixed_60
-    21300122: playercharacter_animation_walking_right_ver2Fixed_61
-    21300124: playercharacter_animation_walking_right_ver2Fixed_62
-    21300126: playercharacter_animation_walking_right_ver2Fixed_63
-    21300128: playercharacter_animation_walking_right_ver2Fixed_64
-    21300130: playercharacter_animation_walking_right_ver2Fixed_65
-    21300132: playercharacter_animation_walking_right_ver2Fixed_66
-    21300134: playercharacter_animation_walking_right_ver2Fixed_67
-    21300136: playercharacter_animation_walking_right_ver2Fixed_68
-    21300138: playercharacter_animation_walking_right_ver2Fixed_69
-    21300140: playercharacter_animation_walking_right_ver2Fixed_70
-    21300142: playercharacter_animation_walking_right_ver2Fixed_71
-    21300144: playercharacter_animation_walking_right_ver2Fixed_72
-    21300146: playercharacter_animation_walking_right_ver2Fixed_73
-    21300148: playercharacter_animation_walking_right_ver2Fixed_74
-    21300150: playercharacter_animation_walking_right_ver2Fixed_75
-    21300152: playercharacter_animation_walking_right_ver2Fixed_76
-    21300154: playercharacter_animation_walking_right_ver2Fixed_77
-    21300156: playercharacter_animation_walking_right_ver2Fixed_78
-    21300158: playercharacter_animation_walking_right_ver2Fixed_79
-    21300160: playercharacter_animation_walking_right_ver2Fixed_80
-    21300162: playercharacter_animation_walking_right_ver2Fixed_81
-    21300164: playercharacter_animation_walking_right_ver2Fixed_82
-    21300166: playercharacter_animation_walking_right_ver2Fixed_83
-    21300168: playercharacter_animation_walking_right_ver2Fixed_84
-    21300170: playercharacter_animation_walking_right_ver2Fixed_85
-    21300172: playercharacter_animation_walking_right_ver2Fixed_86
-    21300174: playercharacter_animation_walking_right_ver2Fixed_87
-    21300176: playercharacter_animation_walking_right_ver2Fixed_88
-    21300178: playercharacter_animation_walking_right_ver2Fixed_89
-    21300180: playercharacter_animation_walking_right_ver2Fixed_90
-    21300182: playercharacter_animation_walking_right_ver2Fixed_91
-    21300184: playercharacter_animation_walking_right_ver2Fixed_92
-    21300186: playercharacter_animation_walking_right_ver2Fixed_93
-    21300188: playercharacter_animation_walking_right_ver2Fixed_94
-    21300190: playercharacter_animation_walking_right_ver2Fixed_95
+    21300000: idleV5_0
+    21300002: idleV5_1
+    21300004: idleV5_2
+    21300006: idleV5_3
+    21300008: idleV5_4
+    21300010: idleV5_5
+    21300012: idleV5_6
+    21300014: idleV5_7
+    21300016: idleV5_8
+    21300018: idleV5_9
+    21300020: idleV5_10
+    21300022: idleV5_11
+    21300024: idleV5_12
+    21300026: idleV5_13
+    21300028: idleV5_14
+    21300030: idleV5_15
+    21300032: idleV5_16
+    21300034: idleV5_17
+    21300036: idleV5_18
+    21300038: idleV5_19
+    21300040: idleV5_20
+    21300042: idleV5_21
+    21300044: idleV5_22
+    21300046: idleV5_23
+    21300048: idleV5_24
+    21300050: idleV5_25
+    21300052: idleV5_26
+    21300054: idleV5_27
+    21300056: idleV5_28
+    21300058: idleV5_29
+    21300060: idleV5_30
+    21300062: idleV5_31
+    21300064: idleV5_32
+    21300066: idleV5_33
+    21300068: idleV5_34
+    21300070: idleV5_35
+    21300072: idleV5_36
+    21300074: idleV5_37
+    21300076: idleV5_38
+    21300078: idleV5_39
+    21300080: idleV5_40
+    21300082: idleV5_41
+    21300084: idleV5_42
+    21300086: idleV5_43
+    21300088: idleV5_44
+    21300090: idleV5_45
+    21300092: idleV5_46
+    21300094: idleV5_47
+    21300096: idleV5_48
+    21300098: idleV5_49
+    21300100: idleV5_50
+    21300102: idleV5_51
+    21300104: idleV5_52
+    21300106: idleV5_53
+    21300108: idleV5_54
+    21300110: idleV5_55
+    21300112: idleV5_56
+    21300114: idleV5_57
+    21300116: idleV5_58
+    21300118: idleV5_59
+    21300120: idleV5_60
+    21300122: idleV5_61
+    21300124: idleV5_62
+    21300126: idleV5_63
+    21300128: idleV5_64
+    21300130: idleV5_65
+    21300132: idleV5_66
+    21300134: idleV5_67
+    21300136: idleV5_68
+    21300138: idleV5_69
+    21300140: idleV5_70
+    21300142: idleV5_71
+    21300144: idleV5_72
+    21300146: idleV5_73
+    21300148: idleV5_74
+    21300150: idleV5_75
+    21300152: idleV5_76
+    21300154: idleV5_77
+    21300156: idleV5_78
+    21300158: idleV5_79
+    21300160: idleV5_80
+    21300162: idleV5_81
+    21300164: idleV5_82
+    21300166: idleV5_83
+    21300168: idleV5_84
+    21300170: idleV5_85
+    21300172: idleV5_86
+    21300174: idleV5_87
+    21300176: idleV5_88
+    21300178: idleV5_89
+    21300180: idleV5_90
+    21300182: idleV5_91
+    21300184: idleV5_92
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -180,13 +177,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: playercharacter_animation_walking_right_ver2Fixed_0
+      name: idleV5_0
       rect:
         serializedVersion: 2
-        x: 56
-        y: 1857
-        width: 45
-        height: 123
+        x: 0
+        y: 2200
+        width: 100
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -194,19 +191,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 046203c6987f89944a1b8d10339f63bd
+      spriteID: 51c2c53aed54fdd468368ce176d73f22
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playercharacter_animation_walking_right_ver2Fixed_1
+      name: idleV5_1
       rect:
         serializedVersion: 2
-        x: 147
-        y: 1856
-        width: 44
-        height: 125
+        x: 100
+        y: 2200
+        width: 100
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -214,19 +211,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 56ce62cd457ee0c42b9fe7a7995c073d
+      spriteID: 4d1a46f388af0f244af248d9059c3a69
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playercharacter_animation_walking_right_ver2Fixed_2
+      name: idleV5_2
       rect:
         serializedVersion: 2
-        x: 237
-        y: 1858
-        width: 44
-        height: 123
+        x: 200
+        y: 2200
+        width: 100
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -234,19 +231,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dd1b748fcfcbb8a4a9590640b10a0ff6
+      spriteID: 62ab7e5cfa7c115449f673d672ffcfee
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playercharacter_animation_walking_right_ver2Fixed_3
+      name: idleV5_3
       rect:
         serializedVersion: 2
-        x: 324
-        y: 1859
-        width: 48
-        height: 123
+        x: 300
+        y: 2200
+        width: 100
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -254,19 +251,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5f98801ba4196af4daa246e504dc7cc4
+      spriteID: 174a4d1ca9bda4d4b835aa427be4221d
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playercharacter_animation_walking_right_ver2Fixed_4
+      name: idleV5_4
       rect:
         serializedVersion: 2
-        x: 416
-        y: 1860
-        width: 45
-        height: 124
+        x: 400
+        y: 2200
+        width: 100
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -274,379 +271,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 52700bcbf0062634886d67d57bda8900
+      spriteID: ed068c126b62562499d261e064b4469b
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playercharacter_animation_walking_right_ver2Fixed_5
-      rect:
-        serializedVersion: 2
-        x: 507
-        y: 1860
-        width: 43
-        height: 124
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b556fd993f1c3ea4f9c9adc79ae3a1f7
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: playercharacter_animation_walking_right_ver2Fixed_6
-      rect:
-        serializedVersion: 2
-        x: 596
-        y: 1860
-        width: 45
-        height: 124
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9cc6ff83b6db260458e05e4797b3b4ee
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: playercharacter_animation_walking_right_ver2Fixed_7
-      rect:
-        serializedVersion: 2
-        x: 686
-        y: 1860
-        width: 46
-        height: 123
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 585ad778755e236459a978fb544c78e0
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: playercharacter_animation_walking_right_ver2Fixed_8
-      rect:
-        serializedVersion: 2
-        x: 775
-        y: 1860
-        width: 45
-        height: 124
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c7e419192d7e07a4a8111dbda3cc103b
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: playercharacter_animation_walking_right_ver2Fixed_9
-      rect:
-        serializedVersion: 2
-        x: 55
-        y: 1712
-        width: 46
-        height: 125
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ced6e05cf5ee7b94f91962cca49f5a13
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: playercharacter_animation_walking_right_ver2Fixed_10
-      rect:
-        serializedVersion: 2
-        x: 145
-        y: 1712
-        width: 45
-        height: 125
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 93393f66469cc7c4d9555974cde6bc5e
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: playercharacter_animation_walking_right_ver2Fixed_11
-      rect:
-        serializedVersion: 2
-        x: 234
-        y: 1712
-        width: 47
-        height: 126
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9b63dcadaddede343aa9c28a9b25252a
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: playercharacter_animation_walking_right_ver2Fixed_12
-      rect:
-        serializedVersion: 2
-        x: 323
-        y: 1712
-        width: 49
-        height: 126
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 6ed8dd7485598694ea178f6af86f7f76
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: playercharacter_animation_walking_right_ver2Fixed_13
-      rect:
-        serializedVersion: 2
-        x: 412
-        y: 1712
-        width: 48
-        height: 126
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ce1979898e927164b9d75efaa1ee1c38
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: playercharacter_animation_walking_right_ver2Fixed_14
-      rect:
-        serializedVersion: 2
-        x: 503
-        y: 1712
-        width: 49
-        height: 126
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 936ec336a1a0bf240bc1a2a775765992
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: playercharacter_animation_walking_right_ver2Fixed_15
-      rect:
-        serializedVersion: 2
-        x: 592
-        y: 1712
-        width: 48
-        height: 125
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f525d7f3470a7d14a9562324b1ec7c73
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: playercharacter_animation_walking_right_ver2Fixed_16
-      rect:
-        serializedVersion: 2
-        x: 682
-        y: 1712
-        width: 50
-        height: 125
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: bbb342ccd07d16d4a8db42b3897505a0
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: playercharacter_animation_walking_right_ver2Fixed_17
-      rect:
-        serializedVersion: 2
-        x: 771
-        y: 1712
-        width: 49
-        height: 125
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a18c714b05f38ce45beaffce6722e213
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: playercharacter_animation_walking_right_ver2Fixed_18
-      rect:
-        serializedVersion: 2
-        x: 51
-        y: 1571
-        width: 49
-        height: 125
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: adc0057d5eddb6740bfa07b419774eb1
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: playercharacter_animation_walking_right_ver2Fixed_19
-      rect:
-        serializedVersion: 2
-        x: 140
-        y: 1571
-        width: 50
-        height: 125
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9cf5719ff53a2f7449160e8c5fd574c0
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: playercharacter_animation_walking_right_ver2Fixed_20
-      rect:
-        serializedVersion: 2
-        x: 231
-        y: 1571
-        width: 49
-        height: 124
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 5f0b09f1dc54301488061cd02c3f08fc
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: playercharacter_animation_walking_right_ver2Fixed_21
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 1568
-        width: 52
-        height: 126
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fcc704b9a4fcab041a88addd597ed34d
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: playercharacter_animation_walking_right_ver2Fixed_22
-      rect:
-        serializedVersion: 2
-        x: 408
-        y: 1568
-        width: 53
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: fa3b5b068da385041b7704404cd40e6b
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: playercharacter_animation_walking_right_ver2Fixed_23
+      name: idleV5_5
       rect:
         serializedVersion: 2
         x: 500
-        y: 1570
-        width: 52
-        height: 123
+        y: 2200
+        width: 100
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -654,19 +291,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9025638886feba04ba9df1688e7e6745
+      spriteID: ed5c6c54ab0bf4744b63088647acbb12
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playercharacter_animation_walking_right_ver2Fixed_24
+      name: idleV5_6
       rect:
         serializedVersion: 2
-        x: 590
-        y: 1568
-        width: 51
-        height: 125
+        x: 600
+        y: 2200
+        width: 100
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -674,19 +311,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6883dd0148d26fc4ba90dbed86f6acdc
+      spriteID: 7f9bffd359ce1b84c99a4ea5e385e8fb
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playercharacter_animation_walking_right_ver2Fixed_25
+      name: idleV5_7
       rect:
         serializedVersion: 2
-        x: 680
-        y: 1570
-        width: 52
-        height: 123
+        x: 700
+        y: 2200
+        width: 100
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -694,19 +331,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d55d3794f3afc6e4581a9031a9f3e9fa
+      spriteID: 837d80db827119144a308558903433b6
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playercharacter_animation_walking_right_ver2Fixed_26
+      name: idleV5_8
       rect:
         serializedVersion: 2
-        x: 768
-        y: 1568
-        width: 52
-        height: 125
+        x: 0
+        y: 2000
+        width: 100
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -714,19 +351,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5bb2598aefd7edc41b47c568aa9b456b
+      spriteID: 9aaed5ff1a872d34aa46a3d2226d9aeb
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playercharacter_animation_walking_right_ver2Fixed_27
+      name: idleV5_9
       rect:
         serializedVersion: 2
-        x: 50
-        y: 1424
-        width: 50
-        height: 124
+        x: 100
+        y: 2000
+        width: 100
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -734,19 +371,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a2982ea98ed7e9443aaf5c91fb8cfed5
+      spriteID: f46f997cca36c8c45bf99771efe900da
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playercharacter_animation_walking_right_ver2Fixed_28
+      name: idleV5_10
       rect:
         serializedVersion: 2
-        x: 140
-        y: 1424
-        width: 50
-        height: 124
+        x: 200
+        y: 2000
+        width: 100
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -754,19 +391,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9e52504b749a8394f9060eea091d130c
+      spriteID: f8ba51bfeb8ebda41b2e6effa78fc2b2
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playercharacter_animation_walking_right_ver2Fixed_29
+      name: idleV5_11
       rect:
         serializedVersion: 2
-        x: 231
-        y: 1424
-        width: 49
-        height: 125
+        x: 300
+        y: 2000
+        width: 100
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -774,19 +411,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aed4fab718228fc4ab10391e02a4cb4c
+      spriteID: cb879d915f6675f4ab5e54c929211f0e
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playercharacter_animation_walking_right_ver2Fixed_30
+      name: idleV5_12
       rect:
         serializedVersion: 2
-        x: 320
-        y: 1424
-        width: 52
-        height: 125
+        x: 400
+        y: 2000
+        width: 100
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -794,39 +431,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e0749f4c9c0356b44a8864f32ffa4add
+      spriteID: 16341c930768d044cae34e785708959b
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playercharacter_animation_walking_right_ver2Fixed_31
-      rect:
-        serializedVersion: 2
-        x: 411
-        y: 1424
-        width: 49
-        height: 126
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ad613d825978fae45b237740b68a151b
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: playercharacter_animation_walking_right_ver2Fixed_32
+      name: idleV5_13
       rect:
         serializedVersion: 2
         x: 500
-        y: 1424
-        width: 52
-        height: 126
+        y: 2000
+        width: 100
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -834,19 +451,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9567ca642535dac45844c62b79f4b2e9
+      spriteID: 9aa79a1bbf374a54196a6b44461d844c
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playercharacter_animation_walking_right_ver2Fixed_33
+      name: idleV5_14
       rect:
         serializedVersion: 2
-        x: 592
-        y: 1424
-        width: 48
-        height: 127
+        x: 600
+        y: 2000
+        width: 100
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -854,19 +471,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e7d28cc978f730b44be5960c75f677eb
+      spriteID: 10dc7b556de91dd43b822b4a96d80895
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playercharacter_animation_walking_right_ver2Fixed_34
+      name: idleV5_15
       rect:
         serializedVersion: 2
-        x: 680
-        y: 1426
-        width: 50
-        height: 125
+        x: 700
+        y: 2000
+        width: 100
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -874,19 +491,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 225baa42b490feb44aa6c2a133baf14e
+      spriteID: 9d536011a8fea334fbee130a45efd6fc
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playercharacter_animation_walking_right_ver2Fixed_35
+      name: idleV5_16
       rect:
         serializedVersion: 2
-        x: 773
-        y: 1426
-        width: 47
-        height: 126
+        x: 0
+        y: 1800
+        width: 100
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -894,19 +511,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9e37f5885f3b52d4c9e0930a28c17914
+      spriteID: cc994089416e9c44093d82a7e385d0df
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playercharacter_animation_walking_right_ver2Fixed_36
+      name: idleV5_17
       rect:
         serializedVersion: 2
-        x: 53
-        y: 1276
-        width: 47
-        height: 125
+        x: 100
+        y: 1800
+        width: 100
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -914,19 +531,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 84e5cd602db59d64fafaac4af8483fdc
+      spriteID: c11d1d0e6b53f954e868b42389a3ee39
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playercharacter_animation_walking_right_ver2Fixed_37
+      name: idleV5_18
       rect:
         serializedVersion: 2
-        x: 144
-        y: 1276
-        width: 46
-        height: 125
+        x: 200
+        y: 1800
+        width: 100
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -934,19 +551,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 335eb42203f9d8d48baa60cdcfd2038f
+      spriteID: b5b7a1cb7e6a8754985199d65c4a334c
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playercharacter_animation_walking_right_ver2Fixed_38
+      name: idleV5_19
       rect:
         serializedVersion: 2
-        x: 234
-        y: 1276
-        width: 47
-        height: 125
+        x: 300
+        y: 1800
+        width: 100
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -954,19 +571,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: dd3f732172a064549a9d55ffcc1746fe
+      spriteID: c39d32c287562024284755c27fa203bd
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playercharacter_animation_walking_right_ver2Fixed_39
+      name: idleV5_20
       rect:
         serializedVersion: 2
-        x: 324
-        y: 1276
-        width: 48
-        height: 125
+        x: 400
+        y: 1800
+        width: 100
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -974,579 +591,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0e578d375c616e84d966f33f16295aac
+      spriteID: 5948125124cc0344d9a04cacd5d6358b
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playercharacter_animation_walking_right_ver2Fixed_40
-      rect:
-        serializedVersion: 2
-        x: 415
-        y: 1276
-        width: 46
-        height: 125
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: f75a39325338d8646a9f7ab1b30fcd16
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: playercharacter_animation_walking_right_ver2Fixed_41
-      rect:
-        serializedVersion: 2
-        x: 504
-        y: 1275
-        width: 48
-        height: 125
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e19b051fd8cc5f040a5a2709ce8a9558
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: playercharacter_animation_walking_right_ver2Fixed_42
-      rect:
-        serializedVersion: 2
-        x: 596
-        y: 1275
-        width: 45
-        height: 125
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a486c952a8041e343983d32f3ee23821
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: playercharacter_animation_walking_right_ver2Fixed_43
-      rect:
-        serializedVersion: 2
-        x: 684
-        y: 1275
-        width: 48
-        height: 125
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 36f10c0df698d7d438aeffba2794e83c
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: playercharacter_animation_walking_right_ver2Fixed_44
-      rect:
-        serializedVersion: 2
-        x: 777
-        y: 1274
-        width: 43
-        height: 126
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 31f19ea6d22c4f1478b2a73025fc8fc6
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: playercharacter_animation_walking_right_ver2Fixed_45
-      rect:
-        serializedVersion: 2
-        x: 56
-        y: 1128
-        width: 45
-        height: 124
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 1967efa3a8402584e89a6f567f3e27e3
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: playercharacter_animation_walking_right_ver2Fixed_46
-      rect:
-        serializedVersion: 2
-        x: 147
-        y: 1128
-        width: 45
-        height: 124
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8e268f796f4ac104ebf712542eea75e6
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: playercharacter_animation_walking_right_ver2Fixed_47
-      rect:
-        serializedVersion: 2
-        x: 237
-        y: 1128
-        width: 45
-        height: 124
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4d3ae7d5d534d024d90610bddbc34050
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: playercharacter_animation_walking_right_ver2Fixed_48
-      rect:
-        serializedVersion: 2
-        x: 327
-        y: 1128
-        width: 45
-        height: 124
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 486d7f9d56fde5644930fe41cf339391
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: playercharacter_animation_walking_right_ver2Fixed_49
-      rect:
-        serializedVersion: 2
-        x: 416
-        y: 1128
-        width: 45
-        height: 124
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0dcaf7d524ccedb419666732385e74a9
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: playercharacter_animation_walking_right_ver2Fixed_50
-      rect:
-        serializedVersion: 2
-        x: 507
-        y: 1129
-        width: 45
-        height: 123
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 862b6921b8415844c882881492734b0c
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: playercharacter_animation_walking_right_ver2Fixed_51
-      rect:
-        serializedVersion: 2
-        x: 596
-        y: 1128
-        width: 45
-        height: 124
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ea7b637690df1154c87c58971c98f07e
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: playercharacter_animation_walking_right_ver2Fixed_52
-      rect:
-        serializedVersion: 2
-        x: 687
-        y: 1128
-        width: 45
-        height: 124
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a15148a397fdf87478a68beca99a1f09
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: playercharacter_animation_walking_right_ver2Fixed_53
-      rect:
-        serializedVersion: 2
-        x: 776
-        y: 1130
-        width: 44
-        height: 122
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8aaf9cff59308fc4cb70ef86a84ef733
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: playercharacter_animation_walking_right_ver2Fixed_54
-      rect:
-        serializedVersion: 2
-        x: 56
-        y: 984
-        width: 45
-        height: 124
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 10370ebb5d1c1bd40ac7d7486aada35e
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: playercharacter_animation_walking_right_ver2Fixed_55
-      rect:
-        serializedVersion: 2
-        x: 146
-        y: 984
-        width: 46
-        height: 124
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: cd5e53a2ffe2da14e853936db8f4fdf8
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: playercharacter_animation_walking_right_ver2Fixed_56
-      rect:
-        serializedVersion: 2
-        x: 236
-        y: 984
-        width: 45
-        height: 125
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2e98176b5251fee4c9fbd97e07e38fea
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: playercharacter_animation_walking_right_ver2Fixed_57
-      rect:
-        serializedVersion: 2
-        x: 324
-        y: 984
-        width: 48
-        height: 125
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 869a6b1af42228143af478027bd94da6
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: playercharacter_animation_walking_right_ver2Fixed_58
-      rect:
-        serializedVersion: 2
-        x: 415
-        y: 984
-        width: 45
-        height: 126
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 12a686c9a01cdd94493bd3c4bd281d50
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: playercharacter_animation_walking_right_ver2Fixed_59
-      rect:
-        serializedVersion: 2
-        x: 504
-        y: 984
-        width: 48
-        height: 126
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 40405f4c6b33d724b9019485a8f53211
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: playercharacter_animation_walking_right_ver2Fixed_60
-      rect:
-        serializedVersion: 2
-        x: 594
-        y: 984
-        width: 47
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 04f9f571d97016440b1d2e92a9185999
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: playercharacter_animation_walking_right_ver2Fixed_61
-      rect:
-        serializedVersion: 2
-        x: 683
-        y: 984
-        width: 49
-        height: 126
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a780ad5d3029384488b7d4b8e9325776
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: playercharacter_animation_walking_right_ver2Fixed_62
-      rect:
-        serializedVersion: 2
-        x: 772
-        y: 984
-        width: 48
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 455d9a30b3db5b54e94bacbdb0e9c08f
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: playercharacter_animation_walking_right_ver2Fixed_63
-      rect:
-        serializedVersion: 2
-        x: 52
-        y: 844
-        width: 48
-        height: 125
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8ed499595d363d942b8f5bb9e7ec5e6a
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: playercharacter_animation_walking_right_ver2Fixed_64
-      rect:
-        serializedVersion: 2
-        x: 142
-        y: 844
-        width: 48
-        height: 125
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 834b32febc222a94ab5808dacdace71b
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: playercharacter_animation_walking_right_ver2Fixed_65
-      rect:
-        serializedVersion: 2
-        x: 231
-        y: 844
-        width: 49
-        height: 125
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a05a91a508a9a54419edc8082cede834
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: playercharacter_animation_walking_right_ver2Fixed_66
-      rect:
-        serializedVersion: 2
-        x: 320
-        y: 843
-        width: 52
-        height: 126
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a9dbc6d4ecf883e45aaed93e3ec8e51b
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: playercharacter_animation_walking_right_ver2Fixed_67
-      rect:
-        serializedVersion: 2
-        x: 411
-        y: 843
-        width: 49
-        height: 125
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9c3701b7b63f3fc46ac15adee14b80b9
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: playercharacter_animation_walking_right_ver2Fixed_68
+      name: idleV5_21
       rect:
         serializedVersion: 2
         x: 500
-        y: 843
-        width: 52
-        height: 125
+        y: 1800
+        width: 100
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1554,19 +611,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 62b28eee932c15f4f88951eb9388b919
+      spriteID: 4dfbad1c43a39f04289addef0d2f316e
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playercharacter_animation_walking_right_ver2Fixed_69
+      name: idleV5_22
       rect:
         serializedVersion: 2
-        x: 590
-        y: 842
-        width: 51
-        height: 124
+        x: 600
+        y: 1800
+        width: 100
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1574,19 +631,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 00d5075c39caa514b906263c6e0e4c97
+      spriteID: ffa8801032630ed46a2ac7cd74028d0f
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playercharacter_animation_walking_right_ver2Fixed_70
+      name: idleV5_23
       rect:
         serializedVersion: 2
-        x: 680
-        y: 842
-        width: 52
-        height: 126
+        x: 700
+        y: 1800
+        width: 100
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1594,19 +651,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7a6e49d03299dca4ebd930cdac6163c1
+      spriteID: de3b13b2ce4021242bfc001a9a069ae2
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playercharacter_animation_walking_right_ver2Fixed_71
+      name: idleV5_24
       rect:
         serializedVersion: 2
-        x: 768
-        y: 842
-        width: 52
-        height: 126
+        x: 0
+        y: 1600
+        width: 100
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1614,19 +671,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d863db453b7583a4a8650912b7165ebf
+      spriteID: cc347b73c0579ac4e91a4acb9f8eb999
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playercharacter_animation_walking_right_ver2Fixed_72
+      name: idleV5_25
       rect:
         serializedVersion: 2
-        x: 50
-        y: 692
-        width: 51
-        height: 124
+        x: 100
+        y: 1600
+        width: 100
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1634,19 +691,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0160afa71165198419af7382243f6eb4
+      spriteID: 76265a52fef211a44b3dd2b2546c31fb
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playercharacter_animation_walking_right_ver2Fixed_73
+      name: idleV5_26
       rect:
         serializedVersion: 2
-        x: 140
-        y: 693
-        width: 51
-        height: 123
+        x: 200
+        y: 1600
+        width: 100
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1654,19 +711,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3a7ee9d8482f18a49aea8fdf1b04dbfd
+      spriteID: 2834f4b8f25e4f54282c09ee54d5c3f8
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playercharacter_animation_walking_right_ver2Fixed_74
+      name: idleV5_27
       rect:
         serializedVersion: 2
-        x: 230
-        y: 692
-        width: 51
-        height: 124
+        x: 300
+        y: 1600
+        width: 100
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1674,19 +731,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ac0d2607dbaa77c448d43a7b24ab086d
+      spriteID: 04b52b8ca8574294189bc87774455301
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playercharacter_animation_walking_right_ver2Fixed_75
+      name: idleV5_28
       rect:
         serializedVersion: 2
-        x: 320
-        y: 694
-        width: 52
-        height: 122
+        x: 400
+        y: 1600
+        width: 100
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1694,39 +751,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 04444cfdbf39931429d5bcc991515cb2
+      spriteID: 791b3ad81622d004bb69c6188c9aa33f
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playercharacter_animation_walking_right_ver2Fixed_76
-      rect:
-        serializedVersion: 2
-        x: 408
-        y: 692
-        width: 52
-        height: 125
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e048431aea278df429d99d1fae8b0ec0
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: playercharacter_animation_walking_right_ver2Fixed_77
+      name: idleV5_29
       rect:
         serializedVersion: 2
         x: 500
-        y: 694
-        width: 52
-        height: 123
+        y: 1600
+        width: 100
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1734,19 +771,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9e90d35f4aec68d4ba7ffb8d23fc75dd
+      spriteID: 6ffe6a4908316db40b0776733117d297
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playercharacter_animation_walking_right_ver2Fixed_78
+      name: idleV5_30
       rect:
         serializedVersion: 2
-        x: 591
-        y: 692
-        width: 49
-        height: 125
+        x: 600
+        y: 1600
+        width: 100
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1754,19 +791,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1edcc7e696a6a2a45bc2f77ca548a0df
+      spriteID: 7f06b4e0ba728ef47a925d3394f170ae
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playercharacter_animation_walking_right_ver2Fixed_79
+      name: idleV5_31
       rect:
         serializedVersion: 2
-        x: 680
-        y: 692
-        width: 52
-        height: 126
+        x: 700
+        y: 1600
+        width: 100
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1774,19 +811,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3d7f31e7ccb3f4c46a7117d69d5a694d
+      spriteID: a3f48b828a3b93e44ade2beb65569ae4
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playercharacter_animation_walking_right_ver2Fixed_80
+      name: idleV5_32
       rect:
         serializedVersion: 2
-        x: 772
-        y: 694
-        width: 48
-        height: 126
+        x: 0
+        y: 1400
+        width: 100
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1794,19 +831,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 822dd1586c04d5f40ac4bd821f2f82ee
+      spriteID: caedb57c7c28a8441bf72f04c1fabebb
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playercharacter_animation_walking_right_ver2Fixed_81
+      name: idleV5_33
       rect:
         serializedVersion: 2
-        x: 52
-        y: 544
-        width: 48
-        height: 124
+        x: 100
+        y: 1400
+        width: 100
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1814,19 +851,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b70a014c3ee464a49aca372ca280d039
+      spriteID: 766782c14d6702840988a672d8de22e3
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playercharacter_animation_walking_right_ver2Fixed_82
+      name: idleV5_34
       rect:
         serializedVersion: 2
-        x: 142
-        y: 544
-        width: 48
-        height: 125
+        x: 200
+        y: 1400
+        width: 100
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1834,19 +871,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d942a4557bcd90946a6f1072dbc646c4
+      spriteID: 5168694ad10f1b9489193bacd6daaa78
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playercharacter_animation_walking_right_ver2Fixed_83
+      name: idleV5_35
       rect:
         serializedVersion: 2
-        x: 233
-        y: 544
-        width: 47
-        height: 125
+        x: 300
+        y: 1400
+        width: 100
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1854,19 +891,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 004db127dd903c2489e38b8d9c29e8f4
+      spriteID: bfa1da016aa510a4eb36d3e3b8885c7a
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playercharacter_animation_walking_right_ver2Fixed_84
+      name: idleV5_36
       rect:
         serializedVersion: 2
-        x: 323
-        y: 544
-        width: 49
-        height: 125
+        x: 400
+        y: 1400
+        width: 100
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1874,19 +911,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a0da3dbdfcb7a2c448f87cc536765adc
+      spriteID: e21bfad800969114d8aff3d84137bfd8
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playercharacter_animation_walking_right_ver2Fixed_85
+      name: idleV5_37
       rect:
         serializedVersion: 2
-        x: 414
-        y: 544
-        width: 46
-        height: 126
+        x: 500
+        y: 1400
+        width: 100
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1894,19 +931,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 16eeb2c3c1479ce428522c7bdf45b69e
+      spriteID: e939e4d5a76cc88419c4adec1d0c8a06
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playercharacter_animation_walking_right_ver2Fixed_86
+      name: idleV5_38
       rect:
         serializedVersion: 2
-        x: 504
-        y: 544
-        width: 48
-        height: 125
+        x: 600
+        y: 1400
+        width: 100
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1914,19 +951,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4d81bf5bcfa74ca42988a3025c96ad38
+      spriteID: 3f8f4ada9d88fbc43a7605b92f3a6991
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playercharacter_animation_walking_right_ver2Fixed_87
+      name: idleV5_39
       rect:
         serializedVersion: 2
-        x: 592
-        y: 544
-        width: 49
-        height: 125
+        x: 700
+        y: 1400
+        width: 100
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1934,19 +971,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f5ddc83beb968594eaec81689e16e025
+      spriteID: f5ffe15e12d254d4b8cd817cdbd9ae19
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playercharacter_animation_walking_right_ver2Fixed_88
+      name: idleV5_40
       rect:
         serializedVersion: 2
-        x: 684
-        y: 544
-        width: 48
-        height: 125
+        x: 0
+        y: 1200
+        width: 100
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1954,19 +991,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 79930534c0c69464b826caba846e9167
+      spriteID: 2fb33badf994efa488d16181d44039f7
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playercharacter_animation_walking_right_ver2Fixed_89
+      name: idleV5_41
       rect:
         serializedVersion: 2
-        x: 775
-        y: 544
-        width: 45
-        height: 124
+        x: 100
+        y: 1200
+        width: 100
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1974,19 +1011,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4ceb05333b1a0704ca0c447d1d404d31
+      spriteID: b756858fa7b857e4ca6577e55b0306b0
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playercharacter_animation_walking_right_ver2Fixed_90
+      name: idleV5_42
       rect:
         serializedVersion: 2
-        x: 56
-        y: 396
-        width: 45
-        height: 127
+        x: 200
+        y: 1200
+        width: 100
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1994,19 +1031,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c814940f4bfbdc64e979b7a407d5029d
+      spriteID: 694aedd6b5cf0334f9dff20d7db9ffdc
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playercharacter_animation_walking_right_ver2Fixed_91
+      name: idleV5_43
       rect:
         serializedVersion: 2
-        x: 146
-        y: 398
-        width: 44
-        height: 124
+        x: 300
+        y: 1200
+        width: 100
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2014,19 +1051,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ec3b69f978a09214eb5ddcf6256ca5d4
+      spriteID: 588405c0bc292ce44b89cb6809a0b4be
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playercharacter_animation_walking_right_ver2Fixed_92
+      name: idleV5_44
       rect:
         serializedVersion: 2
-        x: 237
-        y: 398
-        width: 44
-        height: 126
+        x: 400
+        y: 1200
+        width: 100
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2034,19 +1071,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 18256c3c848661e4bb7c145c1afacef8
+      spriteID: 2c485a749f1cfa145a0b5426bdfd27b3
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playercharacter_animation_walking_right_ver2Fixed_93
+      name: idleV5_45
       rect:
         serializedVersion: 2
-        x: 327
-        y: 396
-        width: 44
-        height: 125
+        x: 500
+        y: 1200
+        width: 100
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2054,19 +1091,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c72d9b96998cc744ba94af5ce217c9c4
+      spriteID: 721df09906c208c4bb343f7e98d0bc49
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playercharacter_animation_walking_right_ver2Fixed_94
+      name: idleV5_46
       rect:
         serializedVersion: 2
-        x: 416
-        y: 397
-        width: 45
-        height: 124
+        x: 600
+        y: 1200
+        width: 100
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2074,19 +1111,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 04bee304eb56191419f03ff219500e4e
+      spriteID: cc75eb0f9c140d54eb07dbc1c2652f58
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: playercharacter_animation_walking_right_ver2Fixed_95
+      name: idleV5_47
       rect:
         serializedVersion: 2
-        x: 507
-        y: 397
-        width: 45
-        height: 123
+        x: 700
+        y: 1200
+        width: 100
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -2094,7 +1131,907 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4d79052bfabd6f044ba1f471afe315e7
+      spriteID: f1758963213fbd648ab0fe25592cfff6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleV5_48
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1000
+        width: 100
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d20d391de6702d942a8edafe9d51bb23
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleV5_49
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 1000
+        width: 100
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7fdcbffa21db0643b418b0a6ce59e2a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleV5_50
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 1000
+        width: 100
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 50dacd9ad7a967a44b033998177c847f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleV5_51
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 1000
+        width: 100
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20e4ce2f10a864044b327fd75c2bdb52
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleV5_52
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 1000
+        width: 100
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e97d5445a743ef248b3ff956424c3004
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleV5_53
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 1000
+        width: 100
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ae17e1319d3d2046ae9725c6dbb070c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleV5_54
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 1000
+        width: 100
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53a1ef78a3144f248868def3b7fd8cc5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleV5_55
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 1000
+        width: 100
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6600be50c7be07f43aea67e66c33b83b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleV5_56
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 800
+        width: 100
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6fd01bba884b1ec4abf6891c69d71779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleV5_57
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 800
+        width: 100
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28bb00b0ed08a1240a6b29529583effa
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleV5_58
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 800
+        width: 100
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cfbf3114f2bd2f4a9eeaaaf160acc32
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleV5_59
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 800
+        width: 100
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7551cef8903d49f479237ec3eb49da63
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleV5_60
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 800
+        width: 100
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2facaf4631d261a4ba56ed758852fc3b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleV5_61
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 800
+        width: 100
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac6c33e01f51e4c439b09613a4f510e6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleV5_62
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 800
+        width: 100
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 602491479478f1543ae41690f93c3541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleV5_63
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 800
+        width: 100
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3747cf0b29b30b3438caa26bbadd6a25
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleV5_64
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 600
+        width: 100
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 137feba3b579adc428383f2de4a01ac1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleV5_65
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 600
+        width: 100
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b317f576d37592c4ca8f1d77ab7be69d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleV5_66
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 600
+        width: 100
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a1071b70efdb7644b3dde64a0512934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleV5_67
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 600
+        width: 100
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8566241ece18ff949867293ccfd58228
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleV5_68
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 600
+        width: 100
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a12235cbfa9dbbc4cb1e9f1b3ade52fd
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleV5_69
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 600
+        width: 100
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0105f0349df9e8149802ccb7511f7544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleV5_70
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 600
+        width: 100
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cacc6ae3bda9af48a37e64a09c6fd27
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleV5_71
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 600
+        width: 100
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 724aea10eaacfcf40a7a8018d672b733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleV5_72
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 400
+        width: 100
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65acb7f08a9915649a2205110aec85e1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleV5_73
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 400
+        width: 100
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee73e7f51ef61df48879b9e65af93298
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleV5_74
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 400
+        width: 100
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73642763e6d8d26488020de2876bb84a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleV5_75
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 400
+        width: 100
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2778d144b668d654fafc445e30f23770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleV5_76
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 400
+        width: 100
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9faedfb2107cfd443beb7d7668e6bc4e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleV5_77
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 400
+        width: 100
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2d532f2c59dcce4d823f21477fe8d15
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleV5_78
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 400
+        width: 100
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19c15b8d03d299643935ea68ee6a8c47
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleV5_79
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 400
+        width: 100
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 714411ffb1b4c3b4b9094ed19795f5f1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleV5_80
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 200
+        width: 100
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 58dc32cb1098ef04fbffdd6bb052a815
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleV5_81
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 200
+        width: 100
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5bda3ca394777244bb8e511da2532baa
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleV5_82
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 200
+        width: 100
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35dd9662796c185478ba8768dedf854d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleV5_83
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 200
+        width: 100
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27f32a25ec5b5974e9c0bf60ce8a3621
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleV5_84
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 200
+        width: 100
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6965f21e5a79b7146ab5c5cccd02ef8f
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleV5_85
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 200
+        width: 100
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef36a42b345f5b244ae6fc0f28ba3fb5
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleV5_86
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 200
+        width: 100
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66a80155d780f204d87011548b825829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleV5_87
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 200
+        width: 100
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a94b84c62a755df49bcba52da7de4991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleV5_88
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 100
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2d0484fa9d184d4c8aa9119568c1c7d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleV5_89
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 0
+        width: 100
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80344784306aebf4ba992d8e398f4873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleV5_90
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 0
+        width: 100
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44e7e70e57bac1e4bba4fef795ec4909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleV5_91
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 0
+        width: 100
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a756f7e720166cc4f8c2e0514175b2ee
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: idleV5_92
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 0
+        width: 100
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 847cf68f71061d047b52fe3cfd049f37
       vertices: []
       indices: 
       edges: []
@@ -2102,7 +2039,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 31f2ab9f9f8e7c1409bcc9c29fed2ea7
+    spriteID: 49aae2c5da216f64dad2360de61c6b66
     vertices: []
     indices: 
     edges: []

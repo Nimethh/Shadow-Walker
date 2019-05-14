@@ -48,7 +48,8 @@ public class SunController : MonoBehaviour
         }
         else
         {
-            FindObjectOfType<AudioManager>().Stop("SunMoving");
+            FindObjectOfType<AudioManager>().Mute("SunMoving");
+            //FindObjectOfType<AudioManager>().Stop("SunMoving");
         }
 
     }

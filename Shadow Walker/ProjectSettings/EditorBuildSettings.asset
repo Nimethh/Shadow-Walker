@@ -17,4 +17,13 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Congrats.unity
     guid: a321e2a33e85cbd42b55b51c808a534b
+  - enabled: 0
+    path: Assets/Scenes/1st Level.unity
+    guid: 9920b34c1b7d4b14590305e9cc17e900
+  - enabled: 1
+    path: Assets/Scenes/SampleScene.unity
+    guid: 0058280f65a41844c936d67f4693b230
+  - enabled: 1
+    path: Assets/Scenes/FirstLevel.unity
+    guid: e4032158b01eb2844af54afcfe975993
   m_configObjects: {}

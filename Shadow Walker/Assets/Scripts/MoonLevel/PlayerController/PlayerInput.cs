@@ -179,5 +179,3 @@ public class PlayerInput : MonoBehaviour
         }
     }
 }
-
-
