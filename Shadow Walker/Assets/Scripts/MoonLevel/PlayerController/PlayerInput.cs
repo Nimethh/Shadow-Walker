@@ -56,31 +56,33 @@ public class PlayerInput : MonoBehaviour
 
     void MovementCheck()
     {
-        if (controller.collisionInfo.climbing == false || controller.collisionInfo.below == true)
+        if (!player.movingToNextLevel)
         {
-            directionalInput.x = Input.GetAxisRaw("Horizontal");
-            if (directionalInput.x > 0 && player.onGround)
+            if (controller.collisionInfo.climbing == false || controller.collisionInfo.below == true)
             {
-                lastMoveX = directionalInput.x;
-                animator.SetFloat("MovementX", directionalInput.x);
-                animator.SetBool("Moving", true);
+                directionalInput.x = Input.GetAxisRaw("Horizontal");
+                if (directionalInput.x > 0 && player.onGround)
+                {
+                    lastMoveX = directionalInput.x;
+                    animator.SetFloat("MovementX", directionalInput.x);
+                    animator.SetBool("Moving", true);
+                }
+                else if (directionalInput.x < 0 && player.onGround)
+                {
+                    lastMoveX = directionalInput.x;
+                    animator.SetFloat("MovementX", directionalInput.x);
+                    animator.SetBool("Moving", true);
+                }
+                else
+                {
+                    animator.SetFloat("MovementX", directionalInput.x);
+                    animator.SetBool("Moving", false);
+                }
+                animator.SetFloat("LastXValue", lastMoveX);
             }
-            else if (directionalInput.x < 0 && player.onGround)
-            {
-                lastMoveX = directionalInput.x;
-                animator.SetFloat("MovementX", directionalInput.x);
-                animator.SetBool("Moving", true);
-            }
-            else
-            {
-                animator.SetFloat("MovementX", directionalInput.x);
-                animator.SetBool("Moving", false);
-            }
-            animator.SetFloat("LastXValue", lastMoveX);
+
+            directionalInput.y = Input.GetAxisRaw("Vertical");
         }
-
-        directionalInput.y = Input.GetAxisRaw("Vertical");
-
     }
 
     void MoveOffLadderCheck()
@@ -125,7 +127,7 @@ public class PlayerInput : MonoBehaviour
 
     void JumpCheck()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && !player.movingToNextLevel)
         {
             animator.SetBool("Jumping", true);
             player.OnJumpInputDown();

@@ -33,6 +33,7 @@ public class Player : MonoBehaviour
     public bool falling;
     public bool landing;
     public bool landed;
+    public bool movingToNextLevel = false;
 
     [SerializeField]
     public float wallSlideSpeed = 3;
@@ -40,13 +41,16 @@ public class Player : MonoBehaviour
     private int wallDirX;
 
     private Controller2D controller;
+    Animator animator;
+    private GameObject endOfTheScene;
 
     void Start()
     {
         controller = GetComponent<Controller2D>();
-
+        animator = GetComponent<Animator>();
         gravity = -(2 * jumpHeight) / Mathf.Pow(timeToJumpPeak, 2);
         jumpVelocity = Mathf.Abs(gravity) * timeToJumpPeak;
+        endOfTheScene = GameObject.Find("SceneManager");
     }
 
     void Update()
@@ -54,7 +58,7 @@ public class Player : MonoBehaviour
         CalculateVelocity();
         HandleWallSliding();
         GroundCheck();
-        
+        MovingToEndOfTheSceneCheck();
         controller.Move(velocity * Time.deltaTime, directionalInput);
 
         if (controller.collisionInfo.above || controller.collisionInfo.below && controller.collisionInfo.climbing == false)
@@ -158,5 +162,21 @@ public class Player : MonoBehaviour
         }
     }
 
-    
+    void MovingToEndOfTheSceneCheck()
+    {
+        if(movingToNextLevel)
+        {
+            transform.position = Vector2.MoveTowards(transform.position, endOfTheScene.transform.position, 0.3f * Time.deltaTime);
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if(other.gameObject.CompareTag("LevelEndPoint"))
+        {
+            movingToNextLevel = true;
+            //animator.SetTrigger("MoveToNextLevel");
+        }
+    }
 }
+
