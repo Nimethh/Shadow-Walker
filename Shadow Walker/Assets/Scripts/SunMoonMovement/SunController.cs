@@ -14,7 +14,8 @@ public class SunController : MonoBehaviour
     public int checkPointIndex = 100;
     private int numberOfPoints = 100;
     float startT;
-   
+
+    AudioManager audioManager;
 
     [Range(0f, 1f)][SerializeField]
     private float sunSpeed = 0.2f;
@@ -24,6 +25,7 @@ public class SunController : MonoBehaviour
         //transform.position = points[0].position;
         startT = index / (float)numberOfPoints * sunSpeed;
         transform.position = CalculateQuadraticBezeirPoint(startT, points[0].position, points[1].position, points[2].position);
+        audioManager = FindObjectOfType<AudioManager>();
         //DrawQuadraticCurve();
     }
 
@@ -48,7 +50,7 @@ public class SunController : MonoBehaviour
         }
         else
         {
-            FindObjectOfType<AudioManager>().Mute("SunMoving");
+            audioManager.Mute("SunMoving");
             //FindObjectOfType<AudioManager>().Stop("SunMoving");
         }
 
@@ -59,7 +61,7 @@ public class SunController : MonoBehaviour
         index++;
         float t = index / (float)numberOfPoints * sunSpeed;
         transform.position = CalculateQuadraticBezeirPoint(t, points[0].position, points[1].position, points[2].position);
-        FindObjectOfType<AudioManager>().Play("SunMoving");
+        audioManager.Play("SunMoving");
     }
 
     void MoveLeft()
@@ -67,7 +69,7 @@ public class SunController : MonoBehaviour
         index--;
         float t = index / (float)numberOfPoints * sunSpeed;
         transform.position = CalculateQuadraticBezeirPoint(t, points[0].position, points[1].position, points[2].position);
-        FindObjectOfType<AudioManager>().Play("SunMoving");
+        audioManager.Play("SunMoving");
     }
 
     void Rotate()

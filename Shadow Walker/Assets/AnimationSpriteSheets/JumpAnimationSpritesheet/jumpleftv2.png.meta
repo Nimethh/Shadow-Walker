@@ -1,39 +1,45 @@
 fileFormatVersion: 2
-guid: 100cfb67522313340933aef09c6abef2
+guid: b9170570bbddcef47a4996c9d8316ad8
 TextureImporter:
   fileIDToRecycleName:
-    21300000: SmokeTileCutOut4_0
-    21300002: SmokeTileCutOut4_1
-    21300004: SmokeTileCutOut4_2
-    21300006: SmokeTileCutOut4_3
-    21300008: SmokeTileCutOut4_4
-    21300010: SmokeTileCutOut4_5
-    21300012: SmokeTileCutOut4_6
-    21300014: SmokeTileCutOut4_7
-    21300016: SmokeTileCutOut4_8
-    21300018: SmokeTileCutOut4_9
-    21300020: SmokeTileCutOut4_10
-    21300022: SmokeTileCutOut4_11
-    21300024: SmokeTileCutOut4_12
-    21300026: SmokeTileCutOut4_13
-    21300028: SmokeTileCutOut4_14
-    21300030: SmokeTileCutOut4_15
-    21300032: SmokeTileCutOut4_16
-    21300034: SmokeTileCutOut4_17
-    21300036: SmokeTileCutOut4_18
-    21300038: SmokeTileCutOut4_19
-    21300040: SmokeTileCutOut4_20
-    21300042: SmokeTileCutOut4_21
-    21300044: SmokeTileCutOut4_22
-    21300046: SmokeTileCutOut4_23
-    21300048: SmokeTileCutOut4_24
-    21300050: SmokeTileCutOut4_25
-    21300052: SmokeTileCutOut4_26
-    21300054: SmokeTileCutOut4_27
-    21300056: SmokeTileCutOut4_28
-    21300058: SmokeTileCutOut4_29
-    21300060: SmokeTileCutOut4_30
-    21300062: SmokeTileCutOut4_31
+    21300000: jumpleftv2_0
+    21300002: jumpleftv2_1
+    21300004: jumpleftv2_2
+    21300006: jumpleftv2_3
+    21300008: jumpleftv2_4
+    21300010: jumpleftv2_5
+    21300012: jumpleftv2_6
+    21300014: jumpleftv2_7
+    21300016: jumpleftv2_8
+    21300018: jumpleftv2_9
+    21300020: jumpleftv2_10
+    21300022: jumpleftv2_11
+    21300024: jumpleftv2_12
+    21300026: jumpleftv2_13
+    21300028: jumpleftv2_14
+    21300030: jumpleftv2_15
+    21300032: jumpleftv2_16
+    21300034: jumpleftv2_17
+    21300036: jumpleftv2_18
+    21300038: jumpleftv2_19
+    21300040: jumpleftv2_20
+    21300042: jumpleftv2_21
+    21300044: jumpleftv2_22
+    21300046: jumpleftv2_23
+    21300048: jumpleftv2_24
+    21300050: jumpleftv2_25
+    21300052: jumpleftv2_26
+    21300054: jumpleftv2_27
+    21300056: jumpleftv2_28
+    21300058: jumpleftv2_29
+    21300060: jumpleftv2_30
+    21300062: jumpleftv2_31
+    21300064: jumpleftv2_32
+    21300066: jumpleftv2_33
+    21300068: jumpleftv2_34
+    21300070: jumpleftv2_35
+    21300072: jumpleftv2_36
+    21300074: jumpleftv2_37
   externalObjects: {}
   serializedVersion: 9
   mipmaps:
@@ -116,13 +122,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: SmokeTileCutOut4_0
+      name: jumpleftv2_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 384
-        width: 128
-        height: 128
+        y: 800
+        width: 100
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -130,19 +136,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f57e32051981d964ba121daaa9a95b63
+      spriteID: 867c8404fc7883740ad8a80a756e7a3e
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SmokeTileCutOut4_1
+      name: jumpleftv2_1
       rect:
         serializedVersion: 2
-        x: 128
-        y: 384
-        width: 128
-        height: 128
+        x: 100
+        y: 800
+        width: 100
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,19 +156,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f00c6d32e2fb5964aa58849bd8e7cc63
+      spriteID: 04f8fe2d774802547adcca8c3ae7ffa4
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SmokeTileCutOut4_2
+      name: jumpleftv2_2
       rect:
         serializedVersion: 2
-        x: 256
-        y: 384
-        width: 128
-        height: 128
+        x: 200
+        y: 800
+        width: 100
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -170,19 +176,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ea54e4ba72237fa44846eb7a039a47dc
+      spriteID: 33bf641132ac9b2409a6dd01c606c88e
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SmokeTileCutOut4_3
+      name: jumpleftv2_3
       rect:
         serializedVersion: 2
-        x: 384
-        y: 384
-        width: 128
-        height: 128
+        x: 300
+        y: 800
+        width: 100
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -190,19 +196,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f87356203ddf75c4591e0c261ce66ed4
+      spriteID: 17e10c6e6dad08046952498cc3fd8f16
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SmokeTileCutOut4_4
+      name: jumpleftv2_4
       rect:
         serializedVersion: 2
-        x: 512
-        y: 384
-        width: 128
-        height: 128
+        x: 400
+        y: 800
+        width: 100
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -210,19 +216,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 491729982a2e54d4daf39f29a3fbb34e
+      spriteID: 8182d697ea87f5c428ac1b9ad17a9dd2
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SmokeTileCutOut4_5
+      name: jumpleftv2_5
       rect:
         serializedVersion: 2
-        x: 640
-        y: 384
-        width: 128
-        height: 128
+        x: 500
+        y: 800
+        width: 100
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -230,19 +236,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4a1a0f8215309ce42a7a9ad2d6f1d6fb
+      spriteID: 474b64f4cb817c647a728f3f42db0e69
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SmokeTileCutOut4_6
+      name: jumpleftv2_6
       rect:
         serializedVersion: 2
-        x: 768
-        y: 384
-        width: 128
-        height: 128
+        x: 600
+        y: 800
+        width: 100
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -250,19 +256,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4eab5cf217e9f7046b405f6b3e3d829d
+      spriteID: eeb6f1fb256cd0741bd3b6a6aa3533a5
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SmokeTileCutOut4_7
+      name: jumpleftv2_7
       rect:
         serializedVersion: 2
-        x: 896
-        y: 384
-        width: 128
-        height: 128
+        x: 700
+        y: 800
+        width: 100
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -270,179 +276,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4a1169e22168cc642b92dbaa4e030a1d
+      spriteID: 92ed5e3a075be884cac6dd69c07cbe7b
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SmokeTileCutOut4_8
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 256
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7fa89faff6d906441aed9b90155daecd
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SmokeTileCutOut4_9
-      rect:
-        serializedVersion: 2
-        x: 128
-        y: 256
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a18e229dac4f1c345b0281d0ba529309
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SmokeTileCutOut4_10
-      rect:
-        serializedVersion: 2
-        x: 256
-        y: 256
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 46b81402e385f4b4697ae7c97ec90e20
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SmokeTileCutOut4_11
-      rect:
-        serializedVersion: 2
-        x: 384
-        y: 256
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 0713bbb1cfbd070438d42db9746dbdf0
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SmokeTileCutOut4_12
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 256
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 30a0e917033dfdc45b555eab36805ad2
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SmokeTileCutOut4_13
-      rect:
-        serializedVersion: 2
-        x: 640
-        y: 256
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 079190ef3a5860a4ebc603682bfeeff0
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SmokeTileCutOut4_14
-      rect:
-        serializedVersion: 2
-        x: 768
-        y: 256
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 61c43779e4c463f4f88bcff2d4bfc8d1
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SmokeTileCutOut4_15
-      rect:
-        serializedVersion: 2
-        x: 896
-        y: 256
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: b80d5f142dd0608449dc3d070e666b6c
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SmokeTileCutOut4_16
+      name: jumpleftv2_8
       rect:
         serializedVersion: 2
         x: 0
-        y: 128
-        width: 128
-        height: 128
+        y: 600
+        width: 100
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -450,19 +296,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0c82a9542c8788f40891334914157b36
+      spriteID: 97a9cad3b5249f84b8b314dd06a09b6a
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SmokeTileCutOut4_17
+      name: jumpleftv2_9
       rect:
         serializedVersion: 2
-        x: 128
-        y: 128
-        width: 128
-        height: 128
+        x: 100
+        y: 600
+        width: 100
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -470,19 +316,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d20d53780bea36b45a38237fc9ed0945
+      spriteID: 518916fbb532a464dba565f6a9fb09d4
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SmokeTileCutOut4_18
+      name: jumpleftv2_10
       rect:
         serializedVersion: 2
-        x: 256
-        y: 128
-        width: 128
-        height: 128
+        x: 200
+        y: 600
+        width: 100
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -490,19 +336,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1db92929cae8bf24cb96331062b81a83
+      spriteID: 2e84e7b9bd4a342418d457ac337959cd
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SmokeTileCutOut4_19
+      name: jumpleftv2_11
       rect:
         serializedVersion: 2
-        x: 384
-        y: 128
-        width: 128
-        height: 128
+        x: 300
+        y: 600
+        width: 100
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -510,19 +356,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 190bfce5ffda8104b8edd64349df6ad0
+      spriteID: fe58b84ccf212a648b83204b0f99b733
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SmokeTileCutOut4_20
+      name: jumpleftv2_12
       rect:
         serializedVersion: 2
-        x: 512
-        y: 128
-        width: 128
-        height: 128
+        x: 400
+        y: 600
+        width: 100
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -530,19 +376,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 02e3a4a5417a40942a539fda34e702a9
+      spriteID: cc998f084ff883143a0742b06cf334f5
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SmokeTileCutOut4_21
+      name: jumpleftv2_13
       rect:
         serializedVersion: 2
-        x: 640
-        y: 128
-        width: 128
-        height: 128
+        x: 500
+        y: 600
+        width: 100
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -550,19 +396,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 996fa3ff7ede82c4abb1e2b98915fd62
+      spriteID: 013adb7cae9068b4d9ebd04b936aac65
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SmokeTileCutOut4_22
+      name: jumpleftv2_14
       rect:
         serializedVersion: 2
-        x: 768
-        y: 128
-        width: 128
-        height: 128
+        x: 600
+        y: 600
+        width: 100
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -570,19 +416,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: df1e8eb4cdf328341a872f434720beb4
+      spriteID: 56f57826ecfe7ee41afe39c9c803c78b
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SmokeTileCutOut4_23
+      name: jumpleftv2_15
       rect:
         serializedVersion: 2
-        x: 896
-        y: 128
-        width: 128
-        height: 128
+        x: 700
+        y: 600
+        width: 100
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -590,19 +436,339 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: aa5ac48b939d82f44bcb889b6dabf453
+      spriteID: f53daa68a992533498133e88bc42811c
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SmokeTileCutOut4_24
+      name: jumpleftv2_16
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 400
+        width: 100
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b840bf10a3510034dbdb0d7f6033e8ce
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jumpleftv2_17
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 400
+        width: 100
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99fe7fab7b7b16849b5fa310ecaab6a0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jumpleftv2_18
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 400
+        width: 100
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6ab9c6365d091c42812a2f60b80f799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jumpleftv2_19
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 400
+        width: 100
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b895ee6fbf90d6743a246d5e1bcb0e63
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jumpleftv2_20
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 400
+        width: 100
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99e20ce442805bc419511cc089c74bbb
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jumpleftv2_21
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 400
+        width: 100
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfe871ef8f9166b45a5ade193f20bd65
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jumpleftv2_22
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 400
+        width: 100
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89bc419c0e1023e478acdc5c5ddbbdc6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jumpleftv2_23
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 400
+        width: 100
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13008f6be575f164d82d396a5b1bd011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jumpleftv2_24
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 200
+        width: 100
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd7a3abe5d480a0449011c43007666c4
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jumpleftv2_25
+      rect:
+        serializedVersion: 2
+        x: 100
+        y: 200
+        width: 100
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb7da86a158c4b042a7ab8fb8bb6e398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jumpleftv2_26
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 200
+        width: 100
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8dfdd324baee844fa0b6359f95cb6a7
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jumpleftv2_27
+      rect:
+        serializedVersion: 2
+        x: 300
+        y: 200
+        width: 100
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 380288dc0a444874d8c59e03ee987d2e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jumpleftv2_28
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 200
+        width: 100
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9342755ca3218a142957258a7ea55347
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jumpleftv2_29
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 200
+        width: 100
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85eb421f6a2afc3489d75216df288288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jumpleftv2_30
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 200
+        width: 100
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4cee775bfd0066a45bef7df68b442698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jumpleftv2_31
+      rect:
+        serializedVersion: 2
+        x: 700
+        y: 200
+        width: 100
+        height: 200
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1d3d6337ca951c74eb56ba3c1b1ea3a8
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: jumpleftv2_32
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 128
-        height: 128
+        width: 100
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -610,19 +776,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9fd74fb6a00d5ed46ae7e6be649215a4
+      spriteID: cf4d1f30dddd65a4989937e0a91a4141
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SmokeTileCutOut4_25
+      name: jumpleftv2_33
       rect:
         serializedVersion: 2
-        x: 128
+        x: 100
         y: 0
-        width: 128
-        height: 128
+        width: 100
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -630,19 +796,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 182bdbb6060a19149827d04a56c1360c
+      spriteID: 70bcff479cd6e344ca1575bed7dc9328
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SmokeTileCutOut4_26
+      name: jumpleftv2_34
       rect:
         serializedVersion: 2
-        x: 256
+        x: 200
         y: 0
-        width: 128
-        height: 128
+        width: 100
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -650,19 +816,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f3e1a3bee7384c54fb5299ceb9d5ac11
+      spriteID: deefc7df7dc42b64b992eef7857b3baf
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SmokeTileCutOut4_27
+      name: jumpleftv2_35
       rect:
         serializedVersion: 2
-        x: 384
+        x: 300
         y: 0
-        width: 128
-        height: 128
+        width: 100
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -670,19 +836,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eebc209de599fc846996c3fcfa1f55e7
+      spriteID: ad3363e5e627c1745bd915b24a62e468
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SmokeTileCutOut4_28
+      name: jumpleftv2_36
       rect:
         serializedVersion: 2
-        x: 512
+        x: 400
         y: 0
-        width: 128
-        height: 128
+        width: 100
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -690,19 +856,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 926daae2a90848a48bdfeaa541efeda2
+      spriteID: c4f2bae64134c0d43bc9a588c5180bb7
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: SmokeTileCutOut4_29
+      name: jumpleftv2_37
       rect:
         serializedVersion: 2
-        x: 640
+        x: 500
         y: 0
-        width: 128
-        height: 128
+        width: 100
+        height: 200
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -710,47 +876,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d8395a8b24240dc4dbac5a43ea30c2b1
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SmokeTileCutOut4_30
-      rect:
-        serializedVersion: 2
-        x: 768
-        y: 0
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 57d64a232841e964aa3a55e9f8fbb08f
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: SmokeTileCutOut4_31
-      rect:
-        serializedVersion: 2
-        x: 896
-        y: 0
-        width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 56926bcba2988aa4da418fad4892c5e6
+      spriteID: e327da57d48dcfd4ead46366de0f14d2
       vertices: []
       indices: 
       edges: []
@@ -758,7 +884,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: e18c63619a73abe4a8966e8e40f75ec9
+    spriteID: 584eba5f3b4f01a4a9c4c5ef0f61d705
     vertices: []
     indices: 
     edges: []

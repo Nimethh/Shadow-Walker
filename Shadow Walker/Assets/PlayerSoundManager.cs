@@ -10,6 +10,7 @@ public class PlayerSoundManager : MonoBehaviour
     private PlayerSunBehaviorUpdated playerSunBehaviorUpdated;
     //PlayerSunBehavior playerSunBehavior;
     Controller2D controller;
+    AudioManager audioManager;
 
     private void Start()
     {
@@ -18,6 +19,7 @@ public class PlayerSoundManager : MonoBehaviour
         playerSunBehaviorUpdated = GetComponent<PlayerSunBehaviorUpdated>();
         //playerSunBehavior = GetComponent<PlayerSunBehavior>();
         controller = GetComponent<Controller2D>();
+        audioManager = FindObjectOfType<AudioManager>();
     }
 
     private void Update()
@@ -33,11 +35,11 @@ public class PlayerSoundManager : MonoBehaviour
     {
         if ((directionalInput.x > 0 || directionalInput.x < 0) && player.onGround)
         {
-            FindObjectOfType<AudioManager>().Play("Walk");
+            audioManager.Play("Walk");
         }
         else
         {
-            FindObjectOfType<AudioManager>().Stop("Walk");
+            audioManager.Stop("Walk");
         }
     }
 
@@ -49,7 +51,7 @@ public class PlayerSoundManager : MonoBehaviour
         //}
         if (playerSunBehaviorUpdated.isExposedToSunlight)
         {
-            FindObjectOfType<AudioManager>().Play("Death");
+            audioManager.Play("Death");
         }
     }
 
@@ -57,7 +59,7 @@ public class PlayerSoundManager : MonoBehaviour
     {
         if (player.landed)
         {
-            FindObjectOfType<AudioManager>().Play("Land");
+            audioManager.Play("Land");
             player.landed = false;
         }
     }
@@ -66,7 +68,7 @@ public class PlayerSoundManager : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.Space))
         {
-            FindObjectOfType<AudioManager>().Play("Jump");
+            audioManager.Play("Jump");
         }
     }
 
@@ -74,11 +76,11 @@ public class PlayerSoundManager : MonoBehaviour
     {
         if((directionalInput.y > 0 || directionalInput.y < 0) && controller.collisionInfo.climbing)
         {
-            FindObjectOfType<AudioManager>().Play("Climb");
+            audioManager.Play("Climb");
         }
         else
         {
-            FindObjectOfType<AudioManager>().Stop("Climb");
+            audioManager.Stop("Climb");
         }
     }
 

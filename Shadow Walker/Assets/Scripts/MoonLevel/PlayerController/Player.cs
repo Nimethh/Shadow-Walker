@@ -34,6 +34,8 @@ public class Player : MonoBehaviour
     public bool landing;
     public bool landed;
     public bool movingToNextLevel = false;
+    public bool onLadder = false;
+    public bool moveOffLadder = false;
 
     [SerializeField]
     public float wallSlideSpeed = 3;
@@ -44,6 +46,10 @@ public class Player : MonoBehaviour
     Animator animator;
     private GameObject endOfTheScene;
 
+    ParticleSystem jumpParticle;
+    GameObject jumpParticleObject;
+    ParticleSystem landParticle;
+    GameObject landParticleObject;
     void Start()
     {
         controller = GetComponent<Controller2D>();
@@ -51,6 +57,10 @@ public class Player : MonoBehaviour
         gravity = -(2 * jumpHeight) / Mathf.Pow(timeToJumpPeak, 2);
         jumpVelocity = Mathf.Abs(gravity) * timeToJumpPeak;
         endOfTheScene = GameObject.Find("SceneManager");
+        jumpParticleObject = transform.GetChild(2).gameObject;
+        jumpParticle = jumpParticleObject.GetComponent<ParticleSystem>();
+        landParticleObject = transform.GetChild(1).gameObject;
+        landParticle = landParticleObject.GetComponent<ParticleSystem>();
     }
 
     void Update()
@@ -80,6 +90,7 @@ public class Player : MonoBehaviour
             jumping = true;
             velocity.y = jumpVelocity;
             landing = false;
+            jumpParticle.Play();
         }
     }
 
@@ -90,11 +101,18 @@ public class Player : MonoBehaviour
             falling = true;
             jumping = false;
         }
+        if(velocity.y < 0 && !controller.collisionInfo.below && !controller.collisionInfo.climbing && moveOffLadder)
+        {
+            falling = true;
+            onGround = false;
+            jumping = false;
+        }
         if (velocity.y < 0 && controller.collisionInfo.below)
         {
             if(landing == false)
             {
                 landing = true;
+                animator.SetTrigger("Landing");
                 landed = true;
             }
             falling = false;
@@ -103,6 +121,7 @@ public class Player : MonoBehaviour
         else if(!controller.collisionInfo.below)
         {
             landing = false;
+            onGround = false;
         }
         else
             onGround = false;
@@ -170,6 +189,11 @@ public class Player : MonoBehaviour
         }
     }
 
+    void PlayJumpParticle()
+    {
+
+    }
+
     void OnTriggerEnter2D(Collider2D other)
     {
         //if(other.gameObject.CompareTag("LevelEndPoint"))
@@ -177,6 +201,30 @@ public class Player : MonoBehaviour
         //    movingToNextLevel = true;
         //    //animator.SetTrigger("MoveToNextLevel");
         //}
+        if(other.gameObject.CompareTag("Ground"))
+        {
+            landParticle.Play();
+        }
+       
+    }
+
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Ladder") && !onGround)
+        {
+            onLadder = true;
+            moveOffLadder = false;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if(other.gameObject.CompareTag("Ladder"))
+        {
+            onLadder = false;
+            moveOffLadder = true;
+            animator.SetBool("Climbing", false);
+        }
     }
 }
 

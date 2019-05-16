@@ -43,7 +43,7 @@ public class PlayerInput : MonoBehaviour
         JumpCheck();
         JumpAnimationCheck();
         FallingAnimationCheck();
-
+        ClimbingAnimationCheck();
 
         player.SetDirectionalInput (directionalInput);
         playerSoundManager.SetDirectionalInput(directionalInput);
@@ -61,27 +61,31 @@ public class PlayerInput : MonoBehaviour
             if (controller.collisionInfo.climbing == false || controller.collisionInfo.below == true)
             {
                 directionalInput.x = Input.GetAxisRaw("Horizontal");
-                if (directionalInput.x > 0 && player.onGround)
+                if (player.onGround)
                 {
-                    lastMoveX = directionalInput.x;
-                    animator.SetFloat("MovementX", directionalInput.x);
-                    animator.SetBool("Moving", true);
+                    animator.SetBool("OnGround", player.onGround);
+                    if (directionalInput.x > 0 && player.onGround)
+                    {
+                        lastMoveX = directionalInput.x;
+                        animator.SetFloat("MovementX", directionalInput.x);
+                        animator.SetBool("Moving", true);
+                    }
+                    else if (directionalInput.x < 0 && player.onGround)
+                    {
+                        lastMoveX = directionalInput.x;
+                        animator.SetFloat("MovementX", directionalInput.x);
+                        animator.SetBool("Moving", true);
+                    }
+                    else
+                    {
+                        animator.SetFloat("MovementX", directionalInput.x);
+                        animator.SetBool("Moving", false);
+                    }
+                    animator.SetFloat("LastXValue", lastMoveX);
                 }
-                else if (directionalInput.x < 0 && player.onGround)
-                {
-                    lastMoveX = directionalInput.x;
-                    animator.SetFloat("MovementX", directionalInput.x);
-                    animator.SetBool("Moving", true);
-                }
-                else
-                {
-                    animator.SetFloat("MovementX", directionalInput.x);
-                    animator.SetBool("Moving", false);
-                }
-                animator.SetFloat("LastXValue", lastMoveX);
             }
-
             directionalInput.y = Input.GetAxisRaw("Vertical");
+
         }
     }
 
@@ -101,7 +105,9 @@ public class PlayerInput : MonoBehaviour
                     directionalInput.x = Input.GetAxisRaw("Horizontal");
                 }
                 else
+                {
                     moveOffLadderHoldCooldown -= Time.deltaTime;
+                }
             }
 
             if (Input.GetKeyDown(KeyCode.D))
@@ -111,7 +117,9 @@ public class PlayerInput : MonoBehaviour
                     directionalInput.x = Input.GetAxisRaw("Horizontal");
                 }
                 else
+                {
                     moveOffLadderCooldown -= Time.deltaTime;
+                }
             }
             else if (Input.GetKeyDown(KeyCode.A))
             {
@@ -120,7 +128,9 @@ public class PlayerInput : MonoBehaviour
                     directionalInput.x = Input.GetAxisRaw("Horizontal");
                 }
                 else
+                {
                     moveOffLadderCooldown -= Time.deltaTime;
+                }
             }
         }
     }
@@ -160,9 +170,10 @@ public class PlayerInput : MonoBehaviour
 
     void FallingAnimationCheck()
     {
-        animator.SetBool("Falling", player.falling);
         if (player.falling == true)
         {
+            animator.SetBool("Falling", player.falling);
+            animator.SetBool("OnGround", player.onGround);
             if (directionalInput.x > 0)
             {
                 lastMoveX = directionalInput.x;
@@ -178,6 +189,46 @@ public class PlayerInput : MonoBehaviour
                 animator.SetFloat("MovementX", directionalInput.x);
             }
             animator.SetFloat("LastXValue", lastMoveX);
+        }
+        else
+            animator.SetBool("Falling", player.falling);
+    }
+
+    void ClimbingAnimationCheck()
+    {
+        if(player.onLadder)
+        {
+            player.onGround = false;
+            animator.SetBool("Climbing", true);
+            animator.SetBool("OnGround", false);
+            if (directionalInput.y > 0 || directionalInput.y < 0)
+            {
+                animator.speed = 1;
+            }
+            else
+            {
+                animator.speed = 0;
+            }
+        }
+        else
+        {
+            animator.SetBool("Climbing", false);
+            if(animator.name == "Jump")
+            {
+                animator.speed = 1.5f;
+            }
+            else if(animator.name == "Falling")
+            {
+                animator.speed = 1.5f;
+            }
+            else if(animator.name == "Landing")
+            {
+                animator.speed = 2.5f;
+            }
+            else
+            {
+                animator.speed = 1;
+            }
         }
     }
 }

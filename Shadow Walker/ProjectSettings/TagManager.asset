@@ -16,6 +16,7 @@ TagManager:
   - LadderBottom
   - CheckPoint
   - Sun
+  - LevelEndPoint
   layers:
   - Default
   - TransparentFX

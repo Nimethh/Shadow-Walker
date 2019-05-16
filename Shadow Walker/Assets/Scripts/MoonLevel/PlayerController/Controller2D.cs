@@ -20,6 +20,7 @@ public class Controller2D : RaycastController
     private float ladderRayLengthUp = 0.1f;
     private float ladderRayLengthDown = 0.3f;
 
+    bool OnLadder = false;
 
     public override void Start()
     {
@@ -31,6 +32,7 @@ public class Controller2D : RaycastController
     
     public Vector2 Move(Vector2 moveAmount, Vector2 input, bool standingOnPlatform = false)
     {
+        Debug.Log(collisionInfo.below);
         UpdateRaycastOrigins();
         collisionInfo.Reset();
         collisionInfo.moveAmountOld = moveAmount;
@@ -102,11 +104,11 @@ public class Controller2D : RaycastController
                         continue;
                     }
                 }
-                if (hit.collider.tag == "CheckPoint")
-                {
-                    //SaveSpawnPoints(hit.collider.gameObject);
-                    continue;
-                }
+                //if (hit.collider.tag == "CheckPoint")
+                //{
+                //    //SaveSpawnPoints(hit.collider.gameObject);
+                //    continue;
+                //}
 
                 otherCollider = hit.collider;
 
@@ -170,11 +172,11 @@ public class Controller2D : RaycastController
                 {
                     this.gameObject.transform.parent = null;
                 }
-                if (hit.collider.tag == "CheckPoint")
-                {
-                    //SaveSpawnPoints(hit.collider.gameObject);
-                    continue;
-                }
+                //if (hit.collider.tag == "CheckPoint")
+                    //{
+                    //    //SaveSpawnPoints(hit.collider.gameObject);
+                    //    continue;
+                    //}
                 if (hit.collider.tag == "Through")
                 {
                     if (directionY == 1 && playerInput.x == 0 && collisionInfo.canClimbOld == true)
@@ -293,10 +295,12 @@ public class Controller2D : RaycastController
             {
                 rayLengthDown = ladderHitDown.distance;
             }
+            //if(playerInput.y < 0 )
             collisionInfo.canClimb = true;
 
             if (playerInput.y < 0 && playerInput.x == 0)
             {
+                
                 collisionInfo.climbing = true;
                 if (!ladderHitDown)
                 {
