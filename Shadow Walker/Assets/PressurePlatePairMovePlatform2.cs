@@ -26,6 +26,9 @@ public class PressurePlatePairMovePlatform2 : MonoBehaviour
         {
             platform.activated = true;
             spriteRenderer.sprite = plateActivated;
+            //Added 2019-05-15
+            FindObjectOfType<AudioManager>().Play("PressurePlate");
+
 
             switch (plateDirection)
             {

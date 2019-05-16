@@ -172,11 +172,11 @@ public class Player : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.gameObject.CompareTag("LevelEndPoint"))
-        {
-            movingToNextLevel = true;
-            //animator.SetTrigger("MoveToNextLevel");
-        }
+        //if(other.gameObject.CompareTag("LevelEndPoint"))
+        //{
+        //    movingToNextLevel = true;
+        //    //animator.SetTrigger("MoveToNextLevel");
+        //}
     }
 }
 

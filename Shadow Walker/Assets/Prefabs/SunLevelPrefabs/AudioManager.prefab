@@ -45,8 +45,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   soundFX:
   - name: Background
-    clip: {fileID: 8300000, guid: 99ced8264472a304888e4f6150ec259f, type: 3}
-    volume: 0
+    clip: {fileID: 8300000, guid: c3b287c5d01bdcf4fa1f55e9b208e4e9, type: 3}
+    volume: 0.468
     pitch: 1
     randomVolume: 0
     randomPitch: 0
@@ -54,6 +54,9 @@ MonoBehaviour:
     playOnAwake: 0
     aS: {fileID: 0}
   - name: SunMoving
+    clip: {fileID: 8300000, guid: fe9c69a81f1d3844faa8baa4a99d245f, type: 3}
+    volume: 0.82
+    pitch: 1.4
     clip: {fileID: 8300000, guid: 8ed6ddb13c7cde24abf6e83fd7aebbd8, type: 3}
     volume: 1
     pitch: 1
@@ -63,7 +66,7 @@ MonoBehaviour:
     playOnAwake: 0
     aS: {fileID: 0}
   - name: Jump
-    clip: {fileID: 8300000, guid: 7212349daf7a59b4c8d58ece9c8caf7f, type: 3}
+    clip: {fileID: 8300000, guid: c48f16e690a13384aa7b4de073ff7006, type: 3}
     volume: 1
     pitch: 1
     randomVolume: 0.1
@@ -72,7 +75,7 @@ MonoBehaviour:
     playOnAwake: 0
     aS: {fileID: 0}
   - name: Walk
-    clip: {fileID: 8300000, guid: ba7a592cf79a8cb4c89eab389fd5440f, type: 3}
+    clip: {fileID: 8300000, guid: 894a3627506a50043842f3dcd0e88c35, type: 3}
     volume: 1
     pitch: 1
     randomVolume: 0.1
@@ -81,16 +84,17 @@ MonoBehaviour:
     playOnAwake: 0
     aS: {fileID: 0}
   - name: Death
-    clip: {fileID: 8300000, guid: 1e98df888c28d4044a232ac8b1fad9c2, type: 3}
+    clip: {fileID: 8300000, guid: e02a21beac916c74092b5ed14a9d1bbd, type: 3}
     volume: 1
+    pitch: 1.2
     pitch: 1
     randomVolume: 0.1
     randomPitch: 0.1
     loop: 0
-    playOnAwake: 0
+    playOnAwake: 1
     aS: {fileID: 0}
   - name: Land
-    clip: {fileID: 8300000, guid: 702db4650b265254384ddb9af135781d, type: 3}
+    clip: {fileID: 8300000, guid: 72e67fc6164edb04d9a5bd38bf24e6cf, type: 3}
     volume: 1
     pitch: 1
     randomVolume: 0.1
@@ -99,11 +103,32 @@ MonoBehaviour:
     playOnAwake: 0
     aS: {fileID: 0}
   - name: Climb
-    clip: {fileID: 8300000, guid: 057292f06ab0c904682f07bd670d5639, type: 3}
+    clip: {fileID: 8300000, guid: 35a4b308fd1cae94391af85c11337af5, type: 3}
     volume: 1
     pitch: 1
     randomVolume: 0.1
     randomPitch: 0.1
+    loop: 1
+    playOnAwake: 0
+    aS: {fileID: 0}
+  - name: PressurePlate
+    clip: {fileID: 8300000, guid: 35a4b308fd1cae94391af85c11337af5, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    aS: {fileID: 0}
+  - name: Level Transition
+    clip: {fileID: 8300000, guid: 35a4b308fd1cae94391af85c11337af5, type: 3}
+    volume: 0
+    pitch: 1
+    loop: 1
+    playOnAwake: 0
+    aS: {fileID: 0}
+  - name: Drawbridge falling
+    clip: {fileID: 8300000, guid: 35a4b308fd1cae94391af85c11337af5, type: 3}
+    volume: 0
+    pitch: 1
     loop: 1
     playOnAwake: 0
     aS: {fileID: 0}
