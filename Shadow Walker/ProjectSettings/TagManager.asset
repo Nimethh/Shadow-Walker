@@ -17,6 +17,7 @@ TagManager:
   - CheckPoint
   - Sun
   - LevelEndPoint
+  - Ladder
   layers:
   - Default
   - TransparentFX
