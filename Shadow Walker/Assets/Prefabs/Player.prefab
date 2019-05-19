@@ -9532,6 +9532,9 @@ GameObject:
   - component: {fileID: 318107997}
   - component: {fileID: 29599989126658000}
   - component: {fileID: 3460256166927887457}
+  - component: {fileID: 1407701426}
+  - component: {fileID: 1407701438}
+  - component: {fileID: 1407701439}
   m_Layer: 13
   m_Name: Player
   m_TagString: Player
@@ -9593,7 +9596,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 39c2bcc4b27c94c41a5a413a6c92610a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -9630,11 +9633,11 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 0.02584219, y: 0.5204557}
-      - {x: -0.12255573, y: 0.42825818}
-      - {x: -0.11887884, y: -0.551682}
+    - - {x: -0.0024795532, y: 0.35366952}
+      - {x: -0.14458418, y: 0.2425906}
+      - {x: -0.14330864, y: -0.5586618}
       - {x: 0.19064188, y: -0.55042195}
-      - {x: 0.15500355, y: 0.4447279}
+      - {x: 0.14556348, y: 0.2527663}
 --- !u!114 &29599989126658004
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9642,7 +9645,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 29599989126658009}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0ce7a0a433eda9941b3ec61ac56197bb, type: 3}
   m_Name: 
@@ -9668,16 +9671,16 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 29599989126658009}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5126dcaa40845374498f765a6baa69e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   jumpHeight: 1
-  timeToJumpPeak: 0.4
-  accelerationTimeInAirTurn: 0.207
-  accelerationTimeOnGroundTurn: 0.131
-  moveSpeed: 1.5
+  timeToJumpPeak: 0.45
+  accelerationTimeInAirTurn: 0.08
+  accelerationTimeOnGroundTurn: 0.081
+  moveSpeed: 2
   climbingSpeed: 1.5
   jumping: 0
   velocity: {x: 0, y: 0, z: 0}
@@ -9696,7 +9699,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 29599989126658009}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3587ceee891f98f4aa9f634374b35046, type: 3}
   m_Name: 
@@ -9811,6 +9814,70 @@ MonoBehaviour:
   justGotCoveredFromSunlight: 0
   spawningPos: {fileID: 0}
   timeInSunAllowed: 0
+--- !u!114 &1407701426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 29599989126658009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae48c21da54ee664f918a71222cca30c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  jumpHeight: 1
+  timeToJumpPeak: 0.45
+  accelerationTimeInAirTurn: 0.08
+  accelerationTimeOnGroundTurn: 0.081
+  moveSpeed: 2
+  climbingSpeed: 1.5
+  wallSlideSpeed: 5
+  velocity: {x: 0, y: 0, z: 0}
+  jumping: 0
+  onGround: 0
+  falling: 0
+  landing: 0
+  landed: 0
+  onLadder: 0
+  moveOffLadder: 0
+  movingToNextLevel: 0
+--- !u!114 &1407701438
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 29599989126658009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 77f2373696200124da3deb336d08706e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ground:
+    serializedVersion: 2
+    m_Bits: 16896
+  ladder:
+    serializedVersion: 2
+    m_Bits: 4096
+  numberOfHorizontalRays: 0
+  numberOfVerticalRays: 0
+  horizontalRaySpacing: 0
+  verticalRaySpacing: 0
+  collider: {fileID: 0}
+  playerInput: {x: 0, y: 0}
+--- !u!114 &1407701439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 29599989126658009}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02946b6b7421b03459da8a96a032f106, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &29599990845537559
 GameObject:
   m_ObjectHideFlags: 0

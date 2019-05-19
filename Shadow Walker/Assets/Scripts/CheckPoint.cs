@@ -5,26 +5,27 @@ using UnityEngine;
 public class CheckPoint : MonoBehaviour
 {
     private PlayerSunBehaviorUpdated playerSunBehavior;
-    Player player;
+    //Player player;
+    PlayerUpdated player;
     //private SunController sunController;
     //public int sunCheckPointIndex;
     void Start()
     {
         playerSunBehavior = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerSunBehaviorUpdated>();
-        player = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+        player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerUpdated>();
         //sunController = GameObject.FindGameObjectWithTag("Sun").GetComponent<SunController>();
         //sunCheckPointIndex = sunController.checkPointIndex;
     }
 
     void Update()
     {
-        if (playerSunBehavior.isExposedToSunlight)
-        {
-            SpawnPlayer();
+        //if (playerSunBehavior.isExposedToSunlight)
+        //{
+        //    SpawnPlayer();
 
-            //sunController.canMove = false;
-            //MoveSunToCheckPointPos();
-        }
+        //    //sunController.canMove = false;
+        //    //MoveSunToCheckPointPos();
+        //}
         //else
         //{
         //    sunController.canMove = true;
@@ -34,7 +35,7 @@ public class CheckPoint : MonoBehaviour
     void SpawnPlayer()
     {
         playerSunBehavior.gameObject.SetActive(true);
-        playerSunBehavior.gameObject.transform.position = playerSunBehavior.spawningPos.transform.position;
+        playerSunBehavior.gameObject.transform.position = playerSunBehavior.spawningPos;
         player.landed = false;
         player.velocity.y = 0;
         //sunController.canMove = true;
@@ -44,7 +45,7 @@ public class CheckPoint : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Player"))
         {
-            playerSunBehavior.spawningPos.position = this.gameObject.transform.position;
+            playerSunBehavior.spawningPos = this.gameObject.transform.position;
         }
     }
 

@@ -107,9 +107,9 @@ Material:
     - _Refraction: 10
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
-    - _Speed: 200
+    - _Speed: 400
     - _SrcBlend: 1
-    - _Strength: 0.0001
+    - _Strength: 0.0003
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:

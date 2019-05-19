@@ -4,21 +4,27 @@ using UnityEngine;
 
 public class PlayerSoundManager : MonoBehaviour
 {
-    private PlayerInput playerInput;
-    private Vector2 directionalInput;
-    private Player player;
-    private PlayerSunBehaviorUpdated playerSunBehaviorUpdated;
+    //private PlayerInput playerInput;
+    PlayerInputUpdated playerInput;
+    Vector2 directionalInput;
+    //private Player player;
+    PlayerUpdated player;
+    PlayerSunBehaviorUpdated playerSunBehaviorUpdated;
     //PlayerSunBehavior playerSunBehavior;
-    Controller2D controller;
+    //Controller2D controller;
+    Controller2DUpdated controller;
     AudioManager audioManager;
 
     private void Start()
     {
-        playerInput = GetComponent<PlayerInput>();
-        player = GetComponent<Player>();
+        //playerInput = GetComponent<PlayerInput>();
+        playerInput = GetComponent<PlayerInputUpdated>();
+        //player = GetComponent<Player>();
+        player = GetComponent<PlayerUpdated>();
         playerSunBehaviorUpdated = GetComponent<PlayerSunBehaviorUpdated>();
         //playerSunBehavior = GetComponent<PlayerSunBehavior>();
-        controller = GetComponent<Controller2D>();
+        //controller = GetComponent<Controller2D>();
+        controller = GetComponent<Controller2DUpdated>();
         audioManager = FindObjectOfType<AudioManager>();
     }
 

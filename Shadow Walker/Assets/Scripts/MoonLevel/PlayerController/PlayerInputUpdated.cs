@@ -1,0 +1,114 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+[RequireComponent(typeof(PlayerUpdated))]
+public class PlayerInputUpdated : MonoBehaviour
+{
+    Controller2DUpdated controller;
+    PlayerSoundManager playerSoundManager;
+    PlayerUpdated player;
+    PlayerSunBehaviorUpdated playerSunBehavior;
+    PlayerAnimationManager playerAnimationManager;
+    // GameObject movingParticle;  Instantiate the particle instead.
+    
+    Vector2 directionalInput;
+    
+    float moveOffLadderTimer = 0.01f;
+    float moveOffLadderCooldown = 0.01f;
+    float moveOffLadderHoldTimer = 0.4f;
+    float moveOffLadderHoldCooldown = 0.4f;
+
+    void Start()
+    {
+        player = GetComponent<PlayerUpdated>();
+        playerSoundManager = GetComponent<PlayerSoundManager>();
+        controller = GetComponent<Controller2DUpdated>();
+        playerSunBehavior = GetComponent<PlayerSunBehaviorUpdated>();
+        playerAnimationManager = GetComponent<PlayerAnimationManager>();
+        moveOffLadderCooldown = moveOffLadderTimer;
+        moveOffLadderHoldCooldown = moveOffLadderHoldTimer;
+    }
+
+    void Update()
+    {
+        if (!playerSunBehavior.isDead && playerSunBehavior.doneRespawning)
+        {
+            MoveOffLadderCheck();
+            MovementCheck();
+            JumpCheck();
+
+            player.SetDirectionalInput(directionalInput);
+            playerSoundManager.SetDirectionalInput(directionalInput);
+            playerAnimationManager.SetDirectionalInput(directionalInput);
+    }
+}
+
+    public void PlayMovingParticle()
+    {
+        // Instantiate(movingParticle);
+    }
+
+    void MovementCheck()
+    {
+        if (controller.collisionInfo.climbing == false || controller.collisionInfo.below == true)
+        {
+            directionalInput.x = Input.GetAxisRaw("Horizontal");
+        }
+        directionalInput.y = Input.GetAxisRaw("Vertical");
+    }
+
+    void MoveOffLadderCheck()
+    {
+        if (controller.collisionInfo.climbing == true && controller.collisionInfo.reachedTopOfTheLadder == false)
+        {
+            if (directionalInput.y > 0 || directionalInput.y < 0)
+            {
+                moveOffLadderCooldown = moveOffLadderTimer;
+                moveOffLadderHoldCooldown = moveOffLadderHoldTimer;
+            }
+            if ((Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A)))
+            {
+                if (moveOffLadderHoldCooldown <= 0)
+                {
+                    directionalInput.x = Input.GetAxisRaw("Horizontal");
+                }
+                else
+                {
+                    moveOffLadderHoldCooldown -= Time.deltaTime;
+                }
+            }
+
+            if (Input.GetKeyDown(KeyCode.D))
+            {
+                if (moveOffLadderCooldown <= 0)
+                {
+                    directionalInput.x = Input.GetAxisRaw("Horizontal");
+                }
+                else
+                {
+                    moveOffLadderCooldown -= Time.deltaTime;
+                }
+            }
+            else if (Input.GetKeyDown(KeyCode.A))
+            {
+                if (moveOffLadderCooldown <= 0)
+                {
+                    directionalInput.x = Input.GetAxisRaw("Horizontal");
+                }
+                else
+                {
+                    moveOffLadderCooldown -= Time.deltaTime;
+                }
+            }
+        }
+    }
+
+    void JumpCheck()
+    {
+        if (Input.GetKeyDown(KeyCode.Space) && !player.movingToNextLevel)
+        {
+            player.OnJumpInputDown();
+        }
+    }
+}
