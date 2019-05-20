@@ -202,6 +202,7 @@ public class PlayerAnimationManager : MonoBehaviour
     {
         if(playerSunBehavior.isRespawning)
         {
+            Debug.Log("RespaningAnimationCheck");
             animator.SetBool("Respawning", true);
         }
         if(playerSunBehavior.doneRespawning)

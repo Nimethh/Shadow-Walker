@@ -31,9 +31,14 @@ public class PlayerUpdated : MonoBehaviour
     float gravity;
     float jumpVelocity;
 
-    //[HideInInspector]
+    [HideInInspector]
     public Vector3 velocity;
     private Vector2 directionalInput;
+
+    [SerializeField]
+    GameObject LandParticle;
+    GameObject particlesSpawnPos;
+
 
     [HideInInspector]
     public bool jumping = false;
@@ -71,6 +76,7 @@ public class PlayerUpdated : MonoBehaviour
         gravity = -(2 * jumpHeight) / Mathf.Pow(timeToJumpPeak, 2);
         jumpVelocity = Mathf.Abs(gravity) * timeToJumpPeak;
         endOfTheScene = GameObject.Find("SceneManager");
+        particlesSpawnPos = transform.GetChild(0).gameObject;
     }
 
     void Update()
@@ -225,6 +231,7 @@ public class PlayerUpdated : MonoBehaviour
         if (other.gameObject.CompareTag("Ground"))
         {
             //landParticle.Play(); // Instantiate
+            Instantiate(LandParticle, particlesSpawnPos.transform);
         }
         if (other.gameObject.tag == "MovingPlatform")
         {

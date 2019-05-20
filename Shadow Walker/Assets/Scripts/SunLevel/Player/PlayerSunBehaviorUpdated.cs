@@ -42,11 +42,10 @@ public class PlayerSunBehaviorUpdated : AffectedByTheSun
     public void Update()
     {
         AffectedByTheSunScriptUpdate();
-
+        
         if (isRespawning) // Added 2019-05-19
         {
             transform.position = spawningPos;
-            isRespawning = false;
         }
     }
 
@@ -56,7 +55,7 @@ public class PlayerSunBehaviorUpdated : AffectedByTheSun
         {
             timeInSun = 0;
         }
-        isDead = false; // Added 2019-05-19
+        //isDead = false; // Added 2019-05-19
         //Debug.Log("JustGotCoveredFromSunlight()");
     }
 
@@ -95,8 +94,8 @@ public class PlayerSunBehaviorUpdated : AffectedByTheSun
             isDead = true;
             player.velocity.x = 0;
         }
-        else
-            isDead = false;
+        //else
+        //    isDead = false;
     }
 
     public override void UnderPartialCover()
@@ -112,10 +111,10 @@ public class PlayerSunBehaviorUpdated : AffectedByTheSun
             //playerPlatformController.StopAllMovement(0.8f);
             //transform.position = startingPoint.transform.position;
         }
-        else // Added 2019-05-19
-        {
-            isDead = false;
-        }
+        //else // Added 2019-05-19
+        //{
+        //    isDead = false;
+        //}
     }
 
     // Added 2019-05-19
