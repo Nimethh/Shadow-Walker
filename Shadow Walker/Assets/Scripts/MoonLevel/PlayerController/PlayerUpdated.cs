@@ -56,6 +56,9 @@ public class PlayerUpdated : MonoBehaviour
     public bool moveOffLadder = false;
     [HideInInspector]
     public bool movingToNextLevel = false;
+    public bool movingIntoCheckPoint = false;
+    public bool movingOutCheckPoint = false;
+    public bool finishedMovingOutCheckPoint = true;
 
     Controller2DUpdated controller;
     Animator animator;
@@ -197,12 +200,15 @@ public class PlayerUpdated : MonoBehaviour
 
     void CalculateVelocity()
     {
-        if (!playerSunBehavior.isDead && playerSunBehavior.doneRespawning)
+        if (!playerSunBehavior.isDead && playerSunBehavior.doneRespawning )
         {
-            float targetVelocityX = directionalInput.x * moveSpeed;
-            velocity.x = Mathf.SmoothDamp(velocity.x, targetVelocityX, ref velocityXSmoothing, (controller.collisionInfo.below) ? accelerationTimeOnGroundTurn : accelerationTimeInAirTurn);
+            if (!movingIntoCheckPoint && !movingOutCheckPoint)
+            {
+                float targetVelocityX = directionalInput.x * moveSpeed;
+                velocity.x = Mathf.SmoothDamp(velocity.x, targetVelocityX, ref velocityXSmoothing, (controller.collisionInfo.below) ? accelerationTimeOnGroundTurn : accelerationTimeInAirTurn);
+            }
         }
-            if (controller.collisionInfo.climbing == false)
+        if (controller.collisionInfo.climbing == false)
         {
             velocity.y += gravity * Time.deltaTime;
         }
@@ -230,7 +236,6 @@ public class PlayerUpdated : MonoBehaviour
         //}
         if (other.gameObject.CompareTag("Ground"))
         {
-            //landParticle.Play(); // Instantiate
             Instantiate(LandParticle, particlesSpawnPos.transform);
         }
         if (other.gameObject.tag == "MovingPlatform")
@@ -241,14 +246,31 @@ public class PlayerUpdated : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Ladder") && !onGround)
+        if (controller.collisionInfo.climbing && !onLadder)
         {
-            onLadder = true;
-            moveOffLadder = false;
+            if (other.gameObject.CompareTag("Ladder") && !onGround)
+            {
+                onLadder = true;
+                moveOffLadder = false;
+            }
         }
-        else
+        if(other.gameObject.CompareTag("CheckPoint") && onGround)
         {
-            onLadder = false;
+            if((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) && !movingIntoCheckPoint && !movingOutCheckPoint)
+            {
+                movingIntoCheckPoint = true;
+                movingOutCheckPoint = false;
+                finishedMovingOutCheckPoint = false;
+                velocity.x = 0;
+                Debug.Log("MovingInto");
+            }
+            else if(Input.anyKeyDown && movingIntoCheckPoint)
+            {
+                movingIntoCheckPoint = false;
+                movingOutCheckPoint = true;
+                finishedMovingOutCheckPoint = false;
+                velocity.x = 0;
+            }
         }
     }
 
@@ -258,11 +280,16 @@ public class PlayerUpdated : MonoBehaviour
         {
             onLadder = false;
             moveOffLadder = true;
-            animator.SetBool("Climbing", false);
+            //animator.SetBool("Climbing", false);
         }
         if(other.gameObject.CompareTag("MovingPlatform"))
         {
             this.gameObject.transform.parent = null;
+        }
+        if (other.gameObject.CompareTag("CheckPoint"))
+        {
+            movingIntoCheckPoint = false;
+            movingOutCheckPoint = false;
         }
     }
 }

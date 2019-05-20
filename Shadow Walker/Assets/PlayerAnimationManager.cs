@@ -31,6 +31,7 @@ public class PlayerAnimationManager : MonoBehaviour
         ClimbingAnimationCheck();
         DeathAnimationCheck();
         RespawningAnimationCheck();
+        CheckPointAnimationCheck();
     }
 
     void MovementAnimationCheck()
@@ -209,6 +210,30 @@ public class PlayerAnimationManager : MonoBehaviour
         {
             animator.SetBool("Respawning", false);
         }
+    }
+
+    void CheckPointAnimationCheck()
+    {
+        if(player.movingIntoCheckPoint)
+        {
+            animator.SetBool("MovingIntoCheckPoint",true);
+        }
+        else if(player.movingOutCheckPoint)
+        {
+            animator.SetBool("MovingOutofCheckPoint", true);
+            animator.SetBool("MovingIntoCheckPoint", false);
+        }
+        else
+        {
+            animator.SetBool("MovingOutofCheckPoint", false);
+            animator.SetBool("MovingIntoCheckPoint", false);
+        }
+    }
+
+    public void StopCheckPointAnimation()
+    {
+        player.movingOutCheckPoint = false;
+        player.movingIntoCheckPoint = false;
     }
 
     public void SetDirectionalInput(Vector2 input)

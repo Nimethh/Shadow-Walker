@@ -39,12 +39,13 @@ public class CreateShadowMesh : MonoBehaviour
 
     void LateUpdate()
     {
-        //DrawLineFromCorners();
+        DrawLineFromCorners();
         UpdateShadowEdges();
-        //DrawLineFromCornerToShadowEdge();
         OrderEdgesBasedOnAngles();
+        DrawLineFromCornerToShadowEdge();
         DrawHighestAndLowestAngle();
-        CreateFadeEdges();
+        //CreateFadeEdges();
+        CreateFadeEdgesV2();
         UpdateMesh();
     }
 
@@ -55,19 +56,11 @@ public class CreateShadowMesh : MonoBehaviour
             Vector3 polygonPoint = transform.TransformPoint(colPoints[i]);
             Vector2 DirFromSun = (polygonPoint - sun.transform.position).normalized;
 
-            //shadowEdges[i] = polygonPoint + new Vector3(DirFromSun.x * shadowLength, DirFromSun.y * shadowLength, 0);
-            shadowEdges[i] = new Vector3(DirFromSun.x * shadowLength, DirFromSun.y * shadowLength, 0);
+            shadowEdges[i] = polygonPoint + new Vector3(DirFromSun.x * shadowLength, DirFromSun.y * shadowLength, 0);
+            //shadowEdges[i] = new Vector3(DirFromSun.x * shadowLength, DirFromSun.y * shadowLength, 0);
 
         }
     }
-
-    //void GenerateMesh()
-    //{
-    //    int stepCount = Mathf.RoundToInt(viewAngle * meshResolution);
-    //    float stepAngleSize = viewAngle / stepCount;
-    //    List<Vector3> viewPoints = new List<Vector3>();
-    //    ViewCastInfo oldViewCast = new ViewCastInfo();
-    //}
 
     void DrawLineFromCorners()
     {
@@ -76,16 +69,16 @@ public class CreateShadowMesh : MonoBehaviour
         for (int i = 0; i < colPoints.Length; i++)
         {
             Vector3 polygonPoint = transform.TransformPoint(colPoints[i]);
-            Vector2 DirToSun = (sun.transform.position - polygonPoint).normalized;
+            //Vector2 DirToSun = (sun.transform.position - polygonPoint).normalized;
             Vector2 DirFromSun = (polygonPoint - sun.transform.position).normalized;
 
 
-            Debug.DrawRay(polygonPoint, DirFromSun * 30, Color.blue);
-            Debug.DrawRay(sun.transform.position, DirFromSun * 5, Color.red);
-            Debug.DrawLine(sun.transform.position, sun.transform.up + sun.transform.localPosition, Color.green);
+            //Debug.DrawRay(polygonPoint, DirFromSun * 30, Color.red);
+            //Debug.DrawRay(sun.transform.position, DirFromSun * 1, Color.red);
+            //Debug.DrawLine(sun.transform.position, sun.transform.up + sun.transform.localPosition, Color.green);
 
             //Debug.Log(Vector3.Angle(sun.transform.up + sun.transform.localPosition, DirFromSun));
-            Debug.Log(Vector3.Angle(sun.transform.up, DirFromSun));
+            //Debug.Log(Vector3.Angle(sun.transform.up, DirFromSun));
 
             //Debug.Log(" col " + i + " - " +DirFromSun);
         }
@@ -95,7 +88,14 @@ public class CreateShadowMesh : MonoBehaviour
     {
         for (int i = 0; i < colPoints.Length; i++)
         {
-            Debug.DrawLine(transform.TransformPoint(colPoints[i]), shadowEdges[i], Color.black);
+            if (i == 0)
+                Debug.DrawLine(transform.TransformPoint(colPoints[i]), shadowEdges[i], Color.red);
+            if (i == 1)
+                Debug.DrawLine(transform.TransformPoint(colPoints[i]), shadowEdges[i], Color.green);
+            if (i == 2)
+                Debug.DrawLine(transform.TransformPoint(colPoints[i]), shadowEdges[i], Color.blue);
+            if (i == 3)
+                Debug.DrawLine(transform.TransformPoint(colPoints[i]), shadowEdges[i], Color.white);
         }
     }
 
@@ -148,6 +148,7 @@ public class CreateShadowMesh : MonoBehaviour
 
         if (sun.transform.position.x <= transform.position.x)
         {
+            Debug.Log("1 " + " " + sun.transform.position.x + " " + transform.position.x);
             //Inner Left. Seems to be working as intended.
             triangles[0] = 8;
             triangles[1] = 11; //6
@@ -181,6 +182,7 @@ public class CreateShadowMesh : MonoBehaviour
         }
         else
         {
+            Debug.Log("2");
             //Inner Left. Seems to be working as intended.
             triangles[0] = 9;
             triangles[1] = 11; //6
@@ -227,6 +229,51 @@ public class CreateShadowMesh : MonoBehaviour
 
         //Debug.DrawLine(transform.TransformPoint(colPoints[0]), transform.TransformPoint(colPoints[0]) - differenceVector, Color.red);
         //Debug.DrawLine(transform.TransformPoint(colPoints[3]), transform.TransformPoint(colPoints[3]) + differenceVector, Color.blue);
+
+        fadeEdges[0] = transform.TransformPoint(colPoints[0]) - differenceVector;
+        fadeEdges[1] = transform.TransformPoint(colPoints[3]) + differenceVector;
+
+        differenceVector = ((shadowEdges[0] - shadowEdges[3]).normalized * fadeEdgeDistance);// + colPoints[0];
+
+        Debug.DrawLine(transform.TransformPoint(shadowEdges[0]), transform.TransformPoint(shadowEdges[3]), Color.black);
+
+        //Debug.DrawLine(fadeEdges[0],fadeEdges[0] - differenceVector, Color.red);
+        //Debug.DrawLine(transform.TransformPoint(fadeEdges[3]), transform.TransformPoint(fadeEdges[3]) + differenceVector, Color.red);
+
+        //fadeEdges[2] = transform.TransformPoint(shadowEdges[0]) - differenceVector;
+        //fadeEdges[3] = transform.TransformPoint(shadowEdges[3]) + differenceVector;
+
+        fadeEdges[2] = shadowEdges[0] - differenceVector;
+        fadeEdges[3] = shadowEdges[3] + differenceVector;
+
+        //if(sun.transform.position.x <= transform.position.x)
+        //{
+        //    Vector2 DirFromSun = (fadeEdges[0] - sun.transform.position).normalized;
+        //    fadeEdges[2] = Quaternion.Euler(0,0,-0.1f) * new Vector3(DirFromSun.x * shadowLength, DirFromSun.y * shadowLength, 0);
+
+        //    DirFromSun = (fadeEdges[1] - sun.transform.position).normalized;
+        //    fadeEdges[3] = Quaternion.Euler(0, 0, 0.1f) * new Vector3(DirFromSun.x * shadowLength, DirFromSun.y * shadowLength, 0);
+        //}
+        //else
+        //{
+        //    Vector2 DirFromSun = (fadeEdges[0] - sun.transform.position).normalized;
+        //    fadeEdges[2] = Quaternion.Euler(0, 0, 0.1f) * new Vector3(DirFromSun.x * shadowLength, DirFromSun.y * shadowLength, 0);
+
+        //    DirFromSun = (fadeEdges[1] - sun.transform.position).normalized;
+        //    fadeEdges[3] = Quaternion.Euler(0, 0, -0.1f) * new Vector3(DirFromSun.x * shadowLength, DirFromSun.y * shadowLength, 0);
+        //}
+
+        Debug.DrawLine(shadowEdges[0], fadeEdges[2], Color.green);
+        Debug.DrawLine(shadowEdges[3], fadeEdges[3], Color.green);
+    }
+
+    void CreateFadeEdgesV2()
+    {
+        //Vector3 differenceVector = ((colPoints[0] - colPoints[colPoints.Length - 1]).normalized * 0.1f);// + colPoints[0];
+        Vector3 differenceVector = ((transform.TransformPoint(colPoints[0]) - transform.TransformPoint(colPoints[colPoints.Length - 1])).normalized * colliderDistance);// + colPoints[0];
+
+        Debug.DrawLine(transform.TransformPoint(colPoints[0]), transform.TransformPoint(colPoints[0]) - differenceVector, Color.red);
+        Debug.DrawLine(transform.TransformPoint(colPoints[3]), transform.TransformPoint(colPoints[3]) + differenceVector, Color.red);
 
         fadeEdges[0] = transform.TransformPoint(colPoints[0]) - differenceVector;
         fadeEdges[1] = transform.TransformPoint(colPoints[3]) + differenceVector;
@@ -295,8 +342,8 @@ public class CreateShadowMesh : MonoBehaviour
 
     void DrawHighestAndLowestAngle()
     {
-        Debug.DrawLine(transform.TransformPoint(colPoints[0]), shadowEdges[0], Color.cyan);
-        Debug.DrawLine(transform.TransformPoint(colPoints[colPoints.Length - 1]), shadowEdges[colPoints.Length - 1], Color.cyan);
-
+        //Debug.DrawLine(transform.TransformPoint(colPoints[0]), shadowEdges[0],Color.cyan);
+        //Debug.DrawLine(transform.TransformPoint(colPoints[colPoints.Length-1]), shadowEdges[colPoints.Length-1], Color.cyan);
+        //Debug.DrawLine(transform.TransformPoint(colPoints[3]), shadowEdges[3], Color.cyan);
     }
 }

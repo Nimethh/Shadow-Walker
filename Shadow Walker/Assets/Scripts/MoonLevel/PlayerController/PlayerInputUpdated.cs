@@ -32,7 +32,7 @@ public class PlayerInputUpdated : MonoBehaviour
 
     void Update()
     {
-        if (!playerSunBehavior.isDead && playerSunBehavior.doneRespawning)
+        if (!playerSunBehavior.isDead && playerSunBehavior.doneRespawning && !player.movingIntoCheckPoint && !player.movingOutCheckPoint)
         {
             MoveOffLadderCheck();
             MovementCheck();

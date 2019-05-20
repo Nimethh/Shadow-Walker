@@ -33,7 +33,7 @@ public class PlayerSunBehaviorUpdated : AffectedByTheSun
         animator = GetComponent<Animator>();
         player = GetComponent<PlayerUpdated>();
         playerInput = GetComponent<PlayerInputUpdated>();
-        startingPoint = GameObject.Find("PrototypeStartingPoint");
+        startingPoint = GameObject.Find("Door");
         timeInSun = 0;
         spawningPos = startingPoint.transform.position;
 

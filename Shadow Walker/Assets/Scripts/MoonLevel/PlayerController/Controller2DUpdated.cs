@@ -14,14 +14,14 @@ public class Controller2DUpdated : RaycastController
 
     public CollisionInfo collisionInfo;
     private PlayerSunBehaviorUpdated playerSunBehavior;
-
-    //bool OnLadder = false;
+    PlayerUpdated player;
 
     public override void Start()
     {
         base.Start();
         collisionInfo.raysFacingDir = 1;
         playerSunBehavior = GetComponent<PlayerSunBehaviorUpdated>();
+        player = GetComponent<PlayerUpdated>();
     }
 
     public Vector2 UpdateMovement(Vector2 moveAmount, Vector2 input, bool standingOnPlatform = false)
@@ -288,7 +288,7 @@ public class Controller2DUpdated : RaycastController
                 }
 
                 //Check Input.
-                if (playerInput.y < 0 && playerInput.x == 0)
+                if (playerInput.y < 0 && playerInput.x == 0 && player.onGround)
                 {
                     collisionInfo.climbing = true;
                     if (!ladderHitDown)
@@ -296,7 +296,7 @@ public class Controller2DUpdated : RaycastController
                         collisionInfo.climbing = false;
                     }
                 }
-                else if (playerInput.y > 0 && playerInput.x == 0)
+                else if (playerInput.y > 0 && playerInput.x == 0 && player.onGround)
                 {
                     collisionInfo.climbing = true;
                 }

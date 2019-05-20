@@ -9699,6 +9699,9 @@ MonoBehaviour:
   onLadder: 0
   moveOffLadder: 0
   movingToNextLevel: 0
+  movingIntoCheckPoint: 0
+  movingOutCheckPoint: 0
+  finishedMovingOutCheckPoint: 1
 --- !u!114 &1407701438
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9784,7 +9787,7 @@ Rigidbody2D:
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
-  m_SleepingMode: 1
+  m_SleepingMode: 0
   m_CollisionDetection: 0
   m_Constraints: 0
 --- !u!1 &29599990845537559
@@ -19311,7 +19314,7 @@ GameObject:
   m_Layer: 0
   m_Name: ParticleSpawnPos
   m_TagString: Untagged
-  m_Icon: {fileID: 0}
+  m_Icon: {fileID: 7148428337604731935, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
