@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Controller2DUpdated : RaycastController
 {
-    private float maxClimbSlopeAngle = 80;
-    private float maxDescendSlopeAngle = 80;
+    private float maxClimbSlopeAngle = 89;
+    private float maxDescendSlopeAngle = 89;
     private float ladderRayLengthUp = 0.1f;
     private float ladderRayLengthDown = 0.3f;
 

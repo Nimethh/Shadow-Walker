@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class SceneTransition : MonoBehaviour
 {
     public string nextSceneName;
-    [SerializeField]
+    
     Animator animator;
     private bool goToNextScene = false;
 

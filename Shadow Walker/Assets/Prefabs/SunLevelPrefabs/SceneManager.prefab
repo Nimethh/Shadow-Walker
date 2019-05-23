@@ -25,7 +25,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 327999801795673380}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.05000019, y: -0.15500003, z: -0.1}
+  m_LocalPosition: {x: 1.43, y: -0.34, z: -0.1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6991973236971292101}
@@ -68,7 +68,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2b27b844c8fef9643b851a8ae7d76416, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a853811ac8a9597498f356ec0641bfdf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -88,8 +88,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6991973236971292101}
-  - component: {fileID: 6991973236971292100}
   - component: {fileID: 6991973236971292123}
+  - component: {fileID: 438868738}
   m_Layer: 0
   m_Name: SceneManager
   m_TagString: Untagged
@@ -112,20 +112,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &6991973236971292100
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6991973236971292122}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f98383cf526f1694092fd31ef6c2d72e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nextSceneName: FirstLevel
-  animator: {fileID: 0}
 --- !u!61 &6991973236971292123
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -139,7 +125,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.07220602, y: 1.2833158}
+  m_Offset: {x: 1.4498038, y: -0.26562056}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -150,5 +136,18 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.3952465, y: 3.1623204}
+  m_Size: {x: 0.8744106, y: 1.2616932}
   m_EdgeRadius: 0
+--- !u!114 &438868738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6991973236971292122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f98383cf526f1694092fd31ef6c2d72e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextSceneName: Level3

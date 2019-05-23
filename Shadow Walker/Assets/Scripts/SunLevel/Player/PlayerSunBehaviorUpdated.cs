@@ -6,7 +6,7 @@ public class PlayerSunBehaviorUpdated : AffectedByTheSun
 {
     private GameObject startingPoint;
     [HideInInspector]
-    public Vector2 spawningPos;
+    public Vector3 spawningPos;
 
     Animator animator;
     PlayerInputUpdated playerInput;
@@ -38,7 +38,9 @@ public class PlayerSunBehaviorUpdated : AffectedByTheSun
         playerInput = GetComponent<PlayerInputUpdated>();
         startingPoint = GameObject.Find("Door");
         timeInSun = 0;
-        spawningPos = startingPoint.transform.position;
+        spawningPos.x = startingPoint.transform.position.x;
+        spawningPos.y = startingPoint.transform.position.y;
+        spawningPos.z = -2;
 
     }
 
