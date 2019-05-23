@@ -5,6 +5,7 @@ using UnityEngine;
 public class CreateShadowMesh : MonoBehaviour
 {
     private GameObject sun;
+    [SerializeField]
     private float shadowLength = 20;
 
     //From the object that casts the shadow
@@ -122,8 +123,9 @@ public class CreateShadowMesh : MonoBehaviour
 
         colors[8].a = shadowEdgesAlpha;
         colors[9].a = shadowEdgesAlpha;
-        colors[10].a = shadowEdgesAlpha;
-        colors[11].a = shadowEdgesAlpha;
+        colors[10].a = shadowEdgesAlpha - 0.5f;   //Adds a small gradient on the length of the shadow.
+        colors[11].a = shadowEdgesAlpha - 0.5f;   //Adds a small gradient on the length of the shadow.
+
 
         //colors[colPoints.Length * 2 - 2].a = 1f;
         //colors[colPoints.Length * 2 - 1].a = 1f;
@@ -148,7 +150,7 @@ public class CreateShadowMesh : MonoBehaviour
 
         if (sun.transform.position.x <= transform.position.x)
         {
-            Debug.Log("1 " + " " + sun.transform.position.x + " " + transform.position.x);
+            //Debug.Log("1 " + " " + sun.transform.position.x + " " + transform.position.x);
             //Inner Left. Seems to be working as intended.
             triangles[0] = 8;
             triangles[1] = 11; //6
@@ -182,7 +184,7 @@ public class CreateShadowMesh : MonoBehaviour
         }
         else
         {
-            Debug.Log("2");
+            //Debug.Log("2");
             //Inner Left. Seems to be working as intended.
             triangles[0] = 9;
             triangles[1] = 11; //6
@@ -324,8 +326,10 @@ public class CreateShadowMesh : MonoBehaviour
         {
             for (int y = 0; y < colPoints.Length - i - 1; y++)
             {
-                //if (Vector3.Angle((sun.transform.right) + sun.transform.localPosition, shadowEdges[y]) >= Vector3.Angle(sun.transform.right + sun.transform.localPosition, shadowEdges[y+1]))
-                if (Vector3.Angle(sun.transform.up, shadowEdges[y]) >= Vector3.Angle(sun.transform.up, shadowEdges[y + 1]))
+                //if (Vector3.Angle((sun.transform.right * 0.01f + sun.transform.localPosition), shadowEdges[y]) >= Vector3.Angle((sun.transform.right * 0.01f + sun.transform.localPosition), shadowEdges[y + 1]))
+                //if (Vector3.Angle(sun.transform.up, shadowEdges[y]) >= Vector3.Angle(sun.transform.up, shadowEdges[y + 1]))
+                //if (Vector3.Angle(sun.transform.right, shadowEdges[y]) >= Vector3.Angle(sun.transform.right, shadowEdges[y + 1]))
+                if (Vector3.Angle(sun.transform.right * 0.01f, new Vector3(shadowEdges[y].x - sun.transform.position.x, shadowEdges[y].y - sun.transform.position.y, 0)) >= Vector3.Angle(sun.transform.right * 0.01f, new Vector3(shadowEdges[y + 1].x - sun.transform.position.x, shadowEdges[y + 1].y - sun.transform.position.y, 0)))
                 {
                     Vector3 temp = shadowEdges[y + 1];
                     shadowEdges[y + 1] = shadowEdges[y];

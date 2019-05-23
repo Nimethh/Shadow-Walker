@@ -37,6 +37,12 @@ public class PlayerUpdated : MonoBehaviour
 
     [SerializeField]
     GameObject LandParticle;
+    [SerializeField]
+    GameObject jumpParticle;
+    [SerializeField]
+    GameObject walkParticleLeft;
+    [SerializeField]
+    GameObject walkParticleRight;
     GameObject particlesSpawnPos;
 
 
@@ -56,8 +62,11 @@ public class PlayerUpdated : MonoBehaviour
     public bool moveOffLadder = false;
     [HideInInspector]
     public bool movingToNextLevel = false;
+    [HideInInspector]
     public bool movingIntoCheckPoint = false;
+    [HideInInspector]
     public bool movingOutCheckPoint = false;
+    [HideInInspector]
     public bool finishedMovingOutCheckPoint = true;
 
     Controller2DUpdated controller;
@@ -117,6 +126,7 @@ public class PlayerUpdated : MonoBehaviour
             jumping = true;
             velocity.y = jumpVelocity;
             landing = false;
+            Instantiate(jumpParticle, particlesSpawnPos.transform);
             //jumpParticle.Play(); // Instantiate.
         }
     }
@@ -152,6 +162,16 @@ public class PlayerUpdated : MonoBehaviour
         }
         else
             onGround = false;
+    }
+
+    public void RightWalkingParticle()
+    {
+        Instantiate(walkParticleRight, particlesSpawnPos.transform);
+    }
+
+    public void LeftWalkingParticle()
+    {
+        Instantiate(walkParticleLeft, particlesSpawnPos.transform);
     }
 
     public void Climb()
@@ -262,9 +282,11 @@ public class PlayerUpdated : MonoBehaviour
                 movingOutCheckPoint = false;
                 finishedMovingOutCheckPoint = false;
                 velocity.x = 0;
+                playerSunBehavior.isSafeFromSun = true;
                 Debug.Log("MovingInto");
             }
-            else if(Input.anyKeyDown && movingIntoCheckPoint)
+            else if((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D) ||
+                Input.GetKeyDown(KeyCode.Space)) && movingIntoCheckPoint)
             {
                 movingIntoCheckPoint = false;
                 movingOutCheckPoint = true;

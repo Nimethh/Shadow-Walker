@@ -24,6 +24,9 @@ public class PlayerSunBehaviorUpdated : AffectedByTheSun
     [HideInInspector]
     public bool doneRespawning = true; // Added 2019-05-19
 
+    [HideInInspector]
+    public bool isSafeFromSun = false; //Added 2019-05-21
+
     public void Start()
     {
         AffectedByTheSunScriptStart();
@@ -86,6 +89,11 @@ public class PlayerSunBehaviorUpdated : AffectedByTheSun
     public override void UnderFullExposure()
     {
         //Debug.Log("UnderFullExposure()");
+        if (isSafeFromSun)
+        {
+            timeInSun = 0;
+            return;
+        }
         timeInSun += Time.deltaTime;
         if (timeInSun > timeInSunAllowed && doneRespawning)
         {
@@ -101,6 +109,11 @@ public class PlayerSunBehaviorUpdated : AffectedByTheSun
     public override void UnderPartialCover()
     {
         //Debug.Log("UnderPartialCover()");
+        if (isSafeFromSun)
+        {
+            timeInSun = 0;
+            return;
+        }
         timeInSun += Time.deltaTime;
         if (timeInSun > timeInSunAllowed && doneRespawning)
         {

@@ -56,10 +56,10 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.72351885, y: 0.059331}
-      - {x: -0.71990395, y: -0.28026998}
-      - {x: 0.7639438, y: -0.2802701}
-      - {x: 0.75287855, y: 0.08136225}
+    - - {x: -0.78333735, y: 0.10855007}
+      - {x: -0.66360426, y: -0.100972116}
+      - {x: 0.7920936, y: -0.11151922}
+      - {x: 0.6543541, y: 0.109487355}
 --- !u!1 &7575241730070491869
 GameObject:
   m_ObjectHideFlags: 0
@@ -130,7 +130,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 1e2a3b4c7602d88489ca2838492e494e, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 276680430db0be24abf7cbd9e86716cc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -152,5 +152,5 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.6312339, y: 0.47125298, z: 1}
-  m_Center: {x: -0.05137956, y: -0.066093475, z: 0}
+  m_Size: {x: 1.5747619, y: 0.22299343, z: 1}
+  m_Center: {x: 0.0022690296, y: 0.004434794, z: 0}

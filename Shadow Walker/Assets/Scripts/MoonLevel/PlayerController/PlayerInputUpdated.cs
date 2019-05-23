@@ -11,13 +11,18 @@ public class PlayerInputUpdated : MonoBehaviour
     PlayerSunBehaviorUpdated playerSunBehavior;
     PlayerAnimationManager playerAnimationManager;
     // GameObject movingParticle;  Instantiate the particle instead.
-    
+
     Vector2 directionalInput;
-    
+
     float moveOffLadderTimer = 0.01f;
     float moveOffLadderCooldown = 0.01f;
     float moveOffLadderHoldTimer = 0.4f;
     float moveOffLadderHoldCooldown = 0.4f;
+
+    ParticleSystem movingPartical;
+    GameObject movingParticalObject;
+    ParticleSystem movingLeftParticle;
+    GameObject movingLeftParticleObject;
 
     void Start()
     {
@@ -28,6 +33,11 @@ public class PlayerInputUpdated : MonoBehaviour
         playerAnimationManager = GetComponent<PlayerAnimationManager>();
         moveOffLadderCooldown = moveOffLadderTimer;
         moveOffLadderHoldCooldown = moveOffLadderHoldTimer;
+
+        movingParticalObject = transform.GetChild(2).gameObject;
+        movingPartical = movingParticalObject.GetComponent<ParticleSystem>();
+        movingLeftParticleObject = transform.GetChild(3).gameObject;
+        movingLeftParticle = movingLeftParticleObject.GetComponent<ParticleSystem>();
     }
 
     void Update()
@@ -41,12 +51,18 @@ public class PlayerInputUpdated : MonoBehaviour
             player.SetDirectionalInput(directionalInput);
             playerSoundManager.SetDirectionalInput(directionalInput);
             playerAnimationManager.SetDirectionalInput(directionalInput);
+        }
     }
-}
 
-    public void PlayMovingParticle()
+    public void PlayMovingRightParticle()
     {
+        movingPartical.Play();
         // Instantiate(movingParticle);
+    }
+
+    public void PlayMovingLeftParticle()
+    {
+        movingLeftParticle.Play();
     }
 
     void MovementCheck()

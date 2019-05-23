@@ -148,7 +148,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 5bf049b3b9a19c04bad64f2add66fc62, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f2941b4afc1b86c4d8c0d021f403c998, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -170,8 +170,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.17, y: 0.56, z: 0.2}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 1.9669161, y: 0.20803976, z: 0.2}
+  m_Center: {x: -0.00007387996, y: -0.0102261305, z: 0}
 --- !u!1 &955121256067369252
 GameObject:
   m_ObjectHideFlags: 0
@@ -247,7 +247,7 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: -0.87369204, y: 0.11550486}
-      - {x: -0.8740363, y: -0.2981453}
-      - {x: 1.0597115, y: -0.2826643}
-      - {x: 1.0671039, y: 0.12324548}
+    - - {x: -0.9740444, y: 0.09446046}
+      - {x: -0.84830993, y: -0.11167216}
+      - {x: 0.9750808, y: -0.10309753}
+      - {x: 0.8580487, y: 0.100731835}

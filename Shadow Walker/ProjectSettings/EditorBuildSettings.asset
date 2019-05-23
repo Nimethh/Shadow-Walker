@@ -29,7 +29,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Cast Lv 4.unity
     guid: ec5aa19761c84704690489843adf4706
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Level4.unity
     guid: 40e0d9b101f15e145963065b76e709df
+  - enabled: 1
+    path: Assets/Scenes/Level2.unity
+    guid: 58d245833e9d69041bd6ba1e61c669b3
   m_configObjects: {}

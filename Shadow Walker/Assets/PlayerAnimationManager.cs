@@ -234,6 +234,7 @@ public class PlayerAnimationManager : MonoBehaviour
     {
         player.movingOutCheckPoint = false;
         player.movingIntoCheckPoint = false;
+        playerSunBehavior.isSafeFromSun = false;
     }
 
     public void SetDirectionalInput(Vector2 input)
