@@ -168,6 +168,27 @@ public class PlayerAnimationManager : MonoBehaviour
                 animator.speed = 1;
             }
         }
+
+        if (player.movingIntoCheckPoint)
+        {
+            animator.SetBool("Climbing", false);
+            if (animator.name == "Jump")
+            {
+                animator.speed = 1.5f;
+            }
+            else if (animator.name == "Falling")
+            {
+                animator.speed = 1.5f;
+            }
+            else if (animator.name == "Landing")
+            {
+                animator.speed = 2.5f;
+            }
+            else
+            {
+                animator.speed = 1;
+            }
+        }
     }
 
     void DeathAnimationCheck()
@@ -214,14 +235,20 @@ public class PlayerAnimationManager : MonoBehaviour
 
     void CheckPointAnimationCheck()
     {
-        if(player.movingIntoCheckPoint)
+        if(player.movingIntoCheckPoint /*&& !controller.collisionInfo.climbing*/)
         {
             animator.SetBool("MovingIntoCheckPoint",true);
+            animator.SetBool("Movement", false);
+            animator.SetBool("Idle", false);
+            animator.SetBool("Climbing", false);
         }
         else if(player.movingOutCheckPoint)
         {
             animator.SetBool("MovingOutofCheckPoint", true);
             animator.SetBool("MovingIntoCheckPoint", false);
+            animator.SetBool("Movement", false);
+            animator.SetBool("Idle", false);
+            animator.SetBool("Climbing", false);
         }
         else
         {

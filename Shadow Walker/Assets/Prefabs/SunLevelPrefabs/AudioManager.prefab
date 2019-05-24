@@ -46,8 +46,8 @@ MonoBehaviour:
   soundFX:
   - name: Background
     clip: {fileID: 8300000, guid: c3b287c5d01bdcf4fa1f55e9b208e4e9, type: 3}
-    volume: 0.468
-    pitch: 1
+    volume: 1
+    pitch: 1.43
     randomVolume: 0
     randomPitch: 0
     loop: 1
@@ -55,14 +55,11 @@ MonoBehaviour:
     aS: {fileID: 0}
   - name: SunMoving
     clip: {fileID: 8300000, guid: fe9c69a81f1d3844faa8baa4a99d245f, type: 3}
-    volume: 0.82
-    pitch: 1.4
-    clip: {fileID: 8300000, guid: 8ed6ddb13c7cde24abf6e83fd7aebbd8, type: 3}
-    volume: 1
-    pitch: 1
+    volume: 0
+    pitch: 1.63
     randomVolume: 0.1
     randomPitch: 0.1
-    loop: 1
+    loop: 0
     playOnAwake: 0
     aS: {fileID: 0}
   - name: Jump
@@ -80,18 +77,17 @@ MonoBehaviour:
     pitch: 1
     randomVolume: 0.1
     randomPitch: 0.1
-    loop: 1
+    loop: 0
     playOnAwake: 0
     aS: {fileID: 0}
   - name: Death
     clip: {fileID: 8300000, guid: e02a21beac916c74092b5ed14a9d1bbd, type: 3}
     volume: 1
     pitch: 1.2
-    pitch: 1
     randomVolume: 0.1
     randomPitch: 0.1
     loop: 0
-    playOnAwake: 1
+    playOnAwake: 0
     aS: {fileID: 0}
   - name: Land
     clip: {fileID: 8300000, guid: 72e67fc6164edb04d9a5bd38bf24e6cf, type: 3}
@@ -108,13 +104,15 @@ MonoBehaviour:
     pitch: 1
     randomVolume: 0.1
     randomPitch: 0.1
-    loop: 1
+    loop: 0
     playOnAwake: 0
     aS: {fileID: 0}
   - name: PressurePlate
-    clip: {fileID: 8300000, guid: 35a4b308fd1cae94391af85c11337af5, type: 3}
+    clip: {fileID: 8300000, guid: c989483fc257c41488f0069fa303a9bf, type: 3}
     volume: 1
     pitch: 1
+    randomVolume: 0.1
+    randomPitch: 0.1
     loop: 0
     playOnAwake: 0
     aS: {fileID: 0}
@@ -122,13 +120,17 @@ MonoBehaviour:
     clip: {fileID: 8300000, guid: 35a4b308fd1cae94391af85c11337af5, type: 3}
     volume: 0
     pitch: 1
-    loop: 1
+    randomVolume: 0.1
+    randomPitch: 0.1
+    loop: 0
     playOnAwake: 0
     aS: {fileID: 0}
   - name: Drawbridge falling
-    clip: {fileID: 8300000, guid: 35a4b308fd1cae94391af85c11337af5, type: 3}
+    clip: {fileID: 8300000, guid: df52468acd703af49832bd0123949912, type: 3}
     volume: 0
     pitch: 1
-    loop: 1
+    randomVolume: 0.1
+    randomPitch: 0.1
+    loop: 0
     playOnAwake: 0
     aS: {fileID: 0}

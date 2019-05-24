@@ -62,9 +62,9 @@ public class PlayerUpdated : MonoBehaviour
     public bool moveOffLadder = false;
     [HideInInspector]
     public bool movingToNextLevel = false;
-    [HideInInspector]
+    //[HideInInspector]
     public bool movingIntoCheckPoint = false;
-    [HideInInspector]
+    //[HideInInspector]
     public bool movingOutCheckPoint = false;
     [HideInInspector]
     public bool finishedMovingOutCheckPoint = true;
@@ -138,7 +138,8 @@ public class PlayerUpdated : MonoBehaviour
             falling = true;
             jumping = false;
         }
-        if (velocity.y < 0 && !controller.collisionInfo.below && !controller.collisionInfo.climbing && moveOffLadder)
+        if (velocity.y < 0 && !controller.collisionInfo.below && !controller.collisionInfo.climbing && moveOffLadder && !controller.collisionInfo.climbingSlope
+            && !controller.collisionInfo.descendingSlope)
         {
             falling = true;
             onGround = false;
@@ -288,6 +289,7 @@ public class PlayerUpdated : MonoBehaviour
             else if((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D) ||
                 Input.GetKeyDown(KeyCode.Space)) && movingIntoCheckPoint)
             {
+                Debug.Log("MovingOutOf");
                 movingIntoCheckPoint = false;
                 movingOutCheckPoint = true;
                 finishedMovingOutCheckPoint = false;

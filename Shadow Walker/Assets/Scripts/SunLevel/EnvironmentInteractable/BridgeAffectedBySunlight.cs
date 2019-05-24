@@ -43,12 +43,20 @@ public class BridgeAffectedBySunlight : AffectedByTheSun
 
     public override void UnderFullCover()
     {
+        bridgeActive = true;
+        bridgeObject.SetActive(true);
+        shadowCastingCollider.enabled = true;
+        jumpCollider.enabled = true;
         //Debug.Log("Bridge UnderFullCover()");
     }
 
     public override void UnderFullExposure()
     {
         //Debug.Log("Bridge UnderFullExposure()");
+        bridgeActive = false;
+        bridgeObject.SetActive(false);
+        shadowCastingCollider.enabled = false;
+        jumpCollider.enabled = false;
     }
 
     public override void UnderPartialCover()

@@ -9,7 +9,7 @@ public class PlayerSoundManager : MonoBehaviour
     Vector2 directionalInput;
     //private Player player;
     PlayerUpdated player;
-    PlayerSunBehaviorUpdated playerSunBehaviorUpdated;
+    PlayerSunBehaviorUpdated playerSunBehavior;
     //PlayerSunBehavior playerSunBehavior;
     //Controller2D controller;
     Controller2DUpdated controller;
@@ -21,7 +21,7 @@ public class PlayerSoundManager : MonoBehaviour
         playerInput = GetComponent<PlayerInputUpdated>();
         //player = GetComponent<Player>();
         player = GetComponent<PlayerUpdated>();
-        playerSunBehaviorUpdated = GetComponent<PlayerSunBehaviorUpdated>();
+        playerSunBehavior = GetComponent<PlayerSunBehaviorUpdated>();
         //playerSunBehavior = GetComponent<PlayerSunBehavior>();
         //controller = GetComponent<Controller2D>();
         controller = GetComponent<Controller2DUpdated>();
@@ -55,7 +55,7 @@ public class PlayerSoundManager : MonoBehaviour
         //{
         //    FindObjectOfType<AudioManager>().Play("Death");
         //}
-        if (playerSunBehaviorUpdated.isExposedToSunlight)
+        if (playerSunBehavior.isDead)
         {
             audioManager.Play("Death");
         }
