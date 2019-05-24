@@ -89,6 +89,9 @@ public class PlayerUpdated : MonoBehaviour
         jumpVelocity = Mathf.Abs(gravity) * timeToJumpPeak;
         endOfTheScene = GameObject.Find("SceneManager");
         particlesSpawnPos = transform.GetChild(0).gameObject;
+
+        //movingIntoCheckPoint = true;
+        //playerSunBehavior.isSafeFromSun = true;
     }
 
     void Update()

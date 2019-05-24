@@ -45,7 +45,9 @@ public class CheckPoint : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Player"))
         {
-            playerSunBehavior.spawningPos = this.gameObject.transform.position;
+            Vector3 position = this.gameObject.transform.position;
+            position.z = -3;
+            playerSunBehavior.spawningPos = position;
         }
     }
 

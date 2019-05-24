@@ -40,7 +40,7 @@ public class PlayerSunBehaviorUpdated : AffectedByTheSun
         timeInSun = 0;
         spawningPos.x = startingPoint.transform.position.x;
         spawningPos.y = startingPoint.transform.position.y;
-        spawningPos.z = -2;
+        spawningPos.z = -3;
 
     }
 

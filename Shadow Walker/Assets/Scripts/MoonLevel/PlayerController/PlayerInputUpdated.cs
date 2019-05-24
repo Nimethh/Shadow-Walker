@@ -34,6 +34,8 @@ public class PlayerInputUpdated : MonoBehaviour
         moveOffLadderCooldown = moveOffLadderTimer;
         moveOffLadderHoldCooldown = moveOffLadderHoldTimer;
 
+        Cursor.visible = false;
+
         movingParticalObject = transform.GetChild(2).gameObject;
         movingPartical = movingParticalObject.GetComponent<ParticleSystem>();
         movingLeftParticleObject = transform.GetChild(3).gameObject;
