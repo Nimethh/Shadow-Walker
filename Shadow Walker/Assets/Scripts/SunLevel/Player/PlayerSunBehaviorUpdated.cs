@@ -32,7 +32,6 @@ public class PlayerSunBehaviorUpdated : AffectedByTheSun
         AffectedByTheSunScriptStart();
         
         //playerPlatformController = GetComponent<PlayerPlatformController>();
-
         animator = GetComponent<Animator>();
         player = GetComponent<PlayerUpdated>();
         playerInput = GetComponent<PlayerInputUpdated>();
@@ -41,6 +40,7 @@ public class PlayerSunBehaviorUpdated : AffectedByTheSun
         spawningPos.x = startingPoint.transform.position.x;
         spawningPos.y = startingPoint.transform.position.y;
         spawningPos.z = -3;
+        transform.position = spawningPos;
 
     }
 
@@ -51,6 +51,7 @@ public class PlayerSunBehaviorUpdated : AffectedByTheSun
         if (isRespawning) // Added 2019-05-19
         {
             transform.position = spawningPos;
+            isRespawning = false;
         }
     }
 
@@ -144,6 +145,7 @@ public class PlayerSunBehaviorUpdated : AffectedByTheSun
     {
         isRespawning = true;
         isDead = false;
+        player.spawnedInSafePoint = true;
     }
 
     // Added 2019-05-19
@@ -158,5 +160,6 @@ public class PlayerSunBehaviorUpdated : AffectedByTheSun
         isDead = false;
         isRespawning = false;
         doneRespawning = true;
+        player.spawnedInSafePoint = false;
     }
 }

@@ -4,7 +4,7 @@
 	{
 		_Noise("Noise", 2D) = "white" {}
 		_StrengthFilter("Strength Filter", 2D) = "white" {}
-		_Strength("Distort Strength", float) = 1.0
+		_Strength("Distort Strength", Range(0.0001,0.0009)) = 0.0003
 		_Speed("Distort Speed", float) = 1.0
 	}
 
@@ -58,7 +58,7 @@
 				// billboard to camera
 				float4 pos = input.vertex;
 				pos = mul(UNITY_MATRIX_P,
-					  mul(UNITY_MATRIX_MV, float4(0, 0, 0, 0.2))
+					  mul(UNITY_MATRIX_MV, float4(0, 0, 0, 0.5))
 										 + float4(pos.x, pos.z, 0, 0));
 				output.pos = pos;
 

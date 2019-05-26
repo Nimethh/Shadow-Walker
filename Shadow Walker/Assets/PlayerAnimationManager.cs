@@ -25,12 +25,15 @@ public class PlayerAnimationManager : MonoBehaviour
     
     void Update()
     {
-        MovementAnimationCheck();
-        JumpAnimationCheck();
-        FallingAnimationCheck();
-        ClimbingAnimationCheck();
-        DeathAnimationCheck();
-        RespawningAnimationCheck();
+        if (player.finishedMovingIntoCheckPoint && player.finishedMovingOutCheckPoint)
+        {
+            MovementAnimationCheck();
+            JumpAnimationCheck();
+            FallingAnimationCheck();
+            ClimbingAnimationCheck();
+            DeathAnimationCheck();
+            //RespawningAnimationCheck();
+        }
         CheckPointAnimationCheck();
     }
 
@@ -224,7 +227,6 @@ public class PlayerAnimationManager : MonoBehaviour
     {
         if(playerSunBehavior.isRespawning)
         {
-            Debug.Log("RespaningAnimationCheck");
             animator.SetBool("Respawning", true);
         }
         if(playerSunBehavior.doneRespawning)

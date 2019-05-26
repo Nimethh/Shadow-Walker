@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlayerUpdated : MonoBehaviour
 {
@@ -62,12 +60,16 @@ public class PlayerUpdated : MonoBehaviour
     public bool moveOffLadder = false;
     [HideInInspector]
     public bool movingToNextLevel = false;
-    //[HideInInspector]
+    [HideInInspector]
     public bool movingIntoCheckPoint = false;
-    //[HideInInspector]
+    [HideInInspector]
     public bool movingOutCheckPoint = false;
     [HideInInspector]
     public bool finishedMovingOutCheckPoint = true;
+    [HideInInspector]
+    public bool finishedMovingIntoCheckPoint = true;
+    [HideInInspector]
+    public bool spawnedInSafePoint = false;
 
     Controller2DUpdated controller;
     Animator animator;
@@ -89,32 +91,54 @@ public class PlayerUpdated : MonoBehaviour
         jumpVelocity = Mathf.Abs(gravity) * timeToJumpPeak;
         endOfTheScene = GameObject.Find("SceneManager");
         particlesSpawnPos = transform.GetChild(0).gameObject;
-
-        //movingIntoCheckPoint = true;
-        //playerSunBehavior.isSafeFromSun = true;
+        spawnedInSafePoint = true;
+        playerSunBehavior.isSafeFromSun = true;
     }
 
     void Update()
     {
-        //if (!playerSunBehavior.isDead && playerSunBehavior.doneRespawning)
-        //{
-            CalculateVelocity();
-            HandleWallSliding();
-            SetBools();
-            MovingToEndOfTheSceneCheck();
-            controller.UpdateMovement(velocity * Time.deltaTime, directionalInput);
 
-            if (controller.collisionInfo.above || controller.collisionInfo.below && controller.collisionInfo.climbing == false)
-            {
-                velocity.y = 0;
-            }
-            Climb();
-        //}
-        //else if (playerSunBehavior.isDead)
-        //{
-        //    //gravity = -(2 * jumpHeight) / Mathf.Pow(timeToJumpPeak, 2);
-        //    velocity.y += gravity * Time.deltaTime;
-        //}
+        CheckSpawnMovingOut();
+        CalculateVelocity();
+        HandleWallSliding();
+        SetBools();
+        MovingToEndOfTheSceneCheck();
+        controller.UpdateMovement(velocity * Time.deltaTime, directionalInput);
+
+        if (controller.collisionInfo.above || controller.collisionInfo.below && controller.collisionInfo.climbing == false)
+        {
+            velocity.y = 0;
+        }
+        Climb();
+    }
+
+
+    public void IsInSafePointBoolManager()
+    {
+        spawnedInSafePoint = true;
+        playerSunBehavior.isSafeFromSun = true;
+        playerSunBehavior.doneRespawning = false;
+        finishedMovingOutCheckPoint = false;
+    }
+
+    public void MovingOutOFCheckPointBoolManager()
+    {
+        if(spawnedInSafePoint)
+        {
+            Debug.Log("spawnedInSafePoint");
+            spawnedInSafePoint = false;
+            playerSunBehavior.isSafeFromSun = false;
+            playerSunBehavior.doneRespawning = true;
+            finishedMovingOutCheckPoint = true;
+            movingOutCheckPoint = false;
+        }
+        else if(finishedMovingIntoCheckPoint)
+        {
+            Debug.Log("finishedMovingIntoCheckPoint");
+            finishedMovingOutCheckPoint = true;
+            movingIntoCheckPoint = false;
+            movingOutCheckPoint = false;
+        }
     }
 
     public void SetDirectionalInput(Vector2 input)
@@ -122,9 +146,18 @@ public class PlayerUpdated : MonoBehaviour
         directionalInput = input;
     }
 
+    void CheckSpawnMovingOut()
+    {
+        if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D) ||
+                Input.GetKeyDown(KeyCode.Space)) && spawnedInSafePoint)
+        {
+            animator.SetBool("MovingOutofCheckPoint", true);
+        }
+    }
+
     public void OnJumpInputDown()
     {
-        if (controller.collisionInfo.below && !playerSunBehavior.isDead)
+        if (controller.collisionInfo.below && !playerSunBehavior.isDead && !spawnedInSafePoint && finishedMovingOutCheckPoint /*!movingOutCheckPoint*/)
         {
             jumping = true;
             velocity.y = jumpVelocity;
@@ -224,9 +257,9 @@ public class PlayerUpdated : MonoBehaviour
 
     void CalculateVelocity()
     {
-        if (!playerSunBehavior.isDead && playerSunBehavior.doneRespawning )
+        if (!playerSunBehavior.isDead && playerSunBehavior.doneRespawning)
         {
-            if (!movingIntoCheckPoint && !movingOutCheckPoint)
+            if (finishedMovingOutCheckPoint)
             {
                 float targetVelocityX = directionalInput.x * moveSpeed;
                 velocity.x = Mathf.SmoothDamp(velocity.x, targetVelocityX, ref velocityXSmoothing, (controller.collisionInfo.below) ? accelerationTimeOnGroundTurn : accelerationTimeInAirTurn);
@@ -268,6 +301,11 @@ public class PlayerUpdated : MonoBehaviour
         }
     }
 
+    public void CanMoveOut()
+    {
+        finishedMovingIntoCheckPoint = true;
+    }
+
     private void OnTriggerStay2D(Collider2D other)
     {
         if (controller.collisionInfo.climbing && !onLadder)
@@ -278,24 +316,22 @@ public class PlayerUpdated : MonoBehaviour
                 moveOffLadder = false;
             }
         }
-        if(other.gameObject.CompareTag("CheckPoint") && onGround)
+        if(other.gameObject.CompareTag("CheckPoint") && onGround && !spawnedInSafePoint)
         {
-            if((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) && !movingIntoCheckPoint && !movingOutCheckPoint)
+            if((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) && !movingIntoCheckPoint && finishedMovingOutCheckPoint/*!movingOutCheckPoint*/ /*&& directionalInput.x == 0*/)
             {
                 movingIntoCheckPoint = true;
                 movingOutCheckPoint = false;
+                finishedMovingIntoCheckPoint = false;
                 finishedMovingOutCheckPoint = false;
                 velocity.x = 0;
                 playerSunBehavior.isSafeFromSun = true;
-                Debug.Log("MovingInto");
             }
             else if((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D) ||
-                Input.GetKeyDown(KeyCode.Space)) && movingIntoCheckPoint)
+                Input.GetKeyDown(KeyCode.Space)) && movingIntoCheckPoint && finishedMovingIntoCheckPoint)
             {
-                Debug.Log("MovingOutOf");
                 movingIntoCheckPoint = false;
                 movingOutCheckPoint = true;
-                finishedMovingOutCheckPoint = false;
                 velocity.x = 0;
             }
         }
@@ -307,7 +343,6 @@ public class PlayerUpdated : MonoBehaviour
         {
             onLadder = false;
             moveOffLadder = true;
-            //animator.SetBool("Climbing", false);
         }
         if(other.gameObject.CompareTag("MovingPlatform"))
         {

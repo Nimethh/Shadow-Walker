@@ -24,6 +24,11 @@ public class PlayerInputUpdated : MonoBehaviour
     ParticleSystem movingLeftParticle;
     GameObject movingLeftParticleObject;
 
+    float top = 0;
+    float bottom = 0;
+    float right = 0;
+    float left = 0;
+
     void Start()
     {
         player = GetComponent<PlayerUpdated>();
@@ -35,6 +40,7 @@ public class PlayerInputUpdated : MonoBehaviour
         moveOffLadderHoldCooldown = moveOffLadderHoldTimer;
 
         Cursor.visible = false;
+        FindPlayerBounds();
 
         movingParticalObject = transform.GetChild(2).gameObject;
         movingPartical = movingParticalObject.GetComponent<ParticleSystem>();
@@ -44,7 +50,7 @@ public class PlayerInputUpdated : MonoBehaviour
 
     void Update()
     {
-        if (!playerSunBehavior.isDead && playerSunBehavior.doneRespawning && !player.movingIntoCheckPoint && !player.movingOutCheckPoint)
+        if (!playerSunBehavior.isDead && playerSunBehavior.doneRespawning && player.finishedMovingOutCheckPoint/*&& playerSunBehavior.doneRespawning*/ /*&& !player.movingIntoCheckPoint && !player.movingOutCheckPoint*/)
         {
             MoveOffLadderCheck();
             MovementCheck();
@@ -54,6 +60,40 @@ public class PlayerInputUpdated : MonoBehaviour
             playerSoundManager.SetDirectionalInput(directionalInput);
             playerAnimationManager.SetDirectionalInput(directionalInput);
         }
+
+        CheckPlayerBounds();
+    }
+
+    public void FindPlayerBounds()
+    {
+        top = Camera.main.ViewportToWorldPoint(new Vector3(1, 1, Camera.main.nearClipPlane)).y;
+        right = Camera.main.ViewportToWorldPoint(new Vector3(1, 1, Camera.main.nearClipPlane)).x;
+        left = Camera.main.ViewportToWorldPoint(new Vector3(0, 0, Camera.main.nearClipPlane)).x;
+        bottom = Camera.main.ViewportToWorldPoint(new Vector3(0, 0, Camera.main.nearClipPlane)).y;
+    }
+
+    public void CheckPlayerBounds()
+    {
+        //Right
+        if (transform.position.x > right - 0.2f)// && transform.position.x > left)
+        {
+            transform.position = new Vector3(right - 0.2f, transform.position.y, transform.position.z);
+        }
+
+        //Left
+        if (transform.position.x < left + 0.2f)
+        {
+            transform.position = new Vector3(left + 0.2f, transform.position.y, transform.position.z);
+        }
+
+        //Bottom
+        if (transform.position.y < (bottom - 10.0f))
+        {
+            player.velocity.y = 0;
+            playerSunBehavior.isDead = true;
+            transform.position = playerSunBehavior.spawningPos;
+        }
+
     }
 
     public void PlayMovingRightParticle()
@@ -73,7 +113,18 @@ public class PlayerInputUpdated : MonoBehaviour
         {
             directionalInput.x = Input.GetAxisRaw("Horizontal");
         }
+
         directionalInput.y = Input.GetAxisRaw("Vertical");
+
+        //Check player bounds
+        if (directionalInput.x > 0 && transform.position.x > right - 0.2f)
+        {
+            directionalInput.x = 0;
+        }
+        if (directionalInput.x < 0 && transform.position.x < left + 0.2f)
+        {
+            directionalInput.x = 0;
+        }
     }
 
     void MoveOffLadderCheck()

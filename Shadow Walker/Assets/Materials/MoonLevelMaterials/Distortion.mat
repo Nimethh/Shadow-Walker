@@ -9,7 +9,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: Distortion
   m_Shader: {fileID: 4800000, guid: b9219fcbf3da192449d995eecb9028d2, type: 3}
-  m_ShaderKeywords: 
+  m_ShaderKeywords: _SAMPLES_LOW
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -76,12 +76,13 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _StrengthFilter:
-        m_Texture: {fileID: 2800000, guid: e77ea275685d2344d9624365cb706367, type: 3}
+        m_Texture: {fileID: 2800000, guid: d10fe7aa2e8542549bbeb9b8c1928c38, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - _Alpha: 1
     - _AlphaPower: 2.52
+    - _BlurSize: 0
     - _BumpAmt: 1000
     - _BumpScale: 1
     - _ColorStrength: 1
@@ -92,6 +93,7 @@ Material:
     - _DistortionStrength: -0.1
     - _DstBlend: 0
     - _Factor: 1
+    - _Gauss: 0
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
@@ -105,11 +107,13 @@ Material:
     - _Parallax: 0.02
     - _Power: 3.48
     - _Refraction: 10
+    - _Samples: 0
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
-    - _Speed: 200
+    - _Speed: 500
     - _SrcBlend: 1
-    - _Strength: 0.0002
+    - _StandardDeviation: 0.02
+    - _Strength: 0.000526
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:

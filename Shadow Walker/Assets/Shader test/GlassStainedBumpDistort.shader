@@ -6,7 +6,7 @@ Shader "CookbookShaders/Ch06/StainedGlass"
 	{
 		_MainTex("Base (RGBA)", 2D) = "white" {}
 		_BumpMap("Noise Texture", 2D) = "bump" {}
-		_Magnitude("Magnitude", Range(0,1)) = 0.05
+		_Magnitude("Magnitude", Range(0,0.01)) = 0.001
 	}
 
 		SubShader
@@ -14,11 +14,11 @@ Shader "CookbookShaders/Ch06/StainedGlass"
 			Tags
 			{
 				"Queue" = "Transparent"
-				"IgnoreProjector" = "True"
+				//"IgnoreProjector" = "True"
 				"RenderType" = "Opaque"
 			}
 
-			ZWrite On Lighting Off Cull Off Fog{ Mode Off } Blend One Zero
+			//ZWrite On Lighting Off Cull Off Fog{ Mode Off } Blend One Zero
 
 			GrabPass 
 			{

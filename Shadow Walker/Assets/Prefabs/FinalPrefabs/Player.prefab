@@ -9683,6 +9683,8 @@ MonoBehaviour:
   movingIntoCheckPoint: 0
   movingOutCheckPoint: 0
   finishedMovingOutCheckPoint: 1
+  finishedMovingIntoCheckPoint: 1
+  spawnedInSafePoint: 0
 --- !u!114 &5534811680911101854
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9741,7 +9743,7 @@ Animator:
   m_GameObject: {fileID: 5250840874737443281}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 508e801744e80684b98d156b5536ed23, type: 2}
+  m_Controller: {fileID: 9100000, guid: fe36c09bfb0620a46a7c090878a4b1cd, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
