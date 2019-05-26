@@ -38,4 +38,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/FinalScenes/Level3.unity
     guid: 3e1e767e593246a4aba02d0f010b418b
+  - enabled: 1
+    path: Assets/Scenes/FinalScenes/VideoScene.unity
+    guid: 0a14c5ae71de58a4fa3dc2313af11649
   m_configObjects: {}

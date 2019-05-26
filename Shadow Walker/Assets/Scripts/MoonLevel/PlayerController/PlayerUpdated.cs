@@ -125,7 +125,6 @@ public class PlayerUpdated : MonoBehaviour
     {
         if(spawnedInSafePoint)
         {
-            Debug.Log("spawnedInSafePoint");
             spawnedInSafePoint = false;
             playerSunBehavior.isSafeFromSun = false;
             playerSunBehavior.doneRespawning = true;
@@ -134,10 +133,10 @@ public class PlayerUpdated : MonoBehaviour
         }
         else if(finishedMovingIntoCheckPoint)
         {
-            Debug.Log("finishedMovingIntoCheckPoint");
             finishedMovingOutCheckPoint = true;
             movingIntoCheckPoint = false;
             movingOutCheckPoint = false;
+            playerSunBehavior.isSafeFromSun = false;
         }
     }
 
@@ -160,9 +159,9 @@ public class PlayerUpdated : MonoBehaviour
         if (controller.collisionInfo.below && !playerSunBehavior.isDead && !spawnedInSafePoint && finishedMovingOutCheckPoint /*!movingOutCheckPoint*/)
         {
             jumping = true;
+            Instantiate(jumpParticle, particlesSpawnPos.transform);
             velocity.y = jumpVelocity;
             landing = false;
-            Instantiate(jumpParticle, particlesSpawnPos.transform);
             //jumpParticle.Play(); // Instantiate.
         }
     }
