@@ -790,7 +790,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 438868738, guid: d6abb74bc65158d4da22aba4795cdc07, type: 3}
       propertyPath: afkTimer
-      value: 20
+      value: 90
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d6abb74bc65158d4da22aba4795cdc07, type: 3}
@@ -2676,6 +2676,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1004140410251140064, guid: 117ba6baa6e30cd4e8fa30ff619cd3ec,
+        type: 3}
+      propertyPath: soundFX.Array.data[0].volume
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 117ba6baa6e30cd4e8fa30ff619cd3ec, type: 3}

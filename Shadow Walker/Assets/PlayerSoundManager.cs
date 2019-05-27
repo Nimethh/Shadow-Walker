@@ -39,7 +39,7 @@ public class PlayerSoundManager : MonoBehaviour
 
     public void WalkSound()
     {
-        if ((directionalInput.x > 0 || directionalInput.x < 0) && player.onGround)
+        if ((directionalInput.x > 0 || directionalInput.x < 0) && player.onGround && !player.spawnedInSafePoint && !playerSunBehavior.isDead)
         {
             audioManager.Play("Walk");
         }
@@ -63,7 +63,7 @@ public class PlayerSoundManager : MonoBehaviour
 
     public void LandingSound()
     {
-        if (player.landed)
+        if (player.landed && !playerSunBehavior.isDead && !player.spawnedInSafePoint)
         {
             audioManager.Play("Land");
             player.landed = false;

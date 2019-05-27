@@ -290,7 +290,7 @@ public class PlayerUpdated : MonoBehaviour
         //    movingToNextLevel = true;
         //    //animator.SetTrigger("MoveToNextLevel");
         //}
-        if (other.gameObject.CompareTag("Ground"))
+        if (other.gameObject.CompareTag("Ground") && !spawnedInSafePoint)
         {
             Instantiate(LandParticle, particlesSpawnPos.transform);
         }

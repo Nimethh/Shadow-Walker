@@ -110,10 +110,10 @@ Material:
     - _Samples: 0
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
-    - _Speed: 500
+    - _Speed: 530
     - _SrcBlend: 1
     - _StandardDeviation: 0.02
-    - _Strength: 0.000526
+    - _Strength: 0.000364
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:

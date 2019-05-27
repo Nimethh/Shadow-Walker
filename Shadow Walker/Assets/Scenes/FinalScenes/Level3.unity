@@ -6835,7 +6835,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 438868738, guid: d6abb74bc65158d4da22aba4795cdc07, type: 3}
       propertyPath: afkTimer
-      value: 100
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 438868738, guid: d6abb74bc65158d4da22aba4795cdc07, type: 3}
       propertyPath: videoSceneName
@@ -11212,12 +11212,12 @@ PrefabInstance:
     - target: {fileID: 8930231884945552106, guid: c56e0fd60a4b6984a95806a5471d80a0,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.365
+      value: 2.414
       objectReference: {fileID: 0}
     - target: {fileID: 8930231884945552106, guid: c56e0fd60a4b6984a95806a5471d80a0,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.74
+      value: -1.697
       objectReference: {fileID: 0}
     - target: {fileID: 8930231884945552106, guid: c56e0fd60a4b6984a95806a5471d80a0,
         type: 3}
