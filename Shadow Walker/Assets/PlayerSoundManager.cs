@@ -72,7 +72,7 @@ public class PlayerSoundManager : MonoBehaviour
 
     void JumpSound()
     {
-        if(Input.GetKeyDown(KeyCode.Space))
+        if(Input.GetKeyDown(KeyCode.Space) && !player.spawnedInSafePoint && !playerSunBehavior.isDead)
         {
             audioManager.Play("Jump");
         }
@@ -80,7 +80,7 @@ public class PlayerSoundManager : MonoBehaviour
 
     public void PlayClimbingSound()
     {
-        if((directionalInput.y > 0 || directionalInput.y < 0) && controller.collisionInfo.climbing)
+        if((directionalInput.y > 0 || directionalInput.y < 0) && controller.collisionInfo.climbing && !player.spawnedInSafePoint && !playerSunBehavior.isDead)
         {
             audioManager.Play("Climb");
         }
