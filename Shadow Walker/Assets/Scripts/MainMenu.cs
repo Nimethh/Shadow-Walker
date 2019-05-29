@@ -44,6 +44,7 @@ public class MainMenu : MonoBehaviour
     public void PuzzleMode()
     {
         levelSelectionPanel.SetActive(true);
+        mainMenuPanel.SetActive(false);
     }
 
     public void LoadScene(string p_sceneName)

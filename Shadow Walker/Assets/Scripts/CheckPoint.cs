@@ -9,10 +9,13 @@ public class CheckPoint : MonoBehaviour
     PlayerUpdated player;
     //private SunController sunController;
     //public int sunCheckPointIndex;
+    AudioManager audioManager;
+
     void Start()
     {
         playerSunBehavior = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerSunBehaviorUpdated>();
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerUpdated>();
+        audioManager = FindObjectOfType<AudioManager>();
         //sunController = GameObject.FindGameObjectWithTag("Sun").GetComponent<SunController>();
         //sunCheckPointIndex = sunController.checkPointIndex;
     }
@@ -48,6 +51,7 @@ public class CheckPoint : MonoBehaviour
             Vector3 position = this.gameObject.transform.position;
             position.z = -3;
             playerSunBehavior.spawningPos = position;
+            audioManager.Play("SafePoint");
         }
     }
 

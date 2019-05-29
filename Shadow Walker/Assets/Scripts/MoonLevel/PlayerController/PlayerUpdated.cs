@@ -46,7 +46,7 @@ public class PlayerUpdated : MonoBehaviour
 
     [HideInInspector]
     public bool jumping = false;
-    [HideInInspector]
+    //[HideInInspector]
     public bool onGround = false;
     [HideInInspector]
     public bool falling = false;
@@ -75,6 +75,8 @@ public class PlayerUpdated : MonoBehaviour
     Animator animator;
     GameObject endOfTheScene;
     PlayerSunBehaviorUpdated playerSunBehavior;
+    
+    AudioSource audioSource;    // Added 28/5/2019
 
     //Instantiate them instead.
     //ParticleSystem jumpParticle;
@@ -84,6 +86,8 @@ public class PlayerUpdated : MonoBehaviour
 
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();  // Added 28/5/2019
+
         controller = GetComponent<Controller2DUpdated>();
         playerSunBehavior = GetComponent<PlayerSunBehaviorUpdated>();
         animator = GetComponent<Animator>();
@@ -148,7 +152,7 @@ public class PlayerUpdated : MonoBehaviour
     void CheckSpawnMovingOut()
     {
         if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D) ||
-                Input.GetKeyDown(KeyCode.Space)) && spawnedInSafePoint)
+                Input.GetKeyDown(KeyCode.Space)) && spawnedInSafePoint && !playerSunBehavior.isDead)
         {
             animator.SetBool("MovingOutofCheckPoint", true);
         }
@@ -298,6 +302,10 @@ public class PlayerUpdated : MonoBehaviour
         {
             this.gameObject.transform.parent = other.gameObject.transform;
         }
+        if(other.gameObject.tag == "DeadlyDoor")
+        {
+            playerSunBehavior.isDead = true;
+        }
     }
 
     public void CanMoveOut()
@@ -315,9 +323,9 @@ public class PlayerUpdated : MonoBehaviour
                 moveOffLadder = false;
             }
         }
-        if(other.gameObject.CompareTag("CheckPoint") && onGround && !spawnedInSafePoint)
+        if(other.gameObject.CompareTag("CheckPoint") && onGround && !spawnedInSafePoint && !playerSunBehavior.isDead)
         {
-            if((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) && !movingIntoCheckPoint && finishedMovingOutCheckPoint/*!movingOutCheckPoint*/ /*&& directionalInput.x == 0*/)
+            if((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) && !movingIntoCheckPoint && finishedMovingOutCheckPoint && !playerSunBehavior.isDead/*!movingOutCheckPoint*/ /*&& directionalInput.x == 0*/)
             {
                 movingIntoCheckPoint = true;
                 movingOutCheckPoint = false;
@@ -325,9 +333,10 @@ public class PlayerUpdated : MonoBehaviour
                 finishedMovingOutCheckPoint = false;
                 velocity.x = 0;
                 playerSunBehavior.isSafeFromSun = true;
+                audioSource.Play();
             }
             else if((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D) ||
-                Input.GetKeyDown(KeyCode.Space)) && movingIntoCheckPoint && finishedMovingIntoCheckPoint)
+                Input.GetKeyDown(KeyCode.Space)) && movingIntoCheckPoint && finishedMovingIntoCheckPoint && !playerSunBehavior.isDead)
             {
                 movingIntoCheckPoint = false;
                 movingOutCheckPoint = true;

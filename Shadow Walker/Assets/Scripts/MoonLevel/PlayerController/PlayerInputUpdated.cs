@@ -23,7 +23,7 @@ public class PlayerInputUpdated : MonoBehaviour
     GameObject movingParticalObject;
     ParticleSystem movingLeftParticle;
     GameObject movingLeftParticleObject;
-
+    
     float top = 0;
     float bottom = 0;
     float right = 0;
@@ -46,6 +46,8 @@ public class PlayerInputUpdated : MonoBehaviour
         movingPartical = movingParticalObject.GetComponent<ParticleSystem>();
         movingLeftParticleObject = transform.GetChild(3).gameObject;
         movingLeftParticle = movingLeftParticleObject.GetComponent<ParticleSystem>();
+
+        
     }
 
     void Update()

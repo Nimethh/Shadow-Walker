@@ -18,6 +18,7 @@ TagManager:
   - Sun
   - LevelEndPoint
   - Ladder
+  - DeadlyDoor
   layers:
   - Default
   - TransparentFX

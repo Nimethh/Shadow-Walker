@@ -86,7 +86,8 @@ public class PlayerSunBehaviorUpdated : AffectedByTheSun
     public override void UnderFullCover()
     {
         //Debug.Log("UnderFullCover()");
-        isDead = false;
+        if(!isDead)
+            isDead = false;
     }
 
     public override void UnderFullExposure()

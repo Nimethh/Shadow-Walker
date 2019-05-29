@@ -118,7 +118,7 @@ MonoBehaviour:
     aS: {fileID: 0}
   - name: Level Transition
     clip: {fileID: 8300000, guid: 35a4b308fd1cae94391af85c11337af5, type: 3}
-    volume: 0
+    volume: 1
     pitch: 1
     randomVolume: 0.1
     randomPitch: 0.1
@@ -127,7 +127,25 @@ MonoBehaviour:
     aS: {fileID: 0}
   - name: Drawbridge falling
     clip: {fileID: 8300000, guid: df52468acd703af49832bd0123949912, type: 3}
-    volume: 0
+    volume: 1
+    pitch: 1
+    randomVolume: 0.1
+    randomPitch: 0.1
+    loop: 0
+    playOnAwake: 0
+    aS: {fileID: 0}
+  - name: ShadowPlatform
+    clip: {fileID: 8300000, guid: df52468acd703af49832bd0123949912, type: 3}
+    volume: 1
+    pitch: 1
+    randomVolume: 0.1
+    randomPitch: 0.1
+    loop: 0
+    playOnAwake: 0
+    aS: {fileID: 0}
+  - name: SafePoint
+    clip: {fileID: 8300000, guid: df52468acd703af49832bd0123949912, type: 3}
+    volume: 1
     pitch: 1
     randomVolume: 0.1
     randomPitch: 0.1

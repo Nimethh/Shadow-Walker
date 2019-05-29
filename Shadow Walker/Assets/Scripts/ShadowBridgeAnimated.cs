@@ -9,7 +9,7 @@ public class ShadowBridgeAnimated : AffectedByTheSun
 
     private Animator anim;
 
-
+    AudioManager audioManager; // Added 28/5/2019
 
     void Start()
     {
@@ -33,7 +33,7 @@ public class ShadowBridgeAnimated : AffectedByTheSun
         //Debug.Log("Bridge JustGotCoveredFromSunlight()");
         //anim.SetTrigger("StartToAppear");
         anim.SetBool("ShouldBeOut", true);
-
+        audioManager.Play("ShadowPlatform");    //Added 28/5/2019
     }
 
     public override void JustGotExposedToSunlight()
@@ -46,6 +46,7 @@ public class ShadowBridgeAnimated : AffectedByTheSun
         //Debug.Log("Bridge JustGotExposedToSunlight()");
         //anim.SetTrigger("StartToDisappear");
         anim.SetBool("ShouldBeOut", false);
+        audioManager.Play("ShadowPlatform");    //Added 28/5/2019
 
     }
 
