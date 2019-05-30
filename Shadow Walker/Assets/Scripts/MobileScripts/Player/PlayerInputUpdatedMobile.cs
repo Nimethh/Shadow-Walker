@@ -135,7 +135,7 @@ public class PlayerInputUpdatedMobile : MonoBehaviour
         }
         //directionalInput.y = Input.GetAxisRaw("Vertical");
         directionalInput.y = (movementJoystick.Vertical() > 0.4f || movementJoystick.Vertical() < -0.4f) ? movementJoystick.Vertical() : 0;
-        Debug.Log(directionalInput.y);
+        //Debug.Log(directionalInput.y);
         //Debug.Log(directionalInput.x + " " + directionalInput.y);
     }
 
