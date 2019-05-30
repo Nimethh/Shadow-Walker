@@ -33,13 +33,13 @@ EditorBuildSettings:
     path: Assets/Scenes/Level4.unity
     guid: 40e0d9b101f15e145963065b76e709df
   - enabled: 0
-    path: Assets/Scenes/FinalScenes/Level2Mobile.unity
+    path: 
     guid: 264161e6ef6edfb4d8f4f97678bf49b4
   - enabled: 0
-    path: Assets/Scenes/FinalScenes/Level3Mobile.unity
+    path: 
     guid: a857e7a54e2e9ad458dfafa967adb651
   - enabled: 0
-    path: Assets/Scenes/FinalScenes/VideoSceneMobile.unity
+    path: Assets/Scenes/MobileScenes/VideoSceneMobile.unity
     guid: 1be4970ffe6f7974b8735631c68df665
   - enabled: 1
     path: Assets/Scenes/FinalScenes/Level1.unity
@@ -59,4 +59,34 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/FinalScenes/VideoScene.unity
     guid: 0a14c5ae71de58a4fa3dc2313af11649
+  - enabled: 1
+    path: Assets/Scenes/MobileScenes/Level1Mobile.unity
+    guid: 71b7acdcc0b8eab4bae093ff7ddade38
+  - enabled: 1
+    path: Assets/Scenes/MobileScenes/Level2Mobile.unity
+    guid: 2111edf69f80c2d4b9266c1fab0fd1a1
+  - enabled: 1
+    path: Assets/Scenes/MobileScenes/Level3Mobile.unity
+    guid: 89ef3a0a445d7a247beb331578ea750b
+  - enabled: 1
+    path: Assets/Scenes/MobileScenes/Level4Mobile.unity
+    guid: dc63c426b9d59ac4d8a0c49a99af5154
+  - enabled: 1
+    path: Assets/Scenes/MobileScenes/Level5Mobile.unity
+    guid: 5060b7da838cbbc47a4f4180c83de22e
+  - enabled: 1
+    path: Assets/Scenes/MobileScenes/Level6Mobile.unity
+    guid: 5879fd6193d4b2c4b94f3814f59c6aa5
+  - enabled: 1
+    path: Assets/Scenes/MobileScenes/Level7Mobile.unity
+    guid: 336ad0c2b903d5e4081b9b93d81d0b5d
+  - enabled: 1
+    path: Assets/Scenes/MobileScenes/Level8Mobile.unity
+    guid: f80a451538cb970469e7dfa5fd052ef5
+  - enabled: 1
+    path: Assets/Scenes/MobileScenes/Level9Mobile.unity
+    guid: 6f30fe545c941f54c895858873117a93
+  - enabled: 1
+    path: Assets/Scenes/MobileScenes/Level10Mobile.unity
+    guid: 9898d30fe7ae2454d833a9c97bdaec42
   m_configObjects: {}

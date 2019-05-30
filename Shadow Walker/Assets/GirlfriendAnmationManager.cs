@@ -14,7 +14,7 @@ public class GirlfriendAnmationManager : MonoBehaviour
         else if(gameObject.name == "Girlfriend" && other.gameObject.CompareTag("Player"))
         {
             Animator anim = GetComponent<Animator>();
-            anim.SetTrigger("Final");
+            anim.SetTrigger("Turn");
         }
     }
 }
