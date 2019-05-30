@@ -21,6 +21,7 @@ public class PlayerAnimationManagerMobile : MonoBehaviour
 
     bool moveTowardsTheNote = false;
     float speed = 0.75f;
+    bool teleport = false;
 
     void Start()
     {
@@ -387,6 +388,17 @@ public class PlayerAnimationManagerMobile : MonoBehaviour
         }
     }
 
+    public void TeleportMobile()
+    {
+        if (teleport)
+        {
+            GameObject spawnPos = GameObject.Find("Door1");
+            Vector3 spawnPosition = spawnPos.transform.position;
+            spawnPosition.z = -3;
+            transform.position = spawnPosition;
+
+        }
+    }
 
     public void StopCheckPointAnimation()
     {
@@ -406,6 +418,15 @@ public class PlayerAnimationManagerMobile : MonoBehaviour
         {
             if(other.gameObject.CompareTag("Girlfriend"))
                 animator.SetTrigger("Lean");
+        }
+    }
+
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        if (other.gameObject.name == "Teleport" && Input.GetKeyDown(KeyCode.W))
+        {
+            teleport = true;
+            other.gameObject.SetActive(false);
         }
     }
 }

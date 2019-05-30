@@ -65,13 +65,13 @@ public class PlayerUpdated : MonoBehaviour
     public bool moveOffLadder = false;
     [HideInInspector]
     public bool movingToNextLevel = false;
-    [HideInInspector]
+    //[HideInInspector]
     public bool movingIntoCheckPoint = false;
-    [HideInInspector]
+    //[HideInInspector]
     public bool movingOutCheckPoint = false;
     //[HideInInspector]
     public bool finishedMovingOutCheckPoint = true;
-    [HideInInspector]
+    //[HideInInspector]
     public bool finishedMovingIntoCheckPoint = true;
     [HideInInspector]
     public bool spawnedInSafePoint = false;
@@ -100,7 +100,10 @@ public class PlayerUpdated : MonoBehaviour
         jumpVelocity = Mathf.Abs(gravity) * timeToJumpPeak;
         endOfTheScene = GameObject.Find("SceneManager");
         particlesSpawnPos = transform.GetChild(0).gameObject;
-        spawnedInSafePoint = true;
+        if (SceneManager.GetActiveScene().name != "Level1")
+        {
+            spawnedInSafePoint = true;
+        }
         playerSunBehavior.isSafeFromSun = true;
         
         walkParticleRight = transform.GetChild(0).gameObject;
@@ -128,6 +131,13 @@ public class PlayerUpdated : MonoBehaviour
             velocity.y = 0;
         }
         Climb();
+
+        if(spawnedInSafePoint)
+        {
+            playerSunBehavior.isSafeFromSun = true;
+            playerSunBehavior.doneRespawning = false;
+            finishedMovingOutCheckPoint = false;
+        }
     }
 
     public void RightWalkingParticle()
@@ -155,9 +165,9 @@ public class PlayerUpdated : MonoBehaviour
     public void IsInSafePointBoolManager()
     {
         spawnedInSafePoint = true;
-        playerSunBehavior.isSafeFromSun = true;
-        playerSunBehavior.doneRespawning = false;
-        finishedMovingOutCheckPoint = false;
+        //playerSunBehavior.isSafeFromSun = true;
+        //playerSunBehavior.doneRespawning = false;
+        //finishedMovingOutCheckPoint = false;
     }
 
     public void MovingOutOFCheckPointBoolManager()
@@ -190,6 +200,7 @@ public class PlayerUpdated : MonoBehaviour
                 Input.GetKeyDown(KeyCode.Space)) && spawnedInSafePoint && !playerSunBehavior.isDead)
         {
             animator.SetBool("MovingOutofCheckPoint", true);
+            audioSource.Play();
         }
     }
 
@@ -327,10 +338,6 @@ public class PlayerUpdated : MonoBehaviour
         {
             this.gameObject.transform.parent = other.gameObject.transform;
         }
-        if(other.gameObject.tag == "DeadlyDoor")
-        {
-            playerSunBehavior.isDead = true;
-        }
     }
 
     public void CanMoveOut()
@@ -367,6 +374,7 @@ public class PlayerUpdated : MonoBehaviour
                 movingIntoCheckPoint = false;
                 movingOutCheckPoint = true;
                 velocity.x = 0;
+                audioSource.Play();
             }
         }
     }

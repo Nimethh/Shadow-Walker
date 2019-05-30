@@ -9,10 +9,15 @@ public class CheckPointMobile : MonoBehaviour
     PlayerUpdatedMobile player;
     //private SunController sunController;
     //public int sunCheckPointIndex;
+    AudioManager audioManager;
+
+    bool safePointSoundPlayer = false;
+
     void Start()
     {
         playerSunBehavior = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerSunBehaviorUpdatedMobile>();
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerUpdatedMobile>();
+        audioManager = FindObjectOfType<AudioManager>();
         //sunController = GameObject.FindGameObjectWithTag("Sun").GetComponent<SunController>();
         //sunCheckPointIndex = sunController.checkPointIndex;
     }
@@ -45,7 +50,14 @@ public class CheckPointMobile : MonoBehaviour
     {
         if(other.gameObject.CompareTag("Player"))
         {
-            playerSunBehavior.spawningPos = this.gameObject.transform.position;
+            Vector3 position = this.gameObject.transform.position;
+            position.z = -3;
+            playerSunBehavior.spawningPos = position;
+            if (!safePointSoundPlayer)
+            {
+                audioManager.Play("SafePoint");
+                safePointSoundPlayer = true;
+            }
         }
     }
 

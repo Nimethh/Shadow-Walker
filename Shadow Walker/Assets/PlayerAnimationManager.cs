@@ -18,10 +18,11 @@ public class PlayerAnimationManager : MonoBehaviour
     GameObject note;
     Vector3 notePosition;
     GameObject bedCollider;
-
+    GameObject character;
     bool moveTowardsTheNote = false;
     float speed = 0.75f;
-
+    bool teleport = false;
+    
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -29,7 +30,6 @@ public class PlayerAnimationManager : MonoBehaviour
         playerInput = GetComponent<PlayerInputUpdated>();
         playerSunBehavior = GetComponent<PlayerSunBehaviorUpdated>();
         controller = GetComponent<Controller2DUpdated>();
-        
         if (SceneManager.GetActiveScene().name == "Level1")
         {
             bedCollider = GameObject.Find("BedCollider");
@@ -237,6 +237,18 @@ public class PlayerAnimationManager : MonoBehaviour
         }
     }
 
+    public void Teleport()
+    {
+        if (teleport)
+        {
+            GameObject spawnPos = GameObject.Find("Door1");
+            Vector3 spawnPosition = spawnPos.transform.position;
+            spawnPosition.z = -3;
+            transform.position = spawnPosition;
+
+        }
+    }
+
     void DeathAnimationCheck()
     {
         if (playerSunBehavior.isDead)
@@ -324,6 +336,15 @@ public class PlayerAnimationManager : MonoBehaviour
                 PlayerUpdated playerUpdated = GetComponent<PlayerUpdated>();
                 playerUpdated.enabled = false;
             }
+        }
+        
+    }
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        if (other.gameObject.name == "Teleport" && Input.GetKeyDown(KeyCode.W))
+        {
+            teleport = true;
+            other.gameObject.SetActive(false);
         }
     }
 }

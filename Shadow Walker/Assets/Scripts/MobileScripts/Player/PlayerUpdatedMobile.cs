@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerUpdatedMobile : MonoBehaviour
 {
@@ -99,7 +100,10 @@ public class PlayerUpdatedMobile : MonoBehaviour
         jumpVelocity = Mathf.Abs(gravity) * timeToJumpPeak;
         endOfTheScene = GameObject.Find("SceneManager");
         particlesSpawnPos = transform.GetChild(0).gameObject;
-        spawnedInSafePoint = true;
+        if (SceneManager.GetActiveScene().name != "Level1Mobile")
+        {
+            spawnedInSafePoint = true;
+        }
         playerSunBehavior.isSafeFromSun = true;
         
         walkParticleRight = transform.GetChild(0).gameObject;
@@ -127,15 +131,43 @@ public class PlayerUpdatedMobile : MonoBehaviour
             velocity.y = 0;
         }
         Climb();
+        if (spawnedInSafePoint)
+        {
+            playerSunBehavior.isSafeFromSun = true;
+            playerSunBehavior.doneRespawning = false;
+            finishedMovingOutCheckPoint = false;
+        }
     }
 
 
     public void IsInSafePointBoolManager()
     {
         spawnedInSafePoint = true;
-        playerSunBehavior.isSafeFromSun = true;
-        playerSunBehavior.doneRespawning = false;
-        finishedMovingOutCheckPoint = false;
+        //playerSunBehavior.isSafeFromSun = true;
+        //playerSunBehavior.doneRespawning = false;
+        //finishedMovingOutCheckPoint = false;
+    }
+
+    public void RightWalkingParticle()
+    {
+        //Instantiate(walkParticleRight, particlesSpawnPos.transform);
+        walkRightParticleSystem.Play();
+    }
+
+    public void LeftWalkingParticle()
+    {
+        //Instantiate(walkParticleLeft, particlesSpawnPos.transform);
+        walkLeftParticleSystem.Play();
+    }
+
+    public void JumpParticle()
+    {
+        jumpParticleSystem.Play();
+    }
+
+    public void LandParticle()
+    {
+        landParticleSystem.Play();
     }
 
     public void MovingOutOFCheckPointBoolManager()
@@ -167,6 +199,7 @@ public class PlayerUpdatedMobile : MonoBehaviour
         if ((movementJoystick.Vertical() != 0 || movementJoystick.Horizontal() != 0) && spawnedInSafePoint && !playerSunBehavior.isDead)
         {
             animator.SetBool("MovingOutofCheckPoint", true);
+            audioSource.Play();
         }
     }
 
@@ -321,10 +354,6 @@ public class PlayerUpdatedMobile : MonoBehaviour
         {
             this.gameObject.transform.parent = other.gameObject.transform;
         }
-        if (other.gameObject.tag == "DeadlyDoor")
-        {
-            playerSunBehavior.isDead = true;
-        }
     }
 
     public void CanMoveOut()
@@ -359,6 +388,7 @@ public class PlayerUpdatedMobile : MonoBehaviour
                 movingIntoCheckPoint = false;
                 movingOutCheckPoint = true;
                 velocity.x = 0;
+                audioSource.Play();
             }
         }
     }
