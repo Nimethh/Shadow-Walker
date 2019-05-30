@@ -19,10 +19,10 @@ public class PlayerInputUpdatedMobile : MonoBehaviour
     float moveOffLadderHoldTimer = 0.4f;
     float moveOffLadderHoldCooldown = 0.4f;
 
-    ParticleSystem movingPartical;
-    GameObject movingParticalObject;
-    ParticleSystem movingLeftParticle;
-    GameObject movingLeftParticleObject;
+    //ParticleSystem movingPartical;
+    //GameObject movingParticalObject;
+    //ParticleSystem movingLeftParticle;
+    //GameObject movingLeftParticleObject;
 
     float top = 0;
     float bottom = 0;
@@ -41,13 +41,13 @@ public class PlayerInputUpdatedMobile : MonoBehaviour
         moveOffLadderCooldown = moveOffLadderTimer;
         moveOffLadderHoldCooldown = moveOffLadderHoldTimer;
 
-        Cursor.visible = false;
+        //Cursor.visible = false;
         FindPlayerBounds();
 
-        movingParticalObject = transform.GetChild(2).gameObject;
-        movingPartical = movingParticalObject.GetComponent<ParticleSystem>();
-        movingLeftParticleObject = transform.GetChild(3).gameObject;
-        movingLeftParticle = movingLeftParticleObject.GetComponent<ParticleSystem>();
+        //movingParticalObject = transform.GetChild(2).gameObject;
+        //movingPartical = movingParticalObject.GetComponent<ParticleSystem>();
+        //movingLeftParticleObject = transform.GetChild(3).gameObject;
+        //movingLeftParticle = movingLeftParticleObject.GetComponent<ParticleSystem>();
     }
 
     //void Update()
@@ -115,16 +115,16 @@ public class PlayerInputUpdatedMobile : MonoBehaviour
 
     }
 
-    public void PlayMovingRightParticle()
-    {
-        movingPartical.Play();
-        // Instantiate(movingParticle);
-    }
+    //public void PlayMovingRightParticle()
+    //{
+    //    movingPartical.Play();
+    //    // Instantiate(movingParticle);
+    //}
 
-    public void PlayMovingLeftParticle()
-    {
-        movingLeftParticle.Play();
-    }
+    //public void PlayMovingLeftParticle()
+    //{
+    //    movingLeftParticle.Play();
+    //}
 
     void MovementCheck()
     {
@@ -135,7 +135,7 @@ public class PlayerInputUpdatedMobile : MonoBehaviour
         }
         //directionalInput.y = Input.GetAxisRaw("Vertical");
         directionalInput.y = (movementJoystick.Vertical() > 0.4f || movementJoystick.Vertical() < -0.4f) ? movementJoystick.Vertical() : 0;
-
+        Debug.Log(directionalInput.y);
         //Debug.Log(directionalInput.x + " " + directionalInput.y);
     }
 

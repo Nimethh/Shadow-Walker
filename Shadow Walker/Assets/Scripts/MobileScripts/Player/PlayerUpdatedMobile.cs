@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlayerUpdatedMobile : MonoBehaviour
 {
@@ -36,13 +34,23 @@ public class PlayerUpdatedMobile : MonoBehaviour
     private Vector2 directionalInput;
 
     [SerializeField]
-    GameObject LandParticle;
+    GameObject landParticle;
+    ParticleSystem landParticleSystem;
+    [SerializeField]
+    GameObject jumpParticle;
+    ParticleSystem jumpParticleSystem;
+    [SerializeField]
+    GameObject walkParticleLeft;
+    ParticleSystem walkLeftParticleSystem;
+    [SerializeField]
+    GameObject walkParticleRight;
+    ParticleSystem walkRightParticleSystem;
     GameObject particlesSpawnPos;
 
 
     [HideInInspector]
     public bool jumping = false;
-    [HideInInspector]
+    //[HideInInspector]
     public bool onGround = false;
     [HideInInspector]
     public bool falling = false;
@@ -56,30 +64,34 @@ public class PlayerUpdatedMobile : MonoBehaviour
     public bool moveOffLadder = false;
     [HideInInspector]
     public bool movingToNextLevel = false;
-    [HideInInspector] public bool movingIntoCheckPoint = false;
-    [HideInInspector] public bool movingOutCheckPoint = false;
-    [HideInInspector] public bool finishedMovingOutCheckPoint = true;
-    [HideInInspector] public bool finishedMovingIntoCheckPoint = true;
-    [HideInInspector] public bool spawnedInSafePoint = false;
-
+    [HideInInspector]
+    public bool movingIntoCheckPoint = false;
+    [HideInInspector]
+    public bool movingOutCheckPoint = false;
+    [HideInInspector]
+    public bool finishedMovingOutCheckPoint = true;
+    [HideInInspector]
+    public bool finishedMovingIntoCheckPoint = true;
+    [HideInInspector]
+    public bool spawnedInSafePoint = false;
 
     Controller2DUpdatedMobile controller;
     Animator animator;
     GameObject endOfTheScene;
     PlayerSunBehaviorUpdatedMobile playerSunBehavior;
 
+    AudioSource audioSource;    // Added 28/5/2019
+    [SerializeField] VirtualMovementJoystick movementJoystick;
     //Instantiate them instead.
-    ParticleSystem jumpParticle;
-    GameObject jumpParticleObject;
-    ParticleSystem landParticle;
-    GameObject landParticleObject;
-
-
-    public VirtualMovementJoystick movementJoystick;
-
+    //ParticleSystem jumpParticle;
+    //GameObject jumpParticleObject;
+    //ParticleSystem landParticle;
+    //GameObject landParticleObject;
 
     void Start()
     {
+        audioSource = GetComponent<AudioSource>();  // Added 28/5/2019
+
         controller = GetComponent<Controller2DUpdatedMobile>();
         playerSunBehavior = GetComponent<PlayerSunBehaviorUpdatedMobile>();
         animator = GetComponent<Animator>();
@@ -87,13 +99,22 @@ public class PlayerUpdatedMobile : MonoBehaviour
         jumpVelocity = Mathf.Abs(gravity) * timeToJumpPeak;
         endOfTheScene = GameObject.Find("SceneManager");
         particlesSpawnPos = transform.GetChild(0).gameObject;
-
         spawnedInSafePoint = true;
         playerSunBehavior.isSafeFromSun = true;
+        
+        walkParticleRight = transform.GetChild(0).gameObject;
+        walkRightParticleSystem = walkParticleRight.GetComponent<ParticleSystem>();
+        walkParticleLeft = transform.GetChild(1).gameObject;
+        walkLeftParticleSystem = walkParticleLeft.GetComponent<ParticleSystem>();
+        jumpParticle = transform.GetChild(2).gameObject;
+        jumpParticleSystem = jumpParticle.GetComponent<ParticleSystem>();
+        landParticle = transform.GetChild(3).gameObject;
+        landParticleSystem = landParticle.GetComponent<ParticleSystem>();
     }
 
     void Update()
     {
+
         CheckSpawnMovingOut();
         CalculateVelocity();
         HandleWallSliding();
@@ -107,6 +128,7 @@ public class PlayerUpdatedMobile : MonoBehaviour
         }
         Climb();
     }
+
 
     public void IsInSafePointBoolManager()
     {
@@ -142,20 +164,18 @@ public class PlayerUpdatedMobile : MonoBehaviour
 
     void CheckSpawnMovingOut()
     {
-        if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D) ||
-                Input.GetKeyDown(KeyCode.Space)) && spawnedInSafePoint)
+        if ((movementJoystick.Vertical() != 0 || movementJoystick.Horizontal() != 0) && spawnedInSafePoint && !playerSunBehavior.isDead)
         {
             animator.SetBool("MovingOutofCheckPoint", true);
         }
     }
-
 
     public void OnJumpInputDown()
     {
         if (controller.collisionInfo.below && !playerSunBehavior.isDead && !spawnedInSafePoint && finishedMovingOutCheckPoint /*!movingOutCheckPoint*/)
         {
             jumping = true;
-            Instantiate(jumpParticle, particlesSpawnPos.transform);
+            //Instantiate(jumpParticle, particlesSpawnPos.transform);
             velocity.y = jumpVelocity;
             landing = false;
             //jumpParticle.Play(); // Instantiate.
@@ -196,38 +216,27 @@ public class PlayerUpdatedMobile : MonoBehaviour
             onGround = false;
     }
 
-    //public void SetBools()
-    //{
-    //    if (jumping == true && velocity.y < 0)
-    //    {
-    //        falling = true;
-    //        jumping = false;
-    //    }
-    //    if (velocity.y < 0 && !controller.collisionInfo.below && !controller.collisionInfo.climbing && moveOffLadder)
-    //    {
-    //        falling = true;
-    //        onGround = false;
-    //        jumping = false;
-    //    }
-    //    if (velocity.y < 0 && controller.collisionInfo.below)
-    //    {
-    //        if (landing == false)
-    //        {
-    //            landing = true;
-    //            animator.SetTrigger("Landing");
-    //            landed = true;
-    //        }
-    //        falling = false;
-    //        onGround = true;
-    //    }
-    //    else if (!controller.collisionInfo.below)
-    //    {
-    //        landing = false;
-    //        onGround = false;
-    //    }
-    //    else
-    //        onGround = false;
-    //}
+    public void RightWalkingParticleMobile()
+    {
+        //Instantiate(walkParticleRight, particlesSpawnPos.transform);
+        walkRightParticleSystem.Play();
+    }
+
+    public void LeftWalkingParticleMobile()
+    {
+        //Instantiate(walkParticleLeft, particlesSpawnPos.transform);
+        walkLeftParticleSystem.Play();
+    }
+
+    public void JumpParticleMobile()
+    {
+        jumpParticleSystem.Play();
+    }
+
+    public void LandParticleMobile()
+    {
+        landParticleSystem.Play();
+    }
 
     public void Climb()
     {
@@ -273,21 +282,6 @@ public class PlayerUpdatedMobile : MonoBehaviour
 
     }
 
-    //void CalculateVelocity()
-    //{
-    //    if (!playerSunBehavior.isDead && playerSunBehavior.doneRespawning )
-    //    {
-    //        if (!movingIntoCheckPoint && !movingOutCheckPoint)
-    //        {
-    //            float targetVelocityX = directionalInput.x * moveSpeed;
-    //            velocity.x = Mathf.SmoothDamp(velocity.x, targetVelocityX, ref velocityXSmoothing, (controller.collisionInfo.below) ? accelerationTimeOnGroundTurn : accelerationTimeInAirTurn);
-    //        }
-    //    }
-    //    if (controller.collisionInfo.climbing == false)
-    //    {
-    //        velocity.y += gravity * Time.deltaTime;
-    //    }
-    //}
     void CalculateVelocity()
     {
         if (!playerSunBehavior.isDead && playerSunBehavior.doneRespawning)
@@ -312,27 +306,6 @@ public class PlayerUpdatedMobile : MonoBehaviour
         }
     }
 
-    void PlayJumpParticle()
-    {
-        // Instantiate
-    }
-
-    //void OnTriggerEnter2D(Collider2D other)
-    //{
-    //    //if(other.gameObject.CompareTag("LevelEndPoint"))
-    //    //{
-    //    //    movingToNextLevel = true;
-    //    //    //animator.SetTrigger("MoveToNextLevel");
-    //    //}
-    //    if (other.gameObject.CompareTag("Ground"))
-    //    {
-    //        Instantiate(LandParticle, particlesSpawnPos.transform);
-    //    }
-    //    if (other.gameObject.tag == "MovingPlatform")
-    //    {
-    //        this.gameObject.transform.parent = other.gameObject.transform;
-    //    }
-    //}
     void OnTriggerEnter2D(Collider2D other)
     {
         //if(other.gameObject.CompareTag("LevelEndPoint"))
@@ -340,13 +313,17 @@ public class PlayerUpdatedMobile : MonoBehaviour
         //    movingToNextLevel = true;
         //    //animator.SetTrigger("MoveToNextLevel");
         //}
-        if (other.gameObject.CompareTag("Ground") && !spawnedInSafePoint)
+        if ((other.gameObject.CompareTag("Ground") || other.gameObject.CompareTag("Through")) && !spawnedInSafePoint)
         {
-            Instantiate(LandParticle, particlesSpawnPos.transform);
+            //Instantiate(landParticle, particlesSpawnPos.transform);
         }
         if (other.gameObject.tag == "MovingPlatform")
         {
             this.gameObject.transform.parent = other.gameObject.transform;
+        }
+        if (other.gameObject.tag == "DeadlyDoor")
+        {
+            playerSunBehavior.isDead = true;
         }
     }
 
@@ -354,7 +331,6 @@ public class PlayerUpdatedMobile : MonoBehaviour
     {
         finishedMovingIntoCheckPoint = true;
     }
-
 
     private void OnTriggerStay2D(Collider2D other)
     {
@@ -366,9 +342,9 @@ public class PlayerUpdatedMobile : MonoBehaviour
                 moveOffLadder = false;
             }
         }
-        if(other.gameObject.CompareTag("CheckPoint") && onGround && !spawnedInSafePoint)
+        if (other.gameObject.CompareTag("CheckPoint") && onGround && !spawnedInSafePoint && !playerSunBehavior.isDead)
         {
-            if((movementJoystick.Vertical() > 0.4f) && !movingIntoCheckPoint && !movingOutCheckPoint)
+            if ((movementJoystick.Vertical() > 0.4f) && !movingIntoCheckPoint && finishedMovingOutCheckPoint && !playerSunBehavior.isDead/*!movingOutCheckPoint*/ /*&& directionalInput.x == 0*/)
             {
                 movingIntoCheckPoint = true;
                 movingOutCheckPoint = false;
@@ -376,8 +352,9 @@ public class PlayerUpdatedMobile : MonoBehaviour
                 finishedMovingOutCheckPoint = false;
                 velocity.x = 0;
                 playerSunBehavior.isSafeFromSun = true;
+                audioSource.Play();
             }
-            else if(movementJoystick.Vertical() != 0 || movementJoystick.Horizontal() != 0 && movingIntoCheckPoint)
+            else if ((movementJoystick.Vertical() != 0 || movementJoystick.Horizontal() != 0) && movingIntoCheckPoint && finishedMovingIntoCheckPoint && !playerSunBehavior.isDead)
             {
                 movingIntoCheckPoint = false;
                 movingOutCheckPoint = true;
@@ -392,9 +369,8 @@ public class PlayerUpdatedMobile : MonoBehaviour
         {
             onLadder = false;
             moveOffLadder = true;
-            //animator.SetBool("Climbing", false);
         }
-        if(other.gameObject.CompareTag("MovingPlatform"))
+        if (other.gameObject.CompareTag("MovingPlatform"))
         {
             this.gameObject.transform.parent = null;
         }

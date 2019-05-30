@@ -11,6 +11,8 @@ public class CheckPoint : MonoBehaviour
     //public int sunCheckPointIndex;
     AudioManager audioManager;
 
+    BoxCollider2D collider;
+
     void Start()
     {
         playerSunBehavior = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerSunBehaviorUpdated>();
@@ -18,6 +20,7 @@ public class CheckPoint : MonoBehaviour
         audioManager = FindObjectOfType<AudioManager>();
         //sunController = GameObject.FindGameObjectWithTag("Sun").GetComponent<SunController>();
         //sunCheckPointIndex = sunController.checkPointIndex;
+        collider = this.gameObject.GetComponent<BoxCollider2D>();
     }
 
     void Update()
@@ -52,6 +55,7 @@ public class CheckPoint : MonoBehaviour
             position.z = -3;
             playerSunBehavior.spawningPos = position;
             audioManager.Play("SafePoint");
+            //collider.enabled = false;
         }
     }
 

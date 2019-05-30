@@ -36,7 +36,7 @@ public class VirtualSunJoystick : MonoBehaviour, IDragHandler, IPointerUpHandler
             inputVector = new Vector3(x, y, 0);
             //inputVector = new Vector3(pos.x * 2f, 0f, pos.y * 2f);
             inputVector = (inputVector.magnitude > 1.0f) ? inputVector.normalized : inputVector;
-            Debug.Log(inputVector);
+            //Debug.Log(inputVector);
 
             innerCircle.rectTransform.anchoredPosition = new Vector3(inputVector.x * (outerCircle.rectTransform.sizeDelta.x / 2.5f), inputVector.y * (outerCircle.rectTransform.sizeDelta.y / 2.5f));
         }

@@ -8,14 +8,19 @@ public class ShadowBridgeAnimated : AffectedByTheSun
     public bool bridgeActive;
 
     private Animator anim;
-
+    [SerializeField]
     AudioManager audioManager; // Added 28/5/2019
+
+    GameObject player;
 
     void Start()
     {
         anim = GetComponent<Animator>();
         anim.SetBool("ShouldBeOut", true);
         AffectedByTheSunScriptStart();
+
+        audioManager = FindObjectOfType<AudioManager>();    //Added 28/5/2019
+        player = GameObject.Find("Player");
     }
 
     void Update()
@@ -47,7 +52,6 @@ public class ShadowBridgeAnimated : AffectedByTheSun
         //anim.SetTrigger("StartToDisappear");
         anim.SetBool("ShouldBeOut", false);
         audioManager.Play("ShadowPlatform");    //Added 28/5/2019
-
     }
 
     public override void UnderFullCover()

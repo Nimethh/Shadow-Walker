@@ -7,9 +7,11 @@ public class PressurePlatePairMovePlatform2 : MonoBehaviour
     //public MovingPlatformWithEasingAndShakePressurePlatePair platform;
     public PressurePlatform platform;
 
-    [SerializeField] private SpriteRenderer spriteRenderer;
+    //[SerializeField] private SpriteRenderer spriteRenderer;
     [SerializeField] private Sprite plate;
     [SerializeField] private Sprite plateActivated;
+
+    [SerializeField] private Animator anim;
 
     public enum PlatformDirection
     {
@@ -25,7 +27,8 @@ public class PressurePlatePairMovePlatform2 : MonoBehaviour
         if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("Box"))
         {
             platform.activated = true;
-            spriteRenderer.sprite = plateActivated;
+            //spriteRenderer.sprite = plateActivated;
+            anim.SetBool("ShouldBeDown", true);
             //Added 2019-05-15
             FindObjectOfType<AudioManager>().Play("PressurePlate");
 
@@ -60,7 +63,9 @@ public class PressurePlatePairMovePlatform2 : MonoBehaviour
         if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("Box"))
         {
             platform.activated = false;
-            spriteRenderer.sprite = plate;
+            //spriteRenderer.sprite = plate;
+            anim.SetBool("ShouldBeDown", false);
+
 
         }
     }

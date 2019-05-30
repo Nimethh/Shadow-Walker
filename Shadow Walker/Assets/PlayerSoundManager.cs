@@ -33,7 +33,7 @@ public class PlayerSoundManager : MonoBehaviour
         WalkSound();
         PlayClimbingSound();
         JumpSound();
-        DeathSound();
+        //DeathSound();
         LandingSound();
     }
 
@@ -55,10 +55,10 @@ public class PlayerSoundManager : MonoBehaviour
         //{
         //    FindObjectOfType<AudioManager>().Play("Death");
         //}
-        if (playerSunBehavior.isDead)
-        {
+        //if (playerSunBehavior.isDead)
+        //{
             audioManager.Play("Death");
-        }
+        //}
     }
 
     public void LandingSound()

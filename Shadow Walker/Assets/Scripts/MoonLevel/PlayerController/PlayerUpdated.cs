@@ -34,13 +34,17 @@ public class PlayerUpdated : MonoBehaviour
     private Vector2 directionalInput;
 
     [SerializeField]
-    GameObject LandParticle;
+    GameObject landParticle;
+    ParticleSystem landParticleSystem;
     [SerializeField]
     GameObject jumpParticle;
+    ParticleSystem jumpParticleSystem;
     [SerializeField]
     GameObject walkParticleLeft;
+    ParticleSystem walkLeftParticleSystem;
     [SerializeField]
     GameObject walkParticleRight;
+    ParticleSystem walkRightParticleSystem;
     GameObject particlesSpawnPos;
 
 
@@ -97,6 +101,15 @@ public class PlayerUpdated : MonoBehaviour
         particlesSpawnPos = transform.GetChild(0).gameObject;
         spawnedInSafePoint = true;
         playerSunBehavior.isSafeFromSun = true;
+        
+        walkParticleRight = transform.GetChild(0).gameObject;
+        walkRightParticleSystem = walkParticleRight.GetComponent<ParticleSystem>();
+        walkParticleLeft = transform.GetChild(1).gameObject;
+        walkLeftParticleSystem = walkParticleLeft.GetComponent<ParticleSystem>();
+        jumpParticle = transform.GetChild(2).gameObject;
+        jumpParticleSystem = jumpParticle.GetComponent<ParticleSystem>();
+        landParticle = transform.GetChild(3).gameObject;
+        landParticleSystem = landParticle.GetComponent<ParticleSystem>();
     }
 
     void Update()
@@ -116,6 +129,27 @@ public class PlayerUpdated : MonoBehaviour
         Climb();
     }
 
+    public void RightWalkingParticle()
+    {
+        //Instantiate(walkParticleRight, particlesSpawnPos.transform);
+        walkRightParticleSystem.Play();
+    }
+
+    public void LeftWalkingParticle()
+    {
+        //Instantiate(walkParticleLeft, particlesSpawnPos.transform);
+        walkLeftParticleSystem.Play();
+    }
+
+    public void JumpParticle()
+    {
+        jumpParticleSystem.Play();
+    }
+
+    public void LandParticle()
+    {
+        landParticleSystem.Play();
+    }
 
     public void IsInSafePointBoolManager()
     {
@@ -163,7 +197,7 @@ public class PlayerUpdated : MonoBehaviour
         if (controller.collisionInfo.below && !playerSunBehavior.isDead && !spawnedInSafePoint && finishedMovingOutCheckPoint /*!movingOutCheckPoint*/)
         {
             jumping = true;
-            Instantiate(jumpParticle, particlesSpawnPos.transform);
+            //Instantiate(jumpParticle, particlesSpawnPos.transform);
             velocity.y = jumpVelocity;
             landing = false;
             //jumpParticle.Play(); // Instantiate.
@@ -202,16 +236,6 @@ public class PlayerUpdated : MonoBehaviour
         }
         else
             onGround = false;
-    }
-
-    public void RightWalkingParticle()
-    {
-        Instantiate(walkParticleRight, particlesSpawnPos.transform);
-    }
-
-    public void LeftWalkingParticle()
-    {
-        Instantiate(walkParticleLeft, particlesSpawnPos.transform);
     }
 
     public void Climb()
@@ -294,9 +318,9 @@ public class PlayerUpdated : MonoBehaviour
         //    movingToNextLevel = true;
         //    //animator.SetTrigger("MoveToNextLevel");
         //}
-        if (other.gameObject.CompareTag("Ground") && !spawnedInSafePoint)
+        if ((other.gameObject.CompareTag("Ground") || other.gameObject.CompareTag("Through")) && !spawnedInSafePoint)
         {
-            Instantiate(LandParticle, particlesSpawnPos.transform);
+            //Instantiate(LandParticle, particlesSpawnPos.transform);
         }
         if (other.gameObject.tag == "MovingPlatform")
         {
@@ -336,7 +360,8 @@ public class PlayerUpdated : MonoBehaviour
                 audioSource.Play();
             }
             else if((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D) ||
-                Input.GetKeyDown(KeyCode.Space)) && movingIntoCheckPoint && finishedMovingIntoCheckPoint && !playerSunBehavior.isDead)
+            Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.LeftArrow) 
+            || Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.Space)) && movingIntoCheckPoint && finishedMovingIntoCheckPoint && !playerSunBehavior.isDead)
             {
                 movingIntoCheckPoint = false;
                 movingOutCheckPoint = true;

@@ -19,6 +19,13 @@ public class SunController : MonoBehaviour
 
     [Range(0f, 1f)][SerializeField]
     private float sunSpeed = 0.2f;
+    
+    float right = 0;
+    float left = 0;
+
+    [SerializeField]
+    bool restrictMovement = false;
+
     private void Start()
     {
         //lineRenderer.positionCount = numberOfPoints;
@@ -26,6 +33,7 @@ public class SunController : MonoBehaviour
         startT = index / (float)numberOfPoints * sunSpeed;
         transform.position = CalculateQuadraticBezeirPoint(startT, points[0].position, points[1].position, points[2].position);
         audioManager = FindObjectOfType<AudioManager>();
+        FindSunBounds();
         //DrawQuadraticCurve();
     }
 
@@ -55,21 +63,70 @@ public class SunController : MonoBehaviour
         }
 
     }
-    
+
+    public void FindSunBounds()
+    {
+        right = Camera.main.ViewportToWorldPoint(new Vector3(1, 1, Camera.main.nearClipPlane)).x;
+        left = Camera.main.ViewportToWorldPoint(new Vector3(0, 0, Camera.main.nearClipPlane)).x;
+    }
+
+    public void CheckSunBounds()
+    {
+        //Right
+        if (transform.position.x > right - 0.2f)// && transform.position.x > left)
+        {
+            transform.position = new Vector3(right - 0.2f, transform.position.y, transform.position.z);
+        }
+
+        //Left
+        if (transform.position.x < left + 0.2f)
+        {
+            transform.position = new Vector3(left + 0.2f, transform.position.y, transform.position.z);
+        }
+
+    }
+
+
     void MoveRight()
     {
-        index++;
-        float t = index / (float)numberOfPoints * sunSpeed;
-        transform.position = CalculateQuadraticBezeirPoint(t, points[0].position, points[1].position, points[2].position);
-        audioManager.Play("SunMoving");
+        if (restrictMovement)
+        {
+            if (transform.position.x < right - 0.2f)
+            {
+                index++;
+                float t = index / (float)numberOfPoints * sunSpeed;
+                transform.position = CalculateQuadraticBezeirPoint(t, points[0].position, points[1].position, points[2].position);
+                audioManager.Play("SunMoving");
+            }
+        }
+        else
+        {
+            index++;
+            float t = index / (float)numberOfPoints * sunSpeed;
+            transform.position = CalculateQuadraticBezeirPoint(t, points[0].position, points[1].position, points[2].position);
+            audioManager.Play("SunMoving");
+        }
     }
 
     void MoveLeft()
     {
-        index--;
-        float t = index / (float)numberOfPoints * sunSpeed;
-        transform.position = CalculateQuadraticBezeirPoint(t, points[0].position, points[1].position, points[2].position);
-        audioManager.Play("SunMoving");
+        if (restrictMovement)
+        {
+            if (transform.position.x > left + 0.2f)
+            {
+                index--;
+                float t = index / (float)numberOfPoints * sunSpeed;
+                transform.position = CalculateQuadraticBezeirPoint(t, points[0].position, points[1].position, points[2].position);
+                audioManager.Play("SunMoving");
+            }
+        }
+        else
+        {
+            index--;
+            float t = index / (float)numberOfPoints * sunSpeed;
+            transform.position = CalculateQuadraticBezeirPoint(t, points[0].position, points[1].position, points[2].position);
+            audioManager.Play("SunMoving");
+        }
     }
 
     void Rotate()

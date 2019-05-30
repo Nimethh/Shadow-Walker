@@ -87,7 +87,7 @@ public class Controller2DUpdatedMobile : RaycastController
                     {
                         continue;
                     }
-                    if (playerInput.y == -1 && collisionInfo.canClimbOld == true)
+                    if (playerInput.y > -0.8f && collisionInfo.canClimbOld == true)
                     {
                         collisionInfo.fallingThroughPlatform = true;
                         Invoke("ResetFallingThroughPlatform", .5f);
@@ -135,7 +135,7 @@ public class Controller2DUpdatedMobile : RaycastController
                     {
                         continue;
                     }
-                    if (playerInput.y == -1 && playerInput.x == 0 && collisionInfo.canClimbOld == true)
+                    if (playerInput.y < -0.8f && playerInput.x == 0 && collisionInfo.canClimbOld == true)
                     {
                         collisionInfo.fallingThroughPlatform = true;
                         Invoke("ResetFallingThroughPlatform", .5f);

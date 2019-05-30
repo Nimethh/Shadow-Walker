@@ -19,10 +19,10 @@ public class PlayerInputUpdated : MonoBehaviour
     float moveOffLadderHoldTimer = 0.4f;
     float moveOffLadderHoldCooldown = 0.4f;
 
-    ParticleSystem movingPartical;
-    GameObject movingParticalObject;
-    ParticleSystem movingLeftParticle;
-    GameObject movingLeftParticleObject;
+    //ParticleSystem movingPartical;
+    //GameObject movingParticalObject;
+    //ParticleSystem movingLeftParticle;
+    //GameObject movingLeftParticleObject;
     
     float top = 0;
     float bottom = 0;
@@ -42,10 +42,10 @@ public class PlayerInputUpdated : MonoBehaviour
         Cursor.visible = false;
         FindPlayerBounds();
 
-        movingParticalObject = transform.GetChild(2).gameObject;
-        movingPartical = movingParticalObject.GetComponent<ParticleSystem>();
-        movingLeftParticleObject = transform.GetChild(3).gameObject;
-        movingLeftParticle = movingLeftParticleObject.GetComponent<ParticleSystem>();
+        //movingParticalObject = transform.GetChild(2).gameObject;
+        //movingPartical = movingParticalObject.GetComponent<ParticleSystem>();
+        //movingLeftParticleObject = transform.GetChild(3).gameObject;
+        //movingLeftParticle = movingLeftParticleObject.GetComponent<ParticleSystem>();
 
         
     }
@@ -98,16 +98,16 @@ public class PlayerInputUpdated : MonoBehaviour
 
     }
 
-    public void PlayMovingRightParticle()
-    {
-        movingPartical.Play();
-        // Instantiate(movingParticle);
-    }
+    //public void PlayMovingRightParticle()
+    //{
+    //    movingPartical.Play();
+    //    // Instantiate(movingParticle);
+    //}
 
-    public void PlayMovingLeftParticle()
-    {
-        movingLeftParticle.Play();
-    }
+    //public void PlayMovingLeftParticle()
+    //{
+    //    movingLeftParticle.Play();
+    //}
 
     void MovementCheck()
     {
