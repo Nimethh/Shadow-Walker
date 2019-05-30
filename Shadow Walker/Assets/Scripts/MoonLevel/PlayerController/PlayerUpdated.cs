@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerUpdated : MonoBehaviour
 {
@@ -68,7 +69,7 @@ public class PlayerUpdated : MonoBehaviour
     public bool movingIntoCheckPoint = false;
     [HideInInspector]
     public bool movingOutCheckPoint = false;
-    [HideInInspector]
+    //[HideInInspector]
     public bool finishedMovingOutCheckPoint = true;
     [HideInInspector]
     public bool finishedMovingIntoCheckPoint = true;

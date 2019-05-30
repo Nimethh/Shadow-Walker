@@ -19,6 +19,7 @@ public class SceneTransition : MonoBehaviour
 
     [SerializeField]
     float afkTimer;
+    [SerializeField]
     float afkTimerCountDown;
     [SerializeField]
     Animator animator;

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerSunBehaviorUpdatedMobile : AffectedByTheSun
 {
@@ -43,8 +44,11 @@ public class PlayerSunBehaviorUpdatedMobile : AffectedByTheSun
         //spawningPos = startingPoint.transform.position;
         spawningPos.x = startingPoint.transform.position.x;
         spawningPos.y = startingPoint.transform.position.y;
-        spawningPos.z = -2;
-
+        spawningPos.z = -3;
+        if (SceneManager.GetActiveScene().name != "Level1Mobile") //Added 30/5/2019
+        {
+            transform.position = spawningPos;
+        }
     }
 
     public void Update()

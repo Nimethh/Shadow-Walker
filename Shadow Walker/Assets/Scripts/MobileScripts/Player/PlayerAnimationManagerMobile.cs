@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerAnimationManagerMobile : MonoBehaviour
 {
@@ -13,6 +14,13 @@ public class PlayerAnimationManagerMobile : MonoBehaviour
     float xMovement;
     float lastMoveX;
     Vector2 directionalInput;
+    
+    GameObject note;
+    Vector3 notePosition;
+    GameObject bedCollider;
+
+    bool moveTowardsTheNote = false;
+    float speed = 0.75f;
 
     void Start()
     {
@@ -21,6 +29,13 @@ public class PlayerAnimationManagerMobile : MonoBehaviour
         playerInput = GetComponent<PlayerInputUpdatedMobile>();
         playerSunBehavior = GetComponent<PlayerSunBehaviorUpdatedMobile>();
         controller = GetComponent<Controller2DUpdatedMobile>();
+        
+        if (SceneManager.GetActiveScene().name == "Level1Mobile")
+        {
+            bedCollider = GameObject.Find("BedCollider");
+            bedCollider.SetActive(false);
+            note = GameObject.Find("Note");
+        }
     }
 
     void Update()
@@ -35,6 +50,15 @@ public class PlayerAnimationManagerMobile : MonoBehaviour
             //RespawningAnimationCheck();
         }
         CheckPointAnimationCheck();
+        if (moveTowardsTheNote)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, notePosition, Time.deltaTime * speed);
+            if (Vector2.Distance(transform.position, notePosition) <= 0.2f)
+            {
+                moveTowardsTheNote = false;
+                note.SetActive(false);
+            }
+        }
     }
 
     //void Update()
@@ -47,6 +71,25 @@ public class PlayerAnimationManagerMobile : MonoBehaviour
     //    RespawningAnimationCheck();
     //    CheckPointAnimationCheck();
     //}
+
+    public void ActivateBedCollider()
+    {
+        bedCollider.SetActive(true);
+    }
+
+    public void TutorialAnimation()
+    {
+        playerSunBehavior.doneRespawning = false;
+        player.finishedMovingOutCheckPoint = false;
+    }
+
+    public void MoveTowardsTheNote()
+    {
+        notePosition.x = note.transform.position.x;
+        notePosition.y = transform.position.y;
+        notePosition.z = -3;
+        moveTowardsTheNote = true;
+    }
 
     void MovementAnimationCheck()
     {
@@ -355,5 +398,14 @@ public class PlayerAnimationManagerMobile : MonoBehaviour
     public void SetDirectionalInput(Vector2 input)
     {
         directionalInput = input;
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (SceneManager.GetActiveScene().name == "FinalScene")
+        {
+            if(other.gameObject.CompareTag("Girlfriend"))
+                animator.SetTrigger("Lean");
+        }
     }
 }

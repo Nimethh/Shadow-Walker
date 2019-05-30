@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerSunBehaviorUpdated : AffectedByTheSun
 {
@@ -12,16 +13,16 @@ public class PlayerSunBehaviorUpdated : AffectedByTheSun
     PlayerInputUpdated playerInput;
     PlayerUpdated player;
     //private PlayerPlatformController playerPlatformController;
-    
+   
     private float timeInSun;
     [SerializeField]
     private float timeInSunAllowed;
 
-    [HideInInspector]
+    //[HideInInspector]
     public bool isDead = false; // Added 2019-05-19
     [HideInInspector]
     public bool isRespawning = false; // Added 2019-05-19
-    [HideInInspector]
+    //[HideInInspector]
     public bool doneRespawning = true; // Added 2019-05-19
 
     [HideInInspector]
@@ -30,7 +31,7 @@ public class PlayerSunBehaviorUpdated : AffectedByTheSun
     public void Start()
     {
         AffectedByTheSunScriptStart();
-        
+
         //playerPlatformController = GetComponent<PlayerPlatformController>();
         animator = GetComponent<Animator>();
         player = GetComponent<PlayerUpdated>();
@@ -40,20 +41,24 @@ public class PlayerSunBehaviorUpdated : AffectedByTheSun
         spawningPos.x = startingPoint.transform.position.x;
         spawningPos.y = startingPoint.transform.position.y;
         spawningPos.z = -3;
-        transform.position = spawningPos;
-
+        if (SceneManager.GetActiveScene().name != "Level1") //Added 30/5/2019
+        {
+            transform.position = spawningPos;
+        }
     }
 
     public void Update()
     {
         AffectedByTheSunScriptUpdate();
-        
+
         if (isRespawning) // Added 2019-05-19
         {
             transform.position = spawningPos;
             isRespawning = false;
         }
     }
+
+  
 
     public override void JustGotCoveredFromSunlight()
     {
@@ -82,6 +87,8 @@ public class PlayerSunBehaviorUpdated : AffectedByTheSun
         //Debug.Log("JustGotExposedToSunlight()");
 
     }
+
+    
 
     public override void UnderFullCover()
     {

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerAnimationManager : MonoBehaviour
 {
@@ -14,6 +15,13 @@ public class PlayerAnimationManager : MonoBehaviour
     float lastMoveX;
     Vector2 directionalInput;
 
+    GameObject note;
+    Vector3 notePosition;
+    GameObject bedCollider;
+
+    bool moveTowardsTheNote = false;
+    float speed = 0.75f;
+
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -21,6 +29,13 @@ public class PlayerAnimationManager : MonoBehaviour
         playerInput = GetComponent<PlayerInputUpdated>();
         playerSunBehavior = GetComponent<PlayerSunBehaviorUpdated>();
         controller = GetComponent<Controller2DUpdated>();
+        
+        if (SceneManager.GetActiveScene().name == "Level1")
+        {
+            bedCollider = GameObject.Find("BedCollider");
+            bedCollider.SetActive(false);
+            note = GameObject.Find("Note");
+        }
     }
     
     void Update()
@@ -35,6 +50,34 @@ public class PlayerAnimationManager : MonoBehaviour
             //RespawningAnimationCheck();
         }
         CheckPointAnimationCheck();
+        if(moveTowardsTheNote)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, notePosition, Time.deltaTime * speed);
+            if(Vector2.Distance(transform.position,notePosition) <= 0.2f)
+            {
+                moveTowardsTheNote = false;
+                note.SetActive(false);
+            }
+        }
+    }
+
+    public void ActivateBedCollider()
+    {
+        bedCollider.SetActive(true);
+    }
+
+    public void TutorialAnimation()
+    {
+        playerSunBehavior.doneRespawning = false;
+        player.finishedMovingOutCheckPoint = false;
+    }
+
+    public void MoveTowardsTheNote()
+    {
+        notePosition.x = note.transform.position.x;
+        notePosition.y = transform.position.y;
+        notePosition.z = -3;
+        moveTowardsTheNote = true;
     }
 
     void MovementAnimationCheck()
@@ -269,5 +312,18 @@ public class PlayerAnimationManager : MonoBehaviour
     public void SetDirectionalInput(Vector2 input)
     {
         directionalInput = input;
+    }
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (SceneManager.GetActiveScene().name == "FinalScene")
+        {
+            if (other.gameObject.CompareTag("Girlfriend"))
+            {
+                animator.SetTrigger("Lean");
+                PlayerUpdated playerUpdated = GetComponent<PlayerUpdated>();
+                playerUpdated.enabled = false;
+            }
+        }
     }
 }

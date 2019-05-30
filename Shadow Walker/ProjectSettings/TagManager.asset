@@ -19,6 +19,7 @@ TagManager:
   - LevelEndPoint
   - Ladder
   - DeadlyDoor
+  - Girlfriend
   layers:
   - Default
   - TransparentFX
