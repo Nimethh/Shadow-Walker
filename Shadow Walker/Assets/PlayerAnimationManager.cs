@@ -47,6 +47,7 @@ public class PlayerAnimationManager : MonoBehaviour
             FallingAnimationCheck();
             ClimbingAnimationCheck();
             DeathAnimationCheck();
+            MovementTurnCheck();
             //RespawningAnimationCheck();
         }
         CheckPointAnimationCheck();
@@ -78,6 +79,37 @@ public class PlayerAnimationManager : MonoBehaviour
         notePosition.y = transform.position.y;
         notePosition.z = -3;
         moveTowardsTheNote = true;
+    }
+
+    public void FinishedTurning()
+    {
+        if(playerInput.turnAnimLeft)
+        {
+            playerInput.turnAnimLeft = false;
+        }
+        else if(playerInput.turnAnimRight)
+        {
+            playerInput.turnAnimRight = false;
+        }
+    }
+
+    void MovementTurnCheck()
+    {
+        if (playerInput.turnAnimLeft)
+        {
+            animator.SetBool("Turn", true);
+            animator.SetFloat("CurrentDirX", -1f);
+        }
+        else if (playerInput.turnAnimRight)
+        {
+            animator.SetBool("Turn", true);
+            animator.SetFloat("CurrentDirX", 1);
+        }
+        else
+        {
+            animator.SetBool("Turn", false);
+        }
+
     }
 
     void MovementAnimationCheck()

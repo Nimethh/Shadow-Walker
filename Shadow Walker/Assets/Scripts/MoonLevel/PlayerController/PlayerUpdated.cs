@@ -197,7 +197,8 @@ public class PlayerUpdated : MonoBehaviour
     void CheckSpawnMovingOut()
     {
         if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D) ||
-                Input.GetKeyDown(KeyCode.Space)) && spawnedInSafePoint && !playerSunBehavior.isDead)
+                Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.DownArrow) || 
+                Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.RightArrow)) && spawnedInSafePoint && !playerSunBehavior.isDead)
         {
             animator.SetBool("MovingOutofCheckPoint", true);
             audioSource.Play();

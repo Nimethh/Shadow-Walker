@@ -19,6 +19,11 @@ public class PlayerInputUpdated : MonoBehaviour
     float moveOffLadderHoldTimer = 0.4f;
     float moveOffLadderHoldCooldown = 0.4f;
 
+
+    float prevDirX;
+    float currDirX;
+    public bool turnAnimRight = false;
+    public bool turnAnimLeft = false;
     //ParticleSystem movingPartical;
     //GameObject movingParticalObject;
     //ParticleSystem movingLeftParticle;
@@ -114,7 +119,27 @@ public class PlayerInputUpdated : MonoBehaviour
         if (controller.collisionInfo.climbing == false || controller.collisionInfo.below == true)
         {
             directionalInput.x = Input.GetAxisRaw("Horizontal");
+            currDirX = directionalInput.x;
         }
+        if (currDirX == 1 && prevDirX == -1 && !turnAnimRight)
+        {
+            //Debug.Log("Changed Right");
+            prevDirX = currDirX;
+            turnAnimRight = true;
+            turnAnimLeft = false;
+        }
+        else if(currDirX == -1 && prevDirX == 1 && !turnAnimLeft)
+        {
+            //Debug.Log("Changed Left");
+            prevDirX = currDirX;
+            turnAnimLeft = true;
+            turnAnimRight = false;
+        }
+        //else
+        //{
+        //    turnAnimLeft = false;
+        //    turnAnimRight = false;
+        //}
 
         directionalInput.y = Input.GetAxisRaw("Vertical");
 
@@ -127,6 +152,13 @@ public class PlayerInputUpdated : MonoBehaviour
         {
             directionalInput.x = 0;
         }
+
+        if(prevDirX == 0)
+        {
+            prevDirX = directionalInput.x;
+
+        }
+
     }
 
     void MoveOffLadderCheck()
