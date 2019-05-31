@@ -177,6 +177,7 @@ public class PlayerSunBehaviorUpdatedMobile : AffectedByTheSun
     // Added 2019-05-19
     public void PlayerIsDead()
     {
+        Debug.Log("IsDead");
         doneRespawning = false;
         isDead = true;
     }

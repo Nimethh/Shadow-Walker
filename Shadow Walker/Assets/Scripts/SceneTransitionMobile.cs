@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class SceneTransition : MonoBehaviour
+public class SceneTransitionMobile : MonoBehaviour
 {
     [SerializeField]
     string nextSceneName;
@@ -30,7 +30,7 @@ public class SceneTransition : MonoBehaviour
     {
         levelFadePanel = GameObject.Find("LevelFadePanel");
         animator = levelFadePanel.GetComponent<Animator>();
-        //levelFadePanel.GetComponent<Image>().enabled = false;
+        levelFadePanel.GetComponent<Image>().enabled = false;
         afkTimerCountDown = afkTimer;
     }
 
@@ -87,7 +87,7 @@ public class SceneTransition : MonoBehaviour
 
     IEnumerator LoadNextScene(string p_nextSceneName)
     {
-        //levelFadePanel.GetComponent<Image>().enabled = true;
+        levelFadePanel.GetComponent<Image>().enabled = true;
         animator.SetTrigger("FadeOut");
         yield return new WaitForSeconds(1.5f);
         SceneManager.LoadScene(p_nextSceneName);
@@ -95,7 +95,7 @@ public class SceneTransition : MonoBehaviour
 
     IEnumerator LoadPreviousScene(string p_previousSceneName)
     {
-        //levelFadePanel.GetComponent<Image>().enabled = true;
+        levelFadePanel.GetComponent<Image>().enabled = true;
         animator.SetTrigger("FadeOut");
         yield return new WaitForSeconds(1.5f);
         SceneManager.LoadScene(p_previousSceneName);
@@ -103,7 +103,7 @@ public class SceneTransition : MonoBehaviour
 
     IEnumerator LoadFirstScene(string p_firstSceneName)
     {
-        //levelFadePanel.GetComponent<Image>().enabled = true;
+        levelFadePanel.GetComponent<Image>().enabled = true;
         animator.SetTrigger("FadeOut");
         yield return new WaitForSeconds(1.5f);
         SceneManager.LoadScene(p_firstSceneName);
@@ -111,7 +111,7 @@ public class SceneTransition : MonoBehaviour
 
     IEnumerator ReloadScene(string p_thisSceneName)
     {
-        //levelFadePanel.GetComponent<Image>().enabled = true;
+        levelFadePanel.GetComponent<Image>().enabled = true;
         animator.SetTrigger("FadeOut");
         yield return new WaitForSeconds(1.5f);
         SceneManager.LoadScene(p_thisSceneName);
@@ -119,7 +119,7 @@ public class SceneTransition : MonoBehaviour
 
     IEnumerator LoadVideoScene(string p_videoScene)
     {
-        //levelFadePanel.GetComponent<Image>().enabled = true;
+        levelFadePanel.GetComponent<Image>().enabled = true;
         animator.SetTrigger("FadeOut");
         yield return new WaitForSeconds(1.5f);
         SceneManager.LoadScene(p_videoScene);

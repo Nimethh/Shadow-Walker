@@ -34,10 +34,10 @@ EditorBuildSettings:
     guid: 40e0d9b101f15e145963065b76e709df
   - enabled: 0
     path: 
-    guid: 264161e6ef6edfb4d8f4f97678bf49b4
+    guid: 00000000000000000000000000000000
   - enabled: 0
     path: 
-    guid: a857e7a54e2e9ad458dfafa967adb651
+    guid: 00000000000000000000000000000000
   - enabled: 0
     path: Assets/Scenes/MobileScenes/VideoSceneMobile.unity
     guid: 1be4970ffe6f7974b8735631c68df665

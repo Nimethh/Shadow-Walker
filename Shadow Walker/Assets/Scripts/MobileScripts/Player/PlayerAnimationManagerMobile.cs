@@ -396,7 +396,6 @@ public class PlayerAnimationManagerMobile : MonoBehaviour
             Vector3 spawnPosition = spawnPos.transform.position;
             spawnPosition.z = -3;
             transform.position = spawnPosition;
-
         }
     }
 
@@ -423,7 +422,7 @@ public class PlayerAnimationManagerMobile : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D other)
     {
-        if (other.gameObject.name == "Teleport" && Input.GetKeyDown(KeyCode.W))
+        if (other.gameObject.name == "Teleport" && directionalInput.y > 0.4f)
         {
             teleport = true;
             other.gameObject.SetActive(false);

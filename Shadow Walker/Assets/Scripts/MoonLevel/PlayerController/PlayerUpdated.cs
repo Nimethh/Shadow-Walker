@@ -73,7 +73,7 @@ public class PlayerUpdated : MonoBehaviour
     public bool finishedMovingOutCheckPoint = true;
     //[HideInInspector]
     public bool finishedMovingIntoCheckPoint = true;
-    [HideInInspector]
+    //[HideInInspector]
     public bool spawnedInSafePoint = false;
 
     Controller2DUpdated controller;
@@ -118,7 +118,6 @@ public class PlayerUpdated : MonoBehaviour
 
     void Update()
     {
-
         CheckSpawnMovingOut();
         CalculateVelocity();
         HandleWallSliding();
@@ -134,6 +133,7 @@ public class PlayerUpdated : MonoBehaviour
 
         if(spawnedInSafePoint)
         {
+            playerSunBehavior.isDead = false;
             playerSunBehavior.isSafeFromSun = true;
             playerSunBehavior.doneRespawning = false;
             finishedMovingOutCheckPoint = false;
@@ -164,10 +164,12 @@ public class PlayerUpdated : MonoBehaviour
 
     public void IsInSafePointBoolManager()
     {
+        animator.SetBool("Dead", false);
         spawnedInSafePoint = true;
-        //playerSunBehavior.isSafeFromSun = true;
-        //playerSunBehavior.doneRespawning = false;
-        //finishedMovingOutCheckPoint = false;
+        playerSunBehavior.isDead = false;
+        playerSunBehavior.isSafeFromSun = true;
+        playerSunBehavior.doneRespawning = false;
+        finishedMovingOutCheckPoint = false;
     }
 
     public void MovingOutOFCheckPointBoolManager()
@@ -186,6 +188,7 @@ public class PlayerUpdated : MonoBehaviour
             movingIntoCheckPoint = false;
             movingOutCheckPoint = false;
             playerSunBehavior.isSafeFromSun = false;
+            playerSunBehavior.doneRespawning = true;
         }
     }
 
@@ -200,6 +203,7 @@ public class PlayerUpdated : MonoBehaviour
                 Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.DownArrow) || 
                 Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.RightArrow)) && spawnedInSafePoint && !playerSunBehavior.isDead)
         {
+            movingOutCheckPoint = true;
             animator.SetBool("MovingOutofCheckPoint", true);
             audioSource.Play();
         }

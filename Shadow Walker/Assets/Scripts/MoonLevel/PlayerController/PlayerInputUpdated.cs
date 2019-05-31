@@ -97,7 +97,7 @@ public class PlayerInputUpdated : MonoBehaviour
         if (transform.position.y < (bottom - 10.0f))
         {
             player.velocity.y = 0;
-            playerSunBehavior.isDead = true;
+            //playerSunBehavior.isDead = true;
             transform.position = playerSunBehavior.spawningPos;
         }
 
@@ -128,7 +128,7 @@ public class PlayerInputUpdated : MonoBehaviour
             turnAnimRight = true;
             turnAnimLeft = false;
         }
-        else if(currDirX == -1 && prevDirX == 1 && !turnAnimLeft)
+        else if (currDirX == -1 && prevDirX == 1 && !turnAnimLeft)
         {
             //Debug.Log("Changed Left");
             prevDirX = currDirX;
@@ -153,7 +153,7 @@ public class PlayerInputUpdated : MonoBehaviour
             directionalInput.x = 0;
         }
 
-        if(prevDirX == 0)
+        if (prevDirX == 0)
         {
             prevDirX = directionalInput.x;
 
@@ -170,7 +170,7 @@ public class PlayerInputUpdated : MonoBehaviour
                 moveOffLadderCooldown = moveOffLadderTimer;
                 moveOffLadderHoldCooldown = moveOffLadderHoldTimer;
             }
-            if ((Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A)))
+            if ((Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.LeftArrow)))
             {
                 if (moveOffLadderHoldCooldown <= 0)
                 {
@@ -182,7 +182,7 @@ public class PlayerInputUpdated : MonoBehaviour
                 }
             }
 
-            if (Input.GetKeyDown(KeyCode.D))
+            if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
             {
                 if (moveOffLadderCooldown <= 0)
                 {
@@ -193,7 +193,7 @@ public class PlayerInputUpdated : MonoBehaviour
                     moveOffLadderCooldown -= Time.deltaTime;
                 }
             }
-            else if (Input.GetKeyDown(KeyCode.A))
+            else if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
             {
                 if (moveOffLadderCooldown <= 0)
                 {

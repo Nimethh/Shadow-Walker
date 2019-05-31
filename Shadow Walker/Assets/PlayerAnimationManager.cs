@@ -306,6 +306,7 @@ public class PlayerAnimationManager : MonoBehaviour
         }
         else
         {
+            Debug.Log("IsDead = false");
             animator.SetBool("Dead", false);
         }
     }
@@ -373,7 +374,7 @@ public class PlayerAnimationManager : MonoBehaviour
     }
     private void OnTriggerStay2D(Collider2D other)
     {
-        if (other.gameObject.name == "Teleport" && Input.GetKeyDown(KeyCode.W))
+        if (other.gameObject.name == "Teleport" && (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)))
         {
             teleport = true;
             other.gameObject.SetActive(false);

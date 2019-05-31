@@ -186,6 +186,7 @@ public class PlayerUpdatedMobile : MonoBehaviour
             movingIntoCheckPoint = false;
             movingOutCheckPoint = false;
             playerSunBehavior.isSafeFromSun = false;
+            playerSunBehavior.doneRespawning = true;
         }
     }
 
