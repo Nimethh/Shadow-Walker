@@ -60,6 +60,7 @@ public class PlayerAnimationManager : MonoBehaviour
                 note.SetActive(false);
             }
         }
+        Debug.Log(animator.speed);
     }
 
     public void ActivateBedCollider()
@@ -204,6 +205,13 @@ public class PlayerAnimationManager : MonoBehaviour
             {
                 animator.speed = 0;
             }
+        }
+        else if(playerSunBehavior.isDead)
+        {
+            Debug.Log("DeathAnimationCheck()");
+            animator.SetBool("Climbing", false);
+            animator.speed = 1;
+            Debug.Log("DeathAnimationCheck() " + animator.speed);
         }
         else
         {

@@ -36,8 +36,8 @@ TagManager:
   - Ladder
   - Player
   - Glass
-  - 
-  - 
+  - Hills
+  - Light
   - 
   - 
   - 
@@ -56,4 +56,7 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Water
+    uniqueID: 3347604979
     locked: 0

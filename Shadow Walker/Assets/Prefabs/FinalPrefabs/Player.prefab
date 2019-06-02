@@ -235,6 +235,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02946b6b7421b03459da8a96a032f106, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  turnAnimRight: 0
+  turnAnimLeft: 0
 --- !u!114 &46352488433769890
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9984,7 +9986,7 @@ PrefabInstance:
       propertyPath: playOnAwake
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4803092318767501047, guid: 490b147c2f8b57244b1df9394587cb8e,
+    - target: {fileID: 7047141917536627441, guid: 490b147c2f8b57244b1df9394587cb8e,
         type: 3}
       propertyPath: playOnAwake
       value: 0
@@ -9994,7 +9996,7 @@ PrefabInstance:
       propertyPath: playOnAwake
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 7047141917536627441, guid: 490b147c2f8b57244b1df9394587cb8e,
+    - target: {fileID: 4803092318767501047, guid: 490b147c2f8b57244b1df9394587cb8e,
         type: 3}
       propertyPath: playOnAwake
       value: 0

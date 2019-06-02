@@ -55,6 +55,12 @@ public class PlayerSunBehaviorUpdated : AffectedByTheSun
         {
             transform.position = spawningPos;
             isRespawning = false;
+            animator.speed = 1;
+        }
+        if(isDead)
+        {
+            animator.SetBool("Climbing", false);
+            animator.speed = 1;
         }
     }
 
@@ -144,7 +150,10 @@ public class PlayerSunBehaviorUpdated : AffectedByTheSun
     // Added 2019-05-19
     public void PlayerIsDead()
     {
+        Debug.Log("PlayerIsDead");
         doneRespawning = false;
+        animator.SetBool("Climbing", false);
+        animator.speed = 1;
         isDead = true;
     }
 
