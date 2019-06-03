@@ -41,19 +41,19 @@ public class SceneTransition : MonoBehaviour
             StartCoroutine(LoadNextScene(nextSceneName));
         }
 
-        if(Input.GetKeyDown(KeyCode.M))
+        if(Input.GetKeyDown(KeyCode.Z))
         {
             StartCoroutine(LoadNextScene(nextSceneName));
         }
-        else if(Input.GetKeyDown(KeyCode.N))
+        else if(Input.GetKeyDown(KeyCode.X))
         {
             StartCoroutine(LoadPreviousScene(previousSceneName));
         }
-        else if(Input.GetKeyDown(KeyCode.B))
+        else if(Input.GetKeyDown(KeyCode.V))
         {
             StartCoroutine(LoadFirstScene(firstSceneName));
         }
-        else if(Input.GetKeyDown(KeyCode.R))
+        else if(Input.GetKeyDown(KeyCode.C))
         {
             StartCoroutine(ReloadScene(thisSceneName));
         }

@@ -1128,6 +1128,11 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: cc526ea1929d1b540ae26a225741f07d, type: 2}
+    - target: {fileID: 5283512872237241263, guid: c477efd1ae4b6fb4884588625a00b64f,
+        type: 3}
+      propertyPath: timeInSunAllowed
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c477efd1ae4b6fb4884588625a00b64f, type: 3}
 --- !u!33 &392657295 stripped

@@ -11719,6 +11719,11 @@ PrefabInstance:
       propertyPath: wasPreviouslyExposedToSun
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5283512872237241263, guid: c477efd1ae4b6fb4884588625a00b64f,
+        type: 3}
+      propertyPath: timeInSunAllowed
+      value: 0.5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c477efd1ae4b6fb4884588625a00b64f, type: 3}
 --- !u!1 &781093684
@@ -20398,6 +20403,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3500377643428850674, guid: 91c006863cf274344823e8a0fb5b739e,
+        type: 3}
+      propertyPath: speed
+      value: 0.6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91c006863cf274344823e8a0fb5b739e, type: 3}

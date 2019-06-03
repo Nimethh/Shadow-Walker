@@ -3690,7 +3690,43 @@ PrefabInstance:
       propertyPath: m_Size.x
       value: 0.8945589
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 6991973236971292123, guid: d6abb74bc65158d4da22aba4795cdc07,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6991973236971292123, guid: d6abb74bc65158d4da22aba4795cdc07,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.pivot.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6991973236971292123, guid: d6abb74bc65158d4da22aba4795cdc07,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6991973236971292123, guid: d6abb74bc65158d4da22aba4795cdc07,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.oldSize.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6991973236971292123, guid: d6abb74bc65158d4da22aba4795cdc07,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6991973236971292123, guid: d6abb74bc65158d4da22aba4795cdc07,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6991973236971292123, guid: d6abb74bc65158d4da22aba4795cdc07,
+        type: 3}
+      propertyPath: m_SpriteTilingProperty.adaptiveTilingThreshold
+      value: 0.5
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 7755458850177002987, guid: d6abb74bc65158d4da22aba4795cdc07, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: d6abb74bc65158d4da22aba4795cdc07, type: 3}
 --- !u!1001 &1792355926
 PrefabInstance:
@@ -3893,17 +3929,17 @@ PrefabInstance:
     - target: {fileID: 6361856188273948659, guid: 4154cdaa4748a8e49a2d0867eba7f651,
         type: 3}
       propertyPath: m_Center.x
-      value: 1.1333491
+      value: 1.127287
       objectReference: {fileID: 0}
     - target: {fileID: 6361856188273948659, guid: 4154cdaa4748a8e49a2d0867eba7f651,
         type: 3}
       propertyPath: m_Center.y
-      value: 1.0162238
+      value: 1.0162212
       objectReference: {fileID: 0}
     - target: {fileID: 6361856188273948659, guid: 4154cdaa4748a8e49a2d0867eba7f651,
         type: 3}
       propertyPath: m_Size.x
-      value: 0.11560269
+      value: 0.12772723
       objectReference: {fileID: 0}
     - target: {fileID: 1028249426853215644, guid: 4154cdaa4748a8e49a2d0867eba7f651,
         type: 3}
@@ -4222,6 +4258,26 @@ PrefabInstance:
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 1.28
       objectReference: {fileID: 0}
+    - target: {fileID: 7426309837937160669, guid: c477efd1ae4b6fb4884588625a00b64f,
+        type: 3}
+      propertyPath: m_Delay
+      value: 700
+      objectReference: {fileID: 0}
+    - target: {fileID: 7426309837937160669, guid: c477efd1ae4b6fb4884588625a00b64f,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7426309837937160669, guid: c477efd1ae4b6fb4884588625a00b64f,
+        type: 3}
+      propertyPath: m_DryMix
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5283512872237241263, guid: c477efd1ae4b6fb4884588625a00b64f,
+        type: 3}
+      propertyPath: timeInSunAllowed
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 46352488433769890, guid: c477efd1ae4b6fb4884588625a00b64f,
         type: 3}
       propertyPath: NotePos
@@ -4242,21 +4298,6 @@ PrefabInstance:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 702db4650b265254384ddb9af135781d, type: 3}
-    - target: {fileID: 7426309837937160669, guid: c477efd1ae4b6fb4884588625a00b64f,
-        type: 3}
-      propertyPath: m_Delay
-      value: 700
-      objectReference: {fileID: 0}
-    - target: {fileID: 7426309837937160669, guid: c477efd1ae4b6fb4884588625a00b64f,
-        type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7426309837937160669, guid: c477efd1ae4b6fb4884588625a00b64f,
-        type: 3}
-      propertyPath: m_DryMix
-      value: 0.5
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c477efd1ae4b6fb4884588625a00b64f, type: 3}
 --- !u!1 &1923013242
