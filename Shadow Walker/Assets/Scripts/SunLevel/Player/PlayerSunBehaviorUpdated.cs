@@ -25,7 +25,7 @@ public class PlayerSunBehaviorUpdated : AffectedByTheSun
     //[HideInInspector]
     public bool doneRespawning = true; // Added 2019-05-19
 
-    [HideInInspector]
+    //[HideInInspector]
     public bool isSafeFromSun = false; //Added 2019-05-21
 
     public void Start()
@@ -56,8 +56,10 @@ public class PlayerSunBehaviorUpdated : AffectedByTheSun
             transform.position = spawningPos;
             isRespawning = false;
             animator.speed = 1;
+            //player.onLadder = false;
+            animator.SetBool("Climbing", false);
         }
-        if(isDead)
+        if (isDead)
         {
             animator.SetBool("Climbing", false);
             animator.speed = 1;

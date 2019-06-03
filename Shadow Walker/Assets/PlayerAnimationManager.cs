@@ -22,6 +22,7 @@ public class PlayerAnimationManager : MonoBehaviour
     bool moveTowardsTheNote = false;
     float speed = 0.75f;
     bool teleport = false;
+    GameObject extraCollider;
     
     void Start()
     {
@@ -35,6 +36,7 @@ public class PlayerAnimationManager : MonoBehaviour
             bedCollider = GameObject.Find("BedCollider");
             bedCollider.SetActive(false);
             note = GameObject.Find("Note");
+            extraCollider = GameObject.Find("ExtraCollider");
         }
     }
     
@@ -54,10 +56,9 @@ public class PlayerAnimationManager : MonoBehaviour
         if(moveTowardsTheNote)
         {
             transform.position = Vector3.MoveTowards(transform.position, notePosition, Time.deltaTime * speed);
-            if(Vector2.Distance(transform.position,notePosition) <= 0.2f)
+            if(Vector2.Distance(transform.position,notePosition) <= 0.17f)
             {
                 moveTowardsTheNote = false;
-                note.SetActive(false);
             }
         }
         Debug.Log(animator.speed);
@@ -66,12 +67,23 @@ public class PlayerAnimationManager : MonoBehaviour
     public void ActivateBedCollider()
     {
         bedCollider.SetActive(true);
+        note.SetActive(true);
+    }
+
+    public void DeactivateNote()
+    {
+        note.SetActive(false);
     }
 
     public void TutorialAnimation()
     {
         playerSunBehavior.doneRespawning = false;
         player.finishedMovingOutCheckPoint = false;
+    }
+
+    public void DeactivateExtraCollider()
+    {
+        extraCollider.GetComponent<BoxCollider2D>().enabled = false;
     }
 
     public void MoveTowardsTheNote()

@@ -121,14 +121,14 @@ public class PlayerInputUpdated : MonoBehaviour
             directionalInput.x = Input.GetAxisRaw("Horizontal");
             currDirX = directionalInput.x;
         }
-        if (currDirX == 1 && prevDirX == -1 && !turnAnimRight)
+        if (currDirX == 1 && prevDirX == -1 && !turnAnimRight && player.onGround)
         {
             //Debug.Log("Changed Right");
             prevDirX = currDirX;
             turnAnimRight = true;
             turnAnimLeft = false;
         }
-        else if (currDirX == -1 && prevDirX == 1 && !turnAnimLeft)
+        else if (currDirX == -1 && prevDirX == 1 && !turnAnimLeft && player.onGround)
         {
             //Debug.Log("Changed Left");
             prevDirX = currDirX;

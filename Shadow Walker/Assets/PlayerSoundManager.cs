@@ -14,6 +14,7 @@ public class PlayerSoundManager : MonoBehaviour
     //Controller2D controller;
     Controller2DUpdated controller;
     AudioManager audioManager;
+    AudioSource aS;
 
     private void Start()
     {
@@ -26,6 +27,7 @@ public class PlayerSoundManager : MonoBehaviour
         //controller = GetComponent<Controller2D>();
         controller = GetComponent<Controller2DUpdated>();
         audioManager = FindObjectOfType<AudioManager>();
+        aS = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -93,5 +95,10 @@ public class PlayerSoundManager : MonoBehaviour
     public void SetDirectionalInput(Vector2 input)
     {
         directionalInput = input;
+    }
+
+    public void PlayWalkingOutOFSafePointSound()
+    {
+        aS.Play();
     }
 }

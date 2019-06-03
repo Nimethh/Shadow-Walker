@@ -288,7 +288,7 @@ public class Controller2DUpdated : RaycastController
                 }
 
                 //Check Input.
-                if (playerInput.y < 0 && playerInput.x == 0 && player.onGround)
+                if (playerInput.y < 0 && playerInput.x == 0 && player.onGround )
                 {
                     collisionInfo.climbing = true;
                     if (!ladderHitDown)
