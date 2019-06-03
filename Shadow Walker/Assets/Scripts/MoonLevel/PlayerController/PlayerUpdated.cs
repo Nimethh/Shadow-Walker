@@ -82,8 +82,7 @@ public class PlayerUpdated : MonoBehaviour
     Animator animator;
     GameObject endOfTheScene;
     PlayerSunBehaviorUpdated playerSunBehavior;
-    
-    AudioSource audioSource;    // Added 28/5/2019
+    AudioManager audioManager;
 
     //Instantiate them instead.
     //ParticleSystem jumpParticle;
@@ -93,7 +92,7 @@ public class PlayerUpdated : MonoBehaviour
 
     void Start()
     {
-        audioSource = GetComponent<AudioSource>();  // Added 28/5/2019
+        audioManager = FindObjectOfType<AudioManager>();
 
         controller = GetComponent<Controller2DUpdated>();
         playerSunBehavior = GetComponent<PlayerSunBehaviorUpdated>();
@@ -215,7 +214,7 @@ public class PlayerUpdated : MonoBehaviour
             Debug.Log("CheckSpawnMovingOut()");
             movingOutCheckPoint = true;
             animator.SetBool("MovingOutofCheckPoint", true);
-            audioSource.Play();
+            audioManager.Play("WalkingIntoSafePoint");
         }
     }
 
@@ -384,7 +383,7 @@ public class PlayerUpdated : MonoBehaviour
                 finishedMovingOutCheckPoint = false;
                 velocity.x = 0;
                 playerSunBehavior.isSafeFromSun = true;
-                audioSource.Play();
+                audioManager.Play("WalkingIntoSafePoint");
             }
             else if((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.D) ||
             Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.LeftArrow) 
@@ -393,7 +392,7 @@ public class PlayerUpdated : MonoBehaviour
                 movingIntoCheckPoint = false;
                 movingOutCheckPoint = true;
                 velocity.x = 0;
-                audioSource.Play();
+                audioManager.Play("WalkingIntoSafePoint");
             }
         }
     }
