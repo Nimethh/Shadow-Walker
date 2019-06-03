@@ -74,6 +74,7 @@ MonoBehaviour:
   edgeDstThreshold: 0.1
   maskCutawayDistance: 0.15
   viewMeshFilter: {fileID: 5968803598847085356}
+  heatDistortionMeshFilter: {fileID: 0}
 --- !u!114 &5968803597903308593
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -90,8 +91,12 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  index: 38
   centerPosition: {fileID: 0}
+  index: 38
+  canMove: 1
+  checkPointIndex: 100
+  sunSpeed: 0.2
+  restrictMovement: 0
 --- !u!1 &5968803598391072763
 GameObject:
   m_ObjectHideFlags: 0
@@ -160,7 +165,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7cc9b8ec01aa2234c8e43bc22835398c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c54756a0f1566984ca0cd17cb1a324a3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
