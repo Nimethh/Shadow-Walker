@@ -18,12 +18,9 @@ public class PlayerInputUpdated : MonoBehaviour
     float moveOffLadderCooldown = 0.01f;
     float moveOffLadderHoldTimer = 0.4f;
     float moveOffLadderHoldCooldown = 0.4f;
-    [SerializeField]
     float turnAnimationTimer = 0.5f;
-
-    [SerializeField]
+    
     float prevDirX;
-    [SerializeField]
     float currDirX;
     public bool turnAnimRight = false;
     public bool turnAnimLeft = false;
@@ -49,7 +46,7 @@ public class PlayerInputUpdated : MonoBehaviour
 
         Cursor.visible = false;
         FindPlayerBounds();
-
+        turnAnimationTimer = 0;
         //movingParticalObject = transform.GetChild(2).gameObject;
         //movingPartical = movingParticalObject.GetComponent<ParticleSystem>();
         //movingLeftParticleObject = transform.GetChild(3).gameObject;
@@ -122,12 +119,22 @@ public class PlayerInputUpdated : MonoBehaviour
         if (controller.collisionInfo.climbing == false || controller.collisionInfo.below == true)
         {
             directionalInput.x = Input.GetAxisRaw("Horizontal");
-            currDirX = directionalInput.x;
+            //if (player.onGround)
+            //{
+                currDirX = directionalInput.x;
+            //}
         }
         if (player.hitTheGround)
         {
+            //prevDirX = currDirX;
+            //player.hitTheGround = false;
             turnAnimationTimer -= Time.deltaTime;
-            if (turnAnimationTimer <= 0)
+
+            if (turnAnimationTimer >= 0)
+            {
+                prevDirX = currDirX;
+            }
+            else
             {
                 if (currDirX == 1 && prevDirX == -1 && !turnAnimRight && player.onGround)
                 {
@@ -145,14 +152,15 @@ public class PlayerInputUpdated : MonoBehaviour
                 }
             }
         }
-        else
+        else if(!player.hitTheGround && !player.spawnedInSafePoint)
         {
-            turnAnimationTimer = 0.5f;
-        }
-        if(!player.onGround)
-        {
+            turnAnimationTimer = .5f;
             prevDirX = currDirX;
         }
+        //if (!player.onGround)
+        //{
+        //    prevDirX = currDirX;
+        //}
         //else
         //{
         //    turnAnimLeft = false;

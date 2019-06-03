@@ -107,7 +107,8 @@ public class PlayerUpdated : MonoBehaviour
             spawnedInSafePoint = true;
         }
         playerSunBehavior.isSafeFromSun = true;
-        
+        hitTheGround = true;
+
         walkParticleRight = transform.GetChild(0).gameObject;
         walkRightParticleSystem = walkParticleRight.GetComponent<ParticleSystem>();
         walkParticleLeft = transform.GetChild(1).gameObject;

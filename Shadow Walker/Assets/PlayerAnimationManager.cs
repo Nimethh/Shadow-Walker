@@ -38,6 +38,7 @@ public class PlayerAnimationManager : MonoBehaviour
             note = GameObject.Find("Note");
             extraCollider = GameObject.Find("ExtraCollider");
         }
+        lastMoveX = 1;
     }
     
     void Update()
