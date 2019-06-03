@@ -18,9 +18,12 @@ public class PlayerInputUpdated : MonoBehaviour
     float moveOffLadderCooldown = 0.01f;
     float moveOffLadderHoldTimer = 0.4f;
     float moveOffLadderHoldCooldown = 0.4f;
+    [SerializeField]
+    float turnAnimationTimer = 0.5f;
 
-
+    [SerializeField]
     float prevDirX;
+    [SerializeField]
     float currDirX;
     public bool turnAnimRight = false;
     public bool turnAnimLeft = false;
@@ -121,19 +124,34 @@ public class PlayerInputUpdated : MonoBehaviour
             directionalInput.x = Input.GetAxisRaw("Horizontal");
             currDirX = directionalInput.x;
         }
-        if (currDirX == 1 && prevDirX == -1 && !turnAnimRight && player.onGround)
+        if (player.hitTheGround)
         {
-            //Debug.Log("Changed Right");
-            prevDirX = currDirX;
-            turnAnimRight = true;
-            turnAnimLeft = false;
+            turnAnimationTimer -= Time.deltaTime;
+            if (turnAnimationTimer <= 0)
+            {
+                if (currDirX == 1 && prevDirX == -1 && !turnAnimRight && player.onGround)
+                {
+                    //Debug.Log("Changed Right");
+                    prevDirX = currDirX;
+                    turnAnimRight = true;
+                    turnAnimLeft = false;
+                }
+                else if (currDirX == -1 && prevDirX == 1 && !turnAnimLeft && player.onGround)
+                {
+                    //Debug.Log("Changed Left");
+                    prevDirX = currDirX;
+                    turnAnimLeft = true;
+                    turnAnimRight = false;
+                }
+            }
         }
-        else if (currDirX == -1 && prevDirX == 1 && !turnAnimLeft && player.onGround)
+        else
         {
-            //Debug.Log("Changed Left");
+            turnAnimationTimer = 0.5f;
+        }
+        if(!player.onGround)
+        {
             prevDirX = currDirX;
-            turnAnimLeft = true;
-            turnAnimRight = false;
         }
         //else
         //{

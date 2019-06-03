@@ -12,7 +12,7 @@ public class PlayerAnimationManager : MonoBehaviour
     Controller2DUpdated controller;
 
     float xMovement;
-    float lastMoveX;
+    public float lastMoveX;
     Vector2 directionalInput;
 
     GameObject note;

@@ -75,6 +75,8 @@ public class PlayerUpdated : MonoBehaviour
     public bool finishedMovingIntoCheckPoint = true;
     //[HideInInspector]
     public bool spawnedInSafePoint = false;
+    //[HideInInspector]
+    public bool hitTheGround = false;
 
     Controller2DUpdated controller;
     Animator animator;
@@ -161,6 +163,11 @@ public class PlayerUpdated : MonoBehaviour
     public void LandParticle()
     {
         landParticleSystem.Play();
+    }
+
+    public void HitTheGround()
+    {
+        hitTheGround = true;
     }
 
     public void IsInSafePointBoolManager()
@@ -342,6 +349,7 @@ public class PlayerUpdated : MonoBehaviour
         {
             //Instantiate(LandParticle, particlesSpawnPos.transform);
             landParticleSystem.Play();
+            hitTheGround = true;
         }
         if (other.gameObject.tag == "MovingPlatform")
         {
@@ -404,6 +412,10 @@ public class PlayerUpdated : MonoBehaviour
         {
             movingIntoCheckPoint = false;
             movingOutCheckPoint = false;
+        }
+        if(other.gameObject.CompareTag("Ground"))
+        {
+            hitTheGround = false;
         }
     }
 }
