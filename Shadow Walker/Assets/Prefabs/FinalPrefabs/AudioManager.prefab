@@ -45,43 +45,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   soundFX:
   - name: Background
-    clip: {fileID: 8300000, guid: c3b287c5d01bdcf4fa1f55e9b208e4e9, type: 3}
-    volume: 1
-    pitch: 1.43
+    clip: {fileID: 8300000, guid: a91f5d84afa0c3d4bbfe477680f87e8b, type: 3}
+    volume: 0.4
+    pitch: 1
     randomVolume: 0
     randomPitch: 0
     loop: 1
     playOnAwake: 0
     aS: {fileID: 0}
   - name: SunMoving
-    clip: {fileID: 8300000, guid: fe9c69a81f1d3844faa8baa4a99d245f, type: 3}
-    volume: 0
-    pitch: 1.63
-    randomVolume: 0.1
-    randomPitch: 0.1
-    loop: 0
-    playOnAwake: 0
-    aS: {fileID: 0}
-  - name: Jump
-    clip: {fileID: 8300000, guid: c48f16e690a13384aa7b4de073ff7006, type: 3}
-    volume: 1
-    pitch: 1
-    randomVolume: 0.1
-    randomPitch: 0.1
-    loop: 0
-    playOnAwake: 0
-    aS: {fileID: 0}
-  - name: Walk
-    clip: {fileID: 8300000, guid: 894a3627506a50043842f3dcd0e88c35, type: 3}
-    volume: 1
-    pitch: 1
-    randomVolume: 0.1
-    randomPitch: 0.1
-    loop: 0
-    playOnAwake: 0
-    aS: {fileID: 0}
-  - name: Death
-    clip: {fileID: 8300000, guid: e02a21beac916c74092b5ed14a9d1bbd, type: 3}
+    clip: {fileID: 8300000, guid: 73856725cec14614499a38fedb5e576f, type: 3}
     volume: 1
     pitch: 1.2
     randomVolume: 0.1
@@ -89,53 +62,53 @@ MonoBehaviour:
     loop: 0
     playOnAwake: 0
     aS: {fileID: 0}
-  - name: Land
-    clip: {fileID: 8300000, guid: 72e67fc6164edb04d9a5bd38bf24e6cf, type: 3}
+  - name: Jump
+    clip: {fileID: 8300000, guid: 602cbe80990d1964e94982885fa7f88b, type: 3}
+    volume: 1
+    pitch: 1
+    randomVolume: 0.2
+    randomPitch: 0.2
+    loop: 0
+    playOnAwake: 0
+    aS: {fileID: 0}
+  - name: Walk
+    clip: {fileID: 8300000, guid: f34deef8a4a38d144afc1d1342bdd443, type: 3}
+    volume: 1
+    pitch: 1
+    randomVolume: 0.2
+    randomPitch: 0.2
+    loop: 0
+    playOnAwake: 0
+    aS: {fileID: 0}
+  - name: Death
+    clip: {fileID: 8300000, guid: 3d81adc4d229e7e42b19c959a926a0d1, type: 3}
     volume: 1
     pitch: 1
     randomVolume: 0.1
+    randomPitch: 0.1
+    loop: 0
+    playOnAwake: 0
+    aS: {fileID: 0}
+  - name: Land
+    clip: {fileID: 8300000, guid: 10aaea5e12b440f4fa2b84166e791c77, type: 3}
+    volume: 1
+    pitch: 1
+    randomVolume: 0.2
     randomPitch: 0.1
     loop: 0
     playOnAwake: 0
     aS: {fileID: 0}
   - name: Climb
-    clip: {fileID: 8300000, guid: 35a4b308fd1cae94391af85c11337af5, type: 3}
+    clip: {fileID: 8300000, guid: 56add0200c3a8804ca4d352a4cdcff30, type: 3}
     volume: 1
     pitch: 1
-    randomVolume: 0.1
-    randomPitch: 0.1
+    randomVolume: 0.2
+    randomPitch: 0.2
     loop: 0
     playOnAwake: 0
     aS: {fileID: 0}
   - name: PressurePlate
-    clip: {fileID: 8300000, guid: c989483fc257c41488f0069fa303a9bf, type: 3}
-    volume: 1
-    pitch: 1
-    randomVolume: 0.1
-    randomPitch: 0.1
-    loop: 0
-    playOnAwake: 0
-    aS: {fileID: 0}
-  - name: Level Transition
-    clip: {fileID: 8300000, guid: 35a4b308fd1cae94391af85c11337af5, type: 3}
-    volume: 1
-    pitch: 1
-    randomVolume: 0.1
-    randomPitch: 0.1
-    loop: 0
-    playOnAwake: 0
-    aS: {fileID: 0}
-  - name: Drawbridge falling
-    clip: {fileID: 8300000, guid: df52468acd703af49832bd0123949912, type: 3}
-    volume: 1
-    pitch: 1
-    randomVolume: 0.1
-    randomPitch: 0.1
-    loop: 0
-    playOnAwake: 0
-    aS: {fileID: 0}
-  - name: ShadowPlatform
-    clip: {fileID: 8300000, guid: df52468acd703af49832bd0123949912, type: 3}
+    clip: {fileID: 8300000, guid: bab839bc3cd9a2c47bd2176c2baa967f, type: 3}
     volume: 1
     pitch: 1
     randomVolume: 0.1
@@ -144,7 +117,16 @@ MonoBehaviour:
     playOnAwake: 0
     aS: {fileID: 0}
   - name: SafePoint
-    clip: {fileID: 8300000, guid: df52468acd703af49832bd0123949912, type: 3}
+    clip: {fileID: 8300000, guid: 91f6ce682d78eae4f84757a512df13b7, type: 3}
+    volume: 0.6
+    pitch: 1.25
+    randomVolume: 0.1
+    randomPitch: 0.1
+    loop: 0
+    playOnAwake: 0
+    aS: {fileID: 0}
+  - name: WalkingIntoSafePoint
+    clip: {fileID: 8300000, guid: 4ad771d18b8701842b0c05f7b6a6fad5, type: 3}
     volume: 1
     pitch: 1
     randomVolume: 0.1

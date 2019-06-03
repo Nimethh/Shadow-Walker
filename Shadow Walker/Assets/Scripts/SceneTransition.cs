@@ -23,7 +23,7 @@ public class SceneTransition : MonoBehaviour
     float afkTimerCountDown;
     [SerializeField]
     Animator animator;
-    bool goToNextScene = false;
+    public bool goToNextScene = false;
     GameObject levelFadePanel;
 
     void Start()
@@ -85,7 +85,7 @@ public class SceneTransition : MonoBehaviour
         }
     }
 
-    IEnumerator LoadNextScene(string p_nextSceneName)
+    public IEnumerator LoadNextScene(string p_nextSceneName)
     {
         //levelFadePanel.GetComponent<Image>().enabled = true;
         animator.SetTrigger("FadeOut");
