@@ -152,7 +152,6 @@ public class PlayerSunBehaviorUpdated : AffectedByTheSun
     // Added 2019-05-19
     public void PlayerIsDead()
     {
-        Debug.Log("PlayerIsDead");
         doneRespawning = false;
         animator.SetBool("Climbing", false);
         animator.speed = 1;

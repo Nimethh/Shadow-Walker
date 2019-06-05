@@ -46,7 +46,7 @@ MonoBehaviour:
   soundFX:
   - name: Background
     clip: {fileID: 8300000, guid: a91f5d84afa0c3d4bbfe477680f87e8b, type: 3}
-    volume: 0.4
+    volume: 0.6
     pitch: 1
     randomVolume: 0
     randomPitch: 0

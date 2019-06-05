@@ -1044,6 +1044,11 @@ PrefabInstance:
       propertyPath: m_Color.a
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1952625933892931417, guid: 04709310dd5de4247a3a7649031745f4,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1.08
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 04709310dd5de4247a3a7649031745f4, type: 3}
 --- !u!1 &577294561
@@ -4332,6 +4337,11 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: ca0f0176726188d47b535c9f6e0b8685, type: 2}
+    - target: {fileID: 5283512872237241263, guid: c477efd1ae4b6fb4884588625a00b64f,
+        type: 3}
+      propertyPath: timeInSunAllowed
+      value: 0.5
+      objectReference: {fileID: 0}
     - target: {fileID: 1445635278864409995, guid: c477efd1ae4b6fb4884588625a00b64f,
         type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
@@ -4341,11 +4351,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 1.28
-      objectReference: {fileID: 0}
-    - target: {fileID: 5283512872237241263, guid: c477efd1ae4b6fb4884588625a00b64f,
-        type: 3}
-      propertyPath: timeInSunAllowed
-      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 46352488433769890, guid: c477efd1ae4b6fb4884588625a00b64f,
         type: 3}

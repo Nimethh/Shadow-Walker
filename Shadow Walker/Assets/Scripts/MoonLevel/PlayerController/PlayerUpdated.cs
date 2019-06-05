@@ -83,6 +83,7 @@ public class PlayerUpdated : MonoBehaviour
     GameObject endOfTheScene;
     PlayerSunBehaviorUpdated playerSunBehavior;
     AudioManager audioManager;
+    ClimbingCheck climbingCheck;    //Added 19/06/05
 
     //Instantiate them instead.
     //ParticleSystem jumpParticle;
@@ -211,7 +212,6 @@ public class PlayerUpdated : MonoBehaviour
              Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.DownArrow) || 
              Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.RightArrow)) && spawnedInSafePoint && !playerSunBehavior.isDead)
         {
-            Debug.Log("CheckSpawnMovingOut()");
             movingOutCheckPoint = true;
             animator.SetBool("MovingOutofCheckPoint", true);
             audioManager.Play("WalkingIntoSafePoint");
@@ -376,7 +376,6 @@ public class PlayerUpdated : MonoBehaviour
         {
             if((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow)) && !movingIntoCheckPoint && finishedMovingOutCheckPoint && !playerSunBehavior.isDead/*!movingOutCheckPoint*/ /*&& directionalInput.x == 0*/)
             {
-                Debug.Log("CheckPoint MovingOut");
                 movingIntoCheckPoint = true;
                 movingOutCheckPoint = false;
                 finishedMovingIntoCheckPoint = false;
@@ -399,12 +398,15 @@ public class PlayerUpdated : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D other)
     {
-        if (other.gameObject.CompareTag("Ladder"))
+        if (other.gameObject.CompareTag("LadderBottom")) // Added 19/06/05
         {
+            Debug.Log("Exited ladder");
             onLadder = false;
             moveOffLadder = true;
+            climbingCheck = other.gameObject.GetComponent<ClimbingCheck>();
+            climbingCheck.startChecking = false;
         }
-        if(other.gameObject.CompareTag("MovingPlatform"))
+        if (other.gameObject.CompareTag("MovingPlatform"))
         {
             this.gameObject.transform.parent = null;
         }
