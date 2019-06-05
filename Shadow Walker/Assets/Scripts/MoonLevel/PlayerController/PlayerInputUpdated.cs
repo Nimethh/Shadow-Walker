@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(PlayerUpdated))]
 public class PlayerInputUpdated : MonoBehaviour
@@ -235,7 +236,7 @@ public class PlayerInputUpdated : MonoBehaviour
 
     void JumpCheck()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && !player.movingToNextLevel)
+        if (Input.GetKeyDown(KeyCode.Space) && !player.movingToNextLevel && SceneManager.GetActiveScene().name != "FinalScene")
         {
             player.OnJumpInputDown();
         }

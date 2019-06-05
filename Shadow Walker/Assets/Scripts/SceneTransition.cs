@@ -67,7 +67,7 @@ public class SceneTransition : MonoBehaviour
             else
                 afkTimerCountDown -= Time.deltaTime;
         }
-        else if(Input.anyKeyDown && SceneManager.GetActiveScene().name == videoSceneName)
+        else if(Input.anyKeyDown && (SceneManager.GetActiveScene().name == videoSceneName || SceneManager.GetActiveScene().name == "Credits"))
         {
             StartCoroutine(LoadFirstScene(firstSceneName));
         }

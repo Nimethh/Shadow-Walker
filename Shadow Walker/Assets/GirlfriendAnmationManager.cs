@@ -6,6 +6,7 @@ public class GirlfriendAnmationManager : MonoBehaviour
 {
     PlayerUpdated player;
     PlayerInputUpdated playerInput;
+    PlayerSoundManager playerSoundManager;
     GameObject logo;
     SceneTransition sceneTransition;
     
@@ -13,6 +14,7 @@ public class GirlfriendAnmationManager : MonoBehaviour
     {
         player = GameObject.Find("Player").GetComponent<PlayerUpdated>();
         playerInput = GameObject.Find("Player").GetComponent<PlayerInputUpdated>();
+        playerSoundManager = GameObject.Find("Player").GetComponent<PlayerSoundManager>();
         logo = GameObject.Find("Logo");
         logo.SetActive(false);
         sceneTransition = GameObject.Find("SceneManager").GetComponent<SceneTransition>();
@@ -39,10 +41,11 @@ public class GirlfriendAnmationManager : MonoBehaviour
         {
             player.enabled = false;
             playerInput.enabled = false;
+            playerSoundManager.enabled = false;
             Animator anim = GetComponent<Animator>();
             anim.SetTrigger("Turn");
-            Invoke("PlayLogoAnimation", 3);
-            Invoke("GoToNextLevel", 12);
+            Invoke("PlayLogoAnimation", 1f);
+            Invoke("GoToNextLevel", 7);
         }
     }
 }

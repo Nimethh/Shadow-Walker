@@ -10,14 +10,17 @@ public class CheckPoint : MonoBehaviour
     //private SunController sunController;
     //public int sunCheckPointIndex;
     AudioManager audioManager;
-    
+    Animator animator;
+
     bool safePointSoundPlayer = false;
+    bool safePointAnimation = false;
 
     void Start()
     {
         playerSunBehavior = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerSunBehaviorUpdated>();
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerUpdated>();
         audioManager = FindObjectOfType<AudioManager>();
+        animator = transform.GetChild(0).GetComponent<Animator>();
         //sunController = GameObject.FindGameObjectWithTag("Sun").GetComponent<SunController>();
         //sunCheckPointIndex = sunController.checkPointIndex;
     }
@@ -58,6 +61,13 @@ public class CheckPoint : MonoBehaviour
                 audioManager.Play("SafePoint");
                 safePointSoundPlayer = true;
             }
+            if(!safePointAnimation)
+            {
+                animator.SetBool("ShouldBePlayingAnim", true);
+                //animator.SetTrigger("Ringing");
+                safePointAnimation = true;
+            }
+
             //collider.enabled = false;
         }
     }
