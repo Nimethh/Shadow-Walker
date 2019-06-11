@@ -26,7 +26,7 @@ public class SunControllerMobile : MonoBehaviour
 
     [SerializeField]
     bool restrictMovement = false;
-    public VirtualSunJoystick sunJoystick;
+    //public VirtualSunJoystick sunJoystick;
 
 
     private void Start()
@@ -51,11 +51,19 @@ public class SunControllerMobile : MonoBehaviour
         //    MoveLeft();
         //}
 
-        if (sunJoystick.Horizontal() > 0.4f && transform.position.x < points[2].position.x)
+        //if (sunJoystick.Horizontal() > 0.4f && transform.position.x < points[2].position.x)
+        //{
+        //    MoveRight();
+        //}
+        //else if (sunJoystick.Horizontal() < -0.4f && transform.position.x > points[0].position.x)
+        //{
+        //    MoveLeft();
+        //}
+        if (Input.acceleration.x > 0 && transform.position.x < points[2].position.x)
         {
             MoveRight();
         }
-        else if (sunJoystick.Horizontal() < -0.4f && transform.position.x > points[0].position.x)
+        else if (Input.acceleration.x < 0 && transform.position.x > points[0].position.x)
         {
             MoveLeft();
         }
