@@ -59,11 +59,11 @@ public class SunControllerMobile : MonoBehaviour
         //{
         //    MoveLeft();
         //}
-        if (Input.acceleration.x > 0 && transform.position.x < points[2].position.x)
+        if (Input.acceleration.x > 0.15f && transform.position.x < points[2].position.x)
         {
             MoveRight();
         }
-        else if (Input.acceleration.x < 0 && transform.position.x > points[0].position.x)
+        else if (Input.acceleration.x < -0.15 && transform.position.x > points[0].position.x)
         {
             MoveLeft();
         }
@@ -75,22 +75,23 @@ public class SunControllerMobile : MonoBehaviour
 
     }
 
-    void Update()
-    {
-        float acceleration = Mathf.Abs(Input.acceleration.x);
-        if(acceleration > 0.2f && acceleration <= 0.4f)
-        {
-            sunSpeed = 0.1f;
-        }
-        else if(acceleration > 0.4f && acceleration <= 0.7f)
-        {
-            sunSpeed = 0.2f;
-        }
-        else if(acceleration > 0.7f)
-        {
-            sunSpeed = 0.3f;
-        }
-    }
+    //void Update()
+    //{
+        //float acceleration = Input.acceleration.x;
+        //Debug.Log("Acceleration " + acceleration);
+        //if ((acceleration > 0.1f && acceleration <= 0.2f) || (acceleration < -0.1f && acceleration >= -0.2f))
+        //{
+        //    sunSpeed = 0.1f;
+        //}
+        //else if ((acceleration > 0.2f && acceleration <= 0.35f) || (acceleration < -0.2f && acceleration >= -0.35f))
+        //{
+        //    sunSpeed = 0.2f;
+        //}
+        //else if (acceleration > 0.35f || acceleration < -0.35f)
+        //{
+        //    sunSpeed = 0.3f;
+        //}
+    //}
 
     public void FindSunBounds()
     {
