@@ -105,7 +105,7 @@ public class SunControllerMobile : MonoBehaviour
             if (transform.position.x < right - 0.2f)
             {
                 index++;
-                float t = index / (float)numberOfPoints * sunSpeed;
+                float t = index / (float)numberOfPoints * (Input.acceleration.x *sunSpeed);
                 transform.position = CalculateQuadraticBezeirPoint(t, points[0].position, points[1].position, points[2].position);
                 audioManager.Play("SunMoving");
             }
@@ -113,7 +113,7 @@ public class SunControllerMobile : MonoBehaviour
         else
         {
             index++;
-            float t = index / (float)numberOfPoints * sunSpeed;
+            float t = index / (float)numberOfPoints * (Input.acceleration.x * sunSpeed);
             transform.position = CalculateQuadraticBezeirPoint(t, points[0].position, points[1].position, points[2].position);
             audioManager.Play("SunMoving");
         }
