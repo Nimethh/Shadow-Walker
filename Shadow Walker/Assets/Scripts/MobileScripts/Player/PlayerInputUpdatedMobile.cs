@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(PlayerUpdatedMobile))]
 public class PlayerInputUpdatedMobile : MonoBehaviour
@@ -11,14 +12,19 @@ public class PlayerInputUpdatedMobile : MonoBehaviour
     PlayerSunBehaviorUpdatedMobile playerSunBehavior;
     PlayerAnimationManagerMobile playerAnimationManager;
     // GameObject movingParticle;  Instantiate the particle instead.
-    
+
     Vector2 directionalInput;
-    
+
     float moveOffLadderTimer = 0.01f;
     float moveOffLadderCooldown = 0.01f;
-    float moveOffLadderHoldTimer = 0.2f;
-    float moveOffLadderHoldCooldown = 0.2f;
+    float moveOffLadderHoldTimer = 0.4f;
+    float moveOffLadderHoldCooldown = 0.4f;
+    float turnAnimationTimer = 0.5f;
 
+    float prevDirX;
+    float currDirX;
+    public bool turnAnimRight = false;
+    public bool turnAnimLeft = false;
     //ParticleSystem movingPartical;
     //GameObject movingParticalObject;
     //ParticleSystem movingLeftParticle;
@@ -43,29 +49,15 @@ public class PlayerInputUpdatedMobile : MonoBehaviour
 
         //Cursor.visible = false;
         FindPlayerBounds();
-
+        turnAnimationTimer = 0;
         //movingParticalObject = transform.GetChild(2).gameObject;
         //movingPartical = movingParticalObject.GetComponent<ParticleSystem>();
         //movingLeftParticleObject = transform.GetChild(3).gameObject;
         //movingLeftParticle = movingLeftParticleObject.GetComponent<ParticleSystem>();
+
+
     }
 
-    //void Update()
-    //{
-    //    if (!playerSunBehavior.isDead && playerSunBehavior.doneRespawning && !player.movingIntoCheckPoint && !player.movingOutCheckPoint)
-    //    {
-    //        MoveOffLadderCheck();
-    //        MovementCheck();
-    //        JumpCheck();
-
-    //        player.SetDirectionalInput(directionalInput);
-    //        playerSoundManager.SetDirectionalInput(directionalInput);
-    //        playerAnimationManager.SetDirectionalInput(directionalInput);
-    //    }
-
-    //    CheckPlayerBounds();
-
-    //}
     void Update()
     {
         if (!playerSunBehavior.isDead && playerSunBehavior.doneRespawning && player.finishedMovingOutCheckPoint/*&& playerSunBehavior.doneRespawning*/ /*&& !player.movingIntoCheckPoint && !player.movingOutCheckPoint*/)
@@ -81,7 +73,6 @@ public class PlayerInputUpdatedMobile : MonoBehaviour
 
         CheckPlayerBounds();
     }
-
 
     public void FindPlayerBounds()
     {
@@ -109,7 +100,7 @@ public class PlayerInputUpdatedMobile : MonoBehaviour
         if (transform.position.y < (bottom - 10.0f))
         {
             player.velocity.y = 0;
-            playerSunBehavior.isDead = true;
+            //playerSunBehavior.isDead = true;
             transform.position = playerSunBehavior.spawningPos;
         }
 
@@ -130,13 +121,73 @@ public class PlayerInputUpdatedMobile : MonoBehaviour
     {
         if (controller.collisionInfo.climbing == false || controller.collisionInfo.below == true)
         {
-            //directionalInput.x = Input.GetAxisRaw("Horizontal");
             directionalInput.x = (movementJoystick.Horizontal() > 0.4f || movementJoystick.Horizontal() < -0.4f) ? movementJoystick.Horizontal() : 0;
+            //if (player.onGround)
+            //{
+            currDirX = directionalInput.x;
+            //}
         }
-        //directionalInput.y = Input.GetAxisRaw("Vertical");
+        if (player.hitTheGround)
+        {
+            //prevDirX = currDirX;
+            //player.hitTheGround = false;
+            turnAnimationTimer -= Time.deltaTime;
+
+            if (turnAnimationTimer >= 0)
+            {
+                prevDirX = currDirX;
+            }
+            else
+            {
+                if (currDirX == 1 && prevDirX == -1 && !turnAnimRight && player.onGround)
+                {
+                    //Debug.Log("Changed Right");
+                    prevDirX = currDirX;
+                    turnAnimRight = true;
+                    turnAnimLeft = false;
+                }
+                else if (currDirX == -1 && prevDirX == 1 && !turnAnimLeft && player.onGround)
+                {
+                    //Debug.Log("Changed Left");
+                    prevDirX = currDirX;
+                    turnAnimLeft = true;
+                    turnAnimRight = false;
+                }
+            }
+        }
+        else if (!player.hitTheGround && !player.spawnedInSafePoint)
+        {
+            turnAnimationTimer = .5f;
+            prevDirX = currDirX;
+        }
+        //if (!player.onGround)
+        //{
+        //    prevDirX = currDirX;
+        //}
+        //else
+        //{
+        //    turnAnimLeft = false;
+        //    turnAnimRight = false;
+        //}
+
         directionalInput.y = (movementJoystick.Vertical() > 0.4f || movementJoystick.Vertical() < -0.4f) ? movementJoystick.Vertical() : 0;
-        //Debug.Log(directionalInput.y);
-        //Debug.Log(directionalInput.x + " " + directionalInput.y);
+
+        //Check player bounds
+        if (directionalInput.x > 0 && transform.position.x > right - 0.2f)
+        {
+            directionalInput.x = 0;
+        }
+        if (directionalInput.x < 0 && transform.position.x < left + 0.2f)
+        {
+            directionalInput.x = 0;
+        }
+
+        if (prevDirX == 0)
+        {
+            prevDirX = directionalInput.x;
+
+        }
+
     }
 
     void MoveOffLadderCheck()
@@ -187,10 +238,9 @@ public class PlayerInputUpdatedMobile : MonoBehaviour
 
     void JumpCheck()
     {
-        if (movementJoystick.jump && !player.movingToNextLevel)
+        if (movementJoystick.jump && !player.movingToNextLevel && SceneManager.GetActiveScene().name != "FinalScene" && SceneManager.GetActiveScene().name != "FinalSceneMobile")
         {
             player.OnJumpInputDown();
-            //Checking something
             movementJoystick.jump = false;
         }
     }

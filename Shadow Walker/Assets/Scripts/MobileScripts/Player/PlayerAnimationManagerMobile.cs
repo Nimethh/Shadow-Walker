@@ -12,16 +12,17 @@ public class PlayerAnimationManagerMobile : MonoBehaviour
     Controller2DUpdatedMobile controller;
 
     float xMovement;
-    float lastMoveX;
+    public float lastMoveX;
     Vector2 directionalInput;
-    
+
     GameObject note;
     Vector3 notePosition;
     GameObject bedCollider;
-
+    GameObject character;
     bool moveTowardsTheNote = false;
     float speed = 0.75f;
     bool teleport = false;
+    GameObject extraCollider;
 
     void Start()
     {
@@ -30,13 +31,14 @@ public class PlayerAnimationManagerMobile : MonoBehaviour
         playerInput = GetComponent<PlayerInputUpdatedMobile>();
         playerSunBehavior = GetComponent<PlayerSunBehaviorUpdatedMobile>();
         controller = GetComponent<Controller2DUpdatedMobile>();
-        
-        if (SceneManager.GetActiveScene().name == "Level1Mobile")
+        if (SceneManager.GetActiveScene().name == "Level1" || SceneManager.GetActiveScene().name == "Level1Mobile")
         {
             bedCollider = GameObject.Find("BedCollider");
             bedCollider.SetActive(false);
             note = GameObject.Find("Note");
+            extraCollider = GameObject.Find("ExtraCollider");
         }
+        lastMoveX = 1;
     }
 
     void Update()
@@ -48,34 +50,30 @@ public class PlayerAnimationManagerMobile : MonoBehaviour
             FallingAnimationCheck();
             ClimbingAnimationCheck();
             DeathAnimationCheck();
+            MovementTurnCheck();
             //RespawningAnimationCheck();
         }
         CheckPointAnimationCheck();
         if (moveTowardsTheNote)
         {
             transform.position = Vector3.MoveTowards(transform.position, notePosition, Time.deltaTime * speed);
-            if (Vector2.Distance(transform.position, notePosition) <= 0.2f)
+            if (Vector2.Distance(transform.position, notePosition) <= 0.17f)
             {
                 moveTowardsTheNote = false;
-                note.SetActive(false);
             }
         }
+        Debug.Log(animator.speed);
     }
-
-    //void Update()
-    //{
-    //    MovementAnimationCheck();
-    //    JumpAnimationCheck();
-    //    FallingAnimationCheck();
-    //    ClimbingAnimationCheck();
-    //    DeathAnimationCheck();
-    //    RespawningAnimationCheck();
-    //    CheckPointAnimationCheck();
-    //}
 
     public void ActivateBedCollider()
     {
         bedCollider.SetActive(true);
+        note.SetActive(true);
+    }
+
+    public void DeactivateNote()
+    {
+        note.SetActive(false);
     }
 
     public void TutorialAnimation()
@@ -84,12 +82,48 @@ public class PlayerAnimationManagerMobile : MonoBehaviour
         player.finishedMovingOutCheckPoint = false;
     }
 
+    public void DeactivateExtraCollider()
+    {
+        extraCollider.GetComponent<BoxCollider2D>().enabled = false;
+    }
+
     public void MoveTowardsTheNote()
     {
         notePosition.x = note.transform.position.x;
         notePosition.y = transform.position.y;
         notePosition.z = -3;
         moveTowardsTheNote = true;
+    }
+
+    public void FinishedTurning()
+    {
+        if (playerInput.turnAnimLeft)
+        {
+            playerInput.turnAnimLeft = false;
+        }
+        else if (playerInput.turnAnimRight)
+        {
+            playerInput.turnAnimRight = false;
+        }
+    }
+
+    void MovementTurnCheck()
+    {
+        if (playerInput.turnAnimLeft)
+        {
+            animator.SetBool("Turn", true);
+            animator.SetFloat("CurrentDirX", -1f);
+        }
+        else if (playerInput.turnAnimRight)
+        {
+            animator.SetBool("Turn", true);
+            animator.SetFloat("CurrentDirX", 1);
+        }
+        else
+        {
+            animator.SetBool("Turn", false);
+        }
+
     }
 
     void MovementAnimationCheck()
@@ -170,63 +204,6 @@ public class PlayerAnimationManagerMobile : MonoBehaviour
             animator.SetBool("Falling", player.falling);
     }
 
-    //void ClimbingAnimationCheck()
-    //{
-    //    if (player.onLadder && !playerSunBehavior.isDead)
-    //    {
-    //        if (directionalInput.y > 0 || directionalInput.y < 0)
-    //        {
-    //            animator.SetBool("Climbing", true);
-    //            player.onGround = false;
-    //            animator.speed = 1;
-    //        }
-    //        else
-    //        {
-    //            animator.speed = 0;
-    //        }
-    //    }
-    //    else
-    //    {
-    //        animator.SetBool("Climbing", false);
-    //        if (animator.name == "Jump")
-    //        {
-    //            animator.speed = 1.5f;
-    //        }
-    //        else if (animator.name == "Falling")
-    //        {
-    //            animator.speed = 1.5f;
-    //        }
-    //        else if (animator.name == "Landing")
-    //        {
-    //            animator.speed = 2.5f;
-    //        }
-    //        else
-    //        {
-    //            animator.speed = 1;
-    //        }
-    //    }
-
-    //    if(playerSunBehavior.isDead)
-    //    {
-    //        animator.SetBool("Climbing", false);
-    //        if (animator.name == "Jump")
-    //        {
-    //            animator.speed = 1.5f;
-    //        }
-    //        else if (animator.name == "Falling")
-    //        {
-    //            animator.speed = 1.5f;
-    //        }
-    //        else if (animator.name == "Landing")
-    //        {
-    //            animator.speed = 2.5f;
-    //        }
-    //        else
-    //        {
-    //            animator.speed = 1;
-    //        }
-    //    }
-    //}
     void ClimbingAnimationCheck()
     {
         if (player.onLadder && !playerSunBehavior.isDead)
@@ -241,6 +218,13 @@ public class PlayerAnimationManagerMobile : MonoBehaviour
             {
                 animator.speed = 0;
             }
+        }
+        else if (playerSunBehavior.isDead)
+        {
+            Debug.Log("DeathAnimationCheck()");
+            animator.SetBool("Climbing", false);
+            animator.speed = 1;
+            Debug.Log("DeathAnimationCheck() " + animator.speed);
         }
         else
         {
@@ -306,6 +290,18 @@ public class PlayerAnimationManagerMobile : MonoBehaviour
         }
     }
 
+    public void Teleport()
+    {
+        if (teleport)
+        {
+            GameObject spawnPos = GameObject.Find("Door1");
+            Vector3 spawnPosition = spawnPos.transform.position;
+            spawnPosition.z = -3;
+            transform.position = spawnPosition;
+
+        }
+    }
+
     void DeathAnimationCheck()
     {
         if (playerSunBehavior.isDead)
@@ -315,11 +311,11 @@ public class PlayerAnimationManagerMobile : MonoBehaviour
             {
                 animator.SetBool("Jumping", false);
             }
-            if(animator.GetBool("Climbing") == true)
+            if (animator.GetBool("Climbing") == true)
             {
                 animator.SetBool("Climbing", false);
             }
-            if(animator.GetBool("Falling") == true)
+            if (animator.GetBool("Falling") == true)
             {
                 animator.SetBool("Falling", false);
             }
@@ -331,39 +327,23 @@ public class PlayerAnimationManagerMobile : MonoBehaviour
         }
         else
         {
+            Debug.Log("IsDead = false");
             animator.SetBool("Dead", false);
         }
     }
 
     void RespawningAnimationCheck()
     {
-        if(playerSunBehavior.isRespawning)
+        if (playerSunBehavior.isRespawning)
         {
             animator.SetBool("Respawning", true);
         }
-        if(playerSunBehavior.doneRespawning)
+        if (playerSunBehavior.doneRespawning)
         {
             animator.SetBool("Respawning", false);
         }
     }
 
-    //void CheckPointAnimationCheck()
-    //{
-    //    if(player.movingIntoCheckPoint)
-    //    {
-    //        animator.SetBool("MovingIntoCheckPoint",true);
-    //    }
-    //    else if(player.movingOutCheckPoint)
-    //    {
-    //        animator.SetBool("MovingOutofCheckPoint", true);
-    //        animator.SetBool("MovingIntoCheckPoint", false);
-    //    }
-    //    else
-    //    {
-    //        animator.SetBool("MovingOutofCheckPoint", false);
-    //        animator.SetBool("MovingIntoCheckPoint", false);
-    //    }
-    //}
     void CheckPointAnimationCheck()
     {
         if (player.movingIntoCheckPoint /*&& !controller.collisionInfo.climbing*/)
@@ -388,17 +368,6 @@ public class PlayerAnimationManagerMobile : MonoBehaviour
         }
     }
 
-    public void TeleportMobile()
-    {
-        if (teleport)
-        {
-            GameObject spawnPos = GameObject.Find("Door1");
-            Vector3 spawnPosition = spawnPos.transform.position;
-            spawnPosition.z = -3;
-            transform.position = spawnPosition;
-        }
-    }
-
     public void StopCheckPointAnimation()
     {
         player.movingOutCheckPoint = false;
@@ -415,11 +384,15 @@ public class PlayerAnimationManagerMobile : MonoBehaviour
     {
         if (SceneManager.GetActiveScene().name == "FinalScene")
         {
-            if(other.gameObject.CompareTag("Girlfriend"))
+            if (other.gameObject.CompareTag("Girlfriend"))
+            {
                 animator.SetTrigger("Lean");
+                PlayerUpdated playerUpdated = GetComponent<PlayerUpdated>();
+                playerUpdated.enabled = false;
+            }
         }
-    }
 
+    }
     private void OnTriggerStay2D(Collider2D other)
     {
         if (other.gameObject.name == "Teleport" && directionalInput.y > 0.4f)

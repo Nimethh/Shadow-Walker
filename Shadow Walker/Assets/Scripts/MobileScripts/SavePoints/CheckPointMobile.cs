@@ -10,14 +10,17 @@ public class CheckPointMobile : MonoBehaviour
     //private SunController sunController;
     //public int sunCheckPointIndex;
     AudioManager audioManager;
+    Animator animator;
 
     bool safePointSoundPlayer = false;
+    bool safePointAnimation = false;
 
     void Start()
     {
         playerSunBehavior = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerSunBehaviorUpdatedMobile>();
         player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerUpdatedMobile>();
         audioManager = FindObjectOfType<AudioManager>();
+        animator = transform.GetChild(0).GetComponent<Animator>();
         //sunController = GameObject.FindGameObjectWithTag("Sun").GetComponent<SunController>();
         //sunCheckPointIndex = sunController.checkPointIndex;
     }
@@ -48,7 +51,7 @@ public class CheckPointMobile : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player"))
         {
             Vector3 position = this.gameObject.transform.position;
             position.z = -3;
@@ -58,6 +61,14 @@ public class CheckPointMobile : MonoBehaviour
                 audioManager.Play("SafePoint");
                 safePointSoundPlayer = true;
             }
+            if (!safePointAnimation)
+            {
+                animator.SetBool("ShouldBePlayingAnim", true);
+                //animator.SetTrigger("Ringing");
+                safePointAnimation = true;
+            }
+
+            //collider.enabled = false;
         }
     }
 

@@ -4,49 +4,58 @@ using UnityEngine;
 
 public class SunControllerMobile : MonoBehaviour
 {
-    public VirtualSunJoystick sunJoystick;
-
     [SerializeField]
     private Transform[] points;
     [SerializeField]
-    private int index;
-
-    private int numberOfPoints = 100;
-
-    [SerializeField]
     private Transform centerPosition;
+    public int index;
 
-    float right = 0;
-    float left = 0;
+    public bool canMove = true;
+    public int checkPointIndex = 100;
+    private int numberOfPoints = 100;
+    float startT;
+
+    AudioManager audioManager;
 
     [Range(0f, 1f)]
     [SerializeField]
     private float sunSpeed = 0.2f;
 
-    AudioManager audioManager;
+    float right = 0;
+    float left = 0;
+
     [SerializeField]
     bool restrictMovement = false;
+    public VirtualSunJoystick sunJoystick;
+
 
     private void Start()
     {
         //lineRenderer.positionCount = numberOfPoints;
         //transform.position = points[0].position;
-        float startT = index / (float)numberOfPoints * 0.5f;
+        startT = index / (float)numberOfPoints * sunSpeed;
         transform.position = CalculateQuadraticBezeirPoint(startT, points[0].position, points[1].position, points[2].position);
         audioManager = FindObjectOfType<AudioManager>();
         FindSunBounds();
-
         //DrawQuadraticCurve();
     }
 
     private void FixedUpdate()
     {
+        //if (sunJoystick.Horizontal() > 0.4f && transform.position.x < points[2].position.x)
+        //{
+        //    MoveRight();
+        //}
+        //if (sunJoystick.Horizontal() < -0.4f && transform.position.x > points[0].position.x)
+        //{
+        //    MoveLeft();
+        //}
+
         if (sunJoystick.Horizontal() > 0.4f && transform.position.x < points[2].position.x)
         {
             MoveRight();
         }
-
-        if (sunJoystick.Horizontal() < -0.4f && transform.position.x > points[0].position.x)
+        else if (sunJoystick.Horizontal() < -0.4f && transform.position.x > points[0].position.x)
         {
             MoveLeft();
         }
@@ -55,6 +64,7 @@ public class SunControllerMobile : MonoBehaviour
             audioManager.Mute("SunMoving");
             //FindObjectOfType<AudioManager>().Stop("SunMoving");
         }
+
     }
 
     public void FindSunBounds()
@@ -63,11 +73,25 @@ public class SunControllerMobile : MonoBehaviour
         left = Camera.main.ViewportToWorldPoint(new Vector3(0, 0, Camera.main.nearClipPlane)).x;
     }
 
+    public void CheckSunBounds()
+    {
+        //Right
+        if (transform.position.x > right - 0.2f)// && transform.position.x > left)
+        {
+            transform.position = new Vector3(right - 0.2f, transform.position.y, transform.position.z);
+        }
+
+        //Left
+        if (transform.position.x < left + 0.2f)
+        {
+            transform.position = new Vector3(left + 0.2f, transform.position.y, transform.position.z);
+        }
+
+    }
+
+
     void MoveRight()
     {
-        //index++;
-        //float t = index / (float)numberOfPoints * 0.15f;
-        //transform.position = CalculateQuadraticBezeirPoint(t, points[0].position, points[1].position, points[2].position);
         if (restrictMovement)
         {
             if (transform.position.x < right - 0.2f)
@@ -89,9 +113,6 @@ public class SunControllerMobile : MonoBehaviour
 
     void MoveLeft()
     {
-        //index--;
-        //float t = index / (float)numberOfPoints * 0.15f;
-        //transform.position = CalculateQuadraticBezeirPoint(t, points[0].position, points[1].position, points[2].position);
         if (restrictMovement)
         {
             if (transform.position.x > left + 0.2f)
@@ -136,5 +157,4 @@ public class SunControllerMobile : MonoBehaviour
 
         return point;
     }
-
 }

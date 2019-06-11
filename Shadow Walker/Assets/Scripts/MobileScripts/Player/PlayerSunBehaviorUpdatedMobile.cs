@@ -7,45 +7,41 @@ public class PlayerSunBehaviorUpdatedMobile : AffectedByTheSun
 {
     private GameObject startingPoint;
     [HideInInspector]
-    //public Vector2 spawningPos;
     public Vector3 spawningPos;
-
 
     Animator animator;
     PlayerInputUpdatedMobile playerInput;
     PlayerUpdatedMobile player;
     //private PlayerPlatformController playerPlatformController;
-    
+
     private float timeInSun;
     [SerializeField]
     private float timeInSunAllowed;
 
-    [HideInInspector]
+    //[HideInInspector]
     public bool isDead = false; // Added 2019-05-19
     [HideInInspector]
     public bool isRespawning = false; // Added 2019-05-19
-    [HideInInspector]
+    //[HideInInspector]
     public bool doneRespawning = true; // Added 2019-05-19
 
-    [HideInInspector]
+    //[HideInInspector]
     public bool isSafeFromSun = false; //Added 2019-05-21
 
     public void Start()
     {
         AffectedByTheSunScriptStart();
-        
-        //playerPlatformController = GetComponent<PlayerPlatformController>();
 
+        //playerPlatformController = GetComponent<PlayerPlatformController>();
         animator = GetComponent<Animator>();
         player = GetComponent<PlayerUpdatedMobile>();
         playerInput = GetComponent<PlayerInputUpdatedMobile>();
         startingPoint = GameObject.Find("Door");
         timeInSun = 0;
-        //spawningPos = startingPoint.transform.position;
         spawningPos.x = startingPoint.transform.position.x;
         spawningPos.y = startingPoint.transform.position.y;
         spawningPos.z = -3;
-        if (SceneManager.GetActiveScene().name != "Level1Mobile") //Added 30/5/2019
+        if (SceneManager.GetActiveScene().name != "Level1" && SceneManager.GetActiveScene().name != "Level1Mobile") //Added 30/5/2019
         {
             transform.position = spawningPos;
         }
@@ -54,13 +50,23 @@ public class PlayerSunBehaviorUpdatedMobile : AffectedByTheSun
     public void Update()
     {
         AffectedByTheSunScriptUpdate();
-        
+
         if (isRespawning) // Added 2019-05-19
         {
             transform.position = spawningPos;
             isRespawning = false;
+            animator.speed = 1;
+            //player.onLadder = false;
+            animator.SetBool("Climbing", false);
+        }
+        if (isDead)
+        {
+            animator.SetBool("Climbing", false);
+            animator.speed = 1;
         }
     }
+
+
 
     public override void JustGotCoveredFromSunlight()
     {
@@ -90,10 +96,13 @@ public class PlayerSunBehaviorUpdatedMobile : AffectedByTheSun
 
     }
 
+
+
     public override void UnderFullCover()
     {
         //Debug.Log("UnderFullCover()");
-        isDead = false;
+        if (!isDead)
+            isDead = false;
     }
 
     public override void UnderFullExposure()
@@ -115,21 +124,6 @@ public class PlayerSunBehaviorUpdatedMobile : AffectedByTheSun
         //else
         //    isDead = false;
     }
-
-    //public override void UnderFullExposure()
-    //{
-    //    //Debug.Log("UnderFullExposure()");
-    //    timeInSun += Time.deltaTime;
-    //    if (timeInSun > timeInSunAllowed && doneRespawning)
-    //    {
-    //        //playerPlatformController.StopAllMovement(0.8f);
-    //        //transform.position = startingPoint.transform.position;
-    //        isDead = true;
-    //        player.velocity.x = 0;
-    //    }
-    //    //else
-    //    //    isDead = false;
-    //}
 
     public override void UnderPartialCover()
     {
@@ -155,30 +149,13 @@ public class PlayerSunBehaviorUpdatedMobile : AffectedByTheSun
         //}
     }
 
-    //public override void UnderPartialCover()
-    //{
-    //    //Debug.Log("UnderPartialCover()");
-    //    timeInSun += Time.deltaTime;
-    //    if (timeInSun > timeInSunAllowed && doneRespawning)
-    //    {
-    //        // Added 2019-05-19
-    //        isDead = true;
-    //        player.velocity.x = 0;
-
-    //        //playerPlatformController.StopAllMovement(0.8f);
-    //        //transform.position = startingPoint.transform.position;
-    //    }
-    //    //else // Added 2019-05-19
-    //    //{
-    //    //    isDead = false;
-    //    //}
-    //}
-
     // Added 2019-05-19
     public void PlayerIsDead()
     {
-        Debug.Log("IsDead");
+        Debug.Log("PlayerIsDead");
         doneRespawning = false;
+        animator.SetBool("Climbing", false);
+        animator.speed = 1;
         isDead = true;
     }
 

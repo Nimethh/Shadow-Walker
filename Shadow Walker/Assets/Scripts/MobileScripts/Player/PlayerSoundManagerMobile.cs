@@ -9,13 +9,12 @@ public class PlayerSoundManagerMobile : MonoBehaviour
     Vector2 directionalInput;
     //private Player player;
     PlayerUpdatedMobile player;
-    PlayerSunBehaviorUpdatedMobile playerSunBehaviorUpdated;
+    PlayerSunBehaviorUpdatedMobile playerSunBehavior;
     //PlayerSunBehavior playerSunBehavior;
     //Controller2D controller;
     Controller2DUpdatedMobile controller;
     AudioManager audioManager;
-
-    public VirtualMovementJoystick movementJoystick;
+    AudioSource aS;
 
     private void Start()
     {
@@ -23,11 +22,12 @@ public class PlayerSoundManagerMobile : MonoBehaviour
         playerInput = GetComponent<PlayerInputUpdatedMobile>();
         //player = GetComponent<Player>();
         player = GetComponent<PlayerUpdatedMobile>();
-        playerSunBehaviorUpdated = GetComponent<PlayerSunBehaviorUpdatedMobile>();
+        playerSunBehavior = GetComponent<PlayerSunBehaviorUpdatedMobile>();
         //playerSunBehavior = GetComponent<PlayerSunBehavior>();
         //controller = GetComponent<Controller2D>();
         controller = GetComponent<Controller2DUpdatedMobile>();
         audioManager = FindObjectOfType<AudioManager>();
+        aS = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -35,13 +35,13 @@ public class PlayerSoundManagerMobile : MonoBehaviour
         WalkSound();
         PlayClimbingSound();
         JumpSound();
-        DeathSound();
+        //DeathSound();
         LandingSound();
     }
 
     public void WalkSound()
     {
-        if ((directionalInput.x > 0 || directionalInput.x < 0) && player.onGround)
+        if ((directionalInput.x > 0 || directionalInput.x < 0) && player.onGround && !player.spawnedInSafePoint && !playerSunBehavior.isDead)
         {
             audioManager.Play("Walk");
         }
@@ -57,15 +57,15 @@ public class PlayerSoundManagerMobile : MonoBehaviour
         //{
         //    FindObjectOfType<AudioManager>().Play("Death");
         //}
-        if (playerSunBehaviorUpdated.isExposedToSunlight)
-        {
-            audioManager.Play("Death");
-        }
+        //if (playerSunBehavior.isDead)
+        //{
+        audioManager.Play("Death");
+        //}
     }
 
     public void LandingSound()
     {
-        if (player.landed)
+        if (player.landed && !playerSunBehavior.isDead && !player.spawnedInSafePoint)
         {
             audioManager.Play("Land");
             player.landed = false;
@@ -74,7 +74,7 @@ public class PlayerSoundManagerMobile : MonoBehaviour
 
     void JumpSound()
     {
-        if(movementJoystick.jump)
+        if (Input.GetKeyDown(KeyCode.Space) && !player.spawnedInSafePoint && !playerSunBehavior.isDead)
         {
             audioManager.Play("Jump");
         }
@@ -82,7 +82,7 @@ public class PlayerSoundManagerMobile : MonoBehaviour
 
     public void PlayClimbingSound()
     {
-        if((directionalInput.y > 0 || directionalInput.y < 0) && controller.collisionInfo.climbing)
+        if ((directionalInput.y > 0 || directionalInput.y < 0) && controller.collisionInfo.climbing && !player.spawnedInSafePoint && !playerSunBehavior.isDead)
         {
             audioManager.Play("Climb");
         }
@@ -95,5 +95,10 @@ public class PlayerSoundManagerMobile : MonoBehaviour
     public void SetDirectionalInput(Vector2 input)
     {
         directionalInput = input;
+    }
+
+    public void PlayWalkingOutOFSafePointSound()
+    {
+        aS.Play();
     }
 }
