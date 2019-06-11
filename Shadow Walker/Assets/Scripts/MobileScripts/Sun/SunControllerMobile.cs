@@ -75,6 +75,23 @@ public class SunControllerMobile : MonoBehaviour
 
     }
 
+    void Update()
+    {
+        float acceleration = Mathf.Abs(Input.acceleration.x);
+        if(acceleration > 0.2f && acceleration <= 0.4f)
+        {
+            sunSpeed = 0.1f;
+        }
+        else if(acceleration > 0.4f && acceleration <= 0.7f)
+        {
+            sunSpeed = 0.2f;
+        }
+        else if(acceleration > 0.7f)
+        {
+            sunSpeed = 0.3f;
+        }
+    }
+
     public void FindSunBounds()
     {
         right = Camera.main.ViewportToWorldPoint(new Vector3(1, 1, Camera.main.nearClipPlane)).x;
@@ -105,7 +122,7 @@ public class SunControllerMobile : MonoBehaviour
             if (transform.position.x < right - 0.2f)
             {
                 index++;
-                float t = index / (float)numberOfPoints * (Input.acceleration.x *sunSpeed);
+                float t = index / (float)numberOfPoints * sunSpeed;
                 transform.position = CalculateQuadraticBezeirPoint(t, points[0].position, points[1].position, points[2].position);
                 audioManager.Play("SunMoving");
             }
@@ -113,7 +130,7 @@ public class SunControllerMobile : MonoBehaviour
         else
         {
             index++;
-            float t = index / (float)numberOfPoints * (Input.acceleration.x * sunSpeed);
+            float t = index / (float)numberOfPoints * sunSpeed;
             transform.position = CalculateQuadraticBezeirPoint(t, points[0].position, points[1].position, points[2].position);
             audioManager.Play("SunMoving");
         }
