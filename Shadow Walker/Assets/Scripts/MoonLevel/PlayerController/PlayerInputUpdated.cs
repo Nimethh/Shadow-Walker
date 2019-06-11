@@ -17,8 +17,8 @@ public class PlayerInputUpdated : MonoBehaviour
 
     float moveOffLadderTimer = 0.01f;
     float moveOffLadderCooldown = 0.01f;
-    float moveOffLadderHoldTimer = 0.2f;
-    float moveOffLadderHoldCooldown = 0.2f;
+    float moveOffLadderHoldTimer = 0.15f;
+    float moveOffLadderHoldCooldown = 0.15f;
     float turnAnimationTimer = 0.5f;
     
     float prevDirX;
