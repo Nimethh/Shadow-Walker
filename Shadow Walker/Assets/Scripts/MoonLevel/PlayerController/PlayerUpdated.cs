@@ -345,7 +345,7 @@ public class PlayerUpdated : MonoBehaviour
         //    movingToNextLevel = true;
         //    //animator.SetTrigger("MoveToNextLevel");
         //}
-        if ((other.gameObject.CompareTag("Ground") || other.gameObject.CompareTag("Through")) && !spawnedInSafePoint)
+        if ((other.gameObject.CompareTag("Ground") || other.gameObject.CompareTag("Through")) && !spawnedInSafePoint && !onLadder)
         {
             //Instantiate(LandParticle, particlesSpawnPos.transform);
             landParticleSystem.Play();

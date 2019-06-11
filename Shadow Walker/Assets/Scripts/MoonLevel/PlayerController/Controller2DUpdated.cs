@@ -276,8 +276,12 @@ public class Controller2DUpdated : RaycastController
         {
             if (ladderHitUp || ladderHitDown)
             {
+                if(!ladderHitUp && !player.onLadder && playerInput.y > 0)
+                {
+                    return;
+                }
                 collisionInfo.canClimb = true;
-
+                
                 if (ladderHitUp)
                 {
                     rayLengthUp = ladderHitUp.distance;
@@ -288,7 +292,7 @@ public class Controller2DUpdated : RaycastController
                 }
 
                 //Check Input.
-                if (playerInput.y < 0 && playerInput.x == 0 && player.onGround )
+                if (playerInput.y < 0 && playerInput.x == 0 && player.onGround)
                 {
                     collisionInfo.climbing = true;
                     if (!ladderHitDown)

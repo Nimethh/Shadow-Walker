@@ -276,6 +276,10 @@ public class Controller2DUpdatedMobile : RaycastController
         {
             if (ladderHitUp || ladderHitDown)
             {
+                if (!ladderHitUp && !player.onLadder && playerInput.y > 0)
+                {
+                    return;
+                }
                 collisionInfo.canClimb = true;
 
                 if (ladderHitUp)

@@ -347,7 +347,7 @@ public class PlayerUpdatedMobile : MonoBehaviour
         //    movingToNextLevel = true;
         //    //animator.SetTrigger("MoveToNextLevel");
         //}
-        if ((other.gameObject.CompareTag("Ground") || other.gameObject.CompareTag("Through")) && !spawnedInSafePoint)
+        if ((other.gameObject.CompareTag("Ground") || other.gameObject.CompareTag("Through")) && !spawnedInSafePoint && !onLadder)
         {
             //Instantiate(landParticle, particlesSpawnPos.transform);
         }
