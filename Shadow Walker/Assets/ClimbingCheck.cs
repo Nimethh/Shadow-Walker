@@ -32,7 +32,7 @@ public class ClimbingCheck : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerStay2D(Collider2D other)
     {
         if (other.gameObject.CompareTag("Player") && this.gameObject.name == "LadderTop" && playerScript.onLadder)
         {
