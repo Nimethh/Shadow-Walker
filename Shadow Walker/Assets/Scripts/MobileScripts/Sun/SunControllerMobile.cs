@@ -17,54 +17,71 @@ public class SunControllerMobile : MonoBehaviour
 
     AudioManager audioManager;
 
+    float velocity;
+
     [Range(0f, 1f)]
     [SerializeField]
     private float sunSpeed = 0.2f;
 
+    [SerializeField]
+    private float maxVelocity = 0.7f;
+
     float right = 0;
     float left = 0;
 
-    [SerializeField]
+    float t = 0.0f;
+
     bool restrictMovement = false;
     //public VirtualSunJoystick sunJoystick;
 
+    [SerializeField]
+    enum SunMovementType
+    {
+        DRAG,
+        TILT
+    }
+    
+    [SerializeField]
+    SunMovementType movementType;
 
     private void Start()
     {
-        //lineRenderer.positionCount = numberOfPoints;
         //transform.position = points[0].position;
         startT = index / (float)numberOfPoints * sunSpeed;
         transform.position = CalculateQuadraticBezeirPoint(startT, points[0].position, points[1].position, points[2].position);
         audioManager = FindObjectOfType<AudioManager>();
         FindSunBounds();
-        //DrawQuadraticCurve();
+        velocity = 0.0f;
     }
 
     private void FixedUpdate()
     {
-        //if (sunJoystick.Horizontal() > 0.4f && transform.position.x < points[2].position.x)
-        //{
-        //    MoveRight();
-        //}
-        //if (sunJoystick.Horizontal() < -0.4f && transform.position.x > points[0].position.x)
-        //{
-        //    MoveLeft();
-        //}
-
-        //if (sunJoystick.Horizontal() > 0.4f && transform.position.x < points[2].position.x)
-        //{
-        //    MoveRight();
-        //}
-        //else if (sunJoystick.Horizontal() < -0.4f && transform.position.x > points[0].position.x)
-        //{
-        //    MoveLeft();
-        //}
-        if (Input.acceleration.x > 0.15f && transform.position.x < points[2].position.x)
+        /*if (sunJoystick.Horizontal() > 0.4f && transform.position.x < points[2].position.x)
         {
             MoveRight();
         }
-        else if (Input.acceleration.x < -0.15 && transform.position.x > points[0].position.x)
+        if (sunJoystick.Horizontal() < -0.4f && transform.position.x > points[0].position.x)
         {
+            MoveLeft();
+        }
+
+        if (sunJoystick.Horizontal() > 0.4f && transform.position.x < points[2].position.x)
+        {
+            MoveRight();
+        }
+        else if (sunJoystick.Horizontal() < -0.4f && transform.position.x > points[0].position.x)
+        {
+            MoveLeft();
+        }*/
+
+        if (Input.acceleration.x > 0.15f && transform.position.x < points[2].position.x)
+        {
+            velocity = Input.acceleration.x;
+            MoveRight();
+        }
+        else if (Input.acceleration.x < -0.15f && transform.position.x > points[0].position.x)
+        {
+            velocity = Input.acceleration.x;
             MoveLeft();
         }
         else
@@ -74,24 +91,6 @@ public class SunControllerMobile : MonoBehaviour
         }
 
     }
-
-    //void Update()
-    //{
-        //float acceleration = Input.acceleration.x;
-        //Debug.Log("Acceleration " + acceleration);
-        //if ((acceleration > 0.1f && acceleration <= 0.2f) || (acceleration < -0.1f && acceleration >= -0.2f))
-        //{
-        //    sunSpeed = 0.1f;
-        //}
-        //else if ((acceleration > 0.2f && acceleration <= 0.35f) || (acceleration < -0.2f && acceleration >= -0.35f))
-        //{
-        //    sunSpeed = 0.2f;
-        //}
-        //else if (acceleration > 0.35f || acceleration < -0.35f)
-        //{
-        //    sunSpeed = 0.3f;
-        //}
-    //}
 
     public void FindSunBounds()
     {
@@ -115,23 +114,29 @@ public class SunControllerMobile : MonoBehaviour
 
     }
 
-
     void MoveRight()
     {
         if (restrictMovement)
         {
             if (transform.position.x < right - 0.2f)
             {
-                index++;
-                float t = index / (float)numberOfPoints * sunSpeed;
+                //index++;
+                //float t = index / (float)numberOfPoints * sunSpeed;
+                //if (velocity <= 0.75f)
+                //    velocity = 0.75f;
+                velocity = Mathf.Clamp(velocity, -maxVelocity, maxVelocity);
+                t = t + (velocity * velocity) * 0.02f;
+                //Debug.Log(t);
                 transform.position = CalculateQuadraticBezeirPoint(t, points[0].position, points[1].position, points[2].position);
                 audioManager.Play("SunMoving");
             }
         }
         else
         {
-            index++;
-            float t = index / (float)numberOfPoints * sunSpeed;
+            //index++;
+            //float t = index / (float)numberOfPoints * sunSpeed;
+            velocity = Mathf.Clamp(velocity, -maxVelocity, maxVelocity);
+            t = t + (velocity * velocity) * 0.02f;
             transform.position = CalculateQuadraticBezeirPoint(t, points[0].position, points[1].position, points[2].position);
             audioManager.Play("SunMoving");
         }
@@ -143,16 +148,20 @@ public class SunControllerMobile : MonoBehaviour
         {
             if (transform.position.x > left + 0.2f)
             {
-                index--;
-                float t = index / (float)numberOfPoints * sunSpeed;
+                //index--;
+                //float t = index / (float)numberOfPoints * sunSpeed;
+                velocity = Mathf.Clamp(velocity, -maxVelocity, maxVelocity);
+                t = t - (velocity * velocity) * 0.02f;
                 transform.position = CalculateQuadraticBezeirPoint(t, points[0].position, points[1].position, points[2].position);
                 audioManager.Play("SunMoving");
             }
         }
         else
         {
-            index--;
-            float t = index / (float)numberOfPoints * sunSpeed;
+            //index--;
+            //float t = index / (float)numberOfPoints * sunSpeed;
+            velocity = Mathf.Clamp(velocity, -maxVelocity, maxVelocity);
+            t = t - (velocity* velocity) * 0.02f;
             transform.position = CalculateQuadraticBezeirPoint(t, points[0].position, points[1].position, points[2].position);
             audioManager.Play("SunMoving");
         }
@@ -162,16 +171,6 @@ public class SunControllerMobile : MonoBehaviour
     {
         transform.LookAt(centerPosition);
     }
-
-    //void DrawQuadraticCurve()
-    //{
-    //    for (int i = 1; i < numberOfPoints + 1; i++)
-    //    {
-    //        float t = i / (float)numberOfPoints;
-    //        positions[i - 1] = CalculateQuadraticBezeirPoint(t, points[0].position, points[1].position, points[2].position);
-    //    }
-    //    lineRenderer.SetPositions(positions);
-    //}
 
     Vector3 CalculateQuadraticBezeirPoint(float t, Vector3 point1, Vector3 point2, Vector3 point3)
     {

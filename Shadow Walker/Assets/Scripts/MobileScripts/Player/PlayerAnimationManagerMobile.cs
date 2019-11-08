@@ -62,7 +62,7 @@ public class PlayerAnimationManagerMobile : MonoBehaviour
                 moveTowardsTheNote = false;
             }
         }
-        Debug.Log(animator.speed);
+        //Debug.Log(animator.speed);
     }
 
     public void ActivateBedCollider()
@@ -121,7 +121,7 @@ public class PlayerAnimationManagerMobile : MonoBehaviour
         }
         else
         {
-            animator.SetBool("Turn", false);
+            //animator.SetBool("Turn", false);
         }
 
     }
@@ -327,7 +327,7 @@ public class PlayerAnimationManagerMobile : MonoBehaviour
         }
         else
         {
-            Debug.Log("IsDead = false");
+            //Debug.Log("IsDead = false");
             animator.SetBool("Dead", false);
         }
     }
@@ -350,7 +350,7 @@ public class PlayerAnimationManagerMobile : MonoBehaviour
         {
             animator.SetBool("MovingIntoCheckPoint", true);
             animator.SetBool("Movement", false);
-            animator.SetBool("Idle", false);
+            //animator.SetBool("Idle", false);
             animator.SetBool("Climbing", false);
         }
         else if (player.movingOutCheckPoint)
@@ -358,7 +358,7 @@ public class PlayerAnimationManagerMobile : MonoBehaviour
             animator.SetBool("MovingOutofCheckPoint", true);
             animator.SetBool("MovingIntoCheckPoint", false);
             animator.SetBool("Movement", false);
-            animator.SetBool("Idle", false);
+            //animator.SetBool("Idle", false);
             animator.SetBool("Climbing", false);
         }
         else
