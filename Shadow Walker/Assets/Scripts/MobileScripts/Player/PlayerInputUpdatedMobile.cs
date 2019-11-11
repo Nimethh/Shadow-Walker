@@ -11,7 +11,6 @@ public class PlayerInputUpdatedMobile : MonoBehaviour
     PlayerUpdatedMobile player;
     PlayerSunBehaviorUpdatedMobile playerSunBehavior;
     PlayerAnimationManagerMobile playerAnimationManager;
-    // GameObject movingParticle;  Instantiate the particle instead.
 
     Vector2 directionalInput;
 
@@ -20,15 +19,11 @@ public class PlayerInputUpdatedMobile : MonoBehaviour
     float moveOffLadderHoldTimer = 0.4f;
     float moveOffLadderHoldCooldown = 0.4f;
     float turnAnimationTimer = 0.5f;
+    float prevDirX = 0.0f;
+    float currDirX = 0.0f;
 
-    float prevDirX;
-    float currDirX;
     public bool turnAnimRight = false;
     public bool turnAnimLeft = false;
-    //ParticleSystem movingPartical;
-    //GameObject movingParticalObject;
-    //ParticleSystem movingLeftParticle;
-    //GameObject movingLeftParticleObject;
 
     float top = 0;
     float bottom = 0;
@@ -44,23 +39,18 @@ public class PlayerInputUpdatedMobile : MonoBehaviour
         controller = GetComponent<Controller2DUpdatedMobile>();
         playerSunBehavior = GetComponent<PlayerSunBehaviorUpdatedMobile>();
         playerAnimationManager = GetComponent<PlayerAnimationManagerMobile>();
+
         moveOffLadderCooldown = moveOffLadderTimer;
         moveOffLadderHoldCooldown = moveOffLadderHoldTimer;
 
         //Cursor.visible = false;
         FindPlayerBounds();
         turnAnimationTimer = 0;
-        //movingParticalObject = transform.GetChild(2).gameObject;
-        //movingPartical = movingParticalObject.GetComponent<ParticleSystem>();
-        //movingLeftParticleObject = transform.GetChild(3).gameObject;
-        //movingLeftParticle = movingLeftParticleObject.GetComponent<ParticleSystem>();
-
-
     }
 
     void Update()
     {
-        if (!playerSunBehavior.isDead && playerSunBehavior.doneRespawning && player.finishedMovingOutCheckPoint/*&& playerSunBehavior.doneRespawning*/ /*&& !player.movingIntoCheckPoint && !player.movingOutCheckPoint*/)
+        if (!playerSunBehavior.isDead && playerSunBehavior.doneRespawning && player.finishedMovingOutCheckPoint)
         {
             MoveOffLadderCheck();
             MovementCheck();
@@ -106,69 +96,15 @@ public class PlayerInputUpdatedMobile : MonoBehaviour
 
     }
 
-    //public void PlayMovingRightParticle()
-    //{
-    //    movingPartical.Play();
-    //    // Instantiate(movingParticle);
-    //}
-
-    //public void PlayMovingLeftParticle()
-    //{
-    //    movingLeftParticle.Play();
-    //}
-
     void MovementCheck()
     {
         if (controller.collisionInfo.climbing == false || controller.collisionInfo.below == true)
         {
             directionalInput.x = (movementJoystick.Horizontal() > 0.4f || movementJoystick.Horizontal() < -0.4f) ? movementJoystick.Horizontal() : 0;
-            //if (player.onGround)
-            //{
             currDirX = directionalInput.x;
-            //}
         }
-        if (player.hitTheGround)
-        {
-            //prevDirX = currDirX;
-            //player.hitTheGround = false;
-            turnAnimationTimer -= Time.deltaTime;
 
-            if (turnAnimationTimer >= 0)
-            {
-                prevDirX = currDirX;
-            }
-            else
-            {
-                if (currDirX == 1 && prevDirX == -1 && !turnAnimRight && player.onGround)
-                {
-                    //Debug.Log("Changed Right");
-                    prevDirX = currDirX;
-                    turnAnimRight = true;
-                    turnAnimLeft = false;
-                }
-                else if (currDirX == -1 && prevDirX == 1 && !turnAnimLeft && player.onGround)
-                {
-                    //Debug.Log("Changed Left");
-                    prevDirX = currDirX;
-                    turnAnimLeft = true;
-                    turnAnimRight = false;
-                }
-            }
-        }
-        else if (!player.hitTheGround && !player.spawnedInSafePoint)
-        {
-            turnAnimationTimer = .5f;
-            prevDirX = currDirX;
-        }
-        //if (!player.onGround)
-        //{
-        //    prevDirX = currDirX;
-        //}
-        //else
-        //{
-        //    turnAnimLeft = false;
-        //    turnAnimRight = false;
-        //}
+        TurnCheck();
 
         directionalInput.y = (movementJoystick.Vertical() > 0.4f || movementJoystick.Vertical() < -0.4f) ? movementJoystick.Vertical() : 0;
 
@@ -185,20 +121,56 @@ public class PlayerInputUpdatedMobile : MonoBehaviour
         if (prevDirX == 0)
         {
             prevDirX = directionalInput.x;
-
         }
 
+    }
+
+    void TurnCheck()
+    {
+        if (player.hitTheGround)
+        {
+            turnAnimationTimer -= Time.deltaTime;
+
+            if (turnAnimationTimer >= 0)
+            {
+                prevDirX = currDirX;
+            }
+            else
+            {
+                if (currDirX == 1 && prevDirX == -1 && !turnAnimRight && player.onGround)
+                {
+                    Debug.Log("TurnCheck() in the player input triggered");
+                    prevDirX = currDirX;
+                    turnAnimRight = true;
+                    turnAnimLeft = false;
+                }
+                else if (currDirX == -1 && prevDirX == 1 && !turnAnimLeft && player.onGround)
+                {
+                    Debug.Log("TurnCheck() in the player input triggered");
+                    prevDirX = currDirX;
+                    turnAnimLeft = true;
+                    turnAnimRight = false;
+                }
+            }
+        }
+        else if (!player.hitTheGround && !player.spawnedInSafePoint)
+        {
+            turnAnimationTimer = .5f;
+            prevDirX = currDirX;
+        }
     }
 
     void MoveOffLadderCheck()
     {
         if (controller.collisionInfo.climbing == true && controller.collisionInfo.reachedTopOfTheLadder == false)
         {
+            // Reset the timer if we move vertically
             if (directionalInput.y > 0 || directionalInput.y < 0)
             {
                 moveOffLadderCooldown = moveOffLadderTimer;
                 moveOffLadderHoldCooldown = moveOffLadderHoldTimer;
             }
+            //  Start holding the key timer and check if the timer < 0 when we move horizontally
             if ((movementJoystick.Horizontal() > 0.4f || movementJoystick.Horizontal() < -0.4f))
             {
                 if (moveOffLadderHoldCooldown <= 0)
@@ -211,6 +183,7 @@ public class PlayerInputUpdatedMobile : MonoBehaviour
                 }
             }
 
+            // Start double press the key timer and check if we press the key twice before the timer resets.
             if (movementJoystick.Horizontal() > 0.4f)
             {
                 if (moveOffLadderCooldown <= 0)
@@ -238,7 +211,7 @@ public class PlayerInputUpdatedMobile : MonoBehaviour
 
     void JumpCheck()
     {
-        if (movementJoystick.jump && !player.movingToNextLevel && SceneManager.GetActiveScene().name != "FinalScene" && SceneManager.GetActiveScene().name != "FinalSceneMobile")
+        if (movementJoystick.jump && SceneManager.GetActiveScene().name != "FinalScene" && SceneManager.GetActiveScene().name != "FinalSceneMobile")
         {
             player.OnJumpInputDown();
             movementJoystick.jump = false;

@@ -236,7 +236,7 @@ public class PlayerInputUpdated : MonoBehaviour
 
     void JumpCheck()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && !player.movingToNextLevel && SceneManager.GetActiveScene().name != "FinalScene")
+        if (Input.GetKeyDown(KeyCode.Space) && SceneManager.GetActiveScene().name != "FinalScene")
         {
             player.OnJumpInputDown();
         }

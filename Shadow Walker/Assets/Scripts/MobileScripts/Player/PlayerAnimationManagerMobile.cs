@@ -111,17 +111,19 @@ public class PlayerAnimationManagerMobile : MonoBehaviour
     {
         if (playerInput.turnAnimLeft)
         {
+            Debug.Log("Turning left");
             animator.SetBool("Turn", true);
             animator.SetFloat("CurrentDirX", -1f);
         }
         else if (playerInput.turnAnimRight)
         {
+            Debug.Log("Turning right");
             animator.SetBool("Turn", true);
             animator.SetFloat("CurrentDirX", 1);
         }
         else
         {
-            //animator.SetBool("Turn", false);
+            animator.SetBool("Turn", false);
         }
 
     }
@@ -221,10 +223,8 @@ public class PlayerAnimationManagerMobile : MonoBehaviour
         }
         else if (playerSunBehavior.isDead)
         {
-            Debug.Log("DeathAnimationCheck()");
             animator.SetBool("Climbing", false);
             animator.speed = 1;
-            Debug.Log("DeathAnimationCheck() " + animator.speed);
         }
         else
         {
@@ -327,7 +327,6 @@ public class PlayerAnimationManagerMobile : MonoBehaviour
         }
         else
         {
-            //Debug.Log("IsDead = false");
             animator.SetBool("Dead", false);
         }
     }
@@ -346,19 +345,17 @@ public class PlayerAnimationManagerMobile : MonoBehaviour
 
     void CheckPointAnimationCheck()
     {
-        if (player.movingIntoCheckPoint /*&& !controller.collisionInfo.climbing*/)
+        if (player.movingIntoCheckPoint)
         {
             animator.SetBool("MovingIntoCheckPoint", true);
-            animator.SetBool("Movement", false);
-            //animator.SetBool("Idle", false);
+            animator.SetBool("Moving", false);
             animator.SetBool("Climbing", false);
         }
         else if (player.movingOutCheckPoint)
         {
             animator.SetBool("MovingOutofCheckPoint", true);
             animator.SetBool("MovingIntoCheckPoint", false);
-            animator.SetBool("Movement", false);
-            //animator.SetBool("Idle", false);
+            animator.SetBool("Moving", false);
             animator.SetBool("Climbing", false);
         }
         else

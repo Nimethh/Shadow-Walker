@@ -4,30 +4,20 @@ using UnityEngine;
 
 public class PlayerSoundManager : MonoBehaviour
 {
-    //private PlayerInput playerInput;
-    PlayerInputUpdated playerInput;
     Vector2 directionalInput;
-    //private Player player;
+
     PlayerUpdated player;
     PlayerSunBehaviorUpdated playerSunBehavior;
-    //PlayerSunBehavior playerSunBehavior;
-    //Controller2D controller;
     Controller2DUpdated controller;
+
     AudioManager audioManager;
-    AudioSource aS;
 
     private void Start()
     {
-        //playerInput = GetComponent<PlayerInput>();
-        playerInput = GetComponent<PlayerInputUpdated>();
-        //player = GetComponent<Player>();
         player = GetComponent<PlayerUpdated>();
         playerSunBehavior = GetComponent<PlayerSunBehaviorUpdated>();
-        //playerSunBehavior = GetComponent<PlayerSunBehavior>();
-        //controller = GetComponent<Controller2D>();
         controller = GetComponent<Controller2DUpdated>();
         audioManager = FindObjectOfType<AudioManager>();
-        aS = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -35,7 +25,6 @@ public class PlayerSoundManager : MonoBehaviour
         WalkSound();
         PlayClimbingSound();
         JumpSound();
-        //DeathSound();
         LandingSound();
     }
 
@@ -53,14 +42,7 @@ public class PlayerSoundManager : MonoBehaviour
 
     public void DeathSound()
     {
-        //if (playerSunBehaviorUpdated.isExposedToSunlight)
-        //{
-        //    FindObjectOfType<AudioManager>().Play("Death");
-        //}
-        //if (playerSunBehavior.isDead)
-        //{
-            audioManager.Play("Death");
-        //}
+        audioManager.Play("Death");
     }
 
     public void LandingSound()
@@ -82,7 +64,8 @@ public class PlayerSoundManager : MonoBehaviour
 
     public void PlayClimbingSound()
     {
-        if((directionalInput.y > 0 || directionalInput.y < 0) && controller.collisionInfo.climbing && !player.spawnedInSafePoint && !playerSunBehavior.isDead)
+        if( (directionalInput.y > 0 || directionalInput.y < 0) 
+            && controller.collisionInfo.climbing && !player.spawnedInSafePoint && !playerSunBehavior.isDead)
         {
             audioManager.Play("Climb");
         }
@@ -95,10 +78,5 @@ public class PlayerSoundManager : MonoBehaviour
     public void SetDirectionalInput(Vector2 input)
     {
         directionalInput = input;
-    }
-
-    public void PlayWalkingOutOFSafePointSound()
-    {
-        aS.Play();
     }
 }

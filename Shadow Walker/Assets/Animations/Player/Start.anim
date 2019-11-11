@@ -202,7 +202,7 @@ AnimationClip:
   m_HasMotionFloatCurves: 0
   m_Events:
   - time: 0
-    functionName: IsInSafePointBoolManager
+    functionName: SpawningBoolManager
     data: 
     objectReferenceParameter: {fileID: 0}
     floatParameter: 0

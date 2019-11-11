@@ -187,7 +187,7 @@ public class PlayerInputUpdatedMobileOld : MonoBehaviour
 
     void JumpCheck()
     {
-        if (movementJoystick.jump && !player.movingToNextLevel)
+        if (movementJoystick.jump /*&& !player.movingToNextLevel*/)
         {
             player.OnJumpInputDown();
             //Checking something
