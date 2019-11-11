@@ -19,7 +19,9 @@ public class PlayerInputUpdatedMobile : MonoBehaviour
     float moveOffLadderHoldTimer = 0.4f;
     float moveOffLadderHoldCooldown = 0.4f;
     float turnAnimationTimer = 0.5f;
+    [SerializeField]
     float prevDirX = 0.0f;
+    [SerializeField]
     float currDirX = 0.0f;
 
     public bool turnAnimRight = false;
@@ -133,18 +135,19 @@ public class PlayerInputUpdatedMobile : MonoBehaviour
 
             if (turnAnimationTimer >= 0)
             {
+                Debug.Log("turn timer >= 0");
                 prevDirX = currDirX;
             }
             else
             {
-                if (currDirX == 1 && prevDirX == -1 && !turnAnimRight && player.onGround)
+                if (currDirX > 0f && prevDirX < 0f && !turnAnimRight && player.onGround)
                 {
                     Debug.Log("TurnCheck() in the player input triggered");
                     prevDirX = currDirX;
                     turnAnimRight = true;
                     turnAnimLeft = false;
                 }
-                else if (currDirX == -1 && prevDirX == 1 && !turnAnimLeft && player.onGround)
+                else if (currDirX < 0f && prevDirX > 0 && !turnAnimLeft && player.onGround)
                 {
                     Debug.Log("TurnCheck() in the player input triggered");
                     prevDirX = currDirX;
@@ -155,6 +158,7 @@ public class PlayerInputUpdatedMobile : MonoBehaviour
         }
         else if (!player.hitTheGround && !player.spawnedInSafePoint)
         {
+            Debug.Log("else if triggered");
             turnAnimationTimer = .5f;
             prevDirX = currDirX;
         }
