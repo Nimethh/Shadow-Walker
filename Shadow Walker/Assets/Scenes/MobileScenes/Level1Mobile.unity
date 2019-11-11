@@ -3866,6 +3866,7 @@ MonoBehaviour:
   sunSpeed: 0.2
   maxVelocity: 0.7
   invertTiltController: 0
+  movementType: 0
 --- !u!114 &1716353908 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 1588486391575791955, guid: f4404f912a6f1f34c8c9f3d72e328b72,
@@ -4298,6 +4299,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 977432833085803482, guid: f4404f912a6f1f34c8c9f3d72e328b72,
+        type: 3}
+      propertyPath: sun
+      value: 
+      objectReference: {fileID: 1713769087}
     - target: {fileID: 1588486391466620861, guid: f4404f912a6f1f34c8c9f3d72e328b72,
         type: 3}
       propertyPath: m_Name

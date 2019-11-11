@@ -6477,8 +6477,25 @@ PrefabInstance:
       propertyPath: sunJoystick
       value: 
       objectReference: {fileID: 2143429473}
+    - target: {fileID: 4281008495932383959, guid: 34abba8cb5ebfc54faf247ed60b87124,
+        type: 3}
+      propertyPath: invertTiltController
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34abba8cb5ebfc54faf247ed60b87124, type: 3}
+--- !u!114 &1767707354 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4281008495932383959, guid: 34abba8cb5ebfc54faf247ed60b87124,
+    type: 3}
+  m_PrefabInstance: {fileID: 1767707353}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 31fcdb49c8364f742a960c94dcfdf921, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1776376291
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8201,6 +8218,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 977432833085803482, guid: f4404f912a6f1f34c8c9f3d72e328b72,
+        type: 3}
+      propertyPath: sun
+      value: 
+      objectReference: {fileID: 1767707354}
     - target: {fileID: 1588486391466620861, guid: f4404f912a6f1f34c8c9f3d72e328b72,
         type: 3}
       propertyPath: m_Name
