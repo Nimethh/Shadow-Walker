@@ -28,7 +28,6 @@ public class FieldOfView : MonoBehaviour
     //Added 2019-04-29
     public MeshFilter heatDistortionMeshFilter;
 
-
     void Start()
     {
         viewMesh = new Mesh();

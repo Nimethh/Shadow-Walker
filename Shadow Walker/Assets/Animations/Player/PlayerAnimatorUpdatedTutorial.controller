@@ -614,6 +614,9 @@ AnimatorStateTransition:
   - m_ConditionMode: 1
     m_ConditionEvent: MovingOutofCheckPoint
     m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: MovingIntoCheckPoint
+    m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102136979452514842}
   m_Solo: 0
@@ -1094,6 +1097,9 @@ AnimatorStateTransition:
   m_Conditions:
   - m_ConditionMode: 1
     m_ConditionEvent: MovingIntoCheckPoint
+    m_EventTreshold: 0
+  - m_ConditionMode: 2
+    m_ConditionEvent: MovingOutofCheckPoint
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102854026030823148}

@@ -3373,6 +3373,16 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -3
       objectReference: {fileID: 0}
+    - target: {fileID: 4047538756340799430, guid: e3c1e9a9adcf1054596f90ea1603369b,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -0.03509116
+      objectReference: {fileID: 0}
+    - target: {fileID: 4047538756340799430, guid: e3c1e9a9adcf1054596f90ea1603369b,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 2.002032
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e3c1e9a9adcf1054596f90ea1603369b, type: 3}
 --- !u!4 &1104613557 stripped
@@ -6482,6 +6492,11 @@ PrefabInstance:
       propertyPath: invertTiltController
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4281008495932383959, guid: 34abba8cb5ebfc54faf247ed60b87124,
+        type: 3}
+      propertyPath: movementType
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 34abba8cb5ebfc54faf247ed60b87124, type: 3}
 --- !u!114 &1767707354 stripped
@@ -6567,6 +6582,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4047538756340799430, guid: e3c1e9a9adcf1054596f90ea1603369b,
+        type: 3}
+      propertyPath: m_Offset.y
+      value: -0.21869159
+      objectReference: {fileID: 0}
+    - target: {fileID: 4047538756340799430, guid: e3c1e9a9adcf1054596f90ea1603369b,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 1.6348312
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e3c1e9a9adcf1054596f90ea1603369b, type: 3}

@@ -9,9 +9,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5968803597903308592}
-  - component: {fileID: 5968803597903308599}
-  - component: {fileID: 5968803597903308598}
   - component: {fileID: 4281008495932383959}
+  - component: {fileID: 5414729658645288072}
   m_Layer: 0
   m_Name: SunMobile
   m_TagString: Untagged
@@ -35,46 +34,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &5968803597903308599
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5968803597903308594}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13d75465d80d3c742a4170a941642745, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  colliderEdges: []
-  obstaclesVisibileOnTheScreen: []
-  obstacleLayer:
-    serializedVersion: 2
-    m_Bits: 0
---- !u!114 &5968803597903308598
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5968803597903308594}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a08061a1ed0c8f54faa991cf5115caaf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  viewRadius: 40
-  viewAngle: 360
-  obstacleMask:
-    serializedVersion: 2
-    m_Bits: 1024
-  meshResolution: 10
-  edgeResolveIterations: 10
-  edgeDstThreshold: 0.1
-  maskCutawayDistance: 0.15
-  viewMeshFilter: {fileID: 5968803598847085356}
-  heatDistortionMeshFilter: {fileID: 0}
 --- !u!114 &4281008495932383959
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -87,15 +46,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31fcdb49c8364f742a960c94dcfdf921, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sunJoystick: {fileID: 0}
   points:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
   index: 38
-  centerPosition: {fileID: 0}
   sunSpeed: 0.2
-  restrictMovement: 0
+  maxVelocity: 0.7
+  invertTiltController: 0
+  movementType: 0
+--- !u!114 &5414729658645288072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5968803597903308594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 48b849ce4a638ca48a57bf6d1af6d374, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  viewRadius: 40
+  viewAngle: 360
+  obstacleMask:
+    serializedVersion: 2
+    m_Bits: 1024
+  meshResolution: 10
+  edgeResolveIterations: 10
+  edgeDstThreshold: 0.1
+  maskCutawayDistance: 0.15
+  viewMeshFilter: {fileID: 5968803598847085356}
 --- !u!1 &5968803598391072763
 GameObject:
   m_ObjectHideFlags: 0
@@ -164,7 +145,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 7cc9b8ec01aa2234c8e43bc22835398c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c54756a0f1566984ca0cd17cb1a324a3, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

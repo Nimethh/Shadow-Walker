@@ -1541,6 +1541,41 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3891695582580835735, guid: 7fe4d1f7bda0beb498374d19f539efb5,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3042927166268473371, guid: 7fe4d1f7bda0beb498374d19f539efb5,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3042927166268473371, guid: 7fe4d1f7bda0beb498374d19f539efb5,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 195.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3042927166268473371, guid: 7fe4d1f7bda0beb498374d19f539efb5,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 3765.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3042927166268473371, guid: 7fe4d1f7bda0beb498374d19f539efb5,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 343.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3042927166268473371, guid: 7fe4d1f7bda0beb498374d19f539efb5,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 6642.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8858792493062719841, guid: 7fe4d1f7bda0beb498374d19f539efb5,
+        type: 3}
+      propertyPath: m_Name
+      value: LevelFadePanel
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7fe4d1f7bda0beb498374d19f539efb5, type: 3}
 --- !u!4 &651043934 stripped
@@ -2113,6 +2148,12 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.004864216, y: 1.8447993, z: 0.99999994}
   m_Center: {x: -0.5093448, y: -0.0905205, z: 0.000000029802322}
+--- !u!95 &892523670 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 1058624318630224490, guid: 7fe4d1f7bda0beb498374d19f539efb5,
+    type: 3}
+  m_PrefabInstance: {fileID: 651043933}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &967340952
 GameObject:
   m_ObjectHideFlags: 0
@@ -3709,6 +3750,10 @@ PrefabInstance:
       propertyPath: afkTimer
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 438868738, guid: d6abb74bc65158d4da22aba4795cdc07, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 892523670}
     - target: {fileID: 7458079894034780904, guid: d6abb74bc65158d4da22aba4795cdc07,
         type: 3}
       propertyPath: m_LocalPosition.z
@@ -4006,11 +4051,6 @@ PrefabInstance:
       propertyPath: m_Size.x
       value: 0.12772723
       objectReference: {fileID: 0}
-    - target: {fileID: 955121256067369252, guid: 4154cdaa4748a8e49a2d0867eba7f651,
-        type: 3}
-      propertyPath: m_TagString
-      value: Through
-      objectReference: {fileID: 0}
     - target: {fileID: 1028249426853215644, guid: 4154cdaa4748a8e49a2d0867eba7f651,
         type: 3}
       propertyPath: m_LocalPosition.y
@@ -4020,6 +4060,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.016
+      objectReference: {fileID: 0}
+    - target: {fileID: 955121256067369252, guid: 4154cdaa4748a8e49a2d0867eba7f651,
+        type: 3}
+      propertyPath: m_TagString
+      value: Through
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4154cdaa4748a8e49a2d0867eba7f651, type: 3}

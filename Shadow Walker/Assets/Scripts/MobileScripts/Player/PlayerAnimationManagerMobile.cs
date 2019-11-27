@@ -348,6 +348,7 @@ public class PlayerAnimationManagerMobile : MonoBehaviour
         if (player.movingIntoCheckPoint)
         {
             animator.SetBool("MovingIntoCheckPoint", true);
+            animator.SetBool("MovingOutofCheckPoint", false);
             animator.SetBool("Moving", false);
             animator.SetBool("Climbing", false);
         }

@@ -118,7 +118,7 @@ MonoBehaviour:
     aS: {fileID: 0}
   - name: SafePoint
     clip: {fileID: 8300000, guid: 91f6ce682d78eae4f84757a512df13b7, type: 3}
-    volume: 0.6
+    volume: 0.3
     pitch: 1.25
     randomVolume: 0.1
     randomPitch: 0.1

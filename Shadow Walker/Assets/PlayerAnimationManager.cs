@@ -9,20 +9,18 @@ public class PlayerAnimationManager : MonoBehaviour
     PlayerUpdated player;
     PlayerInputUpdated playerInput;
     PlayerSunBehaviorUpdated playerSunBehavior;
-    Controller2DUpdated controller;
 
-    float xMovement;
     public float lastMoveX;
     Vector2 directionalInput;
 
-    GameObject note;
+    // Tutorial level animation stuff.
     Vector3 notePosition;
     GameObject bedCollider;
-    GameObject character;
+    GameObject note;
+    GameObject extraCollider;
     bool moveTowardsTheNote = false;
     float speed = 0.75f;
     bool teleport = false;
-    GameObject extraCollider;
     
     void Start()
     {
@@ -30,7 +28,6 @@ public class PlayerAnimationManager : MonoBehaviour
         player = GetComponent<PlayerUpdated>();
         playerInput = GetComponent<PlayerInputUpdated>();
         playerSunBehavior = GetComponent<PlayerSunBehaviorUpdated>();
-        controller = GetComponent<Controller2DUpdated>();
         if (SceneManager.GetActiveScene().name == "Level1")
         {
             bedCollider = GameObject.Find("BedCollider");
@@ -51,7 +48,6 @@ public class PlayerAnimationManager : MonoBehaviour
             ClimbingAnimationCheck();
             DeathAnimationCheck();
             MovementTurnCheck();
-            //RespawningAnimationCheck();
         }
         CheckPointAnimationCheck();
         if(moveTowardsTheNote)
@@ -342,19 +338,18 @@ public class PlayerAnimationManager : MonoBehaviour
 
     void CheckPointAnimationCheck()
     {
-        if(player.movingIntoCheckPoint /*&& !controller.collisionInfo.climbing*/)
+        if(player.movingIntoCheckPoint)
         {
             animator.SetBool("MovingIntoCheckPoint",true);
-            animator.SetBool("Movement", false);
-            animator.SetBool("Idle", false);
+            animator.SetBool("MovingOutofCheckPoint", false);
+            animator.SetBool("Moving", false);
             animator.SetBool("Climbing", false);
         }
         else if(player.movingOutCheckPoint)
         {
             animator.SetBool("MovingOutofCheckPoint", true);
             animator.SetBool("MovingIntoCheckPoint", false);
-            animator.SetBool("Movement", false);
-            animator.SetBool("Idle", false);
+            animator.SetBool("Moving", false);
             animator.SetBool("Climbing", false);
         }
         else
