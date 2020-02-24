@@ -6,7 +6,7 @@ public class PlayerMoonBehavior : AffectedByTheSun
 {
     private GameObject startingPoint;
 
-    private PlayerController playerController;
+    //private PlayerController playerController;
 
     private float timeBeingInDarkness;
     [SerializeField]
@@ -17,7 +17,7 @@ public class PlayerMoonBehavior : AffectedByTheSun
     {
         AffectedByTheSunScriptStart();
 
-        playerController = GetComponent<PlayerController>();
+        //playerController = GetComponent<PlayerController>();
         startingPoint = GameObject.Find("PrototypeStartingPoint");
         timeBeingInDarkness = 0;
     }
@@ -42,7 +42,7 @@ public class PlayerMoonBehavior : AffectedByTheSun
         timeBeingInDarkness += Time.deltaTime;
         if (timeBeingInDarkness > timeInShadowAllowed)
         {
-            playerController.StopAllMovement(0.8f);
+            //playerController.StopAllMovement(0.8f);
             transform.position = startingPoint.transform.position;
         }
         //Debug.Log("UnderFullCover()");
@@ -62,7 +62,7 @@ public class PlayerMoonBehavior : AffectedByTheSun
         timeBeingInDarkness += Time.deltaTime;
         if(timeBeingInDarkness > timeInShadowAllowed)
         {
-            playerController.StopAllMovement(0.8f);
+            //playerController.StopAllMovement(0.8f);
             transform.position = startingPoint.transform.position;
         }
         //Debug.Log("UnderPartialCover()");

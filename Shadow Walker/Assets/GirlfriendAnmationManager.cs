@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class GirlfriendAnmationManager : MonoBehaviour
 {
-    PlayerUpdated player;
-    PlayerInputUpdated playerInput;
-    PlayerSoundManager playerSoundManager;
+    //PlayerUpdated player;
+    //PlayerInputUpdated playerInput;
+    //PlayerSoundManager playerSoundManager;
     GameObject logo;
     SceneTransition sceneTransition;
     
     void Start()
     {
-        player = GameObject.Find("Player").GetComponent<PlayerUpdated>();
-        playerInput = GameObject.Find("Player").GetComponent<PlayerInputUpdated>();
-        playerSoundManager = GameObject.Find("Player").GetComponent<PlayerSoundManager>();
+        //player = GameObject.Find("Player").GetComponent<PlayerUpdated>();
+        //playerInput = GameObject.Find("Player").GetComponent<PlayerInputUpdated>();
+        //playerSoundManager = GameObject.Find("Player").GetComponent<PlayerSoundManager>();
         logo = GameObject.Find("Logo");
         logo.SetActive(false);
         sceneTransition = GameObject.Find("SceneManager").GetComponent<SceneTransition>();
@@ -39,9 +39,9 @@ public class GirlfriendAnmationManager : MonoBehaviour
         }
         else if(gameObject.name == "Girlfriend" && other.gameObject.CompareTag("Player"))
         {
-            player.enabled = false;
-            playerInput.enabled = false;
-            playerSoundManager.enabled = false;
+            //player.enabled = false;
+            //playerInput.enabled = false;
+            //playerSoundManager.enabled = false;
             Animator anim = GetComponent<Animator>();
             anim.SetTrigger("Turn");
             Invoke("PlayLogoAnimation", 1f);

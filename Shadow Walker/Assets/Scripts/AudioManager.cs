@@ -48,11 +48,10 @@ public class AudioManager : MonoBehaviour
 
     public void Play(string p_name)
     {
-        
         Audio aud = Array.Find(soundFX, Audio => Audio.name == p_name);
         if (aud == null)
         {
-            Debug.Log("Audio : " + name + " not found");
+            Debug.Log("Audio : " + aud.name + " not found");
             return;
         }
         aud.aS.volume = aud.volume * (1 + UnityEngine.Random.Range(-aud.randomVolume / 2f, aud.randomVolume / 2));
