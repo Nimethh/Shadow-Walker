@@ -505,7 +505,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8930231884945552106}
   - component: {fileID: 8930231884945552104}
-  - component: {fileID: 8930231884945552105}
   - component: {fileID: 6430284853840105825}
   m_Layer: 0
   m_Name: SavePoint0
@@ -555,18 +554,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.14415121, y: 0.9362626}
   m_EdgeRadius: 0
---- !u!114 &8930231884945552105
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8930231884945552107}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29ab7e653d468854bbc338831bc3fda3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &6430284853840105825
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -625,7 +612,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8930231885021947054}
   - component: {fileID: 8930231885021947052}
-  - component: {fileID: 8930231885021947053}
   - component: {fileID: 3289299947043846008}
   m_Layer: 0
   m_Name: SavePoint4
@@ -675,18 +661,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.7592068, y: 1.2124538}
   m_EdgeRadius: 0
---- !u!114 &8930231885021947053
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8930231885021947055}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29ab7e653d468854bbc338831bc3fda3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &3289299947043846008
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -745,7 +719,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8930231885108877735}
   - component: {fileID: 8930231885108877733}
-  - component: {fileID: 8930231885108877734}
   - component: {fileID: 4933195191017111053}
   m_Layer: 0
   m_Name: SavePoint1
@@ -795,18 +768,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.1035254, y: 1.0083339}
   m_EdgeRadius: 0
---- !u!114 &8930231885108877734
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8930231885108877752}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29ab7e653d468854bbc338831bc3fda3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &4933195191017111053
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -865,7 +826,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8930231885316758166}
   - component: {fileID: 8930231885316758164}
-  - component: {fileID: 8930231885316758165}
   - component: {fileID: 2742445839344598924}
   m_Layer: 0
   m_Name: SavePoint2
@@ -915,18 +875,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.57684994, y: 1.2434058}
   m_EdgeRadius: 0
---- !u!114 &8930231885316758165
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8930231885316758167}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29ab7e653d468854bbc338831bc3fda3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &2742445839344598924
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -985,7 +933,6 @@ GameObject:
   m_Component:
   - component: {fileID: 8930231885750511978}
   - component: {fileID: 8930231885750511976}
-  - component: {fileID: 8930231885750511977}
   - component: {fileID: 51055759941417468}
   m_Layer: 0
   m_Name: SavePoint3
@@ -1035,18 +982,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.8499299, y: 1.0438814}
   m_EdgeRadius: 0
---- !u!114 &8930231885750511977
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8930231885750511979}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 29ab7e653d468854bbc338831bc3fda3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!212 &51055759941417468
 SpriteRenderer:
   m_ObjectHideFlags: 0

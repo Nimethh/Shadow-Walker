@@ -23,7 +23,6 @@ public class PressurePlatePairMovePlatform2 : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Enter");
         if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("Box"))
         {
             platform.activated = true;

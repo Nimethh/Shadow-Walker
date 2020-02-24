@@ -385,8 +385,8 @@ public class PlayerAnimationManagerMobile : MonoBehaviour
             if (other.gameObject.CompareTag("Girlfriend"))
             {
                 animator.SetTrigger("Lean");
-                PlayerUpdated playerUpdated = GetComponent<PlayerUpdated>();
-                playerUpdated.enabled = false;
+                PlayerUpdatedMobile playerUpdatedMobile = GetComponent<PlayerUpdatedMobile>();
+                playerUpdatedMobile.enabled = false;
             }
         }
 

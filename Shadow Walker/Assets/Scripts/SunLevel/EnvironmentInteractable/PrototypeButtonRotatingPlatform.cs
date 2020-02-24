@@ -11,8 +11,7 @@ public class PrototypeButtonMovingPlatform : MonoBehaviour
         if(collision.gameObject.CompareTag("Player"))
         {
             platform.activated = true;
-            FindObjectOfType<AudioManager>().Play("Drawbridge falling");
-
+            //FindObjectOfType<AudioManager>().Play("Drawbridge falling");
         }
     }
 }

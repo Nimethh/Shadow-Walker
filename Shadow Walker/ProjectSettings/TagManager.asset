@@ -20,6 +20,7 @@ TagManager:
   - Ladder
   - DeadlyDoor
   - Girlfriend
+  - Teleport
   layers:
   - Default
   - TransparentFX

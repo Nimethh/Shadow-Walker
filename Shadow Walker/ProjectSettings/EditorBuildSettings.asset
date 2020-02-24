@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 0
-    path: Assets/Scenes/3rd Level.unity
+    path: Assets/Scenes/PrototypeScenes/3rd Level.unity
     guid: ba0aad0dc7f8ff24d9ca781a06441e3a
   - enabled: 0
     path: Assets/Scenes/Misc/PrototypeLevel.unity
@@ -15,22 +15,22 @@ EditorBuildSettings:
     path: Assets/Scenes/Misc/StencilShaderPrototype.unity
     guid: 24cfecbabde16e74c9054d3ad0a83e06
   - enabled: 0
-    path: Assets/Scenes/Congrats.unity
+    path: Assets/Scenes/PrototypeScenes/Congrats.unity
     guid: a321e2a33e85cbd42b55b51c808a534b
   - enabled: 0
-    path: Assets/Scenes/1st Level.unity
+    path: Assets/Scenes/PrototypeScenes/1st Level.unity
     guid: 9920b34c1b7d4b14590305e9cc17e900
   - enabled: 0
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Scenes/PrototypeScenes/SampleScene.unity
     guid: 0058280f65a41844c936d67f4693b230
   - enabled: 0
-    path: Assets/Scenes/FirstLevel.unity
+    path: Assets/Scenes/PrototypeScenes/FirstLevel.unity
     guid: e4032158b01eb2844af54afcfe975993
   - enabled: 0
-    path: Assets/Scenes/Cast Lv 4.unity
+    path: Assets/Scenes/PrototypeScenes/Cast Lv 4.unity
     guid: ec5aa19761c84704690489843adf4706
   - enabled: 0
-    path: Assets/Scenes/Level4.unity
+    path: Assets/Scenes/PrototypeScenes/Level4.unity
     guid: 40e0d9b101f15e145963065b76e709df
   - enabled: 0
     path: 
@@ -105,6 +105,6 @@ EditorBuildSettings:
     path: Assets/Scenes/MobileScenes/Level10Mobile.unity
     guid: 9898d30fe7ae2454d833a9c97bdaec42
   - enabled: 0
-    path: Assets/Scenes/FinalSceneMobile.unity
+    path: Assets/Scenes/PrototypeScenes/FinalSceneMobile.unity
     guid: 91a927ee5839e394cbecf0e78fb7f67a
   m_configObjects: {}

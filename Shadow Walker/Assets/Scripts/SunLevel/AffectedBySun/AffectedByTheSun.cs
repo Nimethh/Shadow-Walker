@@ -6,12 +6,14 @@ public abstract class AffectedByTheSun : MonoBehaviour
 {
     public bool isExposedToSunlight;
     public bool isPartiallyExposed;
+    public bool isFullyExposed;
     public bool wasPreviouslyExposedToSun;
     public bool justGotExposedToSunlight;
     public bool justGotCoveredFromSunlight;
 
     private PolygonCollider2D col;
     private Vector2[] colPoints;
+    private int halfColPoints;
     private int numberOfExposedColliderPoints;
 
     private GameObject sun;
@@ -21,19 +23,20 @@ public abstract class AffectedByTheSun : MonoBehaviour
     public void AffectedByTheSunScriptStart()
     {
         sun = GameObject.Find("Sun");
-        //obstacleLayer = LayerMask.GetMask("Obstacle");
         obstacleLayer = LayerMask.GetMask("Ground");
         if (obstacleLayer.value == 0)
         {
             Debug.Log("Make sure you've spelled the LayerMask.GetMask correctly, It appears to be the default one");
         }
         col = GetComponent<PolygonCollider2D>();
- 
+
         colPoints = col.points;
+        halfColPoints = colPoints.Length / 2;
         numberOfExposedColliderPoints = 0;
 
         isExposedToSunlight = false;
         isPartiallyExposed = false;
+        isFullyExposed = false;
         wasPreviouslyExposedToSun = false;
     }
 
@@ -47,7 +50,7 @@ public abstract class AffectedByTheSun : MonoBehaviour
 
     public void UpdateAffectedBySunStatus()
     {
-        if(isExposedToSunlight)
+        if (isExposedToSunlight)
         {
             wasPreviouslyExposedToSun = true;
         }
@@ -57,19 +60,19 @@ public abstract class AffectedByTheSun : MonoBehaviour
         }
 
         isPartiallyExposed = false;
+        isFullyExposed = false;
         isExposedToSunlight = false;
         numberOfExposedColliderPoints = 0;
 
         for (int i = 0; i < colPoints.Length; i++)
         {
-            //Vector3 polygonPoint = new Vector3(transform.position.x + colPoints[i].x, transform.position.y + colPoints[i].y);
             Vector3 polygonPoint = transform.TransformPoint(colPoints[i]);
             Vector2 DirToSun = (sun.transform.position - polygonPoint).normalized;
             float DistanceToSun = Vector2.Distance(transform.position, sun.transform.position);
 
             if (!Physics2D.Raycast(polygonPoint, DirToSun, DistanceToSun, obstacleLayer))
             {
-                if(isExposedToSunlight == false && wasPreviouslyExposedToSun == false)
+                if (isExposedToSunlight == false && wasPreviouslyExposedToSun == false)
                 {
                     justGotExposedToSunlight = true;
                 }
@@ -84,16 +87,21 @@ public abstract class AffectedByTheSun : MonoBehaviour
             }
         }
 
-        if(numberOfExposedColliderPoints > 0 && numberOfExposedColliderPoints != colPoints.Length)
+        if (numberOfExposedColliderPoints >= halfColPoints && numberOfExposedColliderPoints != colPoints.Length)
         {
             isPartiallyExposed = true;
+        }
+        else if (numberOfExposedColliderPoints == colPoints.Length)
+        {
+            isFullyExposed = true;
         }
         else
         {
             isPartiallyExposed = false;
+            isFullyExposed = false;
         }
 
-        if(wasPreviouslyExposedToSun && !isExposedToSunlight)
+        if (wasPreviouslyExposedToSun && !isExposedToSunlight)
         {
             justGotCoveredFromSunlight = true;
         }
@@ -102,13 +110,13 @@ public abstract class AffectedByTheSun : MonoBehaviour
 
     public bool ObjectJustGotCoveredOrExposedToSunlight()
     {
-        if(justGotCoveredFromSunlight)
+        if (justGotCoveredFromSunlight)
         {
             JustGotCoveredFromSunlight();
             return true;
         }
 
-        if(justGotExposedToSunlight)
+        if (justGotExposedToSunlight)
         {
             JustGotExposedToSunlight();
             return true;
@@ -127,7 +135,7 @@ public abstract class AffectedByTheSun : MonoBehaviour
                 {
                     UnderPartialCover();
                 }
-                else
+                else if (isFullyExposed)
                 {
                     UnderFullExposure();
                 }
