@@ -128,6 +128,9 @@ public class PlayerLastLevel : MonoBehaviour
                 break;
 
             case PlayerStateLastLevel.TURN:
+                InputCheck();
+                CalculateVelocity();
+                collisionHandler.UpdateMovement(velocity * Time.deltaTime, directionalInput);
                 animator.speed = 1.2f;
                 animator.SetTrigger("Turning");
                 audioManager.Stop("Walk");

@@ -61,6 +61,8 @@ public class Player : MonoBehaviour
     float moveOffLadderHoldTimer = 0.15f;
     float moveOffLadderHoldCooldown = 0.15f;
 
+    public float fallingTimer = 0.0f;
+
     float top = 0;
     float bottom = 0;
     float right = 0;
@@ -101,6 +103,14 @@ public class Player : MonoBehaviour
     {
         CheckPlayerState();
         UpdatePlayer();
+        if(!collisionHandler.collisionInfo.below)
+        {
+            fallingTimer += Time.deltaTime;
+        }
+        else
+        {
+            fallingTimer = 0.0f;
+        }
     }
 
     void CalculateVelocity()
@@ -197,6 +207,8 @@ public class Player : MonoBehaviour
 
             case PlayerState.LANDING:
                 InputCheck();
+                CalculateVelocity();
+                collisionHandler.UpdateMovement(velocity * Time.deltaTime, directionalInput);
                 animator.speed = 1.0f;
                 animator.SetTrigger("Landing");
                 break;
@@ -234,6 +246,9 @@ public class Player : MonoBehaviour
                 break;
 
             case PlayerState.TURN:
+                InputCheck();
+                CalculateVelocity();
+                collisionHandler.UpdateMovement(velocity * Time.deltaTime, directionalInput);
                 animator.speed = 1.2f;
                 animator.SetTrigger("Turning");
                 audioManager.Stop("Walk");
@@ -331,7 +346,7 @@ public class Player : MonoBehaviour
                     audioManager.Play("Jump");
                     ResetAnimationTriggers();
                 }
-                else if(velocity.y < 0 && !collisionHandler.collisionInfo.below)
+                else if(velocity.y < 0 && !collisionHandler.collisionInfo.below && fallingTimer >= 0.2f /*&& !collisionHandler.collisionInfo.ladderNearby*/)
                 {
                     playerState = PlayerState.FALLING;
                     ResetAnimationTriggers();
@@ -366,7 +381,7 @@ public class Player : MonoBehaviour
 
             // LANDING                                                  7
             case PlayerState.LANDING:
-                Invoke("DoneLanding", 0.25f);
+                Invoke("DoneLanding", 0.2f);
                 if (playerSunBehavior.isDead == true)
                 {
                     playerState = PlayerState.DEAD;
@@ -388,7 +403,19 @@ public class Player : MonoBehaviour
 
             // TURN                                                     8
             case PlayerState.TURN:
-                if(doneTurning == true && Input.GetAxisRaw("Horizontal") == 0.0f)
+                if(Input.GetKeyDown(KeyCode.Space))
+                {
+                    CancelInvoke();
+                    
+                    turnAnimLeft = false;
+                    turnAnimRight = false;
+                    doneTurning = false;
+                    velocity.y = jumpVelocity;
+                    playerState = PlayerState.JUMPING;
+                    audioManager.Play("Jump");
+                    ResetAnimationTriggers();
+                }
+                else if(doneTurning == true && Input.GetAxisRaw("Horizontal") == 0.0f)
                 {
                     CancelInvoke();
                     turnAnimLeft = false;
@@ -422,10 +449,10 @@ public class Player : MonoBehaviour
                 }
                 else if(collisionHandler.collisionInfo.below)
                 {
-                    playerState = PlayerState.LANDING;
+                    playerState = PlayerState.IDLE;
                     ResetAnimationTriggers();
                 }
-                else if(velocity.y < 0.0f)
+                else if(velocity.y < 0.0f && fallingTimer >= 0.2f)
                 {
                     playerState = PlayerState.FALLING;
                     ResetAnimationTriggers();
@@ -468,7 +495,7 @@ public class Player : MonoBehaviour
                     audioManager.Play("Jump");
                     ResetAnimationTriggers();
                 }
-                else if (velocity.y < 0 && !collisionHandler.collisionInfo.below)
+                else if (velocity.y < 0 && !collisionHandler.collisionInfo.below && fallingTimer >= 0.2f)
                 {
                     playerState = PlayerState.FALLING;
                     ResetAnimationTriggers();
@@ -503,6 +530,7 @@ public class Player : MonoBehaviour
                 {
                     if (moveOffLadderHoldCooldown <= 0)
                     {
+                        collisionHandler.collisionInfo.moveOffLadder = true;
                         playerState = PlayerState.FALLING;
                         ResetAnimationTriggers();
                     }
@@ -516,6 +544,7 @@ public class Player : MonoBehaviour
                 {
                     if (moveOffLadderCooldown <= 0)
                     {
+                        collisionHandler.collisionInfo.moveOffLadder = true;
                         playerState = PlayerState.FALLING;
                         ResetAnimationTriggers();
                     }

@@ -66,6 +66,8 @@ public class PlayerLevel1 : MonoBehaviour
     float moveOffLadderHoldTimer = 0.15f;
     float moveOffLadderHoldCooldown = 0.15f;
 
+    public float fallingTimer = 0.0f;
+
     float top = 0;
     float bottom = 0;
     float right = 0;
@@ -113,6 +115,14 @@ public class PlayerLevel1 : MonoBehaviour
     {
         CheckPlayerState();
         UpdatePlayer();
+        if (!collisionHandler.collisionInfo.below)
+        {
+            fallingTimer += Time.deltaTime;
+        }
+        else
+        {
+            fallingTimer = 0.0f;
+        }
     }
 
     void CalculateVelocity()
@@ -230,6 +240,8 @@ public class PlayerLevel1 : MonoBehaviour
 
             case PlayerStateLevel1.LANDING:
                 InputCheck();
+                CalculateVelocity();
+                collisionHandler.UpdateMovement(velocity * Time.deltaTime, directionalInput);
                 animator.speed = 1.0f;
                 animator.SetTrigger("Landing");
                 break;
@@ -267,6 +279,9 @@ public class PlayerLevel1 : MonoBehaviour
                 break;
 
             case PlayerStateLevel1.TURN:
+                InputCheck();
+                CalculateVelocity();
+                collisionHandler.UpdateMovement(velocity * Time.deltaTime, directionalInput);
                 animator.speed = 1.2f;
                 animator.SetTrigger("Turning");
                 audioManager.Stop("Walk");
@@ -388,6 +403,7 @@ public class PlayerLevel1 : MonoBehaviour
                 }
                 else if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.S)) && collisionHandler.collisionInfo.ladderNearby == true)
                 {
+                    collisionHandler.collisionInfo.moveOffLadder = false;
                     collisionHandler.collisionInfo.climbingLadder = true;
                     playerState = PlayerStateLevel1.CLIMBING;
                     ResetAnimationTriggers();
@@ -399,7 +415,7 @@ public class PlayerLevel1 : MonoBehaviour
                     audioManager.Play("Jump");
                     ResetAnimationTriggers();
                 }
-                else if (velocity.y < 0 && !collisionHandler.collisionInfo.below)
+                else if (velocity.y < 0 && !collisionHandler.collisionInfo.below && fallingTimer >= 0.2f /*&& !collisionHandler.collisionInfo.ladderNearby*/)
                 {
                     playerState = PlayerStateLevel1.FALLING;
                     ResetAnimationTriggers();
@@ -434,7 +450,7 @@ public class PlayerLevel1 : MonoBehaviour
 
             // LANDING                                                  7
             case PlayerStateLevel1.LANDING:
-                Invoke("DoneLanding", 0.25f);
+                Invoke("DoneLanding", 0.2f);
                 if (playerSunBehavior.isDead == true)
                 {
                     playerState = PlayerStateLevel1.DEAD;
@@ -457,7 +473,18 @@ public class PlayerLevel1 : MonoBehaviour
 
             // TURN                                                     8
             case PlayerStateLevel1.TURN:
-                if (doneTurning == true && Input.GetAxisRaw("Horizontal") == 0.0f)
+                if (Input.GetKeyDown(KeyCode.Space))
+                {
+                    CancelInvoke();
+                    turnAnimLeft = false;
+                    turnAnimRight = false;
+                    doneTurning = false;
+                    velocity.y = jumpVelocity;
+                    playerState = PlayerStateLevel1.JUMPING;
+                    audioManager.Play("Jump");
+                    ResetAnimationTriggers();
+                }
+                else if (doneTurning == true && Input.GetAxisRaw("Horizontal") == 0.0f)
                 {
                     CancelInvoke();
                     turnAnimLeft = false;
@@ -485,6 +512,7 @@ public class PlayerLevel1 : MonoBehaviour
                 }
                 if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.S)) && collisionHandler.collisionInfo.ladderNearby == true)
                 {
+                    collisionHandler.collisionInfo.moveOffLadder = false;
                     collisionHandler.collisionInfo.climbingLadder = true;
                     playerState = PlayerStateLevel1.CLIMBING;
                     ResetAnimationTriggers();
@@ -494,7 +522,7 @@ public class PlayerLevel1 : MonoBehaviour
                     playerState = PlayerStateLevel1.LANDING;
                     ResetAnimationTriggers();
                 }
-                else if (velocity.y < 0.0f)
+                else if (velocity.y < 0.0f && fallingTimer >= 0.2f)
                 {
                     playerState = PlayerStateLevel1.FALLING;
                     ResetAnimationTriggers();
@@ -516,6 +544,7 @@ public class PlayerLevel1 : MonoBehaviour
                 }
                 else if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.S)) && collisionHandler.collisionInfo.ladderNearby == true)
                 {
+                    collisionHandler.collisionInfo.moveOffLadder = false;
                     collisionHandler.collisionInfo.climbingLadder = true;
                     playerState = PlayerStateLevel1.CLIMBING;
                     ResetAnimationTriggers();
@@ -537,7 +566,7 @@ public class PlayerLevel1 : MonoBehaviour
                     audioManager.Play("Jump");
                     ResetAnimationTriggers();
                 }
-                else if (velocity.y < 0 && !collisionHandler.collisionInfo.below)
+                else if (velocity.y < 0 && !collisionHandler.collisionInfo.below && fallingTimer >= 0.2f /* && !collisionHandler.collisionInfo.ladderNearby*/)
                 {
                     playerState = PlayerStateLevel1.FALLING;
                     ResetAnimationTriggers();
@@ -571,6 +600,7 @@ public class PlayerLevel1 : MonoBehaviour
                 {
                     if (moveOffLadderHoldCooldown <= 0)
                     {
+                        collisionHandler.collisionInfo.moveOffLadder = true;
                         playerState = PlayerStateLevel1.FALLING;
                         ResetAnimationTriggers();
                     }
@@ -584,6 +614,8 @@ public class PlayerLevel1 : MonoBehaviour
                 {
                     if (moveOffLadderCooldown <= 0)
                     {
+                        collisionHandler.collisionInfo.moveOffLadder = true;
+                        collisionHandler.checkingCollisionCooldown = collisionHandler.checkingCollisionTimer;
                         playerState = PlayerStateLevel1.FALLING;
                         ResetAnimationTriggers();
                     }
@@ -661,7 +693,7 @@ public class PlayerLevel1 : MonoBehaviour
     public void CheckPlayerBounds()
     {
         //Right
-        if (transform.position.x > right - 0.2f)// && transform.position.x > left)
+        if (transform.position.x > right - 0.2f)
         {
             transform.position = new Vector3(right - 0.2f, transform.position.y, transform.position.z);
         }

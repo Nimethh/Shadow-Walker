@@ -15,8 +15,13 @@ public class CollisionHandler : RaycastController
     private float maxClimbSlopeAngle = 89.0f;
     private float maxDescendSlopeAngle = 89.0f;
 
+    public float checkingCollisionTimer = 0.3f;
+    public float checkingCollisionCooldown = 0.0f;
+
     GameObject startingPosition = null;
     AudioManager audioManager = null;
+
+    public bool collisionTest = false;
 
     public override void Start()
     {
@@ -24,6 +29,11 @@ public class CollisionHandler : RaycastController
         collisionInfo.raysFacingDir = 1;
         SetUpSpawningPosition();
         audioManager = FindObjectOfType<AudioManager>();
+    }
+
+    private void Update()
+    {
+        collisionTest = collisionInfo.below;
     }
 
     void LadderCheck()
@@ -64,8 +74,23 @@ public class CollisionHandler : RaycastController
             DescendSlope(ref moveAmount);
         }
 
-        HorizontalCollisions(ref moveAmount);
-        VerticalCollisions(ref moveAmount);
+        if (collisionInfo.moveOffLadder)
+        {
+            checkingCollisionCooldown = checkingCollisionTimer;
+            collisionInfo.moveOffLadder = false;
+        }
+        else
+        {
+            checkingCollisionCooldown -= Time.deltaTime;
+        }
+
+        if (checkingCollisionCooldown <= 0.0f)
+        {
+            checkingCollisionCooldown = 0.0f;
+            HorizontalCollisions(ref moveAmount);
+            VerticalCollisions(ref moveAmount);
+        }
+
         LadderCheck();
 
         transform.Translate(moveAmount);
@@ -325,6 +350,7 @@ public class CollisionHandler : RaycastController
         //Ladder
         public bool ladderNearby;
         public bool climbingLadder;
+        public bool moveOffLadder;
         //CheckPoint.
         public bool checkPointNearby;
 

@@ -35,7 +35,7 @@ public class PlayerSunBehavior : AffectedByTheSun
         audioManager.Stop("Death");
         if (timeInSun > 0)
         {
-            timeInSun = 0;
+            timeInSun = 0.0f;
         }
     }
 
@@ -47,10 +47,12 @@ public class PlayerSunBehavior : AffectedByTheSun
 
     public override void UnderFullCover()
     {
-        if (!isDead)
-        {
-            isDead = false;
-        }
+        audioManager.Stop("Death");
+        timeInSun = 0.0f;
+        //if (!isDead)
+        //{
+        //    isDead = false;
+        //}
     }
 
     public override void UnderFullExposure()
@@ -60,6 +62,7 @@ public class PlayerSunBehavior : AffectedByTheSun
             timeInSun = 0;
             return;
         }
+        audioManager.Play("Death");
         timeInSun += Time.deltaTime;
         if (timeInSun > timeInSunAllowed)
         {
@@ -74,6 +77,7 @@ public class PlayerSunBehavior : AffectedByTheSun
             timeInSun = 0;
             return;
         }
+        audioManager.Play("Death");
         timeInSun += Time.deltaTime;
         if (timeInSun > timeInSunAllowed)
         {

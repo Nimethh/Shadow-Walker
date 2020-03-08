@@ -7,6 +7,7 @@ public abstract class AffectedByTheSun : MonoBehaviour
     public bool isExposedToSunlight;
     public bool isPartiallyExposed;
     public bool isFullyExposed;
+    public bool isFullyCovered;
     public bool wasPreviouslyExposedToSun;
     public bool justGotExposedToSunlight;
     public bool justGotCoveredFromSunlight;
@@ -62,6 +63,7 @@ public abstract class AffectedByTheSun : MonoBehaviour
         isPartiallyExposed = false;
         isFullyExposed = false;
         isExposedToSunlight = false;
+        isFullyCovered = true;
         numberOfExposedColliderPoints = 0;
 
         for (int i = 0; i < colPoints.Length; i++)
@@ -79,6 +81,7 @@ public abstract class AffectedByTheSun : MonoBehaviour
 
                 numberOfExposedColliderPoints++;
                 isExposedToSunlight = true;
+                isFullyCovered = false;
                 Debug.DrawLine(polygonPoint, sun.transform.position, Color.red);
             }
             else
@@ -94,6 +97,10 @@ public abstract class AffectedByTheSun : MonoBehaviour
         else if (numberOfExposedColliderPoints == colPoints.Length)
         {
             isFullyExposed = true;
+        }
+        else if(numberOfExposedColliderPoints == 0)
+        {
+            isFullyCovered = true;
         }
         else
         {
@@ -146,7 +153,7 @@ public abstract class AffectedByTheSun : MonoBehaviour
                 {
                     UnderPartialCover();
                 }
-                else
+                else if(isFullyCovered)
                 {
                     UnderFullCover();
                 }

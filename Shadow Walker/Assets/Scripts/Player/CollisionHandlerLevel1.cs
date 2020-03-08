@@ -15,29 +15,18 @@ public class CollisionHandlerLevel1 : RaycastController
     private float maxClimbSlopeAngle = 89.0f;
     private float maxDescendSlopeAngle = 89.0f;
 
+    public float checkingCollisionTimer = 0.3f;
+    public float checkingCollisionCooldown = 0.0f;
+
     AudioManager audioManager = null;
 
     public bool teleport = false;
-
-    // Just debugging (REMOVE LATER)
-    public bool collisionTest = false;
-    public bool atLadderTest = false;
-    public bool atCheckPointTest = false;
-    public bool climbingLadderTest = false;
 
     public override void Start()
     {
         base.Start();
         collisionInfo.raysFacingDir = 1;
         audioManager = FindObjectOfType<AudioManager>();
-    }
-
-    private void Update()
-    {
-        atLadderTest = collisionInfo.ladderNearby;
-        atCheckPointTest = collisionInfo.checkPointNearby;
-        climbingLadderTest = collisionInfo.climbingLadder;
-        collisionTest = collisionInfo.below;
     }
 
     void LadderCheck()
@@ -78,8 +67,22 @@ public class CollisionHandlerLevel1 : RaycastController
             DescendSlope(ref moveAmount);
         }
 
-        HorizontalCollisions(ref moveAmount);
-        VerticalCollisions(ref moveAmount);
+        if(collisionInfo.moveOffLadder)
+        {
+            checkingCollisionCooldown = checkingCollisionTimer;
+            collisionInfo.moveOffLadder = false;
+        }
+        else
+        {
+            checkingCollisionCooldown -= Time.deltaTime;
+        }
+
+        if (checkingCollisionCooldown <= 0.0f)
+        {
+            checkingCollisionCooldown = 0.0f;
+            HorizontalCollisions(ref moveAmount);
+            VerticalCollisions(ref moveAmount);
+        }
         LadderCheck();
 
         transform.Translate(moveAmount);
@@ -335,6 +338,7 @@ public class CollisionHandlerLevel1 : RaycastController
         //Ladder
         public bool ladderNearby;
         public bool climbingLadder;
+        public bool moveOffLadder;
         //CheckPoint.
         public bool checkPointNearby;
 
