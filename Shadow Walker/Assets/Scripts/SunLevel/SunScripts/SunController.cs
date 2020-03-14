@@ -17,14 +17,17 @@ public class SunController : MonoBehaviour
 
     AudioManager audioManager;
 
-    [Range(0f, 1f)][SerializeField]
+    [Range(0f, 1f)]
+    [SerializeField]
     private float sunSpeed = 0.2f;
-    
+
     float right = 0;
     float left = 0;
 
     [SerializeField]
     bool restrictMovement = false;
+
+    public Vector3 previousPosition = Vector3.zero;
 
     private void Start()
     {
