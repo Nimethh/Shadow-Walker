@@ -36,12 +36,13 @@ public class FieldOfViewMobile : MonoBehaviour
 
     void LateUpdate()
     {
-        if (sunController.previousSunPosition != transform.position)
-        {
-            Debug.Log("Drawing");
-            DrawFieldOfView();
-            sunController.previousSunPosition = transform.position;
-        }
+        //if (sunController.previousSunPosition != transform.position)
+        //{
+        //    Debug.Log("Drawing");
+        //    DrawFieldOfView();
+        //    sunController.previousSunPosition = transform.position;
+        //}
+        DrawFieldOfView();
     }
 
     void DrawFieldOfView()

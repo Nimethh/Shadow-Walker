@@ -1,6 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 public class FieldOfView : MonoBehaviour
 {
@@ -55,11 +56,12 @@ public class FieldOfView : MonoBehaviour
 
     void LateUpdate()
     {
-        if (transform.position != sunController.previousPosition)
-        {
-            DrawFieldOfView();
-            sunController.previousPosition = transform.position;
-        }
+        //if (transform.position != sunController.previousPosition)
+        //{
+        //    DrawFieldOfView();
+        //    sunController.previousPosition = transform.position;
+        //}
+        DrawFieldOfView();
     }
 
     //void FindVisibleTargets()
