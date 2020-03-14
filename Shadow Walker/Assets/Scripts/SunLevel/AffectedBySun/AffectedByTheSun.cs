@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public abstract class AffectedByTheSun : MonoBehaviour
 {
@@ -11,6 +9,7 @@ public abstract class AffectedByTheSun : MonoBehaviour
     public bool wasPreviouslyExposedToSun;
     public bool justGotExposedToSunlight;
     public bool justGotCoveredFromSunlight;
+    public bool reset;
 
     private PolygonCollider2D col;
     private Vector2[] colPoints;
@@ -18,12 +17,13 @@ public abstract class AffectedByTheSun : MonoBehaviour
     private int numberOfExposedColliderPoints;
 
     private GameObject sun;
+    private PlayerSunBehavior playerSunBehavior;
     private LayerMask obstacleLayer;
-
 
     public void AffectedByTheSunScriptStart()
     {
         sun = GameObject.Find("Sun");
+        playerSunBehavior = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerSunBehavior>();
         obstacleLayer = LayerMask.GetMask("Ground");
         if (obstacleLayer.value == 0)
         {
@@ -43,10 +43,18 @@ public abstract class AffectedByTheSun : MonoBehaviour
 
     public void AffectedByTheSunScriptUpdate()
     {
-        UpdateAffectedBySunStatus();
-        UpdateObjectBehaviour();
-        justGotExposedToSunlight = false;
-        justGotCoveredFromSunlight = false;
+        reset = playerSunBehavior.isSafeFromSun;
+        if (reset)
+        {
+            ResetBools();
+        }
+        else
+        {
+            UpdateAffectedBySunStatus();
+            UpdateObjectBehaviour();
+            justGotExposedToSunlight = false;
+            justGotCoveredFromSunlight = false;
+        }
     }
 
     public void UpdateAffectedBySunStatus()
@@ -159,6 +167,17 @@ public abstract class AffectedByTheSun : MonoBehaviour
                 }
             }
         }
+    }
+
+    private void ResetBools()
+    {
+        isExposedToSunlight = false;
+        isPartiallyExposed = false;
+        isFullyExposed = false;
+        isFullyCovered = false;
+        wasPreviouslyExposedToSun = false;
+        justGotExposedToSunlight = false;
+        justGotCoveredFromSunlight = false;
     }
 
     public abstract void JustGotExposedToSunlight();

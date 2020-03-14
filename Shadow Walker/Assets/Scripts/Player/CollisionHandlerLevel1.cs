@@ -1,5 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 public class CollisionHandlerLevel1 : RaycastController
@@ -15,7 +14,7 @@ public class CollisionHandlerLevel1 : RaycastController
     private float maxClimbSlopeAngle = 89.0f;
     private float maxDescendSlopeAngle = 89.0f;
 
-    public float checkingCollisionTimer = 0.3f;
+    public float checkingCollisionTimer = 0.1f;
     public float checkingCollisionCooldown = 0.0f;
 
     AudioManager audioManager = null;
@@ -67,7 +66,8 @@ public class CollisionHandlerLevel1 : RaycastController
             DescendSlope(ref moveAmount);
         }
 
-        if(collisionInfo.moveOffLadder)
+        HorizontalCollisions(ref moveAmount);
+        if (collisionInfo.moveOffLadder)
         {
             checkingCollisionCooldown = checkingCollisionTimer;
             collisionInfo.moveOffLadder = false;
@@ -80,7 +80,6 @@ public class CollisionHandlerLevel1 : RaycastController
         if (checkingCollisionCooldown <= 0.0f)
         {
             checkingCollisionCooldown = 0.0f;
-            HorizontalCollisions(ref moveAmount);
             VerticalCollisions(ref moveAmount);
         }
         LadderCheck();
@@ -112,10 +111,7 @@ public class CollisionHandlerLevel1 : RaycastController
             {
                 if (hit.collider.tag == "Through")
                 {
-                    if (collisionInfo.climbingLadder)
-                    {
-                        continue;
-                    }
+                    continue;
                 }
 
                 SlopeCheckHorizontally(hit, i, ref moveAmount, directionX, rayLength);

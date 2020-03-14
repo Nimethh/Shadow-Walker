@@ -2094,7 +2094,7 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Controller
       value: 
-      objectReference: {fileID: 9100000, guid: 8c92c13f0ecbfa3459fc75c86c4b4b03, type: 2}
+      objectReference: {fileID: 9100000, guid: 10d06fb121f33594eb8e5d482021fd7f, type: 2}
     - target: {fileID: 5283512872237241263, guid: c477efd1ae4b6fb4884588625a00b64f,
         type: 3}
       propertyPath: wasPreviouslyExposedToSun

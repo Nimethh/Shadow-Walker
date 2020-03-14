@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlayerSunBehavior : AffectedByTheSun
 {
@@ -26,8 +24,7 @@ public class PlayerSunBehavior : AffectedByTheSun
 
     public void Update()
     {
-        if(!isSafeFromSun)
-            AffectedByTheSunScriptUpdate();
+        AffectedByTheSunScriptUpdate();
     }
 
     public override void JustGotCoveredFromSunlight()
@@ -49,39 +46,27 @@ public class PlayerSunBehavior : AffectedByTheSun
     {
         audioManager.Stop("Death");
         timeInSun = 0.0f;
-        //if (!isDead)
-        //{
-        //    isDead = false;
-        //}
     }
 
     public override void UnderFullExposure()
     {
-        if (isSafeFromSun)
-        {
-            timeInSun = 0;
-            return;
-        }
         audioManager.Play("Death");
         timeInSun += Time.deltaTime;
         if (timeInSun > timeInSunAllowed)
         {
             isDead = true;
+            timeInSun = 0;
         }
     }
 
     public override void UnderPartialCover()
     {
-        if (isSafeFromSun)
-        {
-            timeInSun = 0;
-            return;
-        }
         audioManager.Play("Death");
         timeInSun += Time.deltaTime;
         if (timeInSun > timeInSunAllowed)
         {
             isDead = true;
+            timeInSun = 0;
         }
     }
 }

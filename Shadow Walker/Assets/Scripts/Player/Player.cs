@@ -339,14 +339,14 @@ public class Player : MonoBehaviour
                     playerState = PlayerState.CLIMBING;
                     ResetAnimationTriggers();
                 }
-                else if(Input.GetKeyDown(KeyCode.Space))
+                else if(Input.GetKeyDown(KeyCode.Space) && collisionHandler.collisionInfo.below)
                 {
                     velocity.y = jumpVelocity;
                     playerState = PlayerState.JUMPING;
                     audioManager.Play("Jump");
                     ResetAnimationTriggers();
                 }
-                else if(velocity.y < 0 && !collisionHandler.collisionInfo.below && fallingTimer >= 0.2f /*&& !collisionHandler.collisionInfo.ladderNearby*/)
+                else if(velocity.y < 0 && !collisionHandler.collisionInfo.below && fallingTimer >= 0.2f)
                 {
                     playerState = PlayerState.FALLING;
                     ResetAnimationTriggers();
@@ -387,6 +387,13 @@ public class Player : MonoBehaviour
                     playerState = PlayerState.DEAD;
                     ResetAnimationTriggers();
                 }
+                else if (Input.GetKeyDown(KeyCode.Space) && collisionHandler.collisionInfo.below)
+                {
+                    velocity.y = jumpVelocity;
+                    playerState = PlayerState.JUMPING;
+                    audioManager.Play("Jump");
+                    ResetAnimationTriggers();
+                }
                 else if (Input.GetAxisRaw("Horizontal") != 0.0f && doneLanding)
                 {
                     CancelInvoke();
@@ -403,7 +410,7 @@ public class Player : MonoBehaviour
 
             // TURN                                                     8
             case PlayerState.TURN:
-                if(Input.GetKeyDown(KeyCode.Space))
+                if(Input.GetKeyDown(KeyCode.Space) && collisionHandler.collisionInfo.below)
                 {
                     CancelInvoke();
                     
@@ -423,6 +430,7 @@ public class Player : MonoBehaviour
                     doneTurning = false;
                     playerState = PlayerState.IDLE;
                     ResetAnimationTriggers();
+                    animator.SetFloat("FacingDirection", facingDirection);
                 }
                 else if(doneTurning == true && Input.GetAxisRaw("Horizontal") != 0.0f)
                 {
@@ -432,6 +440,7 @@ public class Player : MonoBehaviour
                     doneTurning = false;
                     playerState = PlayerState.MOVING;
                     ResetAnimationTriggers();
+                    animator.SetFloat("FacingDirection", facingDirection);
                 }
                 break;
 
@@ -488,7 +497,7 @@ public class Player : MonoBehaviour
                     playerState = PlayerState.MOVING;
                     ResetAnimationTriggers();
                 }
-                else if (Input.GetKeyDown(KeyCode.Space))
+                else if (Input.GetKeyDown(KeyCode.Space) && collisionHandler.collisionInfo.below)
                 {
                     velocity.y = jumpVelocity;
                     playerState = PlayerState.JUMPING;
@@ -545,6 +554,7 @@ public class Player : MonoBehaviour
                     if (moveOffLadderCooldown <= 0)
                     {
                         collisionHandler.collisionInfo.moveOffLadder = true;
+                        collisionHandler.checkingCollisionCooldown = collisionHandler.checkingCollisionTimer;
                         playerState = PlayerState.FALLING;
                         ResetAnimationTriggers();
                     }
@@ -601,7 +611,7 @@ public class Player : MonoBehaviour
     public void CheckPlayerBounds()
     {
         //Right
-        if (transform.position.x > right - 0.2f)// && transform.position.x > left)
+        if (transform.position.x > right - 0.2f)
         {
             transform.position = new Vector3(right - 0.2f, transform.position.y, transform.position.z);
         }
@@ -630,14 +640,14 @@ public class Player : MonoBehaviour
             currDirX = directionalInput.x;
         }
 
-        if (playerState == PlayerState.MOVING || playerState == PlayerState.IDLE)
+        if (playerState == PlayerState.MOVING || playerState == PlayerState.IDLE || playerState == PlayerState.TURN)
         {
             if (currDirX > 0 && prevDirX < 0)
             {
                 doneTurning = false;
                 turnAnimRight = true;
                 prevDirX = currDirX;
-                animator.SetFloat("TurnDirection", 1f);
+                animator.SetFloat("TurnDirection", prevDirX);
                 Invoke("DoneTurning", 0.2f);
             }
             else if (currDirX < 0 && prevDirX > 0)
@@ -645,7 +655,7 @@ public class Player : MonoBehaviour
                 doneTurning = false;
                 turnAnimLeft = true;
                 prevDirX = currDirX;
-                animator.SetFloat("TurnDirection", -1f);
+                animator.SetFloat("TurnDirection", prevDirX);
                 Invoke("DoneTurning", 0.2f);
             }
         }
@@ -654,13 +664,13 @@ public class Player : MonoBehaviour
             if (currDirX != 0)
             {
                 prevDirX = currDirX;
+                animator.SetFloat("FacingDirection", facingDirection);
             }
         }
 
         if (directionalInput.x != 0)
         {
             facingDirection = directionalInput.x;
-            animator.SetFloat("FacingDirection", facingDirection);
         }
 
         directionalInput.y = Input.GetAxisRaw("Vertical");

@@ -408,14 +408,14 @@ public class PlayerLevel1 : MonoBehaviour
                     playerState = PlayerStateLevel1.CLIMBING;
                     ResetAnimationTriggers();
                 }
-                else if (Input.GetKeyDown(KeyCode.Space))
+                else if (Input.GetKeyDown(KeyCode.Space) && collisionHandler.collisionInfo.below)
                 {
                     velocity.y = jumpVelocity;
                     playerState = PlayerStateLevel1.JUMPING;
                     audioManager.Play("Jump");
                     ResetAnimationTriggers();
                 }
-                else if (velocity.y < 0 && !collisionHandler.collisionInfo.below && fallingTimer >= 0.2f /*&& !collisionHandler.collisionInfo.ladderNearby*/)
+                else if (velocity.y < 0 && !collisionHandler.collisionInfo.below && fallingTimer >= 0.2f)
                 {
                     playerState = PlayerStateLevel1.FALLING;
                     ResetAnimationTriggers();
@@ -456,7 +456,13 @@ public class PlayerLevel1 : MonoBehaviour
                     playerState = PlayerStateLevel1.DEAD;
                     ResetAnimationTriggers();
                 }
-
+                else if (Input.GetKeyDown(KeyCode.Space) && collisionHandler.collisionInfo.below)
+                {
+                    velocity.y = jumpVelocity;
+                    playerState = PlayerStateLevel1.JUMPING;
+                    audioManager.Play("Jump");
+                    ResetAnimationTriggers();
+                }
                 else if (Input.GetAxisRaw("Horizontal") != 0.0f && doneLanding)
                 {
                     CancelInvoke();
@@ -473,7 +479,7 @@ public class PlayerLevel1 : MonoBehaviour
 
             // TURN                                                     8
             case PlayerStateLevel1.TURN:
-                if (Input.GetKeyDown(KeyCode.Space))
+                if (Input.GetKeyDown(KeyCode.Space) && collisionHandler.collisionInfo.below)
                 {
                     CancelInvoke();
                     turnAnimLeft = false;
@@ -559,7 +565,7 @@ public class PlayerLevel1 : MonoBehaviour
                     playerState = PlayerStateLevel1.MOVING;
                     ResetAnimationTriggers();
                 }
-                else if (Input.GetKeyDown(KeyCode.Space))
+                else if (Input.GetKeyDown(KeyCode.Space) && collisionHandler.collisionInfo.below)
                 {
                     velocity.y = jumpVelocity;
                     playerState = PlayerStateLevel1.JUMPING;
@@ -722,7 +728,7 @@ public class PlayerLevel1 : MonoBehaviour
             currDirX = directionalInput.x;
         }
 
-        if (playerState == PlayerStateLevel1.MOVING || playerState == PlayerStateLevel1.IDLE)
+        if (playerState == PlayerStateLevel1.MOVING || playerState == PlayerStateLevel1.IDLE || playerState == PlayerStateLevel1.TURN)
         {
             if (currDirX > 0 && prevDirX < 0)
             {
@@ -743,16 +749,16 @@ public class PlayerLevel1 : MonoBehaviour
         }
         else
         {
-            if (directionalInput.x != 0)
+            if (currDirX != 0)
             {
                 prevDirX = currDirX;
+                animator.SetFloat("FacingDirection", facingDirection);
             }
         }
 
         if (directionalInput.x != 0)
         {
             facingDirection = directionalInput.x;
-            animator.SetFloat("FacingDirection", facingDirection);
         }
 
         directionalInput.y = Input.GetAxisRaw("Vertical");
