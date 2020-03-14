@@ -498,6 +498,7 @@ public class PlayerLevel1 : MonoBehaviour
                     doneTurning = false;
                     playerState = PlayerStateLevel1.IDLE;
                     ResetAnimationTriggers();
+                    animator.SetFloat("FacingDirection", facingDirection);
                 }
                 else if (doneTurning == true && Input.GetAxisRaw("Horizontal") != 0.0f)
                 {
@@ -507,6 +508,7 @@ public class PlayerLevel1 : MonoBehaviour
                     doneTurning = false;
                     playerState = PlayerStateLevel1.MOVING;
                     ResetAnimationTriggers();
+                    animator.SetFloat("FacingDirection", facingDirection);
                 }
                 break;
 
