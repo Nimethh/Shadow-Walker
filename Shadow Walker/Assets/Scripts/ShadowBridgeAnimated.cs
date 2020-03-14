@@ -20,7 +20,7 @@ public class ShadowBridgeAnimated : AffectedByTheSun
         AffectedByTheSunScriptStart();
 
         audioManager = FindObjectOfType<AudioManager>();    //Added 28/5/2019
-        player = GameObject.Find("Player");
+        player = GameObject.FindGameObjectWithTag("Player");
     }
 
     void Update()

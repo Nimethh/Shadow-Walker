@@ -358,7 +358,7 @@ public class PlayerLevel1 : MonoBehaviour
                     playerState = PlayerStateLevel1.TELEPORT;
                     ResetAnimationTriggers();
                 }
-                if (Input.anyKeyDown && !Input.GetKeyDown(KeyCode.J) && !Input.GetKeyDown(KeyCode.L))
+                else if (Input.anyKeyDown && !Input.GetKeyDown(KeyCode.J) && !Input.GetKeyDown(KeyCode.L))
                 {
                     playerState = PlayerStateLevel1.MOVING_OUT_FROM_CHECK_POINT;
                     ResetAnimationTriggers();

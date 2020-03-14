@@ -30,7 +30,7 @@ public class SceneTransitionMobile : MonoBehaviour
     {
         levelFadePanel = GameObject.Find("LevelFadePanel");
         animator = levelFadePanel.GetComponent<Animator>();
-        levelFadePanel.GetComponent<Image>().enabled = false;
+        //levelFadePanel.GetComponent<Image>().enabled = false;
         afkTimerCountDown = afkTimer;
     }
 

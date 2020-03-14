@@ -54,7 +54,8 @@ MonoBehaviour:
   sunSpeed: 0.2
   maxVelocity: 0.7
   invertTiltController: 0
-  movementType: 0
+  previousSunPosition: {x: 0, y: 0, z: 0}
+  movementType: 1
 --- !u!114 &5414729658645288072
 MonoBehaviour:
   m_ObjectHideFlags: 0
