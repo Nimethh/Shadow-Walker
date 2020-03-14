@@ -28,6 +28,8 @@ public class FieldOfView : MonoBehaviour
     //Added 2019-04-29
     public MeshFilter heatDistortionMeshFilter;
 
+    SunController sunController;
+
     void Start()
     {
         viewMesh = new Mesh();
@@ -36,7 +38,7 @@ public class FieldOfView : MonoBehaviour
 
         //Added 2019-04-29
         heatDistortionMeshFilter.mesh = viewMesh;
-
+        sunController = GetComponent<SunController>();
 
         //StartCoroutine("FindTargetsWithDelay", .2f);
     }
@@ -53,7 +55,11 @@ public class FieldOfView : MonoBehaviour
 
     void LateUpdate()
     {
-        DrawFieldOfView();
+        if (transform.position != sunController.previousPosition)
+        {
+            DrawFieldOfView();
+            sunController.previousPosition = transform.position;
+        }
     }
 
     //void FindVisibleTargets()
@@ -187,7 +193,7 @@ public class FieldOfView : MonoBehaviour
         {
             angleInDegrees += transform.eulerAngles.y;
         }
-        return new Vector3(Mathf.Sin(angleInDegrees * Mathf.Deg2Rad), Mathf.Cos(angleInDegrees * Mathf.Deg2Rad),0);
+        return new Vector3(Mathf.Sin(angleInDegrees * Mathf.Deg2Rad), Mathf.Cos(angleInDegrees * Mathf.Deg2Rad), 0);
     }
 
     public struct ViewCastInfo
