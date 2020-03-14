@@ -29,6 +29,7 @@ public class SunControllerMobile : MonoBehaviour
     private bool invertTiltController = false;
 
     AudioManager audioManager;
+    public Vector3 previousSunPosition = Vector3.zero;
 
     public enum SunMovementType
     {
@@ -36,7 +37,7 @@ public class SunControllerMobile : MonoBehaviour
         TILT
     }
 
-    public SunMovementType movementType;
+    public SunMovementType movementType = SunMovementType.TILT;
 
     //public VirtualSunJoystick sunJoystick;
 

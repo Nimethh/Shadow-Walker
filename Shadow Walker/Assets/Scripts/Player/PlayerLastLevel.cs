@@ -227,6 +227,7 @@ public class PlayerLastLevel : MonoBehaviour
                     doneTurning = false;
                     playerState = PlayerStateLastLevel.IDLE;
                     ResetAnimationTriggers();
+                    animator.SetFloat("FacingDirection", facingDirection);
                 }
                 else if(doneTurning == true && Input.GetAxisRaw("Horizontal") != 0.0f)
                 {
@@ -236,6 +237,7 @@ public class PlayerLastLevel : MonoBehaviour
                     doneTurning = false;
                     playerState = PlayerStateLastLevel.MOVING;
                     ResetAnimationTriggers();
+                    animator.SetFloat("FacingDirection", facingDirection);
                 }
                 break;
 
@@ -339,12 +341,12 @@ public class PlayerLastLevel : MonoBehaviour
         else
         {
             prevDirX = currDirX;
+            animator.SetFloat("FacingDirection", facingDirection);
         }
 
         if (directionalInput.x != 0)
         {
             facingDirection = directionalInput.x;
-            animator.SetFloat("FacingDirection", facingDirection);
         }
 
         directionalInput.y = Input.GetAxisRaw("Vertical");

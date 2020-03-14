@@ -4,7 +4,6 @@ using System.Collections.Generic;
 
 public class FieldOfViewMobile : MonoBehaviour
 {
-
     public float viewRadius;
     [Range(0, 360)]
     public float viewAngle;
@@ -25,8 +24,11 @@ public class FieldOfViewMobile : MonoBehaviour
     public MeshFilter viewMeshFilter;
     Mesh viewMesh;
 
+    SunControllerMobile sunController;
+
     void Start()
     {
+        sunController = GetComponent<SunControllerMobile>();
         viewMesh = new Mesh();
         viewMesh.name = "View Mesh";
         viewMeshFilter.mesh = viewMesh;
@@ -34,7 +36,12 @@ public class FieldOfViewMobile : MonoBehaviour
 
     void LateUpdate()
     {
-        DrawFieldOfView();
+        if (sunController.previousSunPosition != transform.position)
+        {
+            Debug.Log("Drawing");
+            DrawFieldOfView();
+            sunController.previousSunPosition = transform.position;
+        }
     }
 
     void DrawFieldOfView()
