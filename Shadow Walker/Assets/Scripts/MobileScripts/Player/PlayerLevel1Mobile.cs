@@ -1,7 +1,11 @@
 ﻿using UnityEngine;
 
-public enum PlayerStateMobile
+public enum PlayerStateLevel1Mobile
 {
+    BLINKING_IN_BED,
+    OUT_OF_BED,
+    MOVE_TOWARDS_NOTE,
+    PICKING_UP_NOTE,
     IDLE,
     MOVING,
     JUMPING,
@@ -12,10 +16,11 @@ public enum PlayerStateMobile
     MOVING_OUT_FROM_CHECK_POINT,
     INSIDE_CHECK_POINT,
     TURN,
+    TELEPORT,
     DEAD
 }
 
-public class PlayerMobile : MonoBehaviour
+public class PlayerLevel1Mobile : MonoBehaviour
 {
     [Header("Jump Variables")]
     [SerializeField]
@@ -52,7 +57,7 @@ public class PlayerMobile : MonoBehaviour
     public float facingDirection;
 
     /// Newly Added starts.
-    public bool isInsideCheck = true;
+    public bool isInsideCheck = false;
     public bool doneTurning = true;
     public bool doneLanding = false;
 
@@ -73,13 +78,16 @@ public class PlayerMobile : MonoBehaviour
     public bool turnAnimRight = false;
     public bool turnAnimLeft = false;
 
-    CollisionHandler collisionHandler;
+    CollisionHandlerLevel1 collisionHandler;
     PlayerSunBehavior playerSunBehavior;
     Animator animator;
     AudioManager audioManager;
-    public VirtualMovementJoystick movementJoystick;
+    //public VirtualMovementJoystick movementJoystick;
 
-    public PlayerStateMobile playerState = PlayerStateMobile.INSIDE_CHECK_POINT;
+    GameObject note;
+    Transform destination;
+
+    public PlayerStateLevel1Mobile playerState = PlayerStateLevel1Mobile.BLINKING_IN_BED;
 
     [SerializeField]
     LayerMask jumpLayer;
@@ -89,10 +97,13 @@ public class PlayerMobile : MonoBehaviour
     {
         camera = Camera.main;
 
-        collisionHandler = GetComponent<CollisionHandler>();
+        collisionHandler = GetComponent<CollisionHandlerLevel1>();
         playerSunBehavior = GetComponent<PlayerSunBehavior>();
         animator = GetComponent<Animator>();
         audioManager = FindObjectOfType<AudioManager>();
+
+        destination = GameObject.Find("Door").transform;
+        note = GameObject.Find("Note");
 
         Cursor.visible = false;
         FindPlayerBounds();
@@ -104,6 +115,7 @@ public class PlayerMobile : MonoBehaviour
 
         animator.SetFloat("FacingDirection", 1.0f);
         prevDirX = 1.0f;
+        isInsideCheck = false;
     }
 
     void Update()
@@ -122,7 +134,7 @@ public class PlayerMobile : MonoBehaviour
 
     void CalculateVelocity()
     {
-        if (playerState != PlayerStateMobile.INSIDE_CHECK_POINT)
+        if (playerState != PlayerStateLevel1Mobile.INSIDE_CHECK_POINT)
         {
             float targetVelocityX = directionalInput.x * moveSpeed;
             velocity.x = Mathf.SmoothDamp(velocity.x, targetVelocityX, ref velocityXSmoothing, (collisionHandler.collisionInfo.below) ? accelerationTimeOnGroundTurn : accelerationTimeInAirTurn);
@@ -171,7 +183,28 @@ public class PlayerMobile : MonoBehaviour
     {
         switch (playerState)
         {
-            case PlayerStateMobile.IDLE:
+            case PlayerStateLevel1Mobile.BLINKING_IN_BED:
+                break;
+
+            case PlayerStateLevel1Mobile.OUT_OF_BED:
+                CalculateVelocity();
+                collisionHandler.UpdateMovement(velocity * Time.deltaTime, directionalInput);
+                break;
+
+            case PlayerStateLevel1Mobile.MOVE_TOWARDS_NOTE:
+                Vector3 notePosition = new Vector3(note.transform.position.x, transform.position.y, transform.position.z);
+                transform.position = Vector3.MoveTowards(transform.position, notePosition, Time.deltaTime);
+                if (Vector3.Distance(transform.position, notePosition) <= 0.27f)
+                {
+                    Invoke("MoveToNextState", 0.1f);
+                }
+                break;
+
+            case PlayerStateLevel1Mobile.PICKING_UP_NOTE:
+                DeactivateNote();
+                break;
+
+            case PlayerStateLevel1Mobile.IDLE:
                 InputCheck();
                 CalculateVelocity();
                 audioManager.Stop("Walk");
@@ -179,7 +212,7 @@ public class PlayerMobile : MonoBehaviour
                 animator.SetTrigger("Idle");
                 break;
 
-            case PlayerStateMobile.MOVING:
+            case PlayerStateLevel1Mobile.MOVING:
                 InputCheck();
                 CalculateVelocity();
                 HandleWallSliding();
@@ -190,7 +223,7 @@ public class PlayerMobile : MonoBehaviour
                 animator.SetTrigger("Moving");
                 break;
 
-            case PlayerStateMobile.JUMPING:
+            case PlayerStateLevel1Mobile.JUMPING:
                 InputCheck();
                 CalculateVelocity();
                 HandleWallSliding();
@@ -201,7 +234,7 @@ public class PlayerMobile : MonoBehaviour
                 animator.SetTrigger("Jumping");
                 break;
 
-            case PlayerStateMobile.FALLING:
+            case PlayerStateLevel1Mobile.FALLING:
                 InputCheck();
                 CalculateVelocity();
                 HandleWallSliding();
@@ -212,7 +245,7 @@ public class PlayerMobile : MonoBehaviour
                 audioManager.Stop("Walk");
                 break;
 
-            case PlayerStateMobile.LANDING:
+            case PlayerStateLevel1Mobile.LANDING:
                 InputCheck();
                 CalculateVelocity();
                 collisionHandler.UpdateMovement(velocity * Time.deltaTime, directionalInput);
@@ -220,7 +253,7 @@ public class PlayerMobile : MonoBehaviour
                 animator.SetTrigger("Landing");
                 break;
 
-            case PlayerStateMobile.CLIMBING:
+            case PlayerStateLevel1Mobile.CLIMBING:
                 InputCheck();
                 velocity.x = 0.0f;
                 collisionHandler.UpdateMovement(velocity * Time.deltaTime, directionalInput);
@@ -228,22 +261,21 @@ public class PlayerMobile : MonoBehaviour
                 animator.SetTrigger("Climbing");
                 break;
 
-            case PlayerStateMobile.MOVING_INTO_CHECK_POINT:
+            case PlayerStateLevel1Mobile.MOVING_INTO_CHECK_POINT:
                 playerSunBehavior.isSafeFromSun = true;
                 animator.speed = 1;
                 animator.SetTrigger("MovingInto");
                 audioManager.Stop("Walk");
                 break;
 
-            case PlayerStateMobile.MOVING_OUT_FROM_CHECK_POINT:
+            case PlayerStateLevel1Mobile.MOVING_OUT_FROM_CHECK_POINT:
                 playerSunBehavior.isSafeFromSun = false;
                 animator.speed = 1;
                 animator.SetTrigger("MovingOutFrom");
                 audioManager.Stop("Walk");
                 break;
 
-            case PlayerStateMobile.INSIDE_CHECK_POINT:
-                InputCheck();
+            case PlayerStateLevel1Mobile.INSIDE_CHECK_POINT:
                 CalculateVelocity();
                 velocity.x = 0.0f;
                 directionalInput.x = 0.0f;
@@ -253,7 +285,7 @@ public class PlayerMobile : MonoBehaviour
                 animator.SetTrigger("InsideCheckPoint");
                 break;
 
-            case PlayerStateMobile.TURN:
+            case PlayerStateLevel1Mobile.TURN:
                 InputCheck();
                 CalculateVelocity();
                 collisionHandler.UpdateMovement(velocity * Time.deltaTime, directionalInput);
@@ -262,12 +294,21 @@ public class PlayerMobile : MonoBehaviour
                 audioManager.Stop("Walk");
                 break;
 
-            case PlayerStateMobile.DEAD:
+            case PlayerStateLevel1Mobile.TELEPORT:
+                if (collisionHandler.teleport == true)
+                {
+                    transform.position = destination.position;
+                    playerState = PlayerStateLevel1Mobile.INSIDE_CHECK_POINT;
+                }
+                break;
+
+            case PlayerStateLevel1Mobile.DEAD:
                 audioManager.Stop("Walk");
                 audioManager.Play("Death");
                 animator.speed = 1;
                 animator.SetTrigger("Death");
                 break;
+
             default:
                 break;
         }
@@ -290,251 +331,279 @@ public class PlayerMobile : MonoBehaviour
         animator.ResetTrigger("Jumping");
         animator.ResetTrigger("Moving");
         animator.ResetTrigger("Idle");
+        animator.ResetTrigger("OutOfBed");
+        animator.ResetTrigger("MoveTowardsNote");
+        animator.ResetTrigger("PickUpNote");
     }
 
     void CheckPlayerState()
     {
         switch (playerState)
         {
+            case PlayerStateLevel1Mobile.BLINKING_IN_BED:
+                Invoke("MoveToNextState", 2.0f);
+                break;
+
+            case PlayerStateLevel1Mobile.OUT_OF_BED:
+                animator.SetTrigger("OutOfBed");
+                Invoke("MoveToNextState", 1.0f);
+                break;
+
+            case PlayerStateLevel1Mobile.MOVE_TOWARDS_NOTE:
+                animator.SetTrigger("MoveTowardsNote");
+                break;
+
+            case PlayerStateLevel1Mobile.PICKING_UP_NOTE:
+                animator.SetTrigger("PickUpNote");
+                Invoke("MoveToNextState", 2.5f);
+                break;
+
             // INSIDE_CHECK_POINT                                       1
-            case PlayerStateMobile.INSIDE_CHECK_POINT:
-                if(directionalInput.x != 0 || directionalInput.y != 0 || jumpCheck())
+            case PlayerStateLevel1Mobile.INSIDE_CHECK_POINT:
+                if (collisionHandler.teleport == true)
                 {
-                    playerState = PlayerStateMobile.MOVING_OUT_FROM_CHECK_POINT;
+                    playerState = PlayerStateLevel1Mobile.TELEPORT;
+                    ResetAnimationTriggers();
+                }
+                else if (directionalInput.x != 0 || directionalInput.y != 0 || JumpCheck())
+                {
+                    playerState = PlayerStateLevel1Mobile.MOVING_OUT_FROM_CHECK_POINT;
                     ResetAnimationTriggers();
                 }
                 break;
 
             // MOVING_INTO_CHECK_POINT:                                 2
-            case PlayerStateMobile.MOVING_INTO_CHECK_POINT:
+            case PlayerStateLevel1Mobile.MOVING_INTO_CHECK_POINT:
                 if (isInsideCheck == true)
                 {
-                    playerState = PlayerStateMobile.INSIDE_CHECK_POINT;
+                    playerState = PlayerStateLevel1Mobile.INSIDE_CHECK_POINT;
                     ResetAnimationTriggers();
                 }
                 break;
 
             // MOVING_OUT_FROM_CHECK_POINT                              3
-            case PlayerStateMobile.MOVING_OUT_FROM_CHECK_POINT:
+            case PlayerStateLevel1Mobile.MOVING_OUT_FROM_CHECK_POINT:
                 if (isInsideCheck == false)
                 {
-                    playerState = PlayerStateMobile.IDLE;
+                    playerState = PlayerStateLevel1Mobile.IDLE;
                     ResetAnimationTriggers();
                 }
                 break;
 
             // DEAD                                                     4
-            case PlayerStateMobile.DEAD:
+            case PlayerStateLevel1Mobile.DEAD:
                 Invoke("RespawnAterDeath", 1.5f);
                 break;
 
             // MOVING                                                   5
-            case PlayerStateMobile.MOVING:
+            case PlayerStateLevel1Mobile.MOVING:
                 if (playerSunBehavior.isDead == true)
                 {
-                    playerState = PlayerStateMobile.DEAD;
+                    playerState = PlayerStateLevel1Mobile.DEAD;
                     ResetAnimationTriggers();
                 }
                 else if (directionalInput.y != 0 && collisionHandler.collisionInfo.checkPointNearby == true
-                    && collisionHandler.collisionInfo.below && playerState != PlayerStateMobile.INSIDE_CHECK_POINT)
+                    && collisionHandler.collisionInfo.below && playerState != PlayerStateLevel1Mobile.INSIDE_CHECK_POINT)
                 {
-                    playerState = PlayerStateMobile.MOVING_INTO_CHECK_POINT;
+                    playerState = PlayerStateLevel1Mobile.MOVING_INTO_CHECK_POINT;
                     ResetAnimationTriggers();
                 }
                 else if (directionalInput.y != 0 && collisionHandler.collisionInfo.ladderNearby == true)
                 {
+                    collisionHandler.collisionInfo.moveOffLadder = false;
                     collisionHandler.collisionInfo.climbingLadder = true;
-                    playerState = PlayerStateMobile.CLIMBING;
+                    playerState = PlayerStateLevel1Mobile.CLIMBING;
                     ResetAnimationTriggers();
                 }
-                else if (jumpCheck() && collisionHandler.collisionInfo.below)
+                else if (JumpCheck() && collisionHandler.collisionInfo.below)
                 {
                     velocity.y = jumpVelocity;
-                    playerState = PlayerStateMobile.JUMPING;
+                    playerState = PlayerStateLevel1Mobile.JUMPING;
                     audioManager.Play("Jump");
                     ResetAnimationTriggers();
                 }
                 else if (velocity.y < 0 && !collisionHandler.collisionInfo.below && fallingTimer >= 0.2f)
                 {
-                    playerState = PlayerStateMobile.FALLING;
+                    playerState = PlayerStateLevel1Mobile.FALLING;
                     ResetAnimationTriggers();
                 }
                 else if (turnAnimLeft || turnAnimRight)
                 {
-                    playerState = PlayerStateMobile.TURN;
+                    playerState = PlayerStateLevel1Mobile.TURN;
                     ResetAnimationTriggers();
                 }
-                else if (directionalInput.x == 0)
+                else if (directionalInput.x == 0)                                       // TRYING OUT THIS.
                 {
-                    playerState = PlayerStateMobile.IDLE;
+                    playerState = PlayerStateLevel1Mobile.IDLE;
                     ResetAnimationTriggers();
                 }
                 break;
 
             // FALLING                                                  6
-            case PlayerStateMobile.FALLING:
+            case PlayerStateLevel1Mobile.FALLING:
                 doneLanding = false;
                 if (collisionHandler.collisionInfo.below && !collisionHandler.collisionInfo.ladderNearby)
                 {
-                    playerState = PlayerStateMobile.LANDING;
+                    playerState = PlayerStateLevel1Mobile.LANDING;
                     audioManager.Play("Land");
                     ResetAnimationTriggers();
                 }
                 else if (collisionHandler.collisionInfo.below && collisionHandler.collisionInfo.ladderNearby)
                 {
-                    playerState = PlayerStateMobile.IDLE;
+                    playerState = PlayerStateLevel1Mobile.IDLE;
                     ResetAnimationTriggers();
                 }
                 break;
 
             // LANDING                                                  7
-            case PlayerStateMobile.LANDING:
+            case PlayerStateLevel1Mobile.LANDING:
                 Invoke("DoneLanding", 0.2f);
                 if (playerSunBehavior.isDead == true)
                 {
-                    playerState = PlayerStateMobile.DEAD;
+                    playerState = PlayerStateLevel1Mobile.DEAD;
                     ResetAnimationTriggers();
                 }
-                else if (jumpCheck() && collisionHandler.collisionInfo.below)
+                else if (JumpCheck() && collisionHandler.collisionInfo.below)
                 {
                     velocity.y = jumpVelocity;
-                    playerState = PlayerStateMobile.JUMPING;
+                    playerState = PlayerStateLevel1Mobile.JUMPING;
                     audioManager.Play("Jump");
                     ResetAnimationTriggers();
                 }
-                else if (directionalInput.x != 0.0f && doneLanding)
+                else if (directionalInput.x != 0 && doneLanding)                               // TRYING OUT THIS.
                 {
                     CancelInvoke();
-                    playerState = PlayerStateMobile.MOVING;
+                    playerState = PlayerStateLevel1Mobile.MOVING;
                     ResetAnimationTriggers();
                 }
-                else if (directionalInput.x == 0.0f && doneLanding)
+                else if (directionalInput.x == 0 && doneLanding)                                // TRYING OUT THIS.
                 {
                     CancelInvoke();
-                    playerState = PlayerStateMobile.IDLE;
+                    playerState = PlayerStateLevel1Mobile.IDLE;
                     ResetAnimationTriggers();
                 }
                 break;
 
             // TURN                                                     8
-            case PlayerStateMobile.TURN:
-                if (jumpCheck() && collisionHandler.collisionInfo.below)
+            case PlayerStateLevel1Mobile.TURN:
+                if (JumpCheck() && collisionHandler.collisionInfo.below)
                 {
                     CancelInvoke();
-
                     turnAnimLeft = false;
                     turnAnimRight = false;
                     doneTurning = false;
                     velocity.y = jumpVelocity;
-                    playerState = PlayerStateMobile.JUMPING;
+                    playerState = PlayerStateLevel1Mobile.JUMPING;
                     audioManager.Play("Jump");
                     ResetAnimationTriggers();
                 }
-                else if (doneTurning == true && directionalInput.x == 0.0f)
+                else if (doneTurning == true && directionalInput.x == 0)            // TRYING OUT THIS.
                 {
                     CancelInvoke();
                     turnAnimLeft = false;
                     turnAnimRight = false;
                     doneTurning = false;
-                    playerState = PlayerStateMobile.IDLE;
+                    playerState = PlayerStateLevel1Mobile.IDLE;
                     ResetAnimationTriggers();
                     animator.SetFloat("FacingDirection", facingDirection);
                 }
-                else if (doneTurning == true && directionalInput.x != 0)
+                else if (doneTurning == true && directionalInput.x != 0)                // TRYING OUT THIS.
                 {
                     CancelInvoke();
                     turnAnimLeft = false;
                     turnAnimRight = false;
                     doneTurning = false;
-                    playerState = PlayerStateMobile.MOVING;
+                    playerState = PlayerStateLevel1Mobile.MOVING;
                     ResetAnimationTriggers();
                     animator.SetFloat("FacingDirection", facingDirection);
                 }
                 break;
 
             // JUMP                                                     9
-            case PlayerStateMobile.JUMPING:
+            case PlayerStateLevel1Mobile.JUMPING:
                 if (collisionHandler.collisionInfo.above)
                 {
                     velocity.y = 0;
                 }
-                if (directionalInput.y != 0 && collisionHandler.collisionInfo.ladderNearby == true)
+                if (directionalInput.y != 0 && collisionHandler.collisionInfo.ladderNearby == true)         // TRYING OUT THIS
                 {
+                    collisionHandler.collisionInfo.moveOffLadder = false;
                     collisionHandler.collisionInfo.climbingLadder = true;
-                    playerState = PlayerStateMobile.CLIMBING;
+                    playerState = PlayerStateLevel1Mobile.CLIMBING;
                     ResetAnimationTriggers();
                 }
-                else if (collisionHandler.collisionInfo.below)
+                else if (velocity.y < 0.0f && collisionHandler.collisionInfo.below)
                 {
-                    playerState = PlayerStateMobile.IDLE;
+                    playerState = PlayerStateLevel1Mobile.LANDING;
                     ResetAnimationTriggers();
                 }
                 else if (velocity.y < 0.0f && fallingTimer >= 0.2f)
                 {
-                    playerState = PlayerStateMobile.FALLING;
+                    playerState = PlayerStateLevel1Mobile.FALLING;
                     ResetAnimationTriggers();
                 }
                 break;
 
             // IDLE                                                     10
-            case PlayerStateMobile.IDLE:
+            case PlayerStateLevel1Mobile.IDLE:
                 if (playerSunBehavior.isDead == true)
                 {
-                    playerState = PlayerStateMobile.DEAD;
+                    playerState = PlayerStateLevel1Mobile.DEAD;
                     ResetAnimationTriggers();
                 }
                 else if (directionalInput.y != 0 && collisionHandler.collisionInfo.checkPointNearby == true
-                    && collisionHandler.collisionInfo.below && playerState != PlayerStateMobile.INSIDE_CHECK_POINT)
+                    && collisionHandler.collisionInfo.below && playerState != PlayerStateLevel1Mobile.INSIDE_CHECK_POINT)       // TRYING OUT THIS.
                 {
-                    playerState = PlayerStateMobile.MOVING_INTO_CHECK_POINT;
+                    playerState = PlayerStateLevel1Mobile.MOVING_INTO_CHECK_POINT;
                     ResetAnimationTriggers();
                 }
-                else if (directionalInput.y != 0 && collisionHandler.collisionInfo.ladderNearby == true)
+                else if (directionalInput.y != 0 && collisionHandler.collisionInfo.ladderNearby == true)            // TRYING OUT THIS.
                 {
+                    collisionHandler.collisionInfo.moveOffLadder = false;
                     collisionHandler.collisionInfo.climbingLadder = true;
-                    playerState = PlayerStateMobile.CLIMBING;
+                    playerState = PlayerStateLevel1Mobile.CLIMBING;
                     ResetAnimationTriggers();
                 }
                 else if (turnAnimLeft || turnAnimRight)
                 {
-                    playerState = PlayerStateMobile.TURN;
+                    playerState = PlayerStateLevel1Mobile.TURN;
                     ResetAnimationTriggers();
                 }
                 else if (directionalInput.x != 0)
                 {
-                    playerState = PlayerStateMobile.MOVING;
+                    playerState = PlayerStateLevel1Mobile.MOVING;
                     ResetAnimationTriggers();
                 }
-                else if (jumpCheck() && collisionHandler.collisionInfo.below)
+                else if (JumpCheck() && collisionHandler.collisionInfo.below)
                 {
                     velocity.y = jumpVelocity;
-                    playerState = PlayerStateMobile.JUMPING;
+                    playerState = PlayerStateLevel1Mobile.JUMPING;
                     audioManager.Play("Jump");
                     ResetAnimationTriggers();
                 }
                 else if (velocity.y < 0 && !collisionHandler.collisionInfo.below && fallingTimer >= 0.2f)
                 {
-                    playerState = PlayerStateMobile.FALLING;
+                    playerState = PlayerStateLevel1Mobile.FALLING;
                     ResetAnimationTriggers();
                 }
                 break;
 
             // CLIMB                                                    11
-            case PlayerStateMobile.CLIMBING:
+            case PlayerStateLevel1Mobile.CLIMBING:
                 if (playerSunBehavior.isDead == true)
                 {
-                    playerState = PlayerStateMobile.FALLING;
+                    playerState = PlayerStateLevel1Mobile.FALLING;
                     ResetAnimationTriggers();
                 }
-                else if (jumpCheck())
+                else if (JumpCheck())
                 {
-                    playerState = PlayerStateMobile.JUMPING;
+                    playerState = PlayerStateLevel1Mobile.JUMPING;
                     audioManager.Play("Jump");
                     ResetAnimationTriggers();
                 }
                 else if (collisionHandler.collisionInfo.climbingLadder == false)
                 {
-                    playerState = PlayerStateMobile.IDLE;
+                    playerState = PlayerStateLevel1Mobile.IDLE;
                     ResetAnimationTriggers();
                 }
                 if (directionalInput.y > 0 || directionalInput.y < 0)   //  Need to be changed. moving off the ladder.
@@ -542,13 +611,12 @@ public class PlayerMobile : MonoBehaviour
                     moveOffLadderCooldown = moveOffLadderTimer;
                     moveOffLadderHoldCooldown = moveOffLadderHoldTimer;
                 }
-
-                else if (movementJoystick.Horizontal() > 0.4f || movementJoystick.Horizontal() < -0.4f)
+                else if (directionalInput.x != 0)                                                           // TRYING OUT THIS
                 {
                     if (moveOffLadderHoldCooldown <= 0)
                     {
                         collisionHandler.collisionInfo.moveOffLadder = true;
-                        playerState = PlayerStateMobile.FALLING;
+                        playerState = PlayerStateLevel1Mobile.FALLING;
                         ResetAnimationTriggers();
                     }
                     else
@@ -556,13 +624,13 @@ public class PlayerMobile : MonoBehaviour
                         moveOffLadderHoldCooldown -= Time.deltaTime;
                     }
                 }
-                if (movementJoystick.Horizontal() > 0.4f || movementJoystick.Horizontal() < -0.4f)
+                if (directionalInput.x != 0)                                                                // TRYING OUT THIS
                 {
                     if (moveOffLadderCooldown <= 0)
                     {
                         collisionHandler.collisionInfo.moveOffLadder = true;
                         collisionHandler.checkingCollisionCooldown = collisionHandler.checkingCollisionTimer;
-                        playerState = PlayerStateMobile.FALLING;
+                        playerState = PlayerStateLevel1Mobile.FALLING;
                         ResetAnimationTriggers();
                     }
                     else
@@ -573,7 +641,7 @@ public class PlayerMobile : MonoBehaviour
                 break;
             default:
                 Debug.LogError("Default is called in CheckPlayerState() !");
-                playerState = PlayerStateMobile.IDLE;
+                playerState = PlayerStateLevel1Mobile.IDLE;
                 ResetAnimationTriggers();
                 break;
         }
@@ -583,7 +651,7 @@ public class PlayerMobile : MonoBehaviour
     {
         playerSunBehavior.isDead = false;
         isInsideCheck = true;
-        playerState = PlayerStateMobile.INSIDE_CHECK_POINT;
+        playerState = PlayerStateLevel1Mobile.INSIDE_CHECK_POINT;
         ResetAnimationTriggers();
         animator.SetTrigger("InsideCheckPoint");
         transform.position = collisionHandler.spawningPosition;
@@ -602,9 +670,30 @@ public class PlayerMobile : MonoBehaviour
         doneTurning = true;
     }
 
+    void MoveToNextState()
+    {
+        ResetAnimationTriggers();
+        CancelInvoke();
+        if (playerState == PlayerStateLevel1Mobile.PICKING_UP_NOTE)
+        {
+            ActivateNote();
+        }
+        playerState++;
+    }
+
     void DoneLanding()
     {
         doneLanding = true;
+    }
+
+    void DeactivateNote()
+    {
+        note.SetActive(false);
+    }
+
+    void ActivateNote()
+    {
+        note.SetActive(true);
     }
 
     public void FindPlayerBounds()
@@ -635,10 +724,9 @@ public class PlayerMobile : MonoBehaviour
             velocity.y = 0;
             playerSunBehavior.isDead = true;
         }
-
     }
 
-    bool jumpCheck()
+    bool JumpCheck()
     {
         for (int i = 0; i < Input.touchCount; ++i)
         {
@@ -647,9 +735,8 @@ public class PlayerMobile : MonoBehaviour
             {
                 Ray ray = camera.ScreenPointToRay(Input.GetTouch(i).position);
                 RaycastHit2D hit = Physics2D.Raycast(ray.origin, Vector3.forward, 10.0f, jumpLayer);
-                if(hit)
+                if (hit)
                 {
-                    Debug.Log("True");
                     return true;
                 }
             }
@@ -657,31 +744,46 @@ public class PlayerMobile : MonoBehaviour
         return false;
     }
 
+    public void SetHorizontalInput(float p_x)
+    {
+        directionalInput.x = p_x;
+    }
+
+    public void SetVerticalInput(float p_y)
+    {
+        directionalInput.y = p_y;
+    }
+
+    public void ResetInput()
+    {
+        directionalInput = Vector2.zero;
+    }
+
     void InputCheck()
     {
-        if (playerState != PlayerStateMobile.CLIMBING)
+        if (playerState != PlayerStateLevel1Mobile.CLIMBING)
         {
-            directionalInput.x = (movementJoystick.Horizontal() > 0.4f || movementJoystick.Horizontal() < -0.4f) ? movementJoystick.Horizontal() : 0;
-            if (directionalInput.x > 0.0f)
-            {
-                animator.SetFloat("MovingDirection", 1);
-                currDirX = 1;
-            }
-            else if (directionalInput.x < 0.0f)
-            {
-                animator.SetFloat("MovingDirection", -1);
-                currDirX = -1;
-            }
+            //directionalInput.x = (movementJoystick.Horizontal() > 0.4f || movementJoystick.Horizontal() < -0.4f) ? movementJoystick.Horizontal() : 0;
+            //if (directionalInput.x > 0.0f)
+            //{
+                animator.SetFloat("MovingDirection", directionalInput.x);
+                currDirX = directionalInput.x;
+            //}
+            //else if (directionalInput.x < 0.0f)
+            //{
+            //    animator.SetFloat("MovingDirection", -1);
+            //    currDirX = -1;
+            //}
         }
 
-        if (playerState == PlayerStateMobile.MOVING || playerState == PlayerStateMobile.IDLE || playerState == PlayerStateMobile.TURN)
+        if (playerState == PlayerStateLevel1Mobile.MOVING || playerState == PlayerStateLevel1Mobile.IDLE || playerState == PlayerStateLevel1Mobile.TURN)
         {
             if (currDirX > 0 && prevDirX < 0)
             {
                 doneTurning = false;
                 turnAnimRight = true;
                 prevDirX = currDirX;
-                animator.SetFloat("TurnDirection", prevDirX);
+                animator.SetFloat("TurnDirection", 1f);
                 Invoke("DoneTurning", 0.2f);
             }
             else if (currDirX < 0 && prevDirX > 0)
@@ -689,7 +791,7 @@ public class PlayerMobile : MonoBehaviour
                 doneTurning = false;
                 turnAnimLeft = true;
                 prevDirX = currDirX;
-                animator.SetFloat("TurnDirection", prevDirX);
+                animator.SetFloat("TurnDirection", -1f);
                 Invoke("DoneTurning", 0.2f);
             }
         }
@@ -704,12 +806,13 @@ public class PlayerMobile : MonoBehaviour
 
         if (directionalInput.x != 0)
         {
-            if (directionalInput.x > 0.0f)
-                facingDirection = 1;
-            else if (directionalInput.x < 0.0f)
-                facingDirection = -1;
+            facingDirection = directionalInput.x;
+            //if (directionalInput.x > 0.0f)
+            //    facingDirection = 1;
+            //else if (directionalInput.x < 0.0f)
+            //    facingDirection = -1;
         }
 
-        directionalInput.y = (movementJoystick.Vertical() > 0.4f || movementJoystick.Vertical() < -0.4f) ? movementJoystick.Vertical() : 0;
+        //directionalInput.y = (movementJoystick.Vertical() > 0.4f || movementJoystick.Vertical() < -0.4f) ? movementJoystick.Vertical() : 0;
     }
 }
