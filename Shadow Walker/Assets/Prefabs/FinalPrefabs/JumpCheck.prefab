@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8593998724259514825}
-  - component: {fileID: 8593998724259514824}
+  - component: {fileID: 4654399838658086612}
   m_Layer: 17
   m_Name: JumpCheck
   m_TagString: Untagged
@@ -31,8 +31,8 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!61 &8593998724259514824
-BoxCollider2D:
+--- !u!60 &4654399838658086612
+PolygonCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -41,10 +41,10 @@ BoxCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 1.1712399, y: -2.867651}
+  m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -54,6 +54,11 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 22.23344, y: 6.735302}
-  m_EdgeRadius: 0
+  m_Points:
+    m_Paths:
+    - - {x: 3, y: -0.7}
+      - {x: 3, y: 6.5}
+      - {x: -10, y: 6.5}
+      - {x: -10, y: -4.5}
+      - {x: 10, y: -4.5}
+      - {x: 10, y: -0.7}

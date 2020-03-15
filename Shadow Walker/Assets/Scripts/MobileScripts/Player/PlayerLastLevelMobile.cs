@@ -53,7 +53,7 @@ public class PlayerLastLevelMobile : MonoBehaviour
     CollisionHandlerLastLevelMobile collisionHandler;
     Animator animator;
     AudioManager audioManager;
-    public VirtualMovementJoystick movementJoystick;
+    //public VirtualMovementJoystick movementJoystick;
 
     public PlayerStateLastLevelMobile playerState = PlayerStateLastLevelMobile.INSIDE_CHECK_POINT;
 
@@ -315,19 +315,34 @@ public class PlayerLastLevelMobile : MonoBehaviour
         }
     }
 
+    public void SetHorizontalInput(float p_x)
+    {
+        directionalInput.x = p_x;
+    }
+
+    public void SetVerticalInput(float p_y)
+    {
+        directionalInput.y = p_y;
+    }
+
+    public void ResetInput()
+    {
+        directionalInput = Vector2.zero;
+    }
+
     void InputCheck()
     {
-        directionalInput.x = (movementJoystick.Horizontal() > 0.4f || movementJoystick.Horizontal() < -0.4f) ? movementJoystick.Horizontal() : 0;
-        if (directionalInput.x > 0.0f)
-        {
-            animator.SetFloat("MovingDirection", 1);
-            currDirX = 1;
-        }
-        else if (directionalInput.x < 0.0f)
-        {
-            animator.SetFloat("MovingDirection", -1);
-            currDirX = -1;
-        }
+        //directionalInput.x = (movementJoystick.Horizontal() > 0.4f || movementJoystick.Horizontal() < -0.4f) ? movementJoystick.Horizontal() : 0;
+        //if (directionalInput.x > 0.0f)
+        //{
+        animator.SetFloat("MovingDirection", directionalInput.x);
+        currDirX = directionalInput.x;
+        //}
+        //else if (directionalInput.x < 0.0f)
+        //{
+        //    animator.SetFloat("MovingDirection", -1);
+        //    currDirX = -1;
+        //}
 
         if (playerState == PlayerStateLastLevelMobile.MOVING || playerState == PlayerStateLastLevelMobile.IDLE)
         {
@@ -356,13 +371,14 @@ public class PlayerLastLevelMobile : MonoBehaviour
 
         if (directionalInput.x != 0)
         {
-            if (directionalInput.x > 0.0f)
-                facingDirection = 1;
-            else if (directionalInput.x < 0.0f)
-                facingDirection = -1;
+            facingDirection = directionalInput.x;
+            //if (directionalInput.x > 0.0f)
+            //    facingDirection = 1;
+            //else if (directionalInput.x < 0.0f)
+            //    facingDirection = -1;
         }
 
-        directionalInput.y = (movementJoystick.Vertical() > 0.4f || movementJoystick.Vertical() < -0.4f) ? movementJoystick.Vertical() : 0;
+        //directionalInput.y = (movementJoystick.Vertical() > 0.4f || movementJoystick.Vertical() < -0.4f) ? movementJoystick.Vertical() : 0;
     }
 
     private void OnTriggerEnter2D(Collider2D other)

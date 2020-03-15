@@ -59,7 +59,7 @@ public class VirtualMovementJoystick : MonoBehaviour, IDragHandler, IPointerUpHa
         OnDrag(ped);
 
         //Added for Jump
-        if(jumpCountdown > 0)
+        if (jumpCountdown > 0)
         {
             jump = true;
         }
