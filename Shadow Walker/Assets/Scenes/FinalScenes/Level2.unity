@@ -4210,6 +4210,11 @@ PrefabInstance:
       propertyPath: index
       value: 160
       objectReference: {fileID: 0}
+    - target: {fileID: 5968803597903308593, guid: bcee3dfd5d95e88439b30a3f28400c19,
+        type: 3}
+      propertyPath: generateShadowMesh
+      value: 
+      objectReference: {fileID: 494108064}
     - target: {fileID: 5968803598391072762, guid: bcee3dfd5d95e88439b30a3f28400c19,
         type: 3}
       propertyPath: m_LocalPosition.z
