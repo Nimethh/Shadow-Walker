@@ -21,6 +21,8 @@ public class CollisionHandler : RaycastController
     AudioManager audioManager = null;
 
     public bool collisionTest = false;
+    public bool climbUP = false;
+    public bool climbDown = false;
 
     public override void Start()
     {
@@ -33,27 +35,50 @@ public class CollisionHandler : RaycastController
     private void Update()
     {
         collisionTest = collisionInfo.below;
+        climbUP = collisionInfo.climbingLadderUp;
+        climbDown = collisionInfo.climbingLadderDown;
     }
 
     void LadderCheck()
     {
-        Vector3 rayCastOrigin = transform.position - new Vector3(0.0f, 0.35f, 0.0f);
-        RaycastHit2D ladderHit = Physics2D.Raycast(rayCastOrigin, Vector2.down, 0.25f, ladder);
+        Vector3 rayCastOriginDown = transform.position - new Vector3(0.0f, 0.425f, 0.0f);
+        Vector3 rayCastOriginUp = transform.position - new Vector3(0.0f, 0.425f, 0.0f);
+        RaycastHit2D ladderHitDown = Physics2D.Raycast(rayCastOriginDown, Vector2.down, 0.25f, ladder);
+        RaycastHit2D ladderHitUp = Physics2D.Raycast(rayCastOriginUp, Vector2.up, 0.25f, ladder);
 
-        Debug.DrawRay(rayCastOrigin, Vector2.down * 0.25f, Color.white);
-            if (ladderHit)
+        Debug.DrawRay(rayCastOriginDown, Vector2.down * 0.25f, Color.white);
+        Debug.DrawRay(rayCastOriginUp, Vector2.up * 0.25f, Color.green);
+        if (ladderHitUp)
+        {
+            collisionInfo.ladderNearby = true;
+            collisionInfo.canClimbUp = true;
+        }
+        else
+        {
+            collisionInfo.canClimbUp = false;
+            //collisionInfo.climbingLadder = false;
+            collisionInfo.climbingLadderUp = false;
+        }
+        if (ladderHitDown)
+        {
+            collisionInfo.ladderNearby = true;
+            collisionInfo.canClimbDown = true;
+            if (collisionInfo.below && playerInput.y < 0)
             {
-                collisionInfo.ladderNearby = true;
-                if (collisionInfo.below && playerInput.y < 0)
-                {
-                    collisionInfo.climbingLadder = false;
-                }
+                //collisionInfo.climbingLadder = false;
+                collisionInfo.climbingLadderDown = false;
             }
-            else
-            {
-                collisionInfo.ladderNearby = false;
-                collisionInfo.climbingLadder = false;
-            }
+        }
+        else
+        {
+            //collisionInfo.ladderNearby = false;
+            collisionInfo.canClimbDown = false;
+            //collisionInfo.climbingLadder = false;
+            collisionInfo.climbingLadderDown = false;
+        }
+
+        if (!ladderHitUp && !ladderHitDown)
+            collisionInfo.ladderNearby = false;
     }
 
     public Vector2 UpdateMovement(Vector2 moveAmount, Vector2 input)
@@ -68,10 +93,13 @@ public class CollisionHandler : RaycastController
             collisionInfo.raysFacingDir = (int)Mathf.Sign(moveAmount.x);
         }
 
-        if (moveAmount.y < 0 && collisionInfo.climbingLadder == false)
+        //if (moveAmount.y < 0 && collisionInfo.climbingLadder == false)
+        if (moveAmount.y < 0 && !collisionInfo.climbingLadderDown && !collisionInfo.climbingLadderUp)
         {
             DescendSlope(ref moveAmount);
         }
+
+        LadderCheck();
 
         HorizontalCollisions(ref moveAmount);
         if (collisionInfo.moveOffLadder)
@@ -89,8 +117,6 @@ public class CollisionHandler : RaycastController
             checkingCollisionCooldown = 0.0f;
             VerticalCollisions(ref moveAmount);
         }
-
-        LadderCheck();
 
         transform.Translate(moveAmount);
 
@@ -138,14 +164,19 @@ public class CollisionHandler : RaycastController
             rayOrigin += Vector2.right * (verticalRaySpacing * i + moveAmount.x);
             RaycastHit2D hit = Physics2D.Raycast(rayOrigin, Vector2.up * directionY, rayLength, ground);
 
-            Debug.DrawRay(rayOrigin, Vector2.up * directionY, Color.red);
+            Debug.DrawRay(rayOrigin, Vector2.up * directionY, Color.white);
 
             if (hit)
             {
                 if (hit.collider.tag == "Through")
                 {
-                    if (collisionInfo.climbingLadder)
+                    //if (collisionInfo.climbingLadder)
+                    //{
+                    //    continue;
+                    //}
+                    if(collisionInfo.climbingLadderUp || collisionInfo.climbingLadderDown)
                     {
+                        Debug.Log("skipping");
                         continue;
                     }
                 }
@@ -320,7 +351,9 @@ public class CollisionHandler : RaycastController
         if(other.gameObject.CompareTag("Ladder"))
         {
             audioManager.Stop("Climb");
-            collisionInfo.climbingLadder = false;
+            //collisionInfo.climbingLadderUp = false;
+            //collisionInfo.climbingLadderDown = false;
+            //collisionInfo.climbingLadder = false;
         }
         if (other.gameObject.CompareTag("CheckPoint"))
         {
@@ -345,7 +378,11 @@ public class CollisionHandler : RaycastController
 
         //Ladder
         public bool ladderNearby;
-        public bool climbingLadder;
+        public bool canClimbUp;
+        public bool canClimbDown;
+        public bool climbingLadderUp;
+        public bool climbingLadderDown;
+        //public bool climbingLadder;
         public bool moveOffLadder;
         //CheckPoint.
         public bool checkPointNearby;

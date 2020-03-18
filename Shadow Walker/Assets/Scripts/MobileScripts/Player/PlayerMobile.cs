@@ -342,7 +342,7 @@ public class PlayerMobile : MonoBehaviour
                 }
                 else if (directionalInput.y != 0 && collisionHandler.collisionInfo.ladderNearby == true)
                 {
-                    collisionHandler.collisionInfo.climbingLadder = true;
+                    //collisionHandler.collisionInfo.climbingLadder = true;
                     playerState = PlayerStateMobile.CLIMBING;
                     ResetAnimationTriggers();
                 }
@@ -459,7 +459,7 @@ public class PlayerMobile : MonoBehaviour
                 }
                 if (directionalInput.y != 0 && collisionHandler.collisionInfo.ladderNearby == true)
                 {
-                    collisionHandler.collisionInfo.climbingLadder = true;
+                    //collisionHandler.collisionInfo.climbingLadder = true;
                     playerState = PlayerStateMobile.CLIMBING;
                     ResetAnimationTriggers();
                 }
@@ -490,7 +490,7 @@ public class PlayerMobile : MonoBehaviour
                 }
                 else if (directionalInput.y != 0 && collisionHandler.collisionInfo.ladderNearby == true)
                 {
-                    collisionHandler.collisionInfo.climbingLadder = true;
+                    //collisionHandler.collisionInfo.climbingLadder = true;
                     playerState = PlayerStateMobile.CLIMBING;
                     ResetAnimationTriggers();
                 }
@@ -531,7 +531,7 @@ public class PlayerMobile : MonoBehaviour
                     audioManager.Play("Jump");
                     ResetAnimationTriggers();
                 }
-                else if (collisionHandler.collisionInfo.climbingLadder == false)
+                //else if (collisionHandler.collisionInfo.climbingLadder == false)
                 {
                     playerState = PlayerStateMobile.IDLE;
                     ResetAnimationTriggers();

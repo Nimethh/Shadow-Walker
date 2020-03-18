@@ -269,6 +269,7 @@ public class PlayerLevel1 : MonoBehaviour
                 break;
 
             case PlayerStateLevel1.INSIDE_CHECK_POINT:
+                InputCheck();
                 CalculateVelocity();
                 velocity.x = 0.0f;
                 directionalInput.x = 0.0f;
@@ -395,7 +396,7 @@ public class PlayerLevel1 : MonoBehaviour
                     playerState = PlayerStateLevel1.DEAD;
                     ResetAnimationTriggers();
                 }
-                else if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.S)) && collisionHandler.collisionInfo.checkPointNearby == true
+                else if (directionalInput.y != 0 && collisionHandler.collisionInfo.checkPointNearby == true
                     && collisionHandler.collisionInfo.below && playerState != PlayerStateLevel1.INSIDE_CHECK_POINT)
                 {
                     playerState = PlayerStateLevel1.MOVING_INTO_CHECK_POINT;
@@ -425,7 +426,7 @@ public class PlayerLevel1 : MonoBehaviour
                     playerState = PlayerStateLevel1.TURN;
                     ResetAnimationTriggers();
                 }
-                else if (Input.GetAxisRaw("Horizontal") == 0)
+                else if (directionalInput.x == 0)
                 {
                     playerState = PlayerStateLevel1.IDLE;
                     ResetAnimationTriggers();
@@ -463,13 +464,13 @@ public class PlayerLevel1 : MonoBehaviour
                     audioManager.Play("Jump");
                     ResetAnimationTriggers();
                 }
-                else if (Input.GetAxisRaw("Horizontal") != 0.0f && doneLanding)
+                else if (directionalInput.x != 0.0f && doneLanding)
                 {
                     CancelInvoke();
                     playerState = PlayerStateLevel1.MOVING;
                     ResetAnimationTriggers();
                 }
-                else if (Input.GetAxisRaw("Horizontal") == 0.0f && doneLanding)
+                else if (directionalInput.x == 0.0f && doneLanding)
                 {
                     CancelInvoke();
                     playerState = PlayerStateLevel1.IDLE;
@@ -490,7 +491,7 @@ public class PlayerLevel1 : MonoBehaviour
                     audioManager.Play("Jump");
                     ResetAnimationTriggers();
                 }
-                else if (doneTurning == true && Input.GetAxisRaw("Horizontal") == 0.0f)
+                else if (doneTurning == true && directionalInput.x == 0.0f)
                 {
                     CancelInvoke();
                     turnAnimLeft = false;
@@ -500,7 +501,7 @@ public class PlayerLevel1 : MonoBehaviour
                     ResetAnimationTriggers();
                     animator.SetFloat("FacingDirection", facingDirection);
                 }
-                else if (doneTurning == true && Input.GetAxisRaw("Horizontal") != 0.0f)
+                else if (doneTurning == true && directionalInput.x != 0.0f)
                 {
                     CancelInvoke();
                     turnAnimLeft = false;
@@ -544,7 +545,7 @@ public class PlayerLevel1 : MonoBehaviour
                     playerState = PlayerStateLevel1.DEAD;
                     ResetAnimationTriggers();
                 }
-                else if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.S)) && collisionHandler.collisionInfo.checkPointNearby == true
+                else if (directionalInput.y != 0 && collisionHandler.collisionInfo.checkPointNearby == true
                     && collisionHandler.collisionInfo.below && playerState != PlayerStateLevel1.INSIDE_CHECK_POINT)
                 {
                     playerState = PlayerStateLevel1.MOVING_INTO_CHECK_POINT;
@@ -604,7 +605,7 @@ public class PlayerLevel1 : MonoBehaviour
                     moveOffLadderCooldown = moveOffLadderTimer;
                     moveOffLadderHoldCooldown = moveOffLadderHoldTimer;
                 }
-                else if ((Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.LeftArrow)))
+                else if (directionalInput.x != 0)
                 {
                     if (moveOffLadderHoldCooldown <= 0)
                     {
@@ -617,8 +618,7 @@ public class PlayerLevel1 : MonoBehaviour
                         moveOffLadderHoldCooldown -= Time.deltaTime;
                     }
                 }
-                if ((Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.A) ||
-                     Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.LeftArrow)))
+                if (directionalInput.x != 0)
                 {
                     if (moveOffLadderCooldown <= 0)
                     {
@@ -723,12 +723,9 @@ public class PlayerLevel1 : MonoBehaviour
 
     void InputCheck()
     {
-        if (playerState != PlayerStateLevel1.CLIMBING)
-        {
-            directionalInput.x = Input.GetAxisRaw("Horizontal");
-            animator.SetFloat("MovingDirection", directionalInput.x);
-            currDirX = directionalInput.x;
-        }
+        directionalInput.x = Input.GetAxisRaw("Horizontal");
+        animator.SetFloat("MovingDirection", prevDirX);
+        currDirX = directionalInput.x;
 
         if (playerState == PlayerStateLevel1.MOVING || playerState == PlayerStateLevel1.IDLE || playerState == PlayerStateLevel1.TURN)
         {

@@ -27,16 +27,32 @@ public class SunController : MonoBehaviour
 
     public Vector3 previousPosition = Vector3.zero;
 
+    //[SerializeField]
+    //FieldOfViewTest fov;
+
+    private void Awake()
+    {
+        startT = index / (float)numberOfPoints * sunSpeed;
+        transform.position = CalculateQuadraticBezeirPoint(startT, points[0].position, points[1].position, points[2].position);
+        //fov.SetAimDirection(centerPosition.position - transform.position);
+        //fov.SetOrigin(transform.position);
+    }
+
     private void Start()
     {
         //lineRenderer.positionCount = numberOfPoints;
         //transform.position = points[0].position;
-        startT = index / (float)numberOfPoints * sunSpeed;
-        transform.position = CalculateQuadraticBezeirPoint(startT, points[0].position, points[1].position, points[2].position);
+        
         audioManager = FindObjectOfType<AudioManager>();
         FindSunBounds();
         //DrawQuadraticCurve();
     }
+
+    //private void Update()
+    //{
+    //    fov.SetAimDirection(centerPosition.position - transform.position);
+    //    fov.SetOrigin(transform.position);
+    //}
 
     private void FixedUpdate()
     {

@@ -70,6 +70,7 @@ public class Player : MonoBehaviour
 
     public float prevDirX;
     public float currDirX;
+    public float prevDirY;
     public bool turnAnimRight = false;
     public bool turnAnimLeft = false;
 
@@ -103,7 +104,7 @@ public class Player : MonoBehaviour
     {
         CheckPlayerState();
         UpdatePlayer();
-        if(!collisionHandler.collisionInfo.below)
+        if(!collisionHandler.collisionInfo.below && playerState != PlayerState.CLIMBING)
         {
             fallingTimer += Time.deltaTime;
         }
@@ -125,13 +126,13 @@ public class Player : MonoBehaviour
 
     public void Climb()
     {
-        if (directionalInput.y > 0)
+        if (directionalInput.y > 0 && collisionHandler.collisionInfo.canClimbUp)
         {
             velocity.y = climbingSpeed;
             audioManager.Play("Climb");
             animator.speed = 1;
         }
-        else if (directionalInput.y < 0)
+        else if (directionalInput.y < 0 && collisionHandler.collisionInfo.canClimbDown)
         {
             velocity.y = -climbingSpeed;
             audioManager.Play("Climb");
@@ -236,6 +237,7 @@ public class Player : MonoBehaviour
                 break;
 
             case PlayerState.INSIDE_CHECK_POINT:
+                InputCheck();
                 CalculateVelocity();
                 velocity.x = 0.0f;
                 directionalInput.x = 0.0f;
@@ -327,15 +329,23 @@ public class Player : MonoBehaviour
                     playerState = PlayerState.DEAD;
                     ResetAnimationTriggers();
                 }
-                else if((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.S)) && collisionHandler.collisionInfo.checkPointNearby == true 
+                else if(directionalInput.y != 0 && collisionHandler.collisionInfo.checkPointNearby == true 
                     && collisionHandler.collisionInfo.below && playerState != PlayerState.INSIDE_CHECK_POINT)
                 {
                     playerState = PlayerState.MOVING_INTO_CHECK_POINT;
                     ResetAnimationTriggers();
                 }
-                else if((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.S)) && collisionHandler.collisionInfo.ladderNearby == true)
+                else if(directionalInput.y > 0 && collisionHandler.collisionInfo.canClimbUp && collisionHandler.collisionInfo.ladderNearby == true)
                 {
-                    collisionHandler.collisionInfo.climbingLadder = true;
+                    //collisionHandler.collisionInfo.climbingLadder = true;
+                    collisionHandler.collisionInfo.climbingLadderUp = true;
+                    playerState = PlayerState.CLIMBING;
+                    ResetAnimationTriggers();
+                }
+                else if (directionalInput.y < 0 && collisionHandler.collisionInfo.canClimbDown && collisionHandler.collisionInfo.ladderNearby == true)
+                {
+                    //collisionHandler.collisionInfo.climbingLadder = true;
+                    collisionHandler.collisionInfo.climbingLadderDown = true;
                     playerState = PlayerState.CLIMBING;
                     ResetAnimationTriggers();
                 }
@@ -356,7 +366,7 @@ public class Player : MonoBehaviour
                     playerState = PlayerState.TURN;
                     ResetAnimationTriggers();
                 }
-                else if (Input.GetAxisRaw("Horizontal") == 0)
+                else if (directionalInput.x == 0)
                 {
                     playerState = PlayerState.IDLE;
                     ResetAnimationTriggers();
@@ -394,13 +404,13 @@ public class Player : MonoBehaviour
                     audioManager.Play("Jump");
                     ResetAnimationTriggers();
                 }
-                else if (Input.GetAxisRaw("Horizontal") != 0.0f && doneLanding)
+                else if (directionalInput.x != 0.0f && doneLanding)
                 {
                     CancelInvoke();
                     playerState = PlayerState.MOVING;
                     ResetAnimationTriggers();
                 }
-                else if(Input.GetAxisRaw("Horizontal") == 0.0f && doneLanding)
+                else if(directionalInput.x == 0.0f && doneLanding)
                 {
                     CancelInvoke();
                     playerState = PlayerState.IDLE;
@@ -422,7 +432,7 @@ public class Player : MonoBehaviour
                     audioManager.Play("Jump");
                     ResetAnimationTriggers();
                 }
-                else if(doneTurning == true && Input.GetAxisRaw("Horizontal") == 0.0f)
+                else if(doneTurning == true && directionalInput.x == 0.0f)
                 {
                     CancelInvoke();
                     turnAnimLeft = false;
@@ -432,7 +442,7 @@ public class Player : MonoBehaviour
                     ResetAnimationTriggers();
                     animator.SetFloat("FacingDirection", facingDirection);
                 }
-                else if(doneTurning == true && Input.GetAxisRaw("Horizontal") != 0.0f)
+                else if(doneTurning == true && directionalInput.x != 0.0f)
                 {
                     CancelInvoke();
                     turnAnimLeft = false;
@@ -450,9 +460,17 @@ public class Player : MonoBehaviour
                 {
                     velocity.y = 0;
                 }
-                if((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.S)) && collisionHandler.collisionInfo.ladderNearby == true)
+                if (directionalInput.y > 0 && collisionHandler.collisionInfo.canClimbUp && collisionHandler.collisionInfo.ladderNearby == true)
                 {
-                    collisionHandler.collisionInfo.climbingLadder = true;
+                    //collisionHandler.collisionInfo.climbingLadder = true;
+                    collisionHandler.collisionInfo.climbingLadderUp = true;
+                    playerState = PlayerState.CLIMBING;
+                    ResetAnimationTriggers();
+                }
+                else if (directionalInput.y < 0 && collisionHandler.collisionInfo.canClimbDown && collisionHandler.collisionInfo.ladderNearby == true)
+                {
+                    //collisionHandler.collisionInfo.climbingLadder = true;
+                    collisionHandler.collisionInfo.climbingLadderDown = true;
                     playerState = PlayerState.CLIMBING;
                     ResetAnimationTriggers();
                 }
@@ -470,20 +488,29 @@ public class Player : MonoBehaviour
 
             // IDLE                                                     10
             case PlayerState.IDLE:
-                if(playerSunBehavior.isDead == true)
+                audioManager.Stop("Climb");
+                if (playerSunBehavior.isDead == true)
                 {
                     playerState = PlayerState.DEAD;
                     ResetAnimationTriggers();
                 }
-                else if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.S)) && collisionHandler.collisionInfo.checkPointNearby == true
+                else if (directionalInput.y != 0 && collisionHandler.collisionInfo.checkPointNearby == true
                     && collisionHandler.collisionInfo.below && playerState != PlayerState.INSIDE_CHECK_POINT)
                 {
                     playerState = PlayerState.MOVING_INTO_CHECK_POINT;
                     ResetAnimationTriggers();
                 }
-                else if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.S)) && collisionHandler.collisionInfo.ladderNearby == true)
+                else if (directionalInput.y > 0 && collisionHandler.collisionInfo.canClimbUp && collisionHandler.collisionInfo.ladderNearby == true)
                 {
-                    collisionHandler.collisionInfo.climbingLadder = true;
+                    //collisionHandler.collisionInfo.climbingLadder = true;
+                    collisionHandler.collisionInfo.climbingLadderUp = true;
+                    playerState = PlayerState.CLIMBING;
+                    ResetAnimationTriggers();
+                }
+                else if (directionalInput.y < 0 && collisionHandler.collisionInfo.canClimbDown && collisionHandler.collisionInfo.ladderNearby == true)
+                {
+                    //collisionHandler.collisionInfo.climbingLadder = true;
+                    collisionHandler.collisionInfo.climbingLadderDown = true;
                     playerState = PlayerState.CLIMBING;
                     ResetAnimationTriggers();
                 }
@@ -518,13 +545,24 @@ public class Player : MonoBehaviour
                     playerState = PlayerState.FALLING;
                     ResetAnimationTriggers();
                 }
+                if(collisionHandler.collisionInfo.climbingLadderDown && directionalInput.y > 0)
+                {
+                    collisionHandler.collisionInfo.climbingLadderDown = false;
+                    collisionHandler.collisionInfo.climbingLadderUp = true;
+                }
+                else if(collisionHandler.collisionInfo.climbingLadderUp && directionalInput.y < 0)
+                {
+                    collisionHandler.collisionInfo.climbingLadderUp = false;
+                    collisionHandler.collisionInfo.climbingLadderDown = true;
+                }
                 else if(Input.GetKeyDown(KeyCode.Space))
                 {
                     playerState = PlayerState.JUMPING;
                     audioManager.Play("Jump");
                     ResetAnimationTriggers();
                 }
-                else if(collisionHandler.collisionInfo.climbingLadder == false)
+                //else if(collisionHandler.collisionInfo.climbingLadder == false)
+                else if(collisionHandler.collisionInfo.climbingLadderUp == false && collisionHandler.collisionInfo.climbingLadderDown == false)
                 {
                     playerState = PlayerState.IDLE;
                     ResetAnimationTriggers();
@@ -535,7 +573,7 @@ public class Player : MonoBehaviour
                     moveOffLadderHoldCooldown = moveOffLadderHoldTimer;
                 }
                 
-                else if ((Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.RightArrow) || Input.GetKey(KeyCode.LeftArrow)))
+                else if (directionalInput.x != 0)
                 {
                     if (moveOffLadderHoldCooldown <= 0)
                     {
@@ -548,8 +586,7 @@ public class Player : MonoBehaviour
                         moveOffLadderHoldCooldown -= Time.deltaTime;
                     }
                 }
-                if ((Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.A) ||
-                     Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.LeftArrow)))
+                if (directionalInput.x != 0)
                 {
                     if (moveOffLadderCooldown <= 0)
                     {
@@ -633,12 +670,9 @@ public class Player : MonoBehaviour
 
     void InputCheck()
     {
-        if (playerState != PlayerState.CLIMBING)
-        {
-            directionalInput.x = Input.GetAxisRaw("Horizontal");
-            animator.SetFloat("MovingDirection", directionalInput.x);
-            currDirX = directionalInput.x;
-        }
+        directionalInput.x = Input.GetAxisRaw("Horizontal");
+        animator.SetFloat("MovingDirection", prevDirX);
+        currDirX = directionalInput.x;
 
         if (playerState == PlayerState.MOVING || playerState == PlayerState.IDLE || playerState == PlayerState.TURN)
         {

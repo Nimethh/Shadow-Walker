@@ -21,6 +21,7 @@ TagManager:
   - DeadlyDoor
   - Girlfriend
   - Teleport
+  - StaticPlatform
   layers:
   - Default
   - TransparentFX

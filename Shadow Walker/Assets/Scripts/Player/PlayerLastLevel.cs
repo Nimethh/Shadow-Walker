@@ -121,6 +121,7 @@ public class PlayerLastLevel : MonoBehaviour
                 break;
 
             case PlayerStateLastLevel.INSIDE_CHECK_POINT:
+                InputCheck();
                 CalculateVelocity();
                 collisionHandler.UpdateMovement(velocity * Time.deltaTime, directionalInput);
                 animator.speed = 1;
@@ -199,7 +200,7 @@ public class PlayerLastLevel : MonoBehaviour
                     playerState = PlayerStateLastLevel.LEAN_AND_HOLD;
                     ResetAnimationTriggers();
                 }
-                else if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.S)) && collisionHandler.collisionInfo.checkPointNearby == true 
+                else if (directionalInput.y != 0 && collisionHandler.collisionInfo.checkPointNearby == true 
                     && collisionHandler.collisionInfo.below && playerState != PlayerStateLastLevel.INSIDE_CHECK_POINT)
                 {
                     playerState = PlayerStateLastLevel.MOVING_INTO_CHECK_POINT;
@@ -210,7 +211,7 @@ public class PlayerLastLevel : MonoBehaviour
                     playerState = PlayerStateLastLevel.TURN;
                     ResetAnimationTriggers();
                 }
-                else if (Input.GetAxisRaw("Horizontal") == 0)
+                else if (directionalInput.x == 0)
                 {
                     playerState = PlayerStateLastLevel.IDLE;
                     ResetAnimationTriggers();
@@ -219,7 +220,7 @@ public class PlayerLastLevel : MonoBehaviour
 
             // TURN                                                     8
             case PlayerStateLastLevel.TURN:
-                if(doneTurning == true && Input.GetAxisRaw("Horizontal") == 0.0f)
+                if(doneTurning == true && directionalInput.x == 0.0f)
                 {
                     CancelInvoke();
                     turnAnimLeft = false;
@@ -229,7 +230,7 @@ public class PlayerLastLevel : MonoBehaviour
                     ResetAnimationTriggers();
                     animator.SetFloat("FacingDirection", facingDirection);
                 }
-                else if(doneTurning == true && Input.GetAxisRaw("Horizontal") != 0.0f)
+                else if(doneTurning == true && directionalInput.x != 0.0f)
                 {
                     CancelInvoke();
                     turnAnimLeft = false;
@@ -248,7 +249,7 @@ public class PlayerLastLevel : MonoBehaviour
                     playerState = PlayerStateLastLevel.LEAN_AND_HOLD;
                     ResetAnimationTriggers();
                 }
-                else if ((Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.S)) && collisionHandler.collisionInfo.checkPointNearby == true
+                else if (directionalInput.y != 0 && collisionHandler.collisionInfo.checkPointNearby == true
                     && collisionHandler.collisionInfo.below && playerState != PlayerStateLastLevel.INSIDE_CHECK_POINT)
                 {
                     playerState = PlayerStateLastLevel.MOVING_INTO_CHECK_POINT;
@@ -316,7 +317,7 @@ public class PlayerLastLevel : MonoBehaviour
     void InputCheck()
     {
         directionalInput.x = Input.GetAxisRaw("Horizontal");
-        animator.SetFloat("MovingDirection", directionalInput.x);
+        animator.SetFloat("MovingDirection", prevDirX);
         currDirX = directionalInput.x;
 
         if (playerState == PlayerStateLastLevel.MOVING || playerState == PlayerStateLastLevel.IDLE)
